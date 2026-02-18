@@ -130,6 +130,7 @@
       color: var(--accent3);
       margin-bottom: 32px;
       letter-spacing: 1px;
+      min-height: 1.6em;
     }
     .hero-role .cursor {
       display: inline-block;
@@ -140,6 +141,28 @@
       animation: blink 1s step-end infinite;
     }
     @keyframes blink { 50% { opacity: 0; } }
+
+    /* ── SCROLL REVEAL ── */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal:nth-child(2) { transition-delay: .1s; }
+    .reveal:nth-child(3) { transition-delay: .2s; }
+    .reveal:nth-child(4) { transition-delay: .3s; }
+
+    /* ── PROJECT CARD enhanced ── */
+    .project-stat {
+      font-family: var(--mono);
+      font-size: .6rem;
+      color: var(--accent);
+      letter-spacing: 1px;
+      margin-top: 16px;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .project-card:hover .project-stat { opacity: 1; }
 
     .hero-desc {
       font-size: 1rem;
@@ -314,24 +337,56 @@
     /* ── SKILLS ── */
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
     }
     .skill-item {
       background: var(--surface);
       border: 1px solid var(--border);
       padding: 20px 24px;
-      display: flex; align-items: center; gap: 14px;
-      transition: border-color .2s;
+      display: flex; flex-direction: column; gap: 10px;
+      transition: border-color .25s, background .25s, transform .2s;
+      position: relative; overflow: hidden;
+      cursor: default;
     }
-    .skill-item:hover { border-color: var(--accent); }
+    .skill-item::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(0,212,255,0.04), transparent);
+      opacity: 0; transition: opacity .3s;
+    }
+    .skill-item:hover { border-color: var(--accent); background: #141e28; transform: translateY(-2px); }
+    .skill-item:hover::after { opacity: 1; }
+    .skill-top { display: flex; align-items: center; gap: 12px; }
     .skill-icon { font-size: 1.3rem; }
     .skill-name {
       font-family: var(--mono);
       font-size: .8rem;
       color: var(--text);
       letter-spacing: .5px;
+      flex: 1;
     }
+    .skill-level {
+      font-family: var(--mono);
+      font-size: .6rem;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+    .skill-bar {
+      height: 2px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 1s cubic-bezier(.4,0,.2,1);
+    }
+    .skill-item.visible .skill-bar-fill { transform: scaleX(1); }
 
     /* ── CONTACT ── */
     .contact-grid {
@@ -429,7 +484,7 @@
   <div class="nav-links">
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact" style="display:none">Contact</a>
   </div>
 </nav>
 
@@ -451,18 +506,17 @@
   </h1>
 
   <div class="hero-role fade-in">
-    Security &amp; Creative Developer<span class="cursor"></span>
+    <span id="typed-role"></span><span class="cursor"></span>
   </div>
 
   <p class="hero-desc fade-in">
-   セキュリティ業界で働いています。<br>
-  　趣味は、編み物とUnity。<br>
-    Unityで面白いツールを作っています。
+    セキュリティと創造性を掛け合わせてものを作っています。<br>
+    Claude と一緒に、アイデアをかたちにする日々。
   </p>
 
   <div class="hero-cta fade-in">
     <a href="#projects" class="btn-primary">View Projects →</a>
-    <a href="#contact" class="btn-ghost">Get in Touch</a>
+    
   </div>
 </div>
 
@@ -490,7 +544,7 @@
       <div class="project-num">02 / PROJECT</div>
       <span class="project-icon">🔐</span>
       <div class="project-title">Security Dashboard</div>
-      <div class="project-desc">セキュリティ監視ダッシュボード。</div>
+      <div class="project-desc">セキュリティ監視ダッシュボード。（URLをここに入れてね）</div>
       <div class="project-tags">
         <span class="project-tag">Security</span>
         <span class="project-tag">Dashboard</span>
@@ -515,26 +569,26 @@
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-label">Skills</div>
-  <div class="skills-grid">
-    <!-- 編集してね：スキルを追加・変更するときはここを編集 -->
-    <div class="skill-item"><span class="skill-icon">🔐</span><span class="skill-name">Security</span></div>
-    <div class="skill-item"><span class="skill-icon">🌐</span><span class="skill-name">Unity</span></div>
-    <div class="skill-item"><span class="skill-icon">⚡</span><span class="skill-name">C#</span></div>
-    <div class="skill-item"><span class="skill-icon">🤖</span><span class="skill-name">AI / Claude</span></div>
-    <div class="skill-item"><span class="skill-icon">🐙</span><span class="skill-name">GitHub</span></div>
-    <div class="skill-item"><span class="skill-icon">🎨</span><span class="skill-name">Digital Forensics</span></div>
+  <div class="skills-grid" id="skillsGrid">
+    <!-- スキルを追加・変更するときはここを編集 level: 0.0〜1.0 -->
+    <div class="skill-item" data-level="0.95"><div class="skill-top"><span class="skill-icon">🔐</span><span class="skill-name">Security</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:0.95"></div></div></div>
+    <div class="skill-item" data-level="0.75"><div class="skill-top"><span class="skill-icon">🌐</span><span class="skill-name">HTML / CSS</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:0.75"></div></div></div>
+    <div class="skill-item" data-level="0.65"><div class="skill-top"><span class="skill-icon">⚡</span><span class="skill-name">JavaScript</span><span class="skill-level">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:0.65"></div></div></div>
+    <div class="skill-item" data-level="0.9"><div class="skill-top"><span class="skill-icon">🤖</span><span class="skill-name">AI / Claude</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:0.9"></div></div></div>
+    <div class="skill-item" data-level="0.8"><div class="skill-top"><span class="skill-icon">🐙</span><span class="skill-name">GitHub</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:0.8"></div></div></div>
+    <div class="skill-item" data-level="0.7"><div class="skill-top"><span class="skill-icon">🎨</span><span class="skill-name">UI Design</span><span class="skill-level">Intermediate</span></div><div class="skill-bar"><div class="skill-bar-fill" style="--w:0.7"></div></div></div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" style="display:none">
-<section id="contact">
   <div class="section-label">Contact</div>
   <div class="contact-grid">
     <!-- 編集してね：URLを自分のものに変える -->
     <a href="https://github.com/tomoaki12" target="_blank" class="contact-link">
       <span class="icon">🐙</span> GitHub
     </a>
- <a href="https://x.com/" target="_blank" class="contact-link">
+    <a href="https://x.com/" target="_blank" class="contact-link">
       <span class="icon">𝕏</span> X (Twitter)
     </a>
     <a href="/cdn-cgi/l/email-protection#6e17011b1c2e0b030f0702400d0103" class="contact-link">
