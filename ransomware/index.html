@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JP Ransomware Monitor</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap');
+:root{
+  --bg:#0d1117;--s1:#161b22;--s2:#21262d;--bd:#30363d;
+  --tx:#e6edf3;--muted:#8b949e;
+  --acc:#f0883e;--blue:#58a6ff;--green:#3fb950;--red:#f85149;--yellow:#d29922;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);padding:20px;font-size:13px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ヘッダー */
+header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--bd);margin-bottom:20px}
+.title h1{font-size:20px;font-weight:700}
+.title h1 em{color:var(--acc);font-style:normal}
+.title p{font-size:12px;color:var(--muted);margin-top:4px;font-family:'JetBrains Mono',monospace}
+.stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat{background:var(--s1);border:1px solid var(--bd);border-radius:8px;padding:10px 16px;text-align:center;min-width:80px}
+.stat .n{font-size:26px;font-weight:700;color:var(--acc);font-family:'JetBrains Mono',monospace;line-height:1}
+.stat .l{font-size:10px;color:var(--muted);margin-top:3px}
+
+/* フィルター */
+.filter{margin-bottom:14px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.filter input{background:var(--s1);border:1px solid var(--bd);color:var(--tx);padding:7px 12px;border-radius:6px;font-size:13px;width:280px;outline:none;font-family:inherit}
+.filter input:focus{border-color:var(--blue)}
+.filter input::placeholder{color:var(--muted)}
+.filter select{background:var(--s1);border:1px solid var(--bd);color:var(--tx);padding:7px 12px;border-radius:6px;font-size:13px;outline:none}
+
+/* テーブル */
+.wrap{overflow-x:auto;border:1px solid var(--bd);border-radius:10px}
+table{width:100%;border-collapse:collapse}
+thead tr{background:var(--s2)}
+th{padding:10px 12px;text-align:left;font-size:10px;font-weight:600;letter-spacing:.5px;color:var(--muted);text-transform:uppercase;border-bottom:1px solid var(--bd);white-space:nowrap}
+td{padding:11px 12px;border-bottom:1px solid var(--bd);vertical-align:top;line-height:1.6}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.02)}
+
+/* セル */
+.date{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap}
+.org-name{font-weight:700;font-size:14px;margin-bottom:2px}
+.org-url{font-size:11px;word-break:break-all}
+.org-loc{font-size:11px;color:var(--muted);margin-top:3px}
+.group-badge{display:inline-block;background:var(--s2);border:1px solid var(--bd);border-radius:20px;padding:2px 10px;font-size:11px;font-weight:600;color:var(--acc);white-space:nowrap}
+.source{font-size:10px;color:var(--muted);margin-top:4px;display:block}
+.biz{max-width:200px;font-size:12px;color:var(--muted)}
+.num{font-family:'JetBrains Mono',monospace;font-size:12px;white-space:nowrap}
+.ss{text-align:center}
+.thumb{width:120px;height:75px;object-fit:cover;border-radius:4px;border:1px solid var(--bd);display:block;margin-bottom:4px}
+.na{color:var(--muted);font-size:12px}
+
+/* 日本関連 */
+.related-block{background:rgba(88,166,255,.06);border:1px solid rgba(88,166,255,.2);border-radius:6px;padding:8px 10px}
+.related-rel{font-size:10px;color:var(--blue);font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px}
+.related-name{font-weight:700;font-size:13px;margin-bottom:6px}
+.related-detail{font-size:11px;color:var(--muted);line-height:1.8}
+
+/* バッジ */
+.badge{display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600}
+.badge-green{color:var(--green)}
+.badge-red{color:var(--red)}
+.badge-gray{color:var(--muted)}
+
+/* フッター */
+footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size:11px;color:var(--muted);font-family:'JetBrains Mono',monospace;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+</style>
+</head>
+<body>
+<header>
+  <div class="title">
+    <h1>🔴 <em>JP</em> Ransomware Monitor</h1>
+    <p>ransomware.live / ransomlook.io ― 日本関連被害追跡レポート</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="n">11</div><div class="l">総件数</div></div>
+    <div class="stat"><div class="n">6</div><div class="l">日本関連あり</div></div>
+    <div class="stat"><div class="n">9</div><div class="l">攻撃グループ</div></div>
+  </div>
+</header>
+
+<div class="filter">
+  <input id="q" type="text" placeholder="🔍 組織名・グループ・事業内容で絞り込み…" oninput="filt()">
+  <select id="rel" onchange="filt()">
+    <option value="">すべて</option>
+    <option value="あり">日本関連あり</option>
+    <option value="なし">日本関連なし</option>
+  </select>
+</div>
+
+<div class="wrap">
+<table id="t">
+  <thead>
+    <tr>
+      <th class="sortable" onclick="sortTable(0)" style="cursor:pointer">掲載日 <span id="sort0">▼</span></th>
+      <th>① 被害組織 / URL / 所在地</th>
+      <th>グループ / 情報源</th>
+      <th>事業内容</th>
+      <th>資本金</th>
+      <th>従業員数</th>
+      <th>スクショ / リンク</th>
+      <th>② 日本の関連組織</th>
+    </tr>
+  </thead>
+  <tbody id="tb">
+      <tr>
+        <td class="date">2026-04-15</td>
+        <td>
+          <div class="org-name">Rogiken / institute of Science Tokyo</div>
+          <div class="org-url">—</div>
+          <div class="org-loc">📍 </div>
+        </td>
+        <td><span class="group-badge">Coinbasecartel</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz"></td>
+        <td class="num">不明</td>
+        <td class="num">不明</td>
+        <td class="ss"><a href="https://images.ransomware.live/logo.png" target="_blank" rel="noopener"><img src="https://images.ransomware.live/logo.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/Um9naWtlbiAvIGluc3RpdHV0ZSBvZiBTY2llbmNlIFRva3lvQGNvaW5iYXNlY2FydGVs" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td><span class="na">なし</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-10</td>
+        <td>
+          <div class="org-name">HIGASHIYAMA INDUSTRIES Co.,Ltd.</div>
+          <div class="org-url"><a href="https://www.higashiyama.co.jp" target="_blank" rel="noopener">https://www.higashiyama.co.jp</a></div>
+          <div class="org-loc">📍 愛知県名古屋市</div>
+        </td>
+        <td><span class="group-badge">Qilin</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz">鋼管製造・販売、機械装置製造。建設機械用部品、自動車部品、産業用機械部品などの製造を主業とする鋼管メーカー。</td>
+        <td class="num">不明</td>
+        <td class="num">不明</td>
+        <td class="ss"><a href="/logo/www.higashiyama.com.png" target="_blank" rel="noopener"><img src="/logo/www.higashiyama.com.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/SElHQVNISVlBTUEgSU5EVVNUUklFUyBDby4sTHRkLkBxaWxpbg==" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td>
+        <div class="related-block">
+          <div class="related-rel">日本企業</div>
+          <div class="related-name"><a href="https://www.higashiyama.co.jp" target="_blank" rel="noopener">HIGASHIYAMA INDUSTRIES Co.,Ltd.</a></div>
+          <div class="related-detail">
+            📍 愛知県名古屋市<br>
+            💼 鋼管製造・販売、機械装置製造。建設機械用部品、自動車部品、産業用機械部品などの製造を主業とする鋼管メーカー。<br>
+            💴 資本金: 不明<br>
+            👥 従業員: 不明
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-08</td>
+        <td>
+          <div class="org-name">Aichi Electric</div>
+          <div class="org-url">—</div>
+          <div class="org-loc">📍 </div>
+        </td>
+        <td><span class="group-badge">Thegentlemen</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz"></td>
+        <td class="num">不明</td>
+        <td class="num">不明</td>
+        <td class="ss"><a href="/logo/aichidenki.jp.png" target="_blank" rel="noopener"><img src="/logo/aichidenki.jp.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/QWljaGkgRWxlY3RyaWNAdGhlZ2VudGxlbWVu" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td><span class="na">なし</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-14</td>
+        <td>
+          <div class="org-name">earthprotect.co.jp</div>
+          <div class="org-url"><a href="https://www.earthprotect.co.jp" target="_blank" rel="noopener">https://www.earthprotect.co.jp</a></div>
+          <div class="org-loc">📍 東京都渋谷区</div>
+        </td>
+        <td><span class="group-badge">Lockbit5</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz">環境保全・自然保護に関する調査研究、コンサルティング、教育啓発事業を展開。生物多様性評価、環境影響評価、自然資本評価などのサービスを提供。</td>
+        <td class="num">不明</td>
+        <td class="num">不明</td>
+        <td class="ss"><a href="/logo/earthprotect.co.jp.png" target="_blank" rel="noopener"><img src="/logo/earthprotect.co.jp.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/ZWFydGhwcm90ZWN0LmNvLmpwQGxvY2tiaXQ1" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td>
+        <div class="related-block">
+          <div class="related-rel">日本企業</div>
+          <div class="related-name"><a href="https://www.earthprotect.co.jp" target="_blank" rel="noopener">株式会社アースプロテクト</a></div>
+          <div class="related-detail">
+            📍 東京都渋谷区<br>
+            💼 環境保全・自然保護に関する調査研究、コンサルティング、教育啓発事業を展開。生物多様性評価、環境影響評価、自然資本評価などのサービスを提供。<br>
+            💴 資本金: 不明<br>
+            👥 従業員: 
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-04</td>
+        <td>
+          <div class="org-name">GCA Group</div>
+          <div class="org-url">—</div>
+          <div class="org-loc">📍 不明</div>
+        </td>
+        <td><span class="group-badge">Thegentlemen</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz">不明</td>
+        <td class="num">不明</td>
+        <td class="num">不明</td>
+        <td class="ss"><a href="/logo/gcagroupllc.com.png" target="_blank" rel="noopener"><img src="/logo/gcagroupllc.com.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/R0NBIEdyb3VwQHRoZWdlbnRsZW1lbg==" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td><span class="na">なし</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-03</td>
+        <td>
+          <div class="org-name">Nippon Medical School Musashi Kosugi Hospital</div>
+          <div class="org-url"><a href="https://www.nippon-med.jp/musashi/" target="_blank" rel="noopener">https://www.nippon-med.jp/musashi/</a></div>
+          <div class="org-loc">📍 神奈川県川崎市中原区</div>
+        </td>
+        <td><span class="group-badge">Netrunner</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz">一般病院として診療科目の充実、高度な医療技術と人間味のある医療サービスを提供。救急医療、地域医療支援等を実施。</td>
+        <td class="num">不明</td>
+        <td class="num">約1,000名</td>
+        <td class="ss"><a href="/logo/www.nms.ac.jp/kosugi-h.png" target="_blank" rel="noopener"><img src="/logo/www.nms.ac.jp/kosugi-h.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/TmlwcG9uIE1lZGljYWwgU2Nob29sIE11c2FzaGkgS29zdWdpIEhvc3BpdGFsQG5ldHJ1bm5lcg==" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td>
+        <div class="related-block">
+          <div class="related-rel">日本企業（親: 日本医科大学）</div>
+          <div class="related-name"><a href="https://www.nms.ac.jp/" target="_blank" rel="noopener">日本医科大学</a></div>
+          <div class="related-detail">
+            📍 東京都文京区<br>
+            💼 医学部および大学院を設置する私立医科大学。医学教育、医学研究、および関連附属病院の運営を行う。<br>
+            💴 資本金: 不明<br>
+            👥 従業員: 不明
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-03</td>
+        <td>
+          <div class="org-name">Shiraume Hospital</div>
+          <div class="org-url">—</div>
+          <div class="org-loc">📍 不明</div>
+        </td>
+        <td><span class="group-badge">Netrunner</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz">医療機関</td>
+        <td class="num">不明</td>
+        <td class="num">不明</td>
+        <td class="ss"><a href="/logo/www.shiraume.or.jp.png" target="_blank" rel="noopener"><img src="/logo/www.shiraume.or.jp.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/U2hpcmF1bWUgSG9zcGl0YWxAbmV0cnVubmVy" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td><span class="na">なし</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-01</td>
+        <td>
+          <div class="org-name">Nissan</div>
+          <div class="org-url"><a href="https://www.nissan.co.jp/" target="_blank" rel="noopener">https://www.nissan.co.jp/</a></div>
+          <div class="org-loc">📍 日本神奈川県横浜市西区</div>
+        </td>
+        <td><span class="group-badge">Everest</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz">自動車の製造・販売。乗用車、商用車、電動車両の開発・生産・販売を主業とする大手自動車メーカー。</td>
+        <td class="num">上場（時価総額約2.5兆円）</td>
+        <td class="num">約130,000名</td>
+        <td class="ss"><a href="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'&gt;&lt;/svg&gt;" target="_blank" rel="noopener"><img src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'&gt;&lt;/svg&gt;" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/Tmlzc2FuQGV2ZXJlc3Q=" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td>
+        <div class="related-block">
+          <div class="related-rel">日本企業</div>
+          <div class="related-name"><a href="https://www.nissan.co.jp/" target="_blank" rel="noopener">日産自動車株式会社</a></div>
+          <div class="related-detail">
+            📍 神奈川県横浜市西区高島一丁目12番1号<br>
+            💼 自動車の製造・販売及び関連事業<br>
+            💴 資本金: 約2,144億円<br>
+            👥 従業員: 約130,000名
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-03</td>
+        <td>
+          <div class="org-name">whiskey.co.jp</div>
+          <div class="org-url">—</div>
+          <div class="org-loc">📍 </div>
+        </td>
+        <td><span class="group-badge">Krybit</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz"></td>
+        <td class="num">不明</td>
+        <td class="num">不明</td>
+        <td class="ss"><a href="/logo/whiskey.co.jp.png" target="_blank" rel="noopener"><img src="/logo/whiskey.co.jp.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/d2hpc2tleS5jby5qcEBrcnliaXQ=" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td>
+        <div class="related-block">
+          <div class="related-rel">日本企業</div>
+          <div class="related-name">—</div>
+          <div class="related-detail">
+            📍 <br>
+            💼 <br>
+            💴 資本金: 不明<br>
+            👥 従業員: 不明
+          </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-21</td>
+        <td>
+          <div class="org-name">Rutan &amp; Tucker, LLP</div>
+          <div class="org-url"><a href="https://www.rutan-tucker.com" target="_blank" rel="noopener">https://www.rutan-tucker.com</a></div>
+          <div class="org-loc">📍 米国カリフォルニア州アナハイム</div>
+        </td>
+        <td><span class="group-badge">Silentransomgroup</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz">法律事務所。企業法、知的財産権、訴訟、労働法など幅広い法律サービスを提供。</td>
+        <td class="num">不明</td>
+        <td class="num">約150名</td>
+        <td class="ss"><a href="https://images.ransomware.live/logo.png" target="_blank" rel="noopener"><img src="https://images.ransomware.live/logo.png" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/UnV0YW4gJiBUdWNrZXIsIExMUEBTaWxlbnRSYW5zb21Hcm91cA==" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td><span class="na">なし</span></td>
+      </tr>
+      <tr>
+        <td class="date">2026-04-17</td>
+        <td>
+          <div class="org-name">SOGO Auction</div>
+          <div class="org-url"><a href="https://www.sogoauction.com" target="_blank" rel="noopener">https://www.sogoauction.com</a></div>
+          <div class="org-loc">📍 米国カリフォルニア州ロサンゼルス</div>
+        </td>
+        <td><span class="group-badge">Ransomexx</span><br>
+            <span class="source">ransomware.live</span></td>
+        <td class="biz">美術品、骨董品、宝石類などの競売・オークション事業を展開する国際的なオークションハウス。世界中の顧客向けにオンラインおよび対面でのオークション催行。</td>
+        <td class="num">不明</td>
+        <td class="num">不明</td>
+        <td class="ss"><a href="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'&gt;&lt;/svg&gt;" target="_blank" rel="noopener"><img src="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'&gt;&lt;/svg&gt;" class="thumb" onerror="this.parentElement.innerHTML='<span class=na>画像なし</span>'"></a><br>
+            <a href="https://www.ransomware.live/id/U09HTyBBdWN0aW9uQHJhbnNvbWV4eA==" target="_blank" rel="noopener">🔗 詳細</a></td>
+        <td>
+        <div class="related-block">
+          <div class="related-rel">日本に主要取引先あり</div>
+          <div class="related-name">—</div>
+          <div class="related-detail">
+            📍 東京都中央区<br>
+            💼 日本及びアジア地域向けのオークション仲介・美術品販売<br>
+            💴 資本金: <br>
+            👥 従業員: 
+          </div>
+        </div></td>
+      </tr></tbody>
+</table>
+</div>
+
+<footer>
+  <span>最終更新: 2026年04月22日 17:11 JST</span>
+  <span>情報源: ransomware.live / ransomlook.io ― 情報共有目的のみ</span>
+</footer>
+
+<script>
+let sortDir = -1; // -1=降順(新しい順), 1=昇順(古い順)
+
+function sortTable(col){
+  sortDir *= -1;
+  document.getElementById('sort0').textContent = sortDir === -1 ? '▼' : '▲';
+  const tb = document.getElementById('tb');
+  const rows = Array.from(tb.querySelectorAll('tr'));
+  rows.sort((a, b) => {
+    const va = a.cells[col] ? a.cells[col].textContent.trim() : '';
+    const vb = b.cells[col] ? b.cells[col].textContent.trim() : '';
+    return va < vb ? sortDir : va > vb ? -sortDir : 0;
+  });
+  rows.forEach(r => tb.appendChild(r));
+}
+
+function filt(){
+  const q   = document.getElementById('q').value.toLowerCase();
+  const rel = document.getElementById('rel').value;
+  document.querySelectorAll('#tb tr').forEach(row=>{
+    const txt = row.textContent.toLowerCase();
+    const relTd = row.cells[7] ? row.cells[7].textContent : '';
+    const matchQ   = !q   || txt.includes(q);
+    const hasRelated = row.cells[7] ? row.cells[7].querySelector('.related-block') !== null : false;
+    const matchRel = !rel || (rel==='あり' ? hasRelated : !hasRelated);
+    row.style.display = (matchQ && matchRel) ? '' : 'none';
+  });
+}
+
+// 初期表示は日付降順（新しい順）
+window.onload = () => sortTable(0);
+</script>
+</body>
+</html>
