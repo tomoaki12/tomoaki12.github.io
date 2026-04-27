@@ -257,20 +257,20 @@ def fetch_ransomlook():
     except Exception:
         pass
 
-    for url in ["https://www.ransomlook.io/api/posts/recent",
-                "https://www.ransomlook.io/api/recentposts"]:
+    for url in ["https://www.ransomlook.io/api/recent",
+                "https://www.ransomlook.io/api/last"]:
         try:
             r = s.get(url, timeout=20)
             if r.status_code == 200:
                 data = r.json()
-                if not isinstance(data, list):
+                if not isinstance(data, list) or len(data) == 0:
                     continue
                 for item in data:
                     title = item.get("post_title") or item.get("title", "")
                     desc  = item.get("description", "")
                     if not is_japan(title + " " + desc):
                         continue
-                    screenshot = item.get("screenshot") or item.get("image") or ""
+                    screenshot = item.get("screen") or item.get("screenshot") or item.get("image") or ""
                     results.append({
                         "掲載日":       item.get("discovered") or item.get("date", ""),
                         "情報源":       "ransomlook.io",
