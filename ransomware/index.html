@@ -559,7 +559,22 @@ function filt(){
   });
 }
 
-window.onload = () => sortTable(0);
+window.onload = () => {
+  sortTable(0);
+  document.querySelectorAll('#tb tr').forEach(row => {
+    const sourceEl = row.querySelector('.source');
+    const detailLink = Array.from(row.querySelectorAll('.ss a')).find(a => a.textContent.includes('詳細'));
+    if (sourceEl && detailLink) {
+      const a = document.createElement('a');
+      a.href = detailLink.href;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = sourceEl.textContent;
+      sourceEl.textContent = '';
+      sourceEl.appendChild(a);
+    }
+  });
+};
 </script>
 </body>
 </html>
