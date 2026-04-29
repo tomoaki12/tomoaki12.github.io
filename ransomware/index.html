@@ -32,6 +32,9 @@ header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap
 .filter input:focus{border-color:var(--blue)}
 .filter input::placeholder{color:var(--muted)}
 .filter select{background:var(--s1);border:1px solid var(--bd);color:var(--tx);padding:7px 12px;border-radius:6px;font-size:13px;outline:none}
+.filter-btn{background:var(--s1);border:1px solid var(--bd);color:var(--muted);padding:7px 14px;border-radius:6px;font-size:12px;font-family:inherit;cursor:pointer;white-space:nowrap}
+.filter-btn:hover{background:var(--s2);color:var(--tx)}
+.filter-btn.active{border-color:var(--blue);color:var(--blue);background:rgba(88,166,255,.1)}
 
 /* テーブル */
 .wrap{overflow-x:auto;border:1px solid var(--bd);border-radius:10px}
@@ -86,11 +89,10 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
 
 <div class="filter">
   <input id="q" type="text" placeholder="🔍 組織名・グループ・事業内容で絞り込み…" oninput="filt()">
-  <select id="rel" onchange="filt()">
-    <option value="">すべて</option>
-    <option value="あり">日本関連あり</option>
-    <option value="なし">日本関連なし</option>
-  </select>
+  <button class="filter-btn active" data-filter="" onclick="setFilter(this)">すべて</button>
+  <button class="filter-btn" data-filter="confirmed" onclick="setFilter(this)">🇯🇵 日本タグあり</button>
+  <button class="filter-btn" data-filter="possible" onclick="setFilter(this)">⚠️ 日本関係の可能性あり</button>
+  <button class="filter-btn" data-filter="none" onclick="setFilter(this)">不明</button>
 </div>
 
 <div class="wrap">
@@ -538,12 +540,27 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
 </div>
 
 <footer>
-  <span>最終更新: 2026年04月30日 08:30 JST</span>
+  <span>最終更新: 2026年04月30日 08:41 JST</span>
   <span>情報源: ransomware.live / ransomlook.io ― 情報共有目的のみ</span>
 </footer>
 
 <script>
-let sortDir = -1; // -1=降順(新しい順), 1=昇順(古い順)
+let sortDir = -1;
+let currentFilter = '';
+
+const JP_PLACE = /tokyo|osaka|kyoto|yokohama|nagoya|sapporo|fukuoka|hiroshima|sendai|aichi|kanagawa|chiba|hokkaido|nippon|musashi|kosugi|kawasaki|kyushu|tohoku/i;
+
+function japanLevel(row) {
+  if (row.cells[7] && row.cells[7].querySelector('.related-block')) return 'confirmed';
+  const nameEl = row.querySelector('.org-name');
+  const urlEl  = row.querySelector('.org-url');
+  const nameText = nameEl ? nameEl.textContent : '';
+  const urlText  = urlEl  ? urlEl.textContent  : '';
+  if (/\.(?:co|or|ne|ac|go|ed)\.jp\b/i.test(row.innerHTML)) return 'possible';
+  if (/[぀-龯]/.test(nameText)) return 'possible';
+  if (JP_PLACE.test(nameText + ' ' + urlText)) return 'possible';
+  return 'none';
+}
 
 function sortTable(col){
   sortDir *= -1;
@@ -558,21 +575,38 @@ function sortTable(col){
   rows.forEach(r => tb.appendChild(r));
 }
 
+function setFilter(btn) {
+  currentFilter = btn.dataset.filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === btn));
+  filt();
+}
+
 function filt(){
-  const q   = document.getElementById('q').value.toLowerCase();
-  const rel = document.getElementById('rel').value;
-  document.querySelectorAll('#tb tr').forEach(row=>{
+  const q = document.getElementById('q').value.toLowerCase();
+  document.querySelectorAll('#tb tr').forEach(row => {
     const txt = row.textContent.toLowerCase();
-    const relTd = row.cells[7] ? row.cells[7].textContent : '';
-    const matchQ   = !q   || txt.includes(q);
-    const hasRelated = row.cells[7] ? row.cells[7].querySelector('.related-block') !== null : false;
-    const matchRel = !rel || (rel==='あり' ? hasRelated : !hasRelated);
-    row.style.display = (matchQ && matchRel) ? '' : 'none';
+    const matchQ      = !q || txt.includes(q);
+    const matchFilter = !currentFilter || japanLevel(row) === currentFilter;
+    row.style.display = (matchQ && matchFilter) ? '' : 'none';
   });
 }
 
-// 初期表示は日付降順（新しい順）
-window.onload = () => sortTable(0);
+window.onload = () => {
+  sortTable(0);
+  document.querySelectorAll('#tb tr').forEach(row => {
+    const sourceEl = row.querySelector('.source');
+    const detailLink = Array.from(row.querySelectorAll('.ss a')).find(a => a.textContent.includes('詳細'));
+    if (sourceEl && detailLink) {
+      const a = document.createElement('a');
+      a.href = detailLink.href;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.textContent = sourceEl.textContent;
+      sourceEl.textContent = '';
+      sourceEl.appendChild(a);
+    }
+  });
+};
 </script>
 </body>
 </html>
