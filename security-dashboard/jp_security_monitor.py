@@ -377,7 +377,7 @@ body{{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx)
 a{{color:var(--blue);text-decoration:none}}
 a:hover{{text-decoration:underline}}
 
-header{{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--bd);margin-bottom:24px}}
+header{{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:12px;padding-bottom:20px;border-bottom:1px solid var(--bd);margin-bottom:20px}}
 .title h1{{font-size:20px;font-weight:700}}
 .title h1 em{{color:var(--blue);font-style:normal}}
 .title p{{font-size:12px;color:var(--muted);margin-top:4px;font-family:'JetBrains Mono',monospace}}
@@ -388,12 +388,17 @@ header{{display:flex;justify-content:space-between;align-items:flex-end;flex-wra
 .stat.danger .n{{color:var(--red)}}
 .stat.warn   .n{{color:var(--orange)}}
 .stat.info   .n{{color:var(--blue)}}
-.stat.ok     .n{{color:var(--green)}}
 
-section{{margin-bottom:32px}}
-.sec-header{{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}}
-.sec-title{{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}}
-.sec-count{{font-size:12px;color:var(--muted);font-family:'JetBrains Mono',monospace}}
+/* タブ */
+.tabs{{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--bd);}}
+.tab{{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);padding:10px 20px;font-size:14px;font-family:inherit;cursor:pointer;font-weight:600;margin-bottom:-1px;}}
+.tab:hover{{color:var(--tx)}}
+.tab.active{{color:var(--tx);border-bottom-color:var(--blue);}}
+.tab .cnt{{font-size:11px;background:var(--s2);border:1px solid var(--bd);border-radius:20px;padding:1px 7px;margin-left:6px;font-weight:400;font-family:'JetBrains Mono',monospace;}}
+.tab.active .cnt{{background:rgba(88,166,255,.15);border-color:var(--blue);color:var(--blue);}}
+
+section{{display:none}}
+section.active{{display:block}}
 
 .filter-bar{{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px}}
 .filter-bar input{{background:var(--s1);border:1px solid var(--bd);color:var(--tx);padding:6px 12px;border-radius:6px;font-size:13px;width:260px;outline:none;font-family:inherit}}
@@ -412,10 +417,10 @@ tr:last-child td{{border-bottom:none}}
 tr:hover td{{background:rgba(255,255,255,.02)}}
 
 .date{{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);white-space:nowrap}}
-.title-cell{{max-width:320px}}
+.title-cell{{max-width:340px}}
 .title-cell a{{font-weight:600}}
 .cve-row{{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);margin-top:3px}}
-.desc{{font-size:12px;color:var(--muted);max-width:280px}}
+.desc{{font-size:12px;color:var(--muted);max-width:300px}}
 .empty{{text-align:center;padding:40px;color:var(--muted)}}
 .na{{color:var(--muted)}}
 
@@ -439,11 +444,14 @@ footer{{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-siz
   </div>
 </header>
 
-<!-- 脆弱性セクション -->
-<section id="sec-vuln">
-  <div class="sec-header">
-    <div class="sec-title">⚠️ 脆弱性情報 <span class="sec-count">{len(vulns)} 件</span></div>
-  </div>
+<!-- タブ -->
+<div class="tabs">
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">{len(vulns)}</span></button>
+  <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">{len(news)}</span></button>
+</div>
+
+<!-- 脆弱性タブ -->
+<section id="tab-vuln" class="active">
   <div class="filter-bar">
     <input id="vq" type="text" placeholder="🔍 タイトル・CVE・製品名で絞り込み…" oninput="filterVuln()">
     <button class="fbtn active" data-sev="" onclick="setSevFilter(this)">すべて</button>
@@ -461,11 +469,8 @@ footer{{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-siz
   </div>
 </section>
 
-<!-- ニュースセクション -->
-<section id="sec-news">
-  <div class="sec-header">
-    <div class="sec-title">📰 セキュリティニュース <span class="sec-count">{len(news)} 件</span></div>
-  </div>
+<!-- ニュースタブ -->
+<section id="tab-news">
   <div class="filter-bar">
     <input id="nq" type="text" placeholder="🔍 タイトル・キーワードで絞り込み…" oninput="filterNews()">
   </div>
@@ -481,25 +486,30 @@ footer{{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-siz
 
 <footer>
   <span>最終更新: {now_str}</span>
-  <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext / ScanNetSecurity</span>
+  <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
 <script>
+function switchTab(name, btn) {{
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}}
+
 let sevFilter = '';
 
 function setSevFilter(btn) {{
   sevFilter = btn.dataset.sev;
-  document.querySelectorAll('[data-sev]').forEach(b => {{
-    if (b.tagName === 'BUTTON') b.classList.toggle('active', b === btn);
-  }});
+  document.querySelectorAll('.fbtn[data-sev]').forEach(b => b.classList.toggle('active', b === btn));
   filterVuln();
 }}
 
 function filterVuln() {{
   const q = document.getElementById('vq').value.toLowerCase();
   document.querySelectorAll('#vuln-table tbody tr').forEach(row => {{
-    const txt  = row.textContent.toLowerCase();
-    const sev  = row.dataset.sev || '';
+    const txt      = row.textContent.toLowerCase();
+    const sev      = row.dataset.sev || '';
     const matchQ   = !q || txt.includes(q);
     const matchSev = !sevFilter || sev.includes(sevFilter);
     row.style.display = (matchQ && matchSev) ? '' : 'none';
