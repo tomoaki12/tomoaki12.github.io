@@ -18,8 +18,8 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 cd /d "%~dp0.."
-git add security-dashboard/index.html security-dashboard/jp_security_seen.json
-git diff --cached --quiet || git commit -m "auto update security-dashboard: %DATE% %TIME%"
+git add jp-security/index.html jp-security/jp_security_seen.json
+git diff --cached --quiet || git commit -m "auto update jp-security: %DATE% %TIME%"
 
 git push origin main
 if %ERRORLEVEL% NEQ 0 (
