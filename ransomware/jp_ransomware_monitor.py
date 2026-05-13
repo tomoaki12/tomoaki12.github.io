@@ -714,21 +714,12 @@ def main():
             seen.add(rid)
     log(f"新着: {len(new_raw)}件")
 
-    # 3. 企業情報調査（Claude AI）＋ プレスリリース確認（Google）
+    # 3. CSV行組み立て（企業調査・プレスリリース確認はスキップ）
     new_records = []
     for i, rec in enumerate(new_raw, 1):
         name  = rec["被害組織名"]
         group = rec.get("攻撃グループ", "")
-        desc  = rec.get("被害概要_raw", "")
-        log(f"  [{i}/{len(new_raw)}] 調査: {name}")
-
-        ai = research_with_claude(name, group, desc)
-        time.sleep(1.5)
-
-        org_url = ai.get("被害組織URL", "")
-        log(f"         プレスリリース検索中...")
-        pr_status, pr_url = check_press_release(name, org_url)
-        log(f"         → {pr_status}")
+        log(f"  [{i}/{len(new_raw)}] 追加: {name}")
 
         new_records.append({
             "調査日時":          now_str,
@@ -736,23 +727,22 @@ def main():
             "情報源":            rec.get("情報源",""),
             "攻撃グループ":      group,
             "被害組織名":        name,
-            "被害組織URL":       org_url or "不明",
-            "被害組織_所在地":   ai.get("被害組織_所在地","不明"),
-            "被害組織_事業内容": ai.get("被害組織_事業内容","不明"),
-            "被害組織_資本金":   ai.get("被害組織_資本金","不明"),
-            "被害組織_従業員数": ai.get("被害組織_従業員数","不明"),
+            "被害組織URL":       "不明",
+            "被害組織_所在地":   "不明",
+            "被害組織_事業内容": "不明",
+            "被害組織_資本金":   "不明",
+            "被害組織_従業員数": "不明",
             "スクリーンショットURL": rec.get("スクリーンショットURL",""),
             "リークページURL":   rec.get("リークページURL",""),
-            "日本関連_有無":     ai.get("日本関連_有無","不明"),
-            "日本関連_関係":     ai.get("日本関連_関係",""),
-            "日本関連_組織名":   ai.get("日本関連_組織名",""),
-            "日本関連_URL":      ai.get("日本関連_URL",""),
-            "日本関連_所在地":   ai.get("日本関連_所在地",""),
-            "日本関連_事業内容": ai.get("日本関連_事業内容",""),
-            "日本関連_資本金":   ai.get("日本関連_資本金",""),
-            "日本関連_従業員数": ai.get("日本関連_従業員数",""),
+            "日本関連_有無":     "不明",
+            "日本関連_関係":     "",
+            "日本関連_組織名":   "",
+            "日本関連_URL":      "",
+            "日本関連_所在地":   "",
+            "日本関連_事業内容": "",
+            "日本関連_資本金":   "",
+            "日本関連_従業員数": "",
         })
-        time.sleep(2)
 
     # 4. 保存
     if new_records:
