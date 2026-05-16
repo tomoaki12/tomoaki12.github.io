@@ -104,6 +104,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-05-15</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000072.html" target="_blank" rel="noopener">GUARDIANWALL MailSuiteにおけるスタックベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-32661</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">キヤノンマーケティングジャパン株式会社が提供するGUARDIANWALL MailSuiteには、次の脆弱性が存在します。  pop3wallpasswdコマンドにおけるスタックベースのバッファオーバーフロー（CWE-121）- CVE-2026-32661  pop3wallpasswdがgrdnwwwユーザ権限で実行される構成の場合、本脆弱性の影響を受けます。  開発者によると、GUARDIA</td>
+      </tr>
       <tr data-sev="High 8.1" data-src="JVN iPedia">
         <td class="date">2026-05-15</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -446,13 +453,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015686.html" target="_blank" rel="noopener">アドビのAdobe Commerce等の複数製品におけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-34686, CVE-2026-34686</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.7</span></td>
         <td class="desc">Adobe Commerce バージョン 2.4.9-beta1、2.4.8-p4、2.4.7-p9、2.4.6-p14、2.4.5-p16、2.4.4-p17 およびそれ以前のバージョンは、ストアド クロスサイトスクリプティング（XSS）脆弱性の影響を受けています。この脆弱性は、権限の低い攻撃者が脆弱なフォームフィールドに悪意のあるスクリプトを注入するために悪用される可能性があります。攻撃者によ</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-05-15</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-015685.html" target="_blank" rel="noopener">アドビのAdobe After Effectsにおけるスタックベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-34690, CVE-2026-34690</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">After Effectsのバージョン26.0、25.6.4およびそれ以前のバージョンには、スタックベースのバッファオーバーフローの脆弱性が存在し、これにより現在のユーザーのコンテキストで任意のコードが実行される可能性があります。この問題を悪用するためには、被害者が悪意のあるファイルを開くなどのユーザー操作が必要です。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-05-15</td>
@@ -841,6 +841,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-05-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184486" target="_blank" rel="noopener">「Exchange Server」に脆弱性 - すでに悪用を確認、パッチは準備中</a></td>
+        <td class="desc">「Microsoft Exchange Server」に脆弱性が明らかとなった。すでに悪用を確認しており、同社では修正プログラムの準備を進めている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-05-14</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/184451" target="_blank" rel="noopener">「Cisco Catalyst SD-WAN」に脆弱性、悪用も - 証跡保全と侵害調査を</a></td>
@@ -857,6 +863,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/184481" target="_blank" rel="noopener">Linuxカーネルにローカル権限昇格の脆弱性「Fragnesia」</a></td>
         <td class="desc">Linuxカーネルにおいて、ローカルユーザーがroot権限を取得できる脆弱性「Fragnesia」が明らかとなった。実証コードも公開されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184498" target="_blank" rel="noopener">「PHP」に複数の「クリティカル」脆弱性 - アップデートで解消</a></td>
+        <td class="desc">PHPの開発チームは、現地時間2026年5月7日にセキュリティアップデートをリリースした。深刻な脆弱性などを解消している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184490" target="_blank" rel="noopener">スマホ向け「Microsoft Authenticator」、トークン漏洩のおそれ</a></td>
+        <td class="desc">マイクロソフトのスマートデバイス向け認証アプリ「Microsoft Authenticator」に、ユーザーがサインインに用いるアクセストークンが漏洩する脆弱性が確認された。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184494" target="_blank" rel="noopener">エレコム製ルーターなどに複数脆弱性 - 21モデルに影響</a></td>
+        <td class="desc">エレコム製の無線LANルーターや無線アクセスポイントに複数の脆弱性が明らかとなった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184506" target="_blank" rel="noopener">米当局、「Cisco SD-WAN」の脆弱性悪用で緊急対応を要請</a></td>
+        <td class="desc">米当局は、「Cisco SD-WAN」の脆弱性を標的としたゼロデイ攻撃が発生しているとして米政府機関に対し、侵害調査を含めた緊急対応を要請した。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-05-15</td>
@@ -929,43 +959,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/184221" target="_blank" rel="noopener">修学旅行の添乗員が生徒の個人情報含む資料を紛失 - 北広島市</a></td>
         <td class="desc">北海道北広島市教育委員会は、中学校の修学旅行中に、旅行会社の添乗員が生徒や引率教員の個人情報を含む資料を紛失したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184376" target="_blank" rel="noopener">「GUARDIANWALL MailSuite」に深刻な脆弱性 - すでに悪用も</a></td>
-        <td class="desc">キヤノンマーケティングジャパンが提供するメールセキュリティ製品「GUARDIANWALL MailSuite」に脆弱性が判明した。悪用が確認されており、パッチの適用はもちろん、侵害状況の調査なども呼びかけられている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-12</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184334" target="_blank" rel="noopener">MS、5月の月例セキュリティ更新をリリース - 脆弱性118件に対応</a></td>
-        <td class="desc">マイクロソフトは現地時間2026年5月12日、月例セキュリティ更新プログラムを公開した。あわせて118件の脆弱性に対応している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184343" target="_blank" rel="noopener">「FortiAuthenticator」に深刻な脆弱性 - 認証なしでコード実行のおそれ</a></td>
-        <td class="desc">Fortinetが提供する認証管理ソリューション「FortiAuthenticator」に深刻な脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184346" target="_blank" rel="noopener">Apple、「iOS 26.5」「iPadOS 26.5」で多数脆弱性を修正 - 旧端末向け更新も</a></td>
-        <td class="desc">Appleは、「iOS」「iPadOS」のセキュリティアップデートをリリースした。幅広いコンポーネントにおける脆弱性へ対処している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184338" target="_blank" rel="noopener">Mozilla、「Firefox 150.0.3」を公開 - 脆弱性5件を修正</a></td>
-        <td class="desc">「Firefox」に複数の脆弱性が判明し、Mozilla Foundationはセキュリティアップデートをリリースした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年05月15日 13:20 JST</span>
+  <span>最終更新: 2026年05月16日 13:04 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
