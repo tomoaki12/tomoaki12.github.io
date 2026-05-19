@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">31</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">30</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">103</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,6 +104,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-05-18</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016222.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年05月14日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年05月14日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：17件 ICSA-26-134-01 Siemens gWAP ICSA-26-134-02 Siemens Ruggedcom Rox ICSA-26-134-03 Siemens Solid Edge ICSA-26-134-04 Siem</td>
+      </tr>
       <tr data-sev="Medium 5.5" data-src="JVN iPedia">
         <td class="date">2026-05-18</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -446,13 +453,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016169.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1809等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-34340, CVE-2026-34340</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
         <td class="desc">Windows Projected File SystemにおけるUse after freeの脆弱性により、認証された攻撃者がローカルで権限を昇格させることが可能です。</td>
-      </tr>
-      <tr data-sev="High 7" data-src="JVN iPedia">
-        <td class="date">2026-05-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016168.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における二重解放に関する脆弱性</a><div class="cve-row">CVE-2026-34341, CVE-2026-34341</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
-        <td class="desc">Windowsのリンク層探索プロトコル（LLDP）におけるダブルフリーの脆弱性により、認証された攻撃者がローカルで特権を昇格させることが可能です。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-05-15</td>
@@ -841,10 +841,46 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-05-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184566" target="_blank" rel="noopener">LLMアプリ開発基盤「Dify」に複数のクリティカル脆弱性</a></td>
+        <td class="desc">大規模言語モデル（LLM）アプリ開発プラットフォーム「Dify」に情報漏洩や設定の改ざんなど複数の脆弱性が明らかとなった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184573" target="_blank" rel="noopener">F5が四半期アドバイザリ、「BIG-IP」関連に多数脆弱性</a></td>
+        <td class="desc">F5は現地時間2026年5月13日、四半期セキュリティ通知を公開し、「BIG-IP」関連製品における多数の脆弱性について明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184283" target="_blank" rel="noopener">損害調査法人がランサム被害 - ファイル転送ツールの痕跡も</a></td>
+        <td class="desc">損害保険会社から委託を受け、貨物や船舶の損害調査業務を行う新日本検定協会は、サイバー攻撃を受けてシステム障害が発生した問題で、調査の結果、個人情報が流出した可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184591" target="_blank" rel="noopener">内閣府サイト掲載のNPO法人役員名簿で墨塗り処理に不備 - 栃木県</a></td>
+        <td class="desc">栃木県は、内閣府のサイトに掲載されたNPO法人の役員名簿のマスキング処理に不備があったことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184217" target="_blank" rel="noopener">子会社の「LNG受発注システム」で侵害痕跡を確認 - 北海道ガス</a></td>
+        <td class="desc">北海道ガスは、業務委託先である子会社のサーバがサイバー攻撃を受けたことを明らかにした。同社従業員や取引先関係者の個人情報が流出した可能性があるという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-05-17</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/184521" target="_blank" rel="noopener">米当局、「Exchange Server」ゼロデイ脆弱性に注意喚起</a></td>
         <td class="desc">米当局は、「Microsoft Exchange Server」に判明したゼロデイ脆弱性について注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184549" target="_blank" rel="noopener">「MongoDB」に深刻な脆弱性 - 早急な対応を強く推奨</a></td>
+        <td class="desc">NoSQLデータベース「MongoDB Server」に脆弱性が明らかとなった。可能なかぎり早急にアップデートを実施するよう強く推奨している。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-05-18</td>
@@ -857,6 +893,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/184528" target="_blank" rel="noopener">「MS Edge」にセキュリティ更新 - 独自含む脆弱性76件を修正</a></td>
         <td class="desc">マイクロソフトは現地時間2026年5月15日、同社ブラウザ「Microsoft Edge」の最新版を公開した。同ブラウザ固有の脆弱性も複数修正している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184554" target="_blank" rel="noopener">「Apache Flink」にコードインジェクションの脆弱性 - 重要度「クリティカル」</a></td>
+        <td class="desc">ストリーミングデータの分析ツール「Apache Flink」に脆弱性が明らかとなった。アップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184511" target="_blank" rel="noopener">海外子会社にサイバー攻撃、個人情報流出の可能性 - 象印</a></td>
+        <td class="desc">象印マホービンは、海外子会社がサイバー攻撃を受けてシステム障害が発生したことを明らかにした。同子会社が管理する機密情報や個人情報が流出した可能性がある。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184533" target="_blank" rel="noopener">WPS Office旧脆弱性、2020年以降の製品などにも影響</a></td>
+        <td class="desc">Windows向けに提供されているオフィススイート「WPS Office」に脆弱性が判明した。2018年に公開された脆弱性だが、以降にリリースされた製品も影響を受ける。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184476" target="_blank" rel="noopener">27店舗で印鑑届の紛失が判明、誤廃棄の可能性 - 豊川信金</a></td>
+        <td class="desc">豊川信用金庫は、全店で調査を行ったところ、27店舗で印鑑届の紛失が判明したことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-05-17</td>
@@ -899,73 +959,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/184490" target="_blank" rel="noopener">スマホ向け「Microsoft Authenticator」、トークン漏洩のおそれ</a></td>
         <td class="desc">マイクロソフトのスマートデバイス向け認証アプリ「Microsoft Authenticator」に、ユーザーがサインインに用いるアクセストークンが漏洩する脆弱性が確認された。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-15</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184494" target="_blank" rel="noopener">エレコム製ルーターなどに複数脆弱性 - 21モデルに影響</a></td>
-        <td class="desc">エレコム製の無線LANルーターや無線アクセスポイントに複数の脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-15</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184506" target="_blank" rel="noopener">米当局、「Cisco SD-WAN」の脆弱性悪用で緊急対応を要請</a></td>
-        <td class="desc">米当局は、「Cisco SD-WAN」の脆弱性を標的としたゼロデイ攻撃が発生しているとして米政府機関に対し、侵害調査を含めた緊急対応を要請した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-15</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184472" target="_blank" rel="noopener">Hitachi Vantaraのデータ統合分析基盤「Pentaho」に深刻な脆弱性</a></td>
-        <td class="desc">データの統合や分析などの機能を提供するソフトウェア「Pentaho Data Integration &amp; Analytics」に深刻な脆弱性が明らかとなった。アップデートが呼びかけられている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-15</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184463" target="_blank" rel="noopener">「VMware Fusion」に権限昇格の脆弱性 - 修正版を公開</a></td>
-        <td class="desc">デスクトップ仮想化ソフト「VMware Fusion」に脆弱性が明らかとなった。アップデートが提供されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184434" target="_blank" rel="noopener">ウェブサーバ「nginx」に複数脆弱性 - 「クリティカル」も</a></td>
-        <td class="desc">ウェブサーバ「nginx」に複数の脆弱性が判明した。「クリティカル」とされる脆弱性も修正されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184387" target="_blank" rel="noopener">「FortiOS」にFortinet製ネットワーク機器から悪用可能な脆弱性</a></td>
-        <td class="desc">FortinetのUTM製品である「FortiGate」にOSとして搭載されている「FortiOS」に脆弱性が明らかとなった。「FortiAP」など同社ネットワーク機器を制御できる場合に悪用が可能だという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184427" target="_blank" rel="noopener">SAP、5月の定例アップデート15件を公開 - 2件は「クリティカル」</a></td>
-        <td class="desc">SAPは現地時間2026年5月12日、複数製品に関するセキュリティアドバイザリを公開した。「クリティカル」とされるものも含め、脆弱性を解消している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184393" target="_blank" rel="noopener">Apple、「macOS Tahoe 26.5」を公開 - 脆弱性79件を修正</a></td>
-        <td class="desc">Appleは現地時間2026年5月11日、Mac向けにセキュリティアップデート「macOS Tahoe 26.5」「macOS Sequoia 15.7.7」「macOS Sonoma 14.8.7」をリリースした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184371" target="_blank" rel="noopener">キヤノン製プリンタ、複合機に情報取得の脆弱性 - 162モデルに影響</a></td>
-        <td class="desc">キヤノン製プリンタやオフィス向け複合機などに、脆弱性が判明した。ファームウェアのアップデートが呼びかけられている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184409" target="_blank" rel="noopener">Adobe、「Adobe Commerce」など10製品に向けてアップデート</a></td>
-        <td class="desc">Adobeは現地時間2026年5月12日、セキュリティアドバイザリを公開し、複数製品に向けて脆弱性を修正するアップデートをリリースした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年05月18日 13:43 JST</span>
+  <span>最終更新: 2026年05月19日 13:35 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
