@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">21</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">20</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">107</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,18 +104,25 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
-      <tr data-sev="" data-src="JVN iPedia">
+      <tr data-sev="Medium 6.8" data-src="JVN iPedia">
         <td class="date">2026-05-25</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000079.html" target="_blank" rel="noopener">NEC AtermシリーズにおけるOSコマンドインジェクションの脆弱性（NV26-003）</a><div class="cve-row">CVE-2026-8652</div></td>
-        <td><span class="na">—</span></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.8</span></td>
         <td class="desc">日本電気株式会社が提供するAtermシリーズには、次の脆弱性が存在します。  OSコマンドインジェクション（CWE-78）- CVE-2026-8652  この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：三井物産セキュアディレクション株式会社 加藤 創 氏</td>
       </tr>
       <tr data-sev="" data-src="JVN iPedia">
         <td class="date">2026-05-25</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000078.html" target="_blank" rel="noopener">NEC Atermシリーズにおけるクロスサイトスクリプティングの脆弱性（NV26-002）</a><div class="cve-row">CVE-2026-6059</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016977.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年05月21日）</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
+        <td class="desc">2026年05月21日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：5件 ICSA-26-141-01 Hitachi Energy GMS600 ICSA-26-141-02 ABB B&amp;R PCs ICSA-26-141-03 ABB B&amp;R Automation Studio ICSA-26-141-04</td>
+      </tr>
+      <tr data-sev="Low 3.8" data-src="JVN iPedia">
+        <td class="date">2026-05-25</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000078.html" target="_blank" rel="noopener">NEC Atermシリーズにおけるクロスサイトスクリプティングの脆弱性（NV26-002）</a><div class="cve-row">CVE-2026-6059</div></td>
+        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.8</span></td>
         <td class="desc">日本電気株式会社が提供するAtermシリーズには、次の脆弱性が存在します。  クロスサイトスクリプティング（CWE-79）- CVE-2026-6059  この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：株式会社サイバーディフェンス研究所 岩崎 徳明 氏</td>
       </tr>
       <tr data-sev="" data-src="JVN iPedia">
@@ -447,19 +454,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
         <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。libcephのceph_monmap_decode()関数内で非負値に対してu32型を使用する問題がありました。このパッチは、ceph_monmap_decode()内でblob_lenおよびnum_monの符号を不必要に変更する暗黙の型変換を修正します。現在、blob_lenとnum_monは符号付きのint型変数ですが、これらは常に非</td>
       </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-05-25</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-016889.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-43406, CVE-2026-43406</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。libcephのprocess_message_header()関数における潜在的な境界外読み取りを防止します。メッセージフレームが（悪意を持って）破損し、制御セグメントの長さがメッセージヘッダーのサイズ未満になる場合や、異なるフレームがメッセージフレームのように見える場合に、process_message_header()で境界外読み取り</td>
-      </tr>
       <tr data-sev="" data-src="JVN">
-        <td class="date">2026-05-25</td>
+        <td class="date">2026-05-26</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96811810/" target="_blank" rel="noopener">Linuxカーネルにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96879318/" target="_blank" rel="noopener">SGLangにおける複数の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+        <td class="desc">SGLangには複数の脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-05-25</td>
@@ -474,6 +474,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/jp/JVN69049186/" target="_blank" rel="noopener">NEC Atermシリーズにおけるクロスサイトスクリプティングの脆弱性（NV26-002）</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">日本電気株式会社が提供するAtermシリーズには、クロスサイトスクリプティングの脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-05-25</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96811810/" target="_blank" rel="noopener">Linuxカーネルにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-05-22</td>
@@ -586,13 +593,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97068023/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年05月12日）</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">2026年05月12日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-05-12</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN94012927/" target="_blank" rel="noopener">エレコム無線LAN関連製品における複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">エレコム株式会社が提供する無線LAN関連製品には、複数の脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-05-22</td>
@@ -869,6 +869,36 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-05-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184933" target="_blank" rel="noopener">「nginx」の「rewriteモジュール」に脆弱性 - 修正版が公開</a></td>
+        <td class="desc">ウェブサーバ「nginx」の一部モジュールに脆弱性が明らかとなった。脆弱性を解消したアップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184937" target="_blank" rel="noopener">ウェブメール「Roundcube」に複数脆弱性 - アップデートが公開</a></td>
+        <td class="desc">ウェブメールクライアント「Roundcube Webmail」に複数の脆弱性が明らかとなった。最新版へアップデートするよう呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-25</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184925" target="_blank" rel="noopener">NECのルータ製品「Aterm」シリーズに脆弱性 - 11製品に影響</a></td>
+        <td class="desc">NECのルータ製品「Aterm」シリーズに複数の脆弱性が明らかとなった。11モデルに影響があり、利用者にアップデートが呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184942" target="_blank" rel="noopener">iOS版「Firefox」にアップデート - 「なりすまし」脆弱性を解消</a></td>
+        <td class="desc">Mozilla Foundationは現地時間2026年5月25日、「Firefox for iOS」に脆弱性が明らかになったとしてアップデートをリリースした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-25</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184874" target="_blank" rel="noopener">「情報セキュリティ10大脅威 2026」の個人編ハンドブックが公開</a></td>
+        <td class="desc">情報処理推進機構（IPA）は、「情報セキュリティ10大脅威2026 個人編」のハンドブックを公開した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-05-24</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/184859" target="_blank" rel="noopener">「Drupal」のSQLi脆弱性、悪用確認で米当局が対策呼びかけ</a></td>
@@ -883,8 +913,32 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-src="SecurityNext">
         <td class="date">2026-05-25</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184874" target="_blank" rel="noopener">「情報セキュリティ10大脅威 2026」の個人編ハンドブックが公開</a></td>
-        <td class="desc">情報処理推進機構（IPA）は、「情報セキュリティ10大脅威2026 個人編」のハンドブックを公開した。</td>
+        <td class="title-cell"><a href="https://www.security-next.com/184882" target="_blank" rel="noopener">米子会社にサイバー攻撃か、影響など詳細を調査 - 河合楽器</a></td>
+        <td class="desc">河合楽器製作所は、米国の子会社がサイバー攻撃により侵害された可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-25</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184740" target="_blank" rel="noopener">一部サーバでランサムウェア被害 - キャンディルグループ会社</a></td>
+        <td class="desc">キャンディルのグループ会社で住宅のメンテナンスサービスなどを展開するキャンディルパートナーズは、一部サーバがランサムウェアによるサイバー攻撃を受けたことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-25</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184478" target="_blank" rel="noopener">配達員がバイクで用水路に転落、郵便物が所在不明に - 郵便局</a></td>
+        <td class="desc">日本郵便は、郵便局の配達員がバイクごと用水路に転落し、一部郵便物が所在不明となっていることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-25</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184887" target="_blank" rel="noopener">メール誤送信、ポイント事業参加店舗のメアドが流出 - 宮城県</a></td>
+        <td class="desc">宮城県は、メールの誤送信が発生し、みやぎポイント事業に参加する一部店舗のメールアドレスが流出したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-25</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184673" target="_blank" rel="noopener">交通指導員が小学校児童の登下校用名簿を紛失 - 名古屋市</a></td>
+        <td class="desc">名古屋市は、小学校児童における登下校の安全確保を目的に作成された名簿が所在不明となっていることを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-05-24</td>
@@ -933,67 +987,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/184742" target="_blank" rel="noopener">SNS公開のインタビュー動画に患者が映り込み - 大田記念病院</a></td>
         <td class="desc">脳神経センター大田記念病院は、人材採用に向けてSNSで公開した広報動画に、同院の入院患者が映り込んでいたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-22</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184586" target="_blank" rel="noopener">ふるさと納税寄付者の非公開氏名をサイトに誤掲載 - 八重瀬町</a></td>
-        <td class="desc">沖縄県八重瀬町は、ふるさと納税寄付者の個人情報を、同町のウェブサイトで誤って公開していたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-22</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184747" target="_blank" rel="noopener">Android版「ロボフォーム」に脆弱性 - 意図しないファイルDLのおそれ</a></td>
-        <td class="desc">Siber Systemsが提供するパスワード管理アプリ「パスワード管理 ロボフォーム」のAndroid版に脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-22</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184662" target="_blank" rel="noopener">県立高の授業見学申込フォームで個人情報が閲覧可能に - 群馬県</a></td>
-        <td class="desc">群馬県は、県内高校において、授業見学の申し込みフォームに不備があったことを明らかにした。個人情報が閲覧できる状態だったという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-21</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184772" target="_blank" rel="noopener">「TrendAI Apex One」に複数脆弱性 - 一部はすでに悪用</a></td>
-        <td class="desc">トレンドマイクロの企業向けエンドポイントセキュリティ製品「TrendAI Apex One（旧Trend Micro Apex One）」に複数の脆弱性が判明した。一部脆弱性は、すでに悪用が確認されているという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-21</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184732" target="_blank" rel="noopener">「Drupal」に深刻なSQLi脆弱性 - 影響ない環境も更新を強く推奨</a></td>
-        <td class="desc">コンテンツマネジメントシステム「Drupal」のコア部分においてSQLインジェクションの脆弱性が判明した。大きな影響を及ぼすおそれがあり、注意を呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-20</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184720" target="_blank" rel="noopener">ワークロード保護製品「Cisco Secure Workload」に深刻な脆弱性</a></td>
-        <td class="desc">ワークロード間通信を可視化し、トラフィックのアクセス制御機能を提供する「Cisco Secure Workload（旧Cisco Tetration）」の内部REST APIに深刻な脆弱性が明らかとなった。アップデートを提供している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-21</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184778" target="_blank" rel="noopener">「Microsoft Defender」に権限昇格やDoS脆弱性 - 悪用を確認</a></td>
-        <td class="desc">マイクロソフトは現地時間2026年5月19日、Windowsで動作する「Microsoft Defender」のセキュリティアドバイザリを公開し、複数の脆弱性が悪用されたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-21</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184727" target="_blank" rel="noopener">「Chrome」にセキュリティ更新 - クリティカル含む脆弱性16件を修正</a></td>
-        <td class="desc">Googleは現地時間2026年5月19日、同社ブラウザ「Chrome」のセキュリティアップデートを公開した。重要度が「クリティカル」とされる脆弱性も複数含まれる。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-21</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184760" target="_blank" rel="noopener">「BIND 9」に複数の脆弱性、すみやかな更新を強く推奨</a></td>
-        <td class="desc">DNSサーバ「BIND 9」に複数の脆弱性が判明した。提供元や関係者はアップデートを呼びかけている。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年05月25日 13:53 JST</span>
+  <span>最終更新: 2026年05月26日 13:35 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
