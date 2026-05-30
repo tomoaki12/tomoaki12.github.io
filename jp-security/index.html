@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">33</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">32</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">103</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,6 +104,20 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-05-29</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017320.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年05月26日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年05月26日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：7件 ICSA-26-146-01 ABB Terra AC ICSA-26-146-02 ABB AC500 V2 ICSA-26-146-03 ABB AbilityTM Zenon Remote Transport Vulnerabili</td>
+      </tr>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-05-29</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017319.html" target="_blank" rel="noopener">Casdoorにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-6815</div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Casdoorはオープンソースのアイデンティティおよびアクセス管理（IAM）プラットフォームです。Casdoorのローカルファイルシステムストレージプロバイダーには、ユーザによって設定されたパスプレフィックスの検証不備に起因するパストラバーサルの脆弱性（CWE-22、CVE-2026-6815）が存在します。</td>
+      </tr>
       <tr data-sev="Critical 9.8" data-src="JVN iPedia">
         <td class="date">2026-05-29</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -439,20 +453,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017269.html" target="_blank" rel="noopener">NVIDIAのgpu display driverにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-24199, CVE-2026-24199</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.7</span></td>
         <td class="desc">NVIDIAのLinux向けディスプレイドライバーには、カーネルモジュールに脆弱性があり、ユーザーがコンパイラーまたはプロセッサのメモリ命令の順序を入れ替えることで競合状態を引き起こす可能性があります。この脆弱性が悪用されると、サービス拒否（DoS）を引き起こします。</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-05-29</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017268.html" target="_blank" rel="noopener">NVIDIAのIsaac Launchableにおける重要な情報の平文での送信に関する脆弱性</a><div class="cve-row">CVE-2026-24212, CVE-2026-24212</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">NVIDIA Isaac Launchable for Linuxには、機密情報が平文で送信される脆弱性があります。この脆弱性を悪用されると、コードの実行や権限の昇格、情報の漏洩、およびデータの改ざんが発生する可能性があります。</td>
-      </tr>
-      <tr data-sev="Medium 6.1" data-src="JVN iPedia">
-        <td class="date">2026-05-29</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017267.html" target="_blank" rel="noopener">Joomla!におけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-25900, CVE-2026-25900</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.1</span></td>
-        <td class="desc">出力時にエスケープ処理が欠如しているため、フィードモジュールにXSSの脆弱性が発生します。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-05-29</td>
@@ -841,6 +841,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-05-29</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185192" target="_blank" rel="noopener">Oracleが補完パッチ、5製品35件の脆弱性を修正 - クリティカル11件</a></td>
+        <td class="desc">Oracleは現地時間2026年5月28日、「クリティカルセキュリティパッチアップデート（CSPU）」をリリースした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-05-28</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/185143" target="_blank" rel="noopener">「Chrome」に151件の脆弱性 - 22件が「クリティカル」</a></td>
@@ -863,6 +869,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/185141" target="_blank" rel="noopener">「GitLab」にアップデート - 脆弱性7件を修正</a></td>
         <td class="desc">GitLabは現地時間2026年5月27日、セキュリティアップデートとなる「同19.0.1」「同18.11.4」「同18.10.7」をリリースした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-29</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185007" target="_blank" rel="noopener">偽警告被害、ファイル共有サービス利用時に誘導 - 北九州市立大</a></td>
+        <td class="desc">北九州市立大学は、職員が偽警告にだまされ、利用していたパソコンを遠隔から操作されたことを明らかにした。端末内部には個人情報が保存されていたという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-29</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185103" target="_blank" rel="noopener">ランサムウェア被害が発生、受発注や出荷に影響 - 松沢書店</a></td>
+        <td class="desc">楽譜や音楽関連書籍の卸売りを手がける松沢書店は、サイバー攻撃を受けたことを明らかにした。受発注や出荷業務に影響が生じたが、発注システムについては順次復旧が進められている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-29</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185018" target="_blank" rel="noopener">住宅相談者の個人情報含む書類が所在不明に - 港区</a></td>
+        <td class="desc">東京都港区は、「すまいの専門相談」の相談者の個人情報を含む書類が所在不明になっていることを明らかにした。誤って廃棄した可能性があるという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-05-29</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185108" target="_blank" rel="noopener">住民の個人情報含むデータを福祉事業所に誤送信 - 鷹栖町</a></td>
+        <td class="desc">北海道鷹栖町は、住民の個人情報を含むデータを町内の福祉事業所へ誤って送信するミスがあったことを公表した。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-05-27</td>
@@ -929,43 +959,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/185038" target="_blank" rel="noopener">「GitHub Enterprise Server」にクリティカル脆弱性 - 修正版が公開</a></td>
         <td class="desc">「GitHub Enterprise Server（GHES）」に複数の脆弱性が明らかとなった。重要度が「クリティカル」とされる修正も複数含まれる。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-26</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184986" target="_blank" rel="noopener">「LiteSpeed cPanel Plugin」に脆弱性 - すでに悪用も、侵害有無の確認を</a></td>
-        <td class="desc">「LiteSpeed Web Server」利用者向けのプラグイン「LiteSpeed cPanel Plugin」に深刻な脆弱性が判明した。すでに悪用が確認されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184994" target="_blank" rel="noopener">「WebSphere」のウェブサーバプラグインに深刻な脆弱性</a></td>
-        <td class="desc">「IBM WebSphere Application Server」や「WebSphere Application Server Liberty」のオプションプラグインに深刻な脆弱性が明らかとなった。暫定的な修正パッチが提供されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185001" target="_blank" rel="noopener">VPNクライアント「OpenVPN Connect」macOS版に脆弱性 - 修正版公開</a></td>
-        <td class="desc">VPNクライアント「OpenVPN Connect」のmacOS版に深刻な脆弱性が明らかとなった。アップデートが提供されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185012" target="_blank" rel="noopener">インスタアカが乗っ取り被害、復旧後も不正アクセス - 南知多町観光協会</a></td>
-        <td class="desc">愛知県南知多町観光協会は、同協会が運営する複数の「Instagram」アカウントが乗っ取り被害に遭ったことを明らかにした。すでにアカウントは停止状態にあるという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184469" target="_blank" rel="noopener">メルアカに不正アクセス、総当り攻撃受け - エスペック</a></td>
-        <td class="desc">環境試験機器メーカーのエスペックは、従業員1人が利用するメールアカウントが不正アクセスを受けたことを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年05月29日 13:44 JST</span>
+  <span>最終更新: 2026年05月30日 13:18 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
