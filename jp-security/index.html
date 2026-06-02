@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">32</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">31</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">103</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,6 +104,20 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="Medium 5" data-src="JVN iPedia">
+        <td class="date">2026-06-01</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017322.html" target="_blank" rel="noopener">キヤノン製My Image Garden for macOSおよびCUPS Printer Driver for macOSにおけるファイルアクセス時のリンク解釈が不適切な脆弱性</a><div class="cve-row">CVE-2026-6891, CVE-2026-6892</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5</span></td>
+        <td class="desc">キヤノン株式会社が提供するMy Image Garden for macOSおよびCUPS Printer Driver for macOSには、次の脆弱性が存在します。    ファイルアクセス時のリンク解釈が不適切（CWE-59） - CVE-2026-6891、CVE-2026-6892  この脆弱性情報は、製品利用者への周知を目的に、開発者が JPCERT/CC に報告し、JPCERT/CC</td>
+      </tr>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-06-01</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017321.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年05月28日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年05月28日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：9件 ICSA-26-148-01 MacGregor Voyage Data Recorder (VDR) G4e ICSA-26-148-02 Jinan USR IOT Technology Limited (PUSR) USR-W610</td>
+      </tr>
       <tr data-sev="" data-src="JVN iPedia">
         <td class="date">2026-05-29</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -440,19 +454,19 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
         <td class="desc">Microsoft Power Pagesにおけるコマンドで使用される特殊要素が適切に無害化されていない（「コマンドインジェクション」）ため、認可されていない攻撃者がネットワーク経由でコードを実行する可能性があります。</td>
       </tr>
-      <tr data-sev="High 7.1" data-src="JVN iPedia">
-        <td class="date">2026-05-29</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017270.html" target="_blank" rel="noopener">lfprojectsのmlflowにおけるサーバサイドのリクエストフォージェリの脆弱性</a><div class="cve-row">CVE-2026-2393, CVE-2026-2393</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
-        <td class="desc">MLflowのバージョン3.9.0より前のバージョンには、サーバーサイドリクエストフォージェリ（SSRF）脆弱性が存在します。`mlflow/server/handlers.py`の`_create_webhook()`関数は検証なしにユーザー制御の`url`パラメータを受け入れ、`mlflow/webhooks/delivery.py`の`_send_webhook_request()`関数は攻</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-06-02</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90461576/" target="_blank" rel="noopener">Windowsカーネルドライバ「PCTCore64.sys」における不適切なアクセス制御</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
-      <tr data-sev="Medium 4.7" data-src="JVN iPedia">
-        <td class="date">2026-05-29</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-017269.html" target="_blank" rel="noopener">NVIDIAのgpu display driverにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-24199, CVE-2026-24199</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.7</span></td>
-        <td class="desc">NVIDIAのLinux向けディスプレイドライバーには、カーネルモジュールに脆弱性があり、ユーザーがコンパイラーまたはプロセッサのメモリ命令の順序を入れ替えることで競合状態を引き起こす可能性があります。この脆弱性が悪用されると、サービス拒否（DoS）を引き起こします。</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-06-02</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU95687008/" target="_blank" rel="noopener">TP-Link製ルーターArcher BE450およびBE7200におけるOSコマンドインジェクションの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">TP-Linkが提供するArcher BE450およびBE7200には、OSコマンドインジェクションの脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-06-01</td>
@@ -579,20 +593,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU93461473/" target="_blank" rel="noopener">Androidアプリ「パスワード管理 ロボフォーム」のintent処理における検証不備の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">Siber Systems, Inc.が提供するAndroidアプリ「パスワード管理 ロボフォーム」は、intent経由で渡されたURLをオープンする際に十分な検証を行っていません。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-05-20</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU93294524/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年05月19日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年05月19日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-05-19</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN03037325/" target="_blank" rel="noopener">エレコム製無線LANルーターおよび無線アクセスポイントにおける複数の脆弱性（2026年5月）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">エレコム株式会社が提供する無線LANルーターおよび無線アクセスポイントには、複数の脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-05-22</td>
@@ -843,6 +843,24 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-src="SecurityNext">
         <td class="date">2026-06-01</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185246" target="_blank" rel="noopener">米当局、「Oracle WebLogic Server」既知脆弱性の悪用に警鐘</a></td>
+        <td class="desc">米当局は、OracleのJavaアプリケーションサーバ「WebLogic Server」に関する既知の脆弱性が悪用されているとして早急に対策を講じるよう注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185252" target="_blank" rel="noopener">「WebSphere App Server」に複数の深刻な脆弱性 - 暫定パッチ公開</a></td>
+        <td class="desc">「IBM WebSphere Application Server」に複数の深刻な脆弱性が明らかになった。暫定的に対策を講じる修正パッチが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185257" target="_blank" rel="noopener">「Cloud Foundry UAA」にEC秘密鍵情報が漏洩するおそれ</a></td>
+        <td class="desc">「Cloud Foundry」で利用される認証認可コンポーネント「Cloud Foundry UAA」に深刻な脆弱性が明らかとなった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/185216" target="_blank" rel="noopener">不正なVPN接続を確立できる「PAN-OS」脆弱性 - 悪用を確認</a></td>
         <td class="desc">Palo Alto Networksの「PAN-OS」において2026年5月に判明した脆弱性が悪用されていることがわかった。米当局なども注意を呼びかけている。</td>
       </tr>
@@ -857,6 +875,36 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/185223" target="_blank" rel="noopener">分散型DB「Apache Ignite」に脆弱性 - 修正版が公開</a></td>
         <td class="desc">分散型データベース「Apache Ignite」のAPIに情報漏洩のおそれがある脆弱性が明らかとなった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185229" target="_blank" rel="noopener">エフサス製サーバ管理ソフト「ServerView Agents for Windows」に複数脆弱性</a></td>
+        <td class="desc">富士通子会社のエフサステクノロジーズが提供するサーバ管理ソフトウェア「ServerView Agents for Windows」に脆弱性が明らかとなった。アップデートが呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184944" target="_blank" rel="noopener">元職員が個人情報を掲示板投稿、システム設定に不備も - 津田塾大</a></td>
+        <td class="desc">津田塾大学は、元職員が学生に関する個人情報を匿名掲示板に投稿していたことを明らかにした。元職員は、閲覧権限がない個人情報にもアクセスできた可能性があるという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/184749" target="_blank" rel="noopener">個人情報含む文書を外部サイトに掲載、職員を処分 - 郡山広域消防</a></td>
+        <td class="desc">郡山地方広域消防組合は、個人情報が含まれる公文書を外部機関のウェブサイトに掲載した職員に対し、懲戒処分を実施した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185110" target="_blank" rel="noopener">教室内で保管した小学校の児童情報含む書類が所在不明 - 大阪市</a></td>
+        <td class="desc">大阪市は、小学校において、児童の個人情報を含むキャリアパスポート記入用紙を紛失したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185187" target="_blank" rel="noopener">公開講座を案内する一斉メールで送信ミス - 東北学院大</a></td>
+        <td class="desc">東北学院大学は、メールで公開講座について案内を行った際、送信ミスが発生し、メールアドレスが流出したことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-05-31</td>
@@ -911,61 +959,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/185018" target="_blank" rel="noopener">住宅相談者の個人情報含む書類が所在不明に - 港区</a></td>
         <td class="desc">東京都港区は、「すまいの専門相談」の相談者の個人情報を含む書類が所在不明になっていることを明らかにした。誤って廃棄した可能性があるという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185108" target="_blank" rel="noopener">住民の個人情報含むデータを福祉事業所に誤送信 - 鷹栖町</a></td>
-        <td class="desc">北海道鷹栖町は、住民の個人情報を含むデータを町内の福祉事業所へ誤って送信するミスがあったことを公表した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185066" target="_blank" rel="noopener">複数ソフトが改ざん被害、正規ルートで汚染版が流通 - 米当局が注意喚起</a></td>
-        <td class="desc">米当局は、ソフトウェアのサプライチェーン侵害に起因する脆弱性3件について注意を呼びかけた。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185049" target="_blank" rel="noopener">「Google Cloud Apigee」にSSRF脆弱性 - トークン漏洩のおそれ</a></td>
-        <td class="desc">Google Cloudが提供するAPI管理プラットフォーム「Apigee」に、サービスアカウントのアクセストークンが流出する脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185062" target="_blank" rel="noopener">Veeamのバックアップ復旧製品に脆弱性 - 修正版が公開</a></td>
-        <td class="desc">Veeam Softwareが提供するバックアップ製品「Veeam Backup &amp; Replication」に複数の脆弱性が明らかとなった。脆弱性を修正するアップデートが提供されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185047" target="_blank" rel="noopener">Ubiquiti製ネットワーク機器の「UniFi OS」にクリティカル脆弱性</a></td>
-        <td class="desc">Ubiquitiのネットワーク機器に搭載されている「UniFi OS」に複数の脆弱性が判明した。深刻な脆弱性も複数含まれる。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185044" target="_blank" rel="noopener">「IBM ELM」の基盤コンポーネントに脆弱性 - 修正パッチをリリース</a></td>
-        <td class="desc">IBMのエンジニアリング向けアプリケーション群「IBM Engineering Lifecycle Management」の基盤コンポーネントである「Jazz Foundation」に脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184513" target="_blank" rel="noopener">問合管理システムがランサム被害、学習システムなどは影響なし - CKCグループ</a></td>
-        <td class="desc">学習塾や家庭教師派遣サービスを展開する教育事業者のCKCネットワークと学参は、共同で運用している問い合わせ情報管理システムがランサムウェアによるサイバー攻撃を受けたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-05-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184885" target="_blank" rel="noopener">クラファン支援者情報が流出の可能性 - 横浜DeNAベイスターズ</a></td>
-        <td class="desc">横浜DeNAベイスターズは、業務で利用しているクラウドファンディングサービス「CAMPFIRE」が侵害され、同球団の支援者に関する個人情報が外部へ流出した可能性があることを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年06月01日 14:17 JST</span>
+  <span>最終更新: 2026年06月02日 14:01 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
