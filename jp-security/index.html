@@ -455,6 +455,20 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">Camel-CXF および Camel-Knative におけるメッセージヘッダー注入の脆弱性は、受信側でのフィルタリングが欠如していることが原因です。CXF および Knative の HeaderFilterStrategy の実装が受信したヘッダーを適切にフィルタリングしないため、認証されていない攻撃者が内部ヘッダーを注入できる可能性があります。これにより、リモートコードの実行や任意のファイ</td>
       </tr>
       <tr data-sev="" data-src="JVN">
+        <td class="date">2026-06-09</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN27656135/" target="_blank" rel="noopener">CamViewのインストーラにおけるDLL読み込みに関する脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">株式会社アルコムが提供するCamViewのインストーラにはDLL読み込みに関する脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-06-09</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU99913823/" target="_blank" rel="noopener">Apache HTTP Server 2.4における複数の脆弱性に対するアップデート（2026年6月8日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">The Apache Software Foundationから、Apache HTTP Server 2.4系における複数の脆弱性に対応したApache HTTP Server 2.4.68が公開されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
         <td class="date">2026-06-05</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/jp/JVN70631953/" target="_blank" rel="noopener">複数のTP-LINK製品における重要情報の平文送信の脆弱性</a><div class="cve-row"></div></td>
@@ -579,20 +593,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU98011121/" target="_blank" rel="noopener">Casdoorにおけるパストラバーサルの脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">Casdoorには、パストラバーサルの脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-05-26</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90845089/" target="_blank" rel="noopener">dnsmasqにおける複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">dnsmasqには複数の脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-05-26</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96879318/" target="_blank" rel="noopener">SGLangにおける複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">SGLangには複数の脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-05-22</td>
@@ -820,16 +820,88 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-06-09</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185635" target="_blank" rel="noopener">「Chrome」にセキュ更新、脆弱性74件を修正 - 一部で悪用も</a></td>
+        <td class="desc">Googleは現地時間2026年6月8日、同社ブラウザ「Chrome」のセキュリティアップデートをリリースした。一部脆弱性は悪用が確認されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-06-08</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185542" target="_blank" rel="noopener">「Apache Fory」の「Java SDK」に脆弱性 - 修正版が公開</a></td>
-        <td class="desc">データのシリアライズ機能を提供するライブラリ「Apache Fory」に脆弱性が明らかとなった。</td>
+        <td class="title-cell"><a href="https://www.security-next.com/185583" target="_blank" rel="noopener">Check Pointのレガシー構成VPNにゼロデイ脆弱性 - 5月初旬より悪用</a></td>
+        <td class="desc">Check Point Software Technologies製品においてゼロデイ脆弱性が判明した。5月初旬より悪用されていると見られ、ランサムウェア攻撃に用いられたケースも確認されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-08</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185569" target="_blank" rel="noopener">「VCF Operations」に複数のXSS脆弱性 - 修正版が公開</a></td>
+        <td class="desc">Broadcomは、「VMware Cloud Foundation Operations（VCF Operations）」のセキュリティアップデートを公開した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-09</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185593" target="_blank" rel="noopener">米当局、Check Point製UTMやLiteLLMの脆弱性悪用に注意喚起</a></td>
+        <td class="desc">米当局は、Check Point製セキュリティゲートウェイや「LiteLLM」に関する脆弱性が悪用されているとして注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-09</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185507" target="_blank" rel="noopener">ふるさと納税者に関する個人情報の一部がSNS投稿 - 洲本市</a></td>
+        <td class="desc">兵庫県洲本市は、ふるさと納税寄付者に関する個人情報がインターネット上に流出したことを明らかにした。原因などを調べている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-09</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185266" target="_blank" rel="noopener">転職サイトのスマホアプリにPWリスト攻撃 - キャリアデザインセンター</a></td>
+        <td class="desc">転職サイトの運営や人材紹介事業を展開するキャリアデザインセンターは、スマートフォン向け同社アプリにおいて、パスワードリスト攻撃と見られる不正アクセスを受けたことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-06-07</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/185528" target="_blank" rel="noopener">「SolarWinds Serv-U」にDoS脆弱性、悪用も - 米当局が注意喚起</a></td>
         <td class="desc">SolarWindsのファイル転送ソリューション「SolarWinds Serv-U」における既知の脆弱性が悪用されているとして、米当局が注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-08</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185542" target="_blank" rel="noopener">「Apache Fory」の「Java SDK」に脆弱性 - 修正版が公開</a></td>
+        <td class="desc">データのシリアライズ機能を提供するライブラリ「Apache Fory」に脆弱性が明らかとなった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-08</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185537" target="_blank" rel="noopener">「TeamCity」などJetBrainsの4製品に22件の脆弱性</a></td>
+        <td class="desc">JetBrainsは、5月のセキュリティ更新で「TeamCity」を含む4製品において脆弱性へ対処したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-08</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185274" target="_blank" rel="noopener">公益財団法人運営の産廃業者検索サイトで情報流出の可能性</a></td>
+        <td class="desc">公益財団法人の産業廃棄物処理事業振興財団（WMF）は、産廃業者検索サイトが侵害され、利用者に関する個人情報が外部へ流出した可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-08</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185510" target="_blank" rel="noopener">「ミドルの転職」にPWリスト攻撃、不正ログインが発生</a></td>
+        <td class="desc">転職情報サービス「ミドルの転職」が、パスワードリスト攻撃による不正アクセスを受けたことがわかった。一部ユーザーの会員情報が閲覧された可能性がある。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-08</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185269" target="_blank" rel="noopener">サイバー攻撃でシステム障害、原因や影響を調査 - 建材補修会社</a></td>
+        <td class="desc">建材の傷の補修などを手がけるエイテックプロは、システムがサイバー攻撃を受け、障害が発生したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-08</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185189" target="_blank" rel="noopener">小学校で児童情報含む書類を紛失、確認作業中に - 名古屋市</a></td>
+        <td class="desc">名古屋市は、市内小学校において、児童の個人情報が記載された書類が所在不明となっていることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-08</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185512" target="_blank" rel="noopener">複数取引サイトとの確認メールで誤送信 - 北陸電力</a></td>
+        <td class="desc">北陸電力は、業務上のメールにおいて送信ミスがあり、取引先に関するメールアドレスが流出したことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-06-07</td>
@@ -866,85 +938,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/185451" target="_blank" rel="noopener">クラウド侵害で個人情報流出か、未発売のゲームデータも - ビジュアルアーツ</a></td>
         <td class="desc">ゲームコンテンツの制作、販売を手がけるビジュアルアーツは、不正アクセスを受け、個人情報や未発売ゲームのマスターデータが流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-05</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185470" target="_blank" rel="noopener">脆弱性「Dirty Frag」が製品に与える影響を調査 - Fortinet</a></td>
-        <td class="desc">Fortinetは、「Linux Kernel」に権限昇格の脆弱性「Dirty Frag」が見つかった問題を受け、同社製品への影響について調査を進めている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-05</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185457" target="_blank" rel="noopener">役場でPC盗難、盗難防止ワイヤーが切断 - 大郷町</a></td>
-        <td class="desc">宮城県大郷町は、役場においてパソコンや周辺機器の盗難被害が発生したことを明らかにした。端末内部には個人情報が保存されていたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-05</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184676" target="_blank" rel="noopener">送信メールの添付ファイル保管サーバが侵害 - 石川のSIer</a></td>
-        <td class="desc">システムインテグレーターの石川コンピュータ・センター（ICC）は、送信メールの添付ファイル保存サーバがサイバー攻撃を受けたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-05</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185106" target="_blank" rel="noopener">サーバに不正アクセス、侵害経路や影響を調査 - ソディック</a></td>
-        <td class="desc">工作機械メーカーのソディックは、不正アクセスを受け、第三者によりサーバが侵害されたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-05</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185455" target="_blank" rel="noopener">卒業生宛の「進路だより」でメール誤送信 - 新潟県</a></td>
-        <td class="desc">新潟県教育委員会は、県内高校においてメールの送信ミスがあり、卒業生に関するメールアドレスが流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-03</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185385" target="_blank" rel="noopener">「Cisco Unified CM」にクリティカル脆弱性 - 実証コードが公開済み</a></td>
-        <td class="desc">Cisco Systemsは、IP電話やビデオ通話などを管理する企業向けコミュニケーション基盤「Cisco Unified Communications Manager」に脆弱性が判明したとし、アップデートをリリースした。すでに概念実証コード（PoC）も公開済みで、重要度をもっとも高い「クリティカル」へと1段階引き上げ、利用者に対応を呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-04</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185392" target="_blank" rel="noopener">米当局、脆弱性3件を悪用カタログに追加 - 早期対応求める</a></td>
-        <td class="desc">米当局は、「Linuxカーネル」をはじめ、悪用が確認されている3件の脆弱性について注意喚起を行った。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-04</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185397" target="_blank" rel="noopener">「MLflow」にアクセスキーなど機密情報が流出する深刻な脆弱性</a></td>
-        <td class="desc">機械学習ライフサイクル管理ツール「MLflow」に脆弱性が明らかとなった。アクセスキー、暗号化鍵など重要な情報が外部に流出するおそれがある。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-04</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185414" target="_blank" rel="noopener">「Chrome 149」がリリース - セキュリティ情報は近日公開</a></td>
-        <td class="desc">Googleは現地時間2026年6月2日、同社ブラウザの最新版「Chrome 149」をリリースした。セキュリティに関する修正については、今後詳細が公表される見込み。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-04</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185324" target="_blank" rel="noopener">ランサム攻撃で情報流出、詳細は調査中 - 中央紙器工業</a></td>
-        <td class="desc">段ボールメーカーの中央紙器工業は、一部システムがランサムウェアを用いたサイバー攻撃を受け、一部情報が外部に流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-04</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185200" target="_blank" rel="noopener">ECサイトの複数ページで改ざん被害、外部サイトへ誘導 - 健康器具販売サイト</a></td>
-        <td class="desc">磁気健康器具の製造、販売を手がけるコラントッテは、eコマースサイト内の一部ブランドページが改ざん被害に遭ったことを明らかにした。外部のカジノサイトへ誘導される状況となっていたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-04</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/184751" target="_blank" rel="noopener">個人情報含む教員マニュアルを一時紛失、空港トイレで - 大阪府</a></td>
-        <td class="desc">大阪府は、高校の教諭が、生徒の個人情報が記載された宿泊研修の教員マニュアルを一時紛失したことを明らかにした。その後発見され、回収されている。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年06月08日 14:02 JST</span>
+  <span>最終更新: 2026年06月09日 13:37 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
