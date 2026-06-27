@@ -78,14 +78,14 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
   </div>
   <div class="stats">
     <div class="stat danger"><div class="n">17</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">102</div><div class="l">脆弱性</div></div>
+    <div class="stat warn"><div class="n">103</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">102</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">103</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -457,6 +457,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-06-26</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN35146924/" target="_blank" rel="noopener">ExpressUpdate Agent for Windowsにおける名前付きパイプに対するアクセス制御不備の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">日本電気株式会社が提供するExpressUpdate Agent for Windowsには、内部で使用している名前付きパイプのアクセス制御設定に不備が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU99109287/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年06月25日）</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">2026年06月25日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
@@ -587,13 +594,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-06-12</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU94338291/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年06月11日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年06月11日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
-      </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-06-23</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
@@ -719,6 +719,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260624.html#12" target="_blank" rel="noopener">Weekly Report: Fortinetが「FortiGateデバイスの認証情報を使った攻撃キャンペーンの分析」を公開</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">Fortinetが「FortiGateデバイスの認証情報を使った攻撃キャンペーンの分析」を公開</td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2024/win10_eos.html" target="_blank" rel="noopener">更新：Windows 10のサポート終了に伴う注意喚起</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-06-10</td>
@@ -848,8 +855,56 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-src="SecurityNext">
         <td class="date">2026-06-26</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186466" target="_blank" rel="noopener">Synology製NAS向けのメールサーバアドオンに深刻な脆弱性</a></td>
+        <td class="desc">Synologyは、「Synology MailPlus Server」に関する複数の脆弱性を明らかにした。深刻な脆弱性も複数含まれており、利用者にアップデートを呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186474" target="_blank" rel="noopener">DB管理ツール「pgAdmin 4」に脆弱性 - 3件が「クリティカル」</a></td>
+        <td class="desc">PostgreSQL向け管理ツール「pgAdmin 4」に、深刻な脆弱性が明らかとなった。アップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186500" target="_blank" rel="noopener">「FortiBleed」に国内組織の情報も - 影響調査など実施を</a></td>
+        <td class="desc">Fortinet製機器に関連する認証情報の流出が確認された「FortiBleed」では、国内組織に関する情報も確認されている。関連製品を利用する場合は影響を調査し、必要に応じて対策を講じるよう呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186442" target="_blank" rel="noopener">シンクライアント管理製品「Dell WMS」に深刻な脆弱性</a></td>
         <td class="desc">シンクライアント管理製品「Dell Wyse Management Suite（WMS）」に脆弱性が明らかとなった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186438" target="_blank" rel="noopener">海外グループ2社にサイバー攻撃、影響など調査 - サッポロHD</a></td>
+        <td class="desc">サッポロホールディングスは、海外のグループ会社2社においてサイバー攻撃を受けたことを明らかにした。国内事業への影響は確認されていない。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186457" target="_blank" rel="noopener">「OpenDJ」にクリティカル脆弱性 -  アップデートで修正</a></td>
+        <td class="desc">Open Identity Platformのディレクトリサーバ「OpenDJ」に脆弱性が明らかとなった。アップデートで脆弱性が修正された。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186396" target="_blank" rel="noopener">通話品質検証用の一部サーバでデータ侵害のおそれ - ソフツー</a></td>
+        <td class="desc">コールセンターシステムや電話自動応答サービスなどを手がけるソフツーは、検証用サーバが侵害されたことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186329" target="_blank" rel="noopener">札幌市内の郵便局、一部郵便物が所在不明に</a></td>
+        <td class="desc">日本郵便は、北海道支社管内の郵便局において、一部郵便物を紛失したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-06-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/185933" target="_blank" rel="noopener">プロジェクト申込フォームで設定ミス、既存回答が閲覧可能に - NPO法人</a></td>
+        <td class="desc">NPO法人のおてらおやつクラブは、バリューブックスとの共同企画において個人情報の取り扱いに不備があったことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-06-24</td>
@@ -904,61 +959,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186338" target="_blank" rel="noopener">県内中高校向けのメールで誤送信 - 香川県</a></td>
         <td class="desc">香川県は、県内学校へ送信したイベントの案内メールにおいて送信ミスがあり、学校事務職員のメールアドレスが流出したことを公表した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-23</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186316" target="_blank" rel="noopener">UbiquitiやLantronix製品の脆弱性悪用に注意喚起 - 米当局</a></td>
-        <td class="desc">米当局は、Ubiquiti製ネットワーク機器やLantronix製サーバの脆弱性が悪用されているとして注意喚起を行った。早急な対策を求めている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186303" target="_blank" rel="noopener">「ManageEngine」の複数製品でアカウント乗っ取りのおそれ</a></td>
-        <td class="desc">Zohoが提供する「ManageEngine」の複数製品において認証回避の脆弱性が明らかとなった。6月前半に公開されたアップデートで修正済みだという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186297" target="_blank" rel="noopener">AI開発向けフレームワーク「NVIDIA NeMo」に複数脆弱性</a></td>
-        <td class="desc">NVIDIAは、AI開発向けフレームワーク「NVIDIA NeMo Framework」に複数の脆弱性が見つかったとして、セキュリティアップデートをリリースした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186131" target="_blank" rel="noopener">オンラインショップが侵害、影響など詳細を調査 - 村瀬鞄行</a></td>
-        <td class="desc">ランドセルや鞄の製造、販売を手がける村瀬鞄行は、オンラインショップが侵害を受けたことを明らかにした。影響など詳細を調べている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186137" target="_blank" rel="noopener">メルアカ侵害でスパムの踏み台に - 日本医業経営コンサルタント協会</a></td>
-        <td class="desc">公益社団法人の日本医業経営コンサルタント協会は、岩手県支部のメールアカウントが不正アクセスを受け、迷惑メールが送信されたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186070" target="_blank" rel="noopener">府営住宅の募集案内書に個人情報混入、公共施設で配布 - 京都府</a></td>
-        <td class="desc">京都府は、府営住宅の募集案内書について、個人情報を含む別の書類が誤って混入したまま、府内公共機関で配布されたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186078" target="_blank" rel="noopener">預かり証控が所在不明、文書整理で判明 - 旭川信金</a></td>
-        <td class="desc">旭川信用金庫は、一部支店で顧客情報が記載された書類が所在不明となっていることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186068" target="_blank" rel="noopener">学校家庭調査で回答を誤公開 - 仕様確認を担当者に依存</a></td>
-        <td class="desc">沖縄県八重瀬町は、町内学校において家庭調査票のアンケートフォームに設定ミスがあり、回答内容が他回答者に誤って公開されていたことを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年06月26日 13:41 JST</span>
+  <span>最終更新: 2026年06月27日 13:17 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
