@@ -77,15 +77,15 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">0</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">48</div><div class="l">脆弱性</div></div>
+    <div class="stat danger"><div class="n">1</div><div class="l">高深刻度</div></div>
+    <div class="stat warn"><div class="n">50</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">48</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">50</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -105,11 +105,39 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-07-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-021994.html" target="_blank" rel="noopener">Apache Tomcatにおける複数の脆弱性（2026年6月29日）</a><div class="cve-row">CVE-2026-50229, CVE-2026-53404, CVE-2026-53434, CVE-2026-55276, CVE-2026-55955, CVE-2026-55956, CVE-2026-55957</div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">The Apache Software Foundationから、Apache Tomcatの脆弱性（CVE-2026-55957, CVE-2026-55956, CVE-2026-55955, CVE-2026-55276, CVE-2026-53434, CVE-2026-53404, CVE-2026-50229）に対してアドバイザリが公開されました。  Fixed in Apache T</td>
+      </tr>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-07-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-021993.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年06月30日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年06月30日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：8件 ICSA-26-181-01: Mitsubishi Electric MELSOFT Update Manager SW1DND-UDM-M ICSA-26-181-02: Frangoteam FUXA SCADA/HMI ICSA-</td>
+      </tr>
+      <tr data-sev="High 7.2" data-src="JVN iPedia">
         <td class="date">2026-07-01</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/apis/myjvn" target="_blank" rel="noopener">MyJVN　該当する脆弱性対策情報はありません。</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000091.html" target="_blank" rel="noopener">セイコーソリューションズ製SkyBridge MB-A100/MB-A110におけるOSコマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-50043</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
+        <td class="desc">セイコーソリューションズ株式会社が提供するSkyBridge MB-A100/MB-A110には、次の脆弱性が存在します。 OSコマンドインジェクション（CWE-78）- CVE-2026-50043  この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：情報通信研究機構 サイバーセキュリティ研究所 </td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-02</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU92054409/" target="_blank" rel="noopener">三菱電機製数値制御装置における数値の入力に対する不適切な検証</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">MyJVN　該当する脆弱性対策情報はありません。</td>
+        <td class="desc">三菱電機製数値制御装置(CNC)には、数値の入力に対する不適切な検証に起因する脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-01</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN20721579/" target="_blank" rel="noopener">セイコーソリューションズ製SkyBridge MB-A100/MB-A110におけるOSコマンドインジェクションの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">セイコーソリューションズ株式会社が提供するSkyBridge MB-A100/MB-A110には、OSコマンドインジェクションの脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-07-01</td>
@@ -234,20 +262,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="date">2026-06-19</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU93024090/" target="_blank" rel="noopener">Vendor-signed UEFIアプリケーションにおけるセキュアブートバイパスの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-06-19</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90347806/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年06月18日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年06月18日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-06-18</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU95564871/" target="_blank" rel="noopener">SignalRGBカーネルドライバにおける不適切なアクセス制御およびIOCTLの脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
@@ -456,6 +470,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-07-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186688" target="_blank" rel="noopener">米当局、「SharePoint Server」の脆弱性悪用に注意喚起</a></td>
+        <td class="desc">2026年5月の月例セキュリティ更新で修正された「Microsoft SharePoint Server」の脆弱性が悪用されている。アップデートのリリース当初は情報提供がなく、その後アドバイザリが公開されるなど変則的な対応となった脆弱性で、注意が必要だ。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186679" target="_blank" rel="noopener">「IBM Db2」に深刻な脆弱性 - 暫定的な修正を提供</a></td>
+        <td class="desc">IBMは、データベース製品「IBM Db2」に関する複数の脆弱性を明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186684" target="_blank" rel="noopener">「macOS Tahoe 26.5.2」公開 - 脆弱性37件を修正</a></td>
+        <td class="desc">Appleは2026年6月29日、Mac向けに最新OSとなる「macOS Tahoe 26.5.2」を公開した。あわせて旧OS向けに「Safari」のアップデートを提供している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186698" target="_blank" rel="noopener">「Cisco Unified CM」のSSRF脆弱性、悪用に注意</a></td>
+        <td class="desc">Cisco Systemsは、「Cisco Unified Communications Manager（Unified CM）」の脆弱性「CVE-2026-20230」が悪用されているとし、注意を呼びかけた。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-06-30</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186615" target="_blank" rel="noopener">「Adobe ColdFusion」に複数の深刻な脆弱性 - 早急に対応を</a></td>
@@ -484,6 +522,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186631" target="_blank" rel="noopener">「iOS/iPadOS 26.5.2」を公開、脆弱性37件を修正</a></td>
         <td class="desc">Appleは現地時間2026年6月29日、複数の脆弱性へ対処した「iOS 26.5.2」「iPadOS 26.5.2」を公開した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186655" target="_blank" rel="noopener">「Apache Tomcat」に複数脆弱性 - 「クリティカル」との評価も</a></td>
+        <td class="desc">「Apache Tomcat」に複数の脆弱性が明らかとなった。開発者はいずれの脆弱性も重要度を「中（Moderate）」以下とする一方、「クリティカル（Critical）」とされる評価もある。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186504" target="_blank" rel="noopener">システムの登録ユーザー情報、ユーザー間で閲覧可能に - コマツ</a></td>
+        <td class="desc">建設機械メーカーの小松製作所は、同社が管理するシステムに登録されているユーザー情報の管理に不備があったことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186648" target="_blank" rel="noopener">サポート詐欺でPC遠隔操作、情報流出を調査 - 東北文化学園大</a></td>
+        <td class="desc">東北文化学園大学は、教員がサポート詐欺に遭ったことを明らかにした。影響など詳細について調査を進めている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-01</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186577" target="_blank" rel="noopener">児童情報を全認定こども園にメール誤送信 - 八王子市</a></td>
+        <td class="desc">東京都八王子市は、市内の保育施設に在籍する児童の個人情報を、メールで誤送信するミスがあったことを公表した。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-06-30</td>
@@ -526,61 +588,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186510" target="_blank" rel="noopener">労働力調査の調査世帯一覧表を紛失 - 栃木県</a></td>
         <td class="desc">栃木県は、労働力調査の調査員が調査書類を紛失したことを明らかにした。個人情報などが記載されていたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/185868" target="_blank" rel="noopener">過去年度の申請書を誤って廃棄か - 長崎県警</a></td>
-        <td class="desc">長崎県警察は、大村警察署において、個人情報を含む書類を保存期間満了前に誤って廃棄した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186570" target="_blank" rel="noopener">本の雑誌社のXアカウントが乗っ取り被害 - 注意を呼びかけ</a></td>
-        <td class="desc">本の雑誌社は、X（旧Twitter）の公式アカウントが乗っ取り被害に遭ったことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186512" target="_blank" rel="noopener">ログ収集ツール「Fluentd」に深刻な脆弱性 - 修正版を公開</a></td>
-        <td class="desc">クラウド環境などのログ収集に活用されている「Fluentd」に深刻な脆弱性が明らかとなった。アップデートが提供されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186519" target="_blank" rel="noopener">「libssh2」に整数オーバーフローの脆弱性 - 実証コードも公開</a></td>
-        <td class="desc">「SSH2プロトコル」の実装に利用されるクライアント向けライブラリ「libssh2」に脆弱性が判明した。実証コードも公開されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186498" target="_blank" rel="noopener">「GitLab」にセキュリティ更新 - 脆弱性13件を修正</a></td>
-        <td class="desc">GitLabは現地時間2026年6月24日、脆弱性へ対処したセキュリティアップデート「同19.1.1」「同19.0.3」「同18.11.6」をリリースした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186525" target="_blank" rel="noopener">権威DNSサーバ「NSD」に複数脆弱性 - 修正版が公開</a></td>
-        <td class="desc">権威DNSサーバ「NSD」に複数の脆弱性が明らかとなった。NLnet Labsでは、脆弱性に対処したセキュリティアップデートをリリースし、利用者にアップデートを呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186393" target="_blank" rel="noopener">VPN経由でサイバー攻撃、ランサム被害が発生 - D&amp;M</a></td>
-        <td class="desc">バレーボール用のサポーターなどを製造、販売するD＆Mは、社内で利用するファイル共有サーバでランサムウェアによる被害が発生したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186446" target="_blank" rel="noopener">メルアカに不正アクセス、個人情報流出の可能性 - オークション事業者</a></td>
-        <td class="desc">ゲオホールディングスのグループ会社で、古物商向けのオークション事業や査定買取事業などを手がける日本オークション協会は、メールアカウントが不正アクセスを受けたことを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年07月01日 13:55 JST</span>
+  <span>最終更新: 2026年07月02日 13:32 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
