@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shadowing Practice | tomoaki12</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #0a0e14;
+    --panel: #0f1620;
+    --panel-2: #131d29;
+    --line: #1e2b3a;
+    --text: #cdd6e0;
+    --muted: #5a6b7d;
+    --dim: #3a4a5a;
+    --mint: #5eead4;
+    --mint-dim: #2a5c54;
+    --amber: #f0b429;
+    --red: #f97066;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    min-height: 100vh;
+    padding: 20px 16px 40px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 620px; margin: 0 auto; }
+
+  /* header */
+  .top {
+    display: flex; align-items: baseline; justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px; margin-bottom: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .brand { font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--text); }
+  .brand .prompt { color: var(--mint); }
+  .brand .cursor {
+    display: inline-block; width: 7px; height: 14px; background: var(--mint);
+    margin-left: 2px; vertical-align: -2px; animation: blink 1.1s steps(1) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .streak {
+    font-size: 11px; color: var(--muted); text-align: right; line-height: 1.5;
+  }
+  .streak b { color: var(--amber); font-weight: 700; }
+
+  /* stat bar */
+  .stats {
+    display: flex; gap: 8px; margin-bottom: 18px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .stat {
+    flex: 1; background: var(--panel); border: 1px solid var(--line);
+    border-radius: 8px; padding: 10px 12px;
+  }
+  .stat .n { font-size: 20px; font-weight: 700; color: var(--mint); line-height: 1; }
+  .stat .l { font-size: 10px; color: var(--muted); margin-top: 5px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .progbar { height: 3px; background: var(--line); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+  .progbar > span { display: block; height: 100%; background: var(--mint); border-radius: 2px; transition: width .4s ease; }
+
+  /* category filters */
+  .filters {
+    display: flex; gap: 6px; overflow-x: auto; margin-bottom: 16px; padding-bottom: 3px;
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .filters::-webkit-scrollbar { display: none; }
+  .filters button {
+    flex: none; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 500;
+    padding: 8px 13px; border: 1px solid var(--line); background: var(--panel);
+    color: var(--muted); border-radius: 20px;
+  }
+  .filters button.sel { border-color: var(--mint); color: var(--mint); background: var(--mint-dim); }
+
+  /* main card */
+  .card {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: 12px; padding: 22px 20px 20px; margin-bottom: 16px;
+    position: relative;
+  }
+  .cat {
+    display: inline-block; font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--mint); border: 1px solid var(--mint-dim);
+    padding: 3px 8px; border-radius: 5px; margin-bottom: 16px;
+  }
+  .en {
+    font-size: 22px; line-height: 1.5; font-weight: 500; color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .en .w { transition: color .2s, background .2s; padding: 0 1px; border-radius: 3px; }
+  .en .w.ok  { color: var(--mint); }
+  .en .w.miss { color: var(--dim); }
+  .ja {
+    font-size: 13px; color: var(--muted); margin-top: 14px; line-height: 1.6;
+    padding-top: 14px; border-top: 1px solid var(--line);
+  }
+  .ja.hidden { filter: blur(5px); cursor: pointer; user-select: none; }
+  .ja.hidden::after { content: ' （タップで表示）'; font-size: 11px; }
+
+  .heard {
+    font-family: 'IBM Plex Mono', monospace; font-size: 12px;
+    color: var(--muted); margin-top: 14px; min-height: 16px;
+  }
+  .heard b { color: var(--text); }
+  .heard .score { color: var(--amber); font-weight: 700; }
+
+  /* controls */
+  .controls { display: flex; gap: 10px; margin-bottom: 14px; }
+  button {
+    font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 600;
+    border: 1px solid var(--line); background: var(--panel-2); color: var(--text);
+    border-radius: 9px; padding: 13px 14px; cursor: pointer; flex: 1;
+    display: flex; align-items: center; justify-content: center; gap: 7px;
+    transition: border-color .15s, background .15s, transform .05s;
+  }
+  button:hover { border-color: var(--mint-dim); }
+  button:active { transform: translateY(1px); }
+  button:disabled { opacity: .4; cursor: not-allowed; }
+  button.primary { background: var(--mint-dim); border-color: var(--mint); color: var(--mint); }
+  button.primary.playing { animation: pulse 1s ease infinite; }
+  @keyframes pulse { 50% { background: #1a3d38; } }
+  button.done.flash { background: var(--mint-dim); border-color: var(--mint); color: var(--mint); }
+  .ico { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+  /* speed + options row */
+  .row2 { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; font-family: 'IBM Plex Mono', monospace; }
+  .speed { display: flex; gap: 4px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 3px; }
+  .speed button {
+    flex: none; padding: 6px 11px; font-size: 12px; border: none; background: transparent; border-radius: 6px; color: var(--muted);
+  }
+  .speed button.sel { background: var(--panel-2); color: var(--mint); }
+  .row2 .spacer { flex: 1; }
+  .toggle-ja {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted);
+    background: none; border: 1px solid var(--line); border-radius: 7px; padding: 8px 10px; flex: none;
+  }
+
+  /* log */
+  .log-head {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--dim);
+    text-transform: uppercase; letter-spacing: 0.08em; margin: 6px 4px 10px;
+  }
+  .log { font-family: 'IBM Plex Mono', monospace; font-size: 12px; }
+  .log-item {
+    padding: 8px 4px; border-bottom: 1px solid var(--line); color: var(--muted);
+    display: flex; gap: 10px; align-items: baseline;
+  }
+  .log-item .t { color: var(--dim); flex: none; }
+  .log-item .x { flex: 1; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .log-item .s { flex: none; color: var(--mint); }
+  .log-empty { color: var(--dim); font-family: 'IBM Plex Mono', monospace; font-size: 12px; padding: 8px 4px; }
+
+  .hint { font-size: 11px; color: var(--dim); margin-top: 18px; line-height: 1.6; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand"><span class="prompt">shadow</span>@sec:~<span class="cursor"></span></div>
+    <div class="streak" id="streak"></div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="n" id="today">0<span style="font-size:13px;color:var(--muted)">/10</span></div>
+      <div class="l">今日</div>
+      <div class="progbar"><span id="prog" style="width:0%"></span></div>
+    </div>
+    <div class="stat">
+      <div class="n" id="streakNum">0</div>
+      <div class="l">連続日数</div>
+    </div>
+    <div class="stat">
+      <div class="n" id="total">0</div>
+      <div class="l">通算</div>
+    </div>
+  </div>
+
+  <div class="filters" id="filters">
+    <button data-c="all" class="sel">すべて</button>
+    <button data-c="reception">受付</button>
+    <button data-c="networking">ネットワーク</button>
+    <button data-c="pentest">ペンテスト</button>
+    <button data-c="vulnerability">脆弱性</button>
+    <button data-c="news">ニュース</button>
+    <button data-c="workplace">職場</button>
+  </div>
+
+  <div class="card">
+    <span class="cat" id="cat">loading</span>
+    <div class="en" id="en">Loading phrases…</div>
+    <div class="ja hidden" id="ja"></div>
+    <div class="heard" id="heard"></div>
+  </div>
+
+  <div class="controls">
+    <button class="primary" id="listen">
+      <svg class="ico" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+      <span>聞く</span>
+    </button>
+    <button class="done" id="done">
+      <svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+      <span>言えた</span>
+    </button>
+    <button id="next">
+      <span>次へ</span>
+      <svg class="ico" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+  </div>
+
+  <div class="row2">
+    <div class="speed" id="speed">
+      <button data-r="0.6">0.6x</button>
+      <button data-r="0.8" class="sel">0.8x</button>
+      <button data-r="1">1.0x</button>
+    </div>
+    <div class="spacer"></div>
+    <button class="toggle-ja" id="toggleJa">訳: 隠す</button>
+  </div>
+
+  <div class="log-head">// recent</div>
+  <div class="log" id="log"><div class="log-empty">まだ記録なし。「聞く」→ 真似して声に出す → 「話す」で発音チェック。</div></div>
+
+  <div class="hint" id="hint">シャドーイング = 音声を追いかけて0.5秒遅れで真似する練習。まず0.8xで、慣れたら1.0xに。</div>
+</div>
+
+<script>
+const PHRASES = [
+  // networking
+  ["The firewall is blocking traffic on port 443.","ファイアウォールが443番ポートの通信をブロックしている。","networking"],
+  ["Let me check the routing table before we continue.","続ける前にルーティングテーブルを確認させて。","networking"],
+  ["The DNS server failed to resolve that domain name.","DNSサーバーがそのドメイン名を解決できなかった。","networking"],
+  ["This device is assigned a private IP address by DHCP.","この端末はDHCPからプライベートIPアドレスを割り当てられている。","networking"],
+  ["We should segment the network to limit lateral movement.","横方向の移動を制限するためネットワークを分割すべきだ。","networking"],
+  // pentesting
+  ["I'm going to run an nmap scan to enumerate open ports.","開いているポートを列挙するためにnmapスキャンを実行する。","pentest"],
+  ["The target machine seems to be running an outdated service.","対象マシンは古いバージョンのサービスを動かしているようだ。","pentest"],
+  ["We gained an initial foothold through a misconfigured server.","設定ミスのあるサーバー経由で最初の足がかりを得た。","pentest"],
+  ["Let's try to escalate our privileges to root.","権限をrootまで昇格させてみよう。","pentest"],
+  ["I captured the credentials and moved to the next host.","認証情報を取得して次のホストへ移動した。","pentest"],
+  ["Always get written permission before testing a system.","システムをテストする前に必ず書面での許可を取ること。","pentest"],
+  // vulnerabilities
+  ["This input field is vulnerable to SQL injection.","この入力欄はSQLインジェクションに対して脆弱だ。","vulnerability"],
+  ["The application does not sanitize user input properly.","このアプリはユーザー入力を適切に無害化していない。","vulnerability"],
+  ["A critical vulnerability was found in the login module.","ログインモジュールに深刻な脆弱性が見つかった。","vulnerability"],
+  ["Attackers could exploit this flaw to bypass authentication.","攻撃者はこの欠陥を悪用して認証を回避できる。","vulnerability"],
+  ["Please patch this immediately before it gets exploited.","悪用される前に至急これにパッチを当ててください。","vulnerability"],
+  // news style
+  ["Researchers disclosed a new flaw affecting millions of devices.","研究者が数百万台の端末に影響する新たな欠陥を公表した。","news"],
+  ["The company confirmed that customer data was exposed.","その企業は顧客データが流出したことを認めた。","news"],
+  ["The ransomware group leaked the stolen files online.","そのランサムウェア集団は盗んだファイルをオンラインで公開した。","news"],
+  ["Security teams are urged to update as soon as possible.","セキュリティチームはできる限り早く更新するよう促されている。","news"],
+  ["The vulnerability is being actively exploited in the wild.","その脆弱性は実際に悪用が進行している。","news"],
+  ["A phishing campaign is targeting employees with fake invoices.","偽の請求書で従業員を狙うフィッシング攻撃が発生している。","news"],
+  // workplace
+  ["Can you walk me through how this exploit works?","このエクスプロイトの仕組みを順を追って説明してくれる？","workplace"],
+  ["I'll write up the findings in the report tonight.","今夜レポートに調査結果をまとめて書くよ。","workplace"],
+  ["We need to prioritize the high-severity issues first.","まず深刻度の高い問題から優先的に対応する必要がある。","workplace"],
+  ["Let me know if you need any help with the analysis.","分析で手伝いが必要なら知らせてね。","workplace"],
+  ["I think we should double-check this before reporting it.","報告する前にこれをもう一度確認したほうがいいと思う。","workplace"],
+  ["That makes sense, but I'd like to test it myself first.","それは理にかなってるけど、まず自分でテストしたい。","workplace"],
+  ["Could you explain that in a bit more detail?","もう少し詳しく説明してもらえますか？","workplace"],
+  ["I'm still learning, so please correct me if I'm wrong.","まだ勉強中なので、間違っていたら直してください。","workplace"],
+  // reception — greeting
+  ["Hello! How can I help you?","こんにちは。ご用件は何でしょうか？","reception"],
+  ["Good morning. Welcome.","おはようございます。ようこそいらっしゃいました。","reception"],
+  ["Welcome. How may I help you today?","いらっしゃいませ。本日はどのようなご用件でしょうか？","reception"],
+  // reception — appointment
+  ["Do you have an appointment?","お約束はございますか？","reception"],
+  ["May I have your name, please?","お名前を伺えますか？","reception"],
+  ["Who are you here to see?","どなたにご用でしょうか？","reception"],
+  ["What company are you from?","どちらの会社の方でしょうか？","reception"],
+  ["May I ask who your appointment is with?","どなたとのお約束か伺えますか？","reception"],
+  ["What time is your appointment?","お約束は何時でしょうか？","reception"],
+  // reception — take a seat / call
+  ["One moment, please.","少々お待ちください。","reception"],
+  ["Please have a seat.","おかけになってお待ちください。","reception"],
+  ["I'll call them for you right away.","すぐに担当者をお呼びします。","reception"],
+  ["They'll be with you shortly.","担当者がまもなく参ります。","reception"],
+  ["Thank you for waiting.","お待たせいたしました。","reception"],
+  ["Let me check if they're available.","在席しているか確認いたします。","reception"],
+  ["I'm sorry, they're in a meeting right now.","申し訳ございません、ただ今会議中です。","reception"],
+  // reception — asking to repeat
+  ["Could you say that again, please?","もう一度おっしゃっていただけますか？","reception"],
+  ["Could you speak a little slower, please?","もう少しゆっくり話していただけますか？","reception"],
+  ["Sorry, could you write it down for me?","すみません、書いていただけますか？","reception"],
+  ["Could you spell your name for me?","お名前のつづりを教えていただけますか？","reception"],
+  // reception — business card / visitor pass
+  ["May I have your business card?","名刺をいただけますか？","reception"],
+  ["Could I have two cards? One is for our records.","名刺を2枚いただけますか？1枚は記録用です。","reception"],
+  ["One is for our records, and the other is for your visitor pass.","1枚は記録用、もう1枚は来客パス用です。","reception"],
+  ["Here is your visitor pass. Please wear it while you're here.","来客パスです。滞在中は身につけてください。","reception"],
+  ["Please return the pass when you leave.","お帰りの際にパスをご返却ください。","reception"],
+  // reception — forms / ID
+  ["Could you fill out this form, please?","こちらの用紙にご記入いただけますか？","reception"],
+  ["May I see some identification?","身分証を拝見できますか？","reception"],
+  ["Please sign here.","こちらにご署名をお願いします。","reception"],
+  // reception — directions
+  ["The restroom is over there, on your left.","お手洗いはあちら、左手にございます。","reception"],
+  ["The elevator is on your right.","エレベーターは右手にございます。","reception"],
+  ["Please take the elevator to the fifth floor.","エレベーターで5階へお上がりください。","reception"],
+  ["The meeting room is straight down this hall.","会議室はこの廊下をまっすぐ進んだ所です。","reception"],
+  ["I'll show you the way.","ご案内いたします。","reception"],
+  // reception — closing
+  ["Would you like something to drink?","お飲み物はいかがですか？","reception"],
+  ["Thank you for coming. Have a nice day.","お越しいただきありがとうございました。よい一日を。","reception"],
+];
+
+const $ = s => document.querySelector(s);
+const GOAL = 10;
+let rate = 0.8, idx = -1, voice = null, showJa = false, filter = 'all';
+let progress = { streak:0, lastDate:null, todayCount:0, todayDate:null, total:0, log:[] };
+
+const todayStr = () => new Date().toLocaleDateString('en-CA');
+const dayDiff = (a,b) => Math.round((new Date(b) - new Date(a)) / 86400000);
+
+/* ---------- persistent storage (localStorage) ---------- */
+function load() {
+  try {
+    const raw = localStorage.getItem('shadow-progress');
+    if (raw) progress = JSON.parse(raw);
+  } catch(e) { /* first run: key missing */ }
+  rolloverDay();
+  render();
+}
+function save() {
+  try { localStorage.setItem('shadow-progress', JSON.stringify(progress)); }
+  catch(e) { console.error('save failed', e); }
+}
+function rolloverDay() {
+  const t = todayStr();
+  if (progress.todayDate !== t) { progress.todayDate = t; progress.todayCount = 0; }
+  // streak validity: if last practice was 2+ days ago, streak resets to 0
+  if (progress.lastDate && dayDiff(progress.lastDate, t) >= 2) progress.streak = 0;
+}
+function markPracticed() {
+  const t = todayStr();
+  rolloverDay();
+  progress.todayCount++;
+  progress.total++;
+  if (progress.lastDate !== t) {
+    const d = progress.lastDate ? dayDiff(progress.lastDate, t) : null;
+    progress.streak = (d === 1) ? progress.streak + 1 : 1;
+    progress.lastDate = t;
+  }
+  save();
+  render();
+}
+function logPractice(text, score) {
+  const time = new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  progress.log.unshift({ time, text, score });
+  progress.log = progress.log.slice(0, 15);
+  save();
+  renderLog();
+}
+
+/* ---------- render ---------- */
+function render() {
+  $('#today').innerHTML = progress.todayCount + '<span style="font-size:13px;color:var(--muted)">/'+GOAL+'</span>';
+  $('#streakNum').textContent = progress.streak;
+  $('#total').textContent = progress.total;
+  $('#prog').style.width = Math.min(100, progress.todayCount/GOAL*100) + '%';
+  const s = progress.streak;
+  $('#streak').innerHTML = s > 0 ? `<b>${s}</b> 日連続 🔥<br>今日 ${progress.todayCount}/${GOAL}` : `今日から始めよう<br>目標 ${GOAL}/日`;
+  renderLog();
+}
+function renderLog() {
+  const el = $('#log');
+  if (!progress.log.length) { el.innerHTML = '<div class="log-empty">まだ記録なし。「聞く」→ 真似して声に出す → 「話す」で発音チェック。</div>'; return; }
+  el.innerHTML = progress.log.map(i =>
+    `<div class="log-item"><span class="t">${i.time}</span><span class="x">${i.text}</span>${i.score!=null?`<span class="s">${i.score}%</span>`:''}</div>`
+  ).join('');
+}
+
+/* ---------- phrase flow ---------- */
+function poolIds() {
+  return PHRASES.map((p,i)=>i).filter(i => filter==='all' || PHRASES[i][2]===filter);
+}
+function pick() {
+  const ids = poolIds();
+  let n; do { n = ids[Math.floor(Math.random()*ids.length)]; } while (n === idx && ids.length > 1);
+  idx = n;
+  const [en, ja, cat] = PHRASES[idx];
+  $('#cat').textContent = cat;
+  $('#en').innerHTML = en.split(' ').map(w=>`<span class="w">${w}</span>`).join(' ');
+  $('#ja').textContent = ja;
+  $('#ja').classList.toggle('hidden', !showJa);
+  $('#heard').innerHTML = '<span style="color:var(--dim)">① 聞く　② 0.5秒遅れで真似して声に出す　③ 言えたら「言えた」</span>';
+}
+
+/* ---------- text to speech ---------- */
+function loadVoice() {
+  const vs = speechSynthesis.getVoices().filter(v => v.lang.startsWith('en'));
+  voice = vs.find(v=>/Google US|Samantha|Microsoft Aria|Microsoft Zira/i.test(v.name))
+       || vs.find(v=>v.lang==='en-US') || vs[0] || null;
+}
+function speak() {
+  if (!('speechSynthesis' in window)) return;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(PHRASES[idx][0]);
+  u.lang = 'en-US'; u.rate = rate; if (voice) u.voice = voice;
+  const btn = $('#listen');
+  btn.classList.add('playing');
+  u.onend = u.onerror = () => btn.classList.remove('playing');
+  speechSynthesis.speak(u);
+}
+
+/* ---------- self-report (言えた) ---------- */
+function markDone() {
+  markPracticed();
+  logPractice(PHRASES[idx][0], null);
+  const b = $('#done');
+  b.classList.add('flash');
+  $('#heard').innerHTML = '<span style="color:var(--mint)">✓ 記録した。次の文へ。</span>';
+  setTimeout(() => { b.classList.remove('flash'); pick(); }, 550);
+}
+
+/* ---------- events ---------- */
+$('#listen').onclick = speak;
+$('#done').onclick = markDone;
+$('#next').onclick = () => { speechSynthesis.cancel(); pick(); };
+$('#filters').querySelectorAll('button').forEach(b => b.onclick = () => {
+  filter = b.dataset.c;
+  $('#filters').querySelectorAll('button').forEach(x=>x.classList.remove('sel'));
+  b.classList.add('sel');
+  speechSynthesis.cancel();
+  idx = -1;
+  pick();
+});
+$('#speed').querySelectorAll('button').forEach(b => b.onclick = () => {
+  rate = parseFloat(b.dataset.r);
+  $('#speed').querySelectorAll('button').forEach(x=>x.classList.remove('sel'));
+  b.classList.add('sel');
+});
+$('#toggleJa').onclick = () => {
+  showJa = !showJa;
+  $('#ja').classList.toggle('hidden', !showJa);
+  $('#toggleJa').textContent = showJa ? '訳: 表示' : '訳: 隠す';
+};
+$('#ja').onclick = () => { if ($('#ja').classList.contains('hidden')) { $('#ja').classList.remove('hidden'); } };
+
+/* ---------- init ---------- */
+if ('speechSynthesis' in window) { loadVoice(); speechSynthesis.onvoiceschanged = loadVoice; }
+load();
+pick();
+</script>
+</body>
+</html>
