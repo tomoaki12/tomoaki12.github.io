@@ -77,15 +77,15 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">1</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">50</div><div class="l">脆弱性</div></div>
+    <div class="stat danger"><div class="n">33</div><div class="l">高深刻度</div></div>
+    <div class="stat warn"><div class="n">97</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">50</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">97</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -105,25 +105,354 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-sev="" data-src="JVN iPedia">
-        <td class="date">2026-07-02</td>
+        <td class="date">2026-07-06</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-021994.html" target="_blank" rel="noopener">Apache Tomcatにおける複数の脆弱性（2026年6月29日）</a><div class="cve-row">CVE-2026-50229, CVE-2026-53404, CVE-2026-53434, CVE-2026-55276, CVE-2026-55955, CVE-2026-55956, CVE-2026-55957</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022466.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年07月02日）</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">The Apache Software Foundationから、Apache Tomcatの脆弱性（CVE-2026-55957, CVE-2026-55956, CVE-2026-55955, CVE-2026-55276, CVE-2026-53434, CVE-2026-53404, CVE-2026-50229）に対してアドバイザリが公開されました。  Fixed in Apache T</td>
+        <td class="desc">2026年07月02日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：3件 ICSA-26-183-01: ST Engineering iDirect iQ-Series Terminals ICSA-26-183-02: CubeSpace CW0057 Reaction Wheel ICSA-26-183-</td>
       </tr>
       <tr data-sev="" data-src="JVN iPedia">
-        <td class="date">2026-07-02</td>
+        <td class="date">2026-07-06</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-021993.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年06月30日）</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022465.html" target="_blank" rel="noopener">Little Orbit製GamersFirst Anti-Cheatにおける複数のローカル特権昇格の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">2026年06月30日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：8件 ICSA-26-181-01: Mitsubishi Electric MELSOFT Update Manager SW1DND-UDM-M ICSA-26-181-02: Frangoteam FUXA SCADA/HMI ICSA-</td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。  Vulnerability Note VU#639124 Multiple local privilege escalation vulnerabilities in Little Orbits GameFirst Anti-Cheat</td>
       </tr>
-      <tr data-sev="High 7.2" data-src="JVN iPedia">
-        <td class="date">2026-07-01</td>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000091.html" target="_blank" rel="noopener">セイコーソリューションズ製SkyBridge MB-A100/MB-A110におけるOSコマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-50043</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
-        <td class="desc">セイコーソリューションズ株式会社が提供するSkyBridge MB-A100/MB-A110には、次の脆弱性が存在します。 OSコマンドインジェクション（CWE-78）- CVE-2026-50043  この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：情報通信研究機構 サイバーセキュリティ研究所 </td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022433.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける複数の脆弱性</a><div class="cve-row">CVE-2026-14381, CVE-2026-14381</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">150.0.7871.46 より前の Google Chrome の WebAppInstalls において、不適切なセキュリティ UI のために、リモートの攻撃者が細工された HTML ページを介して UI スプーフィングを行うことが可能でした。（Chromium セキュリティの重大度は中です）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022432.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-14382, CVE-2026-14382</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46以前のANGLEにおいて、信頼されていない入力の検証が不十分であったため、リモートの攻撃者が細工されたHTMLページを利用してサンドボックスから脱出する可能性がありました。（Chromiumセキュリティの深刻度：高）」</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022431.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける複数の脆弱性</a><div class="cve-row">CVE-2026-14383, CVE-2026-14383</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Google Chromeのバージョン150.0.7871.46より前のV8における不適切な実装によって、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重大度は中です）」</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022430.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-14384, CVE-2026-14384</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Windows版Google Chromeの150.0.7871.46より前のバージョンにおいて、ANGLEの境界外読み取りの脆弱性により、細工されたHTMLページを介してリモート攻撃者がクロスオリジンのデータを漏えいさせることが可能でした。（Chromiumのセキュリティ深刻度は中です）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022429.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける複数の脆弱性</a><div class="cve-row">CVE-2026-14385, CVE-2026-14385</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Mac版Google Chromeのバージョン150.0.7871.46より前のANGLEにおけるヒープバッファオーバーフローの脆弱性により、リモートの攻撃者が細工されたHTMLページを介して境界外のメモリアクセスを行うことが可能でした。(Chromiumセキュリティ重大度は高と評価されています)</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022428.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-14386, CVE-2026-14386</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Google Chromeのバージョン150.0.7871.46未満におけるANGLEの範囲外読み取りにより、リモートの攻撃者が細工されたHTMLページを介してプロセスメモリから潜在的に機密性の高い情報を取得できる可能性がありました。（Chromiumセキュリティの深刻度は高いです）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022427.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不変と仮定される Web パラメータの外部制御に関する脆弱性</a><div class="cve-row">CVE-2026-14387, CVE-2026-14387</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンのSkiaにおける整数オーバーフローにより、リモートの攻撃者が細工されたHTMLページを介してサンドボックスを脱出する可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022426.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-14388, CVE-2026-14388</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Google Chromeのバージョン150.0.7871.46未満のANGLEにおける境界外読み取りの脆弱性により、遠隔の攻撃者が細工されたHTMLページを経由してプロセスメモリから潜在的に機密性の高い情報を取得できる可能性がありました。（Chromiumセキュリティの重大度は中です）</td>
+      </tr>
+      <tr data-sev="High 8.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022425.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不変と仮定される Web パラメータの外部制御に関する脆弱性</a><div class="cve-row">CVE-2026-14389, CVE-2026-14389</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
+        <td class="desc">Google Chromeのバージョン150.0.7871.46以前のSkiaにおける整数オーバーフローの脆弱性により、リモート攻撃者が細工されたHTMLページを介してレンダラプロセスを乗っ取り、サンドボックスを脱出する可能性がありました。（Chromiumセキュリティ重大度：中）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022424.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14390, CVE-2026-14390</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46 未満のバージョンの ANGLE における use after free の脆弱性により、リモートの攻撃者が細工された HTML ページを介してサンドボックスから脱出を実行する可能性がありました。（Chromium セキュリティの重大度は「高」です）</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022423.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける複数の脆弱性</a><div class="cve-row">CVE-2026-14391, CVE-2026-14391</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">Windows 上の Google Chrome バージョン 150.0.7871.46 未満の ANGLE における整数オーバーフローにより、レンダラープロセスが侵害されます。リモート攻撃者は細工された HTML ページを介してプロセスメモリから潜在的に機密性の高い情報を取得することが可能です。（Chromium セキュリティの重大度：中）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022422.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-14392, CVE-2026-14392</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンのTintにおいて、境界外書き込みの脆弱性が存在しました。この脆弱性により、リモートの攻撃者が細工されたHTMLページを介してサンドボックスを脱出する可能性がありました。（Chromiumのセキュリティ深刻度：高）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022421.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14393, CVE-2026-14393</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46 未満の V8 における use after free 脆弱性により、リモートの攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティの重大度は中と評価されています）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022420.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14394, CVE-2026-14394</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">150.0.7871.46 より前の Google Chrome の V8 における Use after free により、リモートの攻撃者が細工された HTML ページを介してヒープ破損を悪用する可能性がありました。（Chromium セキュリティの深刻度は低いです）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022419.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-14395, CVE-2026-14395</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46未満のバージョンのV8における境界外書き込みの脆弱性により、リモートの攻撃者が細工されたHTMLページを通じてサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重大度は低と評価されています）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022418.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-14396, CVE-2026-14396</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">150.0.7871.46より前のGoogle ChromeのANGLEには境界外読み取りの脆弱性があり、リモートの攻撃者が細工されたHTMLページを介してクロスオリジンデータを漏洩させる可能性がありました。（Chromiumのセキュリティ重要度は高いです）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022417.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-14397, CVE-2026-14397</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Mac版Google Chromeのバージョン150.0.7871.46以前のANGLEにおける境界外書き込みの脆弱性により、リモートの攻撃者が細工されたHTMLページを介してサンドボックスから脱出する可能性がありました。（Chromiumセキュリティの深刻度：中）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022416.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14398, CVE-2026-14398</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンのANGLEにおけるUse after freeの脆弱性により、リモートの攻撃者が特別に細工されたHTMLページを介してサンドボックスを脱出する攻撃を実行する可能性がありました。（Chromiumセキュリティ重大度：重大）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022415.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていない変数の使用に関する脆弱性</a><div class="cve-row">CVE-2026-14399, CVE-2026-14399</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46 より前のバージョンの Dawn において、初期化されていない状態で使用される問題により、リモート攻撃者が細工された HTML ページを介してプロセスメモリから潜在的に機密性の高い情報を取得できる可能性がありました。（Chromium セキュリティ重要度：中）</td>
+      </tr>
+      <tr data-sev="High 8.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022414.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-14400, CVE-2026-14400</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
+        <td class="desc">Google Chrome のバージョン 150.0.7871.46 より前の ANGLE における境界外書き込みにより、レンダラープロセスが侵害される可能性がありました。リモート攻撃者は細工された HTML ページを介してサンドボックスを脱出できるおそれがあります。（Chromium セキュリティ重大度：高）</td>
+      </tr>
+      <tr data-sev="High 8.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022413.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-14401, CVE-2026-14401</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
+        <td class="desc">150.0.7871.46より前のAndroid版Google ChromeのANGLEにおいて、信頼されていない入力の検証が不十分であったため、レンダラープロセスを乗っ取ったリモート攻撃者が細工されたHTMLページを介してサンドボックスから脱出する可能性がありました。（Chromiumセキュリティ深刻度：高）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022412.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていない変数の使用に関する脆弱性</a><div class="cve-row">CVE-2026-14402, CVE-2026-14402</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Windows上のGoogle Chromeバージョン150.0.7871.46未満のANGLEにおける未初期化使用により、リモートの攻撃者が細工されたHTMLページを介してプロセスメモリから潜在的に機密性の高い情報を取得できる可能性がありました。（Chromiumセキュリティの重大度は高いです）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022411.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14403, CVE-2026-14403</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46 未満の V8 における Use after free の脆弱性により、リモートの攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティの深刻度は低です）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022410.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるユーザインターフェースにおける重要情報の誤った表示に関する脆弱性</a><div class="cve-row">CVE-2026-14404, CVE-2026-14404</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Google Chromeの150.0.7871.46以前のPDFiumにおける不適切な実装により、リモート攻撃者が細工されたPDFファイルを介してUIスプーフィングを実行できる可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022409.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていない変数の使用に関する脆弱性</a><div class="cve-row">CVE-2026-14405, CVE-2026-14405</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">150.0.7871.46以前のGoogle ChromeのV8において初期化されていないメモリの使用により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumのセキュリティ重大度は低とされています）</td>
+      </tr>
+      <tr data-sev="Medium 5.9" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022408.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-14406, CVE-2026-14406</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.9</span></td>
+        <td class="desc">150.0.7871.46 より前の Google Chrome の V8 における範囲外読み取りの脆弱性により、悪意のある拡張機能のインストールをユーザーに促す攻撃者が、細工された Chrome 拡張機能を通じてプロセスメモリから潜在的に機密性の高い情報を取得する可能性がありました。（Chromium セキュリティ重大度：中）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022407.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける複数の脆弱性</a><div class="cve-row">CVE-2026-14407, CVE-2026-14407</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">150.0.7871.46 より前の Google Chrome の V8 における不適切な実装により、リモートの攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティの深刻度は中です）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022406.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていない変数の使用に関する脆弱性</a><div class="cve-row">CVE-2026-14408, CVE-2026-14408</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンには、Dawnの未初期化使用の脆弱性が存在し、リモートの攻撃者が細工されたHTMLページを介してプロセスメモリから潜在的に機密情報を取得できる可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022405.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける保護メカニズムの不具合に関する脆弱性</a><div class="cve-row">CVE-2026-14409, CVE-2026-14409</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">Google Chrome のバージョン 150.0.7871.46 未満の V8 における不適切な実装により、リモートの攻撃者が特定の UI ジェスチャーをユーザーに行わせるよう仕向けることで、細工された HTML ページを介してサンドボックス内で任意のコードを実行する可能性がありました。（Chromium セキュリティの重大度は低です）</td>
+      </tr>
+      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022404.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるユーザインターフェースにおける重要情報の誤った表示に関する脆弱性</a><div class="cve-row">CVE-2026-14410, CVE-2026-14410</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
+        <td class="desc">150.0.7871.46より前のGoogle ChromeのSkiaにおける不適切な実装により、レンダラープロセスを乗っ取ったリモート攻撃者が細工されたHTMLページを介してUIスプーフィングを行うことが可能でした。（Chromiumセキュリティ重大度は低です）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022403.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-14411, CVE-2026-14411</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">150.0.7871.46より前のGoogle ChromeのANGLEにおける信頼されていない入力に対する検証が不十分であったため、リモートの攻撃者が細工されたHTMLページを介してサンドボックスを脱出する可能性がありました。（Chromiumセキュリティの深刻度は高です）</td>
+      </tr>
+      <tr data-sev="High 8.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022402.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-14412, CVE-2026-14412</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンに含まれるANGLEの信頼されていない入力に対する検証不十分の脆弱性により、レンダラープロセスを乗っ取ったリモート攻撃者が細工されたHTMLページを介してサンドボックスをエスケープできる可能性がありました。（Chromiumセキュリティの重大度：高）</td>
+      </tr>
+      <tr data-sev="High 8.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022401.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていない変数の使用に関する脆弱性</a><div class="cve-row">CVE-2026-14413, CVE-2026-14413</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンにおいて、ANGLEの初期化されていない使用が原因でレンダラープロセスを乗っ取ったリモート攻撃者が、細工されたHTMLページを介してサンドボックスを脱出する可能性がありました。（Chromiumセキュリティ重大度：高）</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022400.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-14414, CVE-2026-14414</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">150.0.7871.46 より前の Google Chrome の Skia における信頼されていない入力の検証不足により、リモート攻撃者が特殊に細工された HTML ページを介してレンダラープロセスを侵害し、プロセスメモリから潜在的に機密性の高い情報を取得することが可能でした。（Chromium セキュリティ重大度：中）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022399.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-14415, CVE-2026-14415</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46 より前の V8 における不適切な実装により、リモート攻撃者が特定の UI ジェスチャーをユーザーに実行させることに成功し、細工された HTML ページを介してヒープ破損を悪用する可能性がありました。（Chromium セキュリティの深刻度は低いです）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022398.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-14416, CVE-2026-14416</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンのDawnにおいて、境界外読み取りの脆弱性によりリモートの攻撃者が細工されたHTMLページを介してサンドボックスをエスケープできる可能性がありました。（Chromiumセキュリティの深刻度：低）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022397.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14417, CVE-2026-14417</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46 より前のバージョンの Dawn において、use after free の脆弱性が存在し、リモートの攻撃者が細工された HTML ページを介してサンドボックスを脱出する可能性がありました。（Chromium セキュリティ重大度：クリティカルです）</td>
+      </tr>
+      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022396.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていない変数の使用に関する脆弱性</a><div class="cve-row">CVE-2026-14418, CVE-2026-14418</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
+        <td class="desc">150.0.7871.46 より前の Google Chrome の ANGLE における未初期化使用により、リモートの攻撃者が細工された HTML ページを介してクロスオリジンデータを漏洩させる可能性がありました。(Chromium セキュリティの重大度は高いと評価されています。)</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022395.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14419, CVE-2026-14419</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンのSkiaにおけるUse after freeにより、リモートの攻撃者が細工されたHTMLページを介してサンドボックスを脱出する可能性がありました。（Chromiumのセキュリティ重要度は重大です）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022394.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける複数の脆弱性</a><div class="cve-row">CVE-2026-14420, CVE-2026-14420</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンのDawnにおいて、境界外の読み取りおよび書き込みの脆弱性が存在しました。この脆弱性により、リモートの攻撃者が細工されたHTMLページを介してサンドボックスを回避できる可能性がありました。（Chromiumセキュリティの重大度：重大です）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022393.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていない変数の使用に関する脆弱性</a><div class="cve-row">CVE-2026-14421, CVE-2026-14421</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">150.0.7871.46より前のChromeOS上のGoogle ChromeのDawnにおいて、初期化されていない使用により、リモート攻撃者が細工されたHTMLページを介してプロセスメモリから潜在的に機密性の高い情報を取得する可能性がありました。（Chromiumセキュリティの重大度は中です）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022392.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける複数の脆弱性</a><div class="cve-row">CVE-2026-14422, CVE-2026-14422</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Google Chrome のバージョン 150.0.7871.46 より前の Tint には境界外読み取りおよび書き込みの脆弱性があり、遠隔の攻撃者が細工された HTML ページを介して境界外メモリアクセスを行う可能性がありました。（Chromium セキュリティ重大度：高と評価されています）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022391.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける型の取り違えに関する脆弱性</a><div class="cve-row">CVE-2026-14423, CVE-2026-14423</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Google Chromeのバージョン150.0.7871.46より前に存在したTintの型混同の脆弱性により、リモート攻撃者が細工されたHTMLページを介してサンドボックスを脱出する可能性がありました。（Chromiumのセキュリティ重大度は高です）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022390.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14424, CVE-2026-14424</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">Mac用Google Chromeのバージョン150.0.7871.46以前のDawnにはUse after freeの脆弱性が存在し、リモートの攻撃者が細工されたHTMLページを介してサンドボックスの脱出を行う可能性がありました。（Chromiumのセキュリティ深刻度は高と評価されています）</td>
+      </tr>
+      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022389.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14425, CVE-2026-14425</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
+        <td class="desc">150.0.7871.46より前のGoogle ChromeのANGLEにおけるUse after freeにより、リモートの攻撃者が細工されたHTMLページを介してサンドボックスをエスケープする攻撃を実行する可能性がありました。（Chromiumのセキュリティ重大度は高です）</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022388.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-14426, CVE-2026-14426</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">Google Chromeの150.0.7871.46以前のV8におけるUse after freeの脆弱性により、リモート攻撃者が特定のUIジェスチャーを実行するようユーザーを騙し、作成されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重要度：高）</td>
+      </tr>
+      <tr data-sev="High 8.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022387.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-14427, CVE-2026-14427</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
+        <td class="desc">Google Chrome 150.0.7871.46より前のバージョンに含まれるSkiaのヒープバッファオーバーフローにより、レンダラープロセスが侵害される可能性がありました。リモートの攻撃者は細工されたHTMLページを介してサンドボックスを脱出できるおそれがあります。（Chromiumセキュリティ重大度：クリティカル）</td>
+      </tr>
+      <tr data-sev="High 8.3" data-src="JVN iPedia">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-022386.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-14428, CVE-2026-14428</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
+        <td class="desc">Android版Google Chromeのバージョン150.0.7871.46以前のDawnには、信頼されていない入力の検証が不十分な問題がありました。その結果、レンダラープロセスを侵害したリモート攻撃者が、細工されたHTMLページを利用してサンドボックスからの脱出を行う可能性がありました。（Chromiumセキュリティ重大度：高です）</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-07-03</td>
@@ -470,6 +799,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-07-05</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186824" target="_blank" rel="noopener">ウェブメール「Roundcube」、アップデートで複数脆弱性を修正</a></td>
+        <td class="desc">ウェブメールクライアント「Roundcube Webmail」の開発チームは、複数の脆弱性を解消したセキュリティアップデートを公開した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186836" target="_blank" rel="noopener">HTTP通信ライブラリ「Apache HttpComponents」に複数のDoS脆弱性</a></td>
+        <td class="desc">Javaアプリケーションに組み込んで使うHTTP通信ライブラリ「Apache HttpComponents」に複数の脆弱性が明らかとなった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-06</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186841" target="_blank" rel="noopener">「FortiOS」のLDAP認証バイパス脆弱性、仮想パッチが公開</a></td>
+        <td class="desc">FortinetのUTM機器などに搭載されている「FortiOS」の「SSL-VPN」コンポーネントに脆弱性「CVE-2026-22153」が判明した問題で、同社は仮想パッチを公開した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-05</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186828" target="_blank" rel="noopener">先週注目された記事（2026年6月28日〜2026年7月4日）</a></td>
+        <td class="desc">2026年6月28日から2026年7月4日までの1週間にSecurity NEXTにおいて注目度が高かった上位10記事は以下のとおり。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-07-03</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186797" target="_blank" rel="noopener">「WatchGuard Firebox」のVPN機能に深刻なRCE脆弱性</a></td>
@@ -564,37 +917,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186715" target="_blank" rel="noopener">マルウェア対策ソフト「ClamAV」に複数脆弱性 - Cisco製品にも影響</a></td>
         <td class="desc">マルウェア対策ソフト「ClamAV」に複数の脆弱性が判明した。脆弱性を悪用されると、スキャン処理が中断されるおそれがあるという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-02</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186686" target="_blank" rel="noopener">「Firefox」にメモリ破壊の脆弱性 - 任意コード実行のおそれ</a></td>
-        <td class="desc">Mozilla Foundationは、ウェブブラウザ「Firefox」に脆弱性が明らかになったとして、セキュリティアップデートをリリースした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-02</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186643" target="_blank" rel="noopener">個人情報をメールに誤添付、容量から気づく - 阪教大</a></td>
-        <td class="desc">大阪教育大学は、学生や教職員の個人情報を含むファイルを、誤ってメールに添付して送信したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-06-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186615" target="_blank" rel="noopener">「Adobe ColdFusion」に複数の深刻な脆弱性 - 早急に対応を</a></td>
-        <td class="desc">Adobeは、アプリケーションサーバ「Adobe ColdFusion」に深刻な脆弱性が判明したとして、定例外のアップデートを公開した。悪用されるリスクが高いとし、できるだけ早急に対処するよう求めている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-01</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186626" target="_blank" rel="noopener">「Chrome」にアップデート - 382件の脆弱性に対応</a></td>
-        <td class="desc">Googleは現地時間2026年6月30日、ブラウザ「Chrome」のアップデートを公開した。今回のアップデートでは382件の脆弱性に対処している。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年07月05日 13:31 JST</span>
+  <span>最終更新: 2026年07月06日 13:40 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
