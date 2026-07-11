@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">28</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">27</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">102</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,6 +104,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-07-10</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-023199.html" target="_blank" rel="noopener">Adalo App Builderにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Vulnerability Note VU#849433 Adalo Database API Enables Cross-App User Data Extraction via Over-Fetching and Missing Authorization Controls</td>
+      </tr>
       <tr data-sev="Critical 9.1" data-src="JVN iPedia">
         <td class="date">2026-07-10</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -446,13 +453,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-023025.html" target="_blank" rel="noopener">Coderにおける複数の脆弱性</a><div class="cve-row">CVE-2026-55428, CVE-2026-55428</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
         <td class="desc">CoderはTerraformを通じて組織がリモート開発環境をプロビジョニングできるようにします。バージョン2.29.7、2.32.7、2.33.8、および2.34.2より前のバージョンでは、テイルネットコーディネーターはエージェントの`Addresses`が認証されたUUIDに由来するかどうかを検証しますが、`AllowedIPs`については同様の検証を行っていません。コーディネーターはエージェ</td>
-      </tr>
-      <tr data-sev="High 8.7" data-src="JVN iPedia">
-        <td class="date">2026-07-10</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-023024.html" target="_blank" rel="noopener">Coderにおけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-55429, CVE-2026-55429</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.7</span></td>
-        <td class="desc">CoderはTerraformを通じてリモート開発環境のプロビジョニングを組織に提供します。バージョン2.29.7、2.32.7、2.33.8、および2.34.2以前では、`UpsertWorkspaceApp`がプライマリキーの競合時に既存のアプリの`agent_id`を上書きし、`insertAgentApp`はプロビジョナーの`CompleteJob`ペイロードからアプリIDを検証せずに受け</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-07-10</td>
@@ -852,6 +852,48 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">「Microsoft Defender」に未修正の脆弱性が判明したことを受け、マイクロソフトはマルウェア対策エンジンを更新し、対策を講じたことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
+        <td class="date">2026-07-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187133" target="_blank" rel="noopener">「MOVEit Transfer」に複数脆弱性 - 最新版へ更新を</a></td>
+        <td class="desc">Progress Softwareは、ファイル転送ソリューション「MOVEit Transfer」に脆弱性が判明し、修正を行ったことを明らかにした。アップデートを強く推奨している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187062" target="_blank" rel="noopener">都民向け金融セミナーの申込サイトが一時消失 - 攻撃の痕跡も</a></td>
+        <td class="desc">東京都は、都民向け金融セミナーのウェブサイトが一時消失したことを明らかにした。破壊にとどまり、情報が外部に流出した可能性は低いと説明している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187124" target="_blank" rel="noopener">通販サイトに不正アクセスか、調査中 - アメニティメーカー</a></td>
+        <td class="desc">ホテルで利用されるアメニティの製造販売を手がけるシントワールドは、同社が運営する通販サイトが不正アクセスを受けた可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186912" target="_blank" rel="noopener">本人の同意なしに健診結果を家族に説明 - 八重瀬町</a></td>
+        <td class="desc">沖縄県八重瀬町は、本人の同意を得ないまま、職員が健康診断の結果を家族に説明するミスがあったことを公表した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186977" target="_blank" rel="noopener">中学校の生徒情報含む私物メディアを鞄ごと紛失 - 江戸川区</a></td>
+        <td class="desc">東京都江戸川区は、区立中学校の教諭が生徒の個人情報を含む記録メディアを学外に持ち出し、紛失したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/186914" target="_blank" rel="noopener">ボランティア情報含むページが閲覧可能に - 千歳JAL国際マラソン</a></td>
+        <td class="desc">千歳JAL国際マラソンにおいて、個人情報が含まれた運営役員用ウェブページが、インターネット上で閲覧できる状態だったことがわかった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187074" target="_blank" rel="noopener">説明会の案内状を誤送信、全参加予定者の氏名 - 大阪市</a></td>
+        <td class="desc">大阪市は、大阪市中央こども相談センターにおいて、説明会の案内状をメールで送信した際、個人情報が漏洩したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-07-08</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/187045" target="_blank" rel="noopener">ブラウザ「Chrome」にアップデート - 脆弱性27件を修正</a></td>
@@ -910,55 +952,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186957" target="_blank" rel="noopener">「ColdFusion」や「Langflow」の脆弱性悪用に注意喚起 - 米当局</a></td>
         <td class="desc">米当局は、「Adobe ColdFusion」「Langflow」や「Joomla」向け拡張機能の脆弱性が悪用されているとし、早急な対応を呼びかけた。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186711" target="_blank" rel="noopener">紛失を隠蔽するため文書を偽造、職員を処分 - 海老名市</a></td>
-        <td class="desc">神奈川県海老名市は、文書の紛失を隠蔽するため、文書の偽造を行った職員に対し、懲戒処分を実施した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186814" target="_blank" rel="noopener">MS 365アカウントや学生団体サイトの侵害が判明 - 富山県立大</a></td>
-        <td class="desc">富山県立大学は、学内で利用するクラウドサービスの学生アカウントや、学生団体が運営するウェブサイトが外部より侵害を受けたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187008" target="_blank" rel="noopener">「Plesk」のXML API関連に複数の深刻な脆弱性</a></td>
-        <td class="desc">WebProsが提供するサーバ管理ソフト「Plesk」の複数の深刻な脆弱性が明らかとなった。アップデートでいずれも修正している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186984" target="_blank" rel="noopener">プリンタ「HP DeskJet 2800シリーズ」に脆弱性 - 機密情報漏洩のおそれ</a></td>
-        <td class="desc">HPのインクジェットプリンタ「HP DeskJet 2800シリーズ」において脆弱性が明らかとなった。管理者向け情報が漏洩するおそれがある。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186965" target="_blank" rel="noopener">「Dell PowerProtect Data Domain」に143件の脆弱性 - 修正版が公開</a></td>
-        <td class="desc">Dellのバックアップストレージ製品「Dell PowerProtect Data Domain」に多数の脆弱性が明らかとなった。脆弱性を修正したアップデートが提供されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186194" target="_blank" rel="noopener">メルマガ送信サービスで情報流出、影響範囲など調査 - ディライトフル</a></td>
-        <td class="desc">eコマース事業やSaaS事業を展開するディライトフルは、同社が運営するメール配信サービスでシステム障害が発生し、情報が流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186754" target="_blank" rel="noopener">個人情報の保存先を誤り、意図せず学生に共有 - 近畿大</a></td>
-        <td class="desc">近畿大学は、個人情報を含むファイルが意図せず一部学生から閲覧できる状態となっていたことを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年07月10日 13:16 JST</span>
+  <span>最終更新: 2026年07月11日 12:44 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
