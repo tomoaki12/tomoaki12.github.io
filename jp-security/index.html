@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">24</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">22</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">105</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,6 +104,27 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-07-16</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-023534.html" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年7月）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">新規：10件 SSA-229470: Multiple Vulnerabilities in SICAM 8 Products Before V26.20 SSA-019113: Vulnerabilities in the additional GNU/Linux subsystem of the SIMATIC S7-1500 CPU 1518(F)-4 PN/DP MFP V3.1.6 SS</td>
+      </tr>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-07-16</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-023678.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年07月14日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年07月14日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：4件 ICSA-26-195-01: ABB Advant Master Online Builder ICSA-26-195-02: ABB Ability Edgenius ICSA-26-195-03: ABB T-MAC Plus IC</td>
+      </tr>
+      <tr data-sev="Medium 6.3" data-src="JVN iPedia">
+        <td class="date">2026-07-16</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000099.html" target="_blank" rel="noopener">Tera TermのTTSSH2プラグインにおける複数の脆弱性</a><div class="cve-row">CVE-2026-58317, CVE-2026-60060</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.3</span></td>
+        <td class="desc">TeraTerm Projectが提供するTera TermのTTSSH2プラグインには、次の複数の脆弱性が存在します。  符号無し整数から符号付き整数への変換エラー（CWE-196）- CVE-2026-58317 長さパラメータの不整合に対する不適切な処理（CWE-130）- CVE-2026-60060  CVE-2026-58317 この脆弱性情報は、情報セキュリティ早期警戒パートナーシッ</td>
+      </tr>
       <tr data-sev="High 7.8" data-src="JVN iPedia">
         <td class="date">2026-07-15</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -433,26 +454,19 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
         <td class="desc">RabbitMQはメッセージングおよびストリーミングのブローカーです。バージョン3.13.15、4.0.21、4.1.11、および4.2.6より前のRabbitMQには、トピック認可において、メタデータストアの障害時に制限されたトピックへの書き込みやバインドを許可してしまう可能性があります。これは、Khepriからのトピック許可のルックアップエラーが未定義の状態で例外を発生させ、その結果として内部</td>
       </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-07-14</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-023630.html" target="_blank" rel="noopener">BroadcomのRabbitMQ Serverにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-57218, CVE-2026-57218</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">RabbitMQはメッセージングおよびストリーミングのブローカーです。バージョン4.2.6以前のRabbitMQ AMQP 0-9-1では、OAuthトークンの有効期限切れやconnection.update_secretによる権限縮小後も、既存のコンシューマーがメッセージの受信を継続できてしまう問題があります。これは、チャネルのユーザーステートが変更された際に既存のコンシューマーがキャンセルされ</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-16</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN65294474/" target="_blank" rel="noopener">Tera TermのTTSSH2プラグインにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">TeraTerm Projectが提供するTera TermのTTSSH2プラグインには、複数の脆弱性が存在します。</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-07-14</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-023629.html" target="_blank" rel="noopener">BroadcomのRabbitMQ Serverにおける複数の脆弱性</a><div class="cve-row">CVE-2026-57219, CVE-2026-57219</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">RabbitMQはメッセージングおよびストリーミングブローカーです。バージョン3.13.15、4.0.20、4.1.11、および4.2.6より前のバージョンでは、廃止されたGET /api/authエンドポイントが、management.oauth_client_secretで構成されたRabbitMQインストール環境においてOAuth 2クライアントシークレットを漏洩させる可能性がありました。管</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-07-14</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-023628.html" target="_blank" rel="noopener">BroadcomのRabbitMQ Serverにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-57220, CVE-2026-57220</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">RabbitMQはメッセージングおよびストリーミングブローカーです。バージョン4.2.6以前のRabbitMQストリームリスナーは、認証中およびTuneネゴシエーション前にフレームを組み立てる際に設定されたストリームフレームサイズの制限を適用していませんでした。そのため、認証されていないリモートクライアントが過大なフレーム長を宣言し、rabbit_stream_coreでブローカーのメモリを消費す</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-16</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU95286373/" target="_blank" rel="noopener">Apache Tomcatにおける複数の脆弱性(2026年7月14日)</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">The Apache Software Foundationから、Apache Tomcatの脆弱性（CVE-2026-59083、CVE-2026-59084）に対してアドバイザリが公開されました。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-07-15</td>
@@ -580,19 +594,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">セイコーソリューションズ株式会社が提供するSkyBridge MB-A100/MB-A110には、OSコマンドインジェクションの脆弱性が存在します。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-01</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU93304382/" target="_blank" rel="noopener">Apache Tomcatにおける複数の脆弱性（2026年6月29日）</a><div class="cve-row"></div></td>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-07-15</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260020.html" target="_blank" rel="noopener">注意喚起: 2026年7月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">The Apache Software Foundationから、Apache Tomcatの脆弱性（CVE-2026-55957, CVE-2026-55956, CVE-2026-55955, CVE-2026-55276, CVE-2026-53434, CVE-2026-53404, CVE-2026-50229）に対してアドバイザリが公開されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-01</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU99876312/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年06月30日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年06月30日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
+        <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-06-23</td>
@@ -626,13 +633,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="date">2026-05-22</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
         <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260015.html" target="_blank" rel="noopener">注意喚起: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-05-21</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260014.html" target="_blank" rel="noopener">注意喚起: TrendAI Apex Oneなどのトレンドマイクロ製品における複数の脆弱性に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
       </tr>
@@ -857,6 +857,24 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-src="SecurityNext">
         <td class="date">2026-07-15</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187443" target="_blank" rel="noopener">Windows版「Zoom」に深刻な脆弱性 - 最新版で修正済み</a></td>
+        <td class="desc">オンライン会議サービスを提供するZoomは、Windows向けクライアントに脆弱性が見つかり、対処したことを明らかにした。「クリティカル（Critical）」とされる脆弱性も含まれる。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-16</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187455" target="_blank" rel="noopener">「Oracle EBS」やビル設備向けプロトコルの脆弱性を悪用する攻撃</a></td>
+        <td class="desc">米当局は、「Oracle E-Business Suite」やビル設備などで利用される「KNXプロトコル」の脆弱性が、サイバー攻撃に悪用されているとして注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187449" target="_blank" rel="noopener">「Veeam Updater」に権限昇格の脆弱性 - root権限取得のおそれ</a></td>
+        <td class="desc">Veeam Softwareは、Linuxベースアプライアンスで利用される「Veeam Updater」に脆弱性が確認されたとして利用者に注意を呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/187363" target="_blank" rel="noopener">MS月例パッチで500件以上の脆弱性に対応 - ゼロデイ脆弱性も</a></td>
         <td class="desc">マイクロソフトは現地時間2026年7月14日、月例セキュリティ更新プログラムを公開した。500件以上の脆弱性に対応しており、一部はすでに悪用が確認されている。</td>
       </tr>
@@ -889,6 +907,24 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/187344" target="_blank" rel="noopener">「VMware Avi Load Balancer」に複数脆弱性 - 「クリティカル」も</a></td>
         <td class="desc">Broadcomが提供する「VMware Avi Load Balancer」に複数の脆弱性が明らかとなった。深刻な影響を与えるおそれがあり、注意が呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187394" target="_blank" rel="noopener">米セキュリティ当局、5件の悪用脆弱性に注意喚起</a></td>
+        <td class="desc">MicrosoftやCisco Systems、SonicWallなどの脆弱性が悪用されているとして、米当局は注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187305" target="_blank" rel="noopener">ゲーム利用者の内部識別子を広告ツールに外部送信 - LINEヤフー</a></td>
+        <td class="desc">LINEヤフーは、同社が提供するゲームのユーザー内部識別子が、パートナー企業が使用していた外部広告ツールへ送信されていたことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-15</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187225" target="_blank" rel="noopener">防災士会の事務局で会員向けメールを誤送信 - 三好市</a></td>
+        <td class="desc">三好市防災士会の事務局を務める徳島県三好市は、メールの送信ミスがあり、会員のメールアドレスが流出したことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-07-14</td>
@@ -937,49 +973,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/187238" target="_blank" rel="noopener">JPCERT/CC、オムロンPSIRTに感謝状 - 製品セキュリティ向上に貢献</a></td>
         <td class="desc">JPCERTコーディネーションセンター（JPCERT/CC）は、サイバーセキュリティ対策活動に貢献したオムロンPSIRTに感謝状を贈呈した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186709" target="_blank" rel="noopener">個人情報含むファイルを誤送信、別ファイルと勘違い - 大阪市</a></td>
-        <td class="desc">大阪市は、市内小学校において児童の個人情報を含む書類を保護者に誤って配布する事故が発生したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-12</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187195" target="_blank" rel="noopener">「GNU Wget」にSSRF脆弱性 - 連携利用環境なども注意</a></td>
-        <td class="desc">Linux環境などで広く利用されるファイル取得ツール「GNU Wget」に脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-12</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187180" target="_blank" rel="noopener">BeyondTrustのリモートアクセス製品に複数の脆弱性</a></td>
-        <td class="desc">BeyondTrustのリモートサポートツール「Remote Support（RS）」「Privileged Remote Access（PRA）」に複数の脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187193" target="_blank" rel="noopener">Joomla向け機能拡張「iCagenda」「Balbooa Forms」の脆弱性悪用に注意</a></td>
-        <td class="desc">米サイバーセキュリティインフラストラクチャセキュリティ庁（CISA）は、「Joomla」向け拡張機能「iCagenda」「Balbooa Forms」の脆弱性が悪用されているとして対策を呼びかけた。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187218" target="_blank" rel="noopener">情報流出の可能性、影響など調査 - テレビ朝日子会社</a></td>
-        <td class="desc">デジタルコンテンツの制作を手がけるテレビ朝日メディアプレックスは、サイバー攻撃により個人情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186971" target="_blank" rel="noopener">委託先のサーバから個人情報が流出した可能性 - 韓流エンタメ会社</a></td>
-        <td class="desc">韓国のタレントに関するマネジメントやイベント企画などを手がけるフラウ・インターナショナルは、業務委託先において顧客の個人情報が流出した可能性があることを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年07月15日 12:37 JST</span>
+  <span>最終更新: 2026年07月16日 12:40 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
