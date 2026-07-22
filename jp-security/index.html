@@ -77,15 +77,15 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">35</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">105</div><div class="l">脆弱性</div></div>
+    <div class="stat danger"><div class="n">39</div><div class="l">高深刻度</div></div>
+    <div class="stat warn"><div class="n">106</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">105</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">106</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -104,355 +104,369 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000101.html" target="_blank" rel="noopener">Drupalプラグイン「AI Agents」における不正な認証の脆弱性</a><div class="cve-row">CVE-2026-13236</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Drupalが提供するプラグイン「AI Agents」には、次の脆弱性が存在します。  不正な認証（CWE-863）- CVE-2026-13236  この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方が開発者とIPAに報告し、JPCERT/CCが開発者と公表の調整を行いました。 報告者：野口 晋義 氏</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024650.html" target="_blank" rel="noopener">langflowにおけるハードコードされた認証情報の使用に関する脆弱性</a><div class="cve-row">CVE-2026-13446, CVE-2026-13446</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">IBM Langflow OSS バージョン 1.0.0 から 1.10.1 には、パスワードや暗号鍵などのハードコードされた認証情報が含まれており、それらは自社の受信認証、外部コンポーネントへの送信通信、または内部データの暗号化に使用されています。</td>
       </tr>
-      <tr data-sev="Medium 6.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000100.html" target="_blank" rel="noopener">非接触型ICカード技術FeliCaの一部のICチップにおける脆弱性</a><div class="cve-row">CVE-2026-59776</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.8</span></td>
-        <td class="desc">ソニー株式会社より2017年以前に出荷された一部のFeliCa ICチップでは、暗号処理プロセスにおいて特定の操作を行うことにより、本来のセキュリティ強度が低下する事象が発生します。  この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：アンノウン・テクノロジーズ株式会社 切敷 裕大 氏</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024436.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50312, CVE-2026-50312</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">WindowsのWinSock補助機能ドライバーにおけるUse after freeの脆弱性により、認可された攻撃者がローカルで権限を昇格させることが可能となります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024435.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-50313, CVE-2026-50313</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Windows NTFSのヒープベースのバッファオーバーフローにより、不正な攻撃者がローカルでコードを実行できる脆弱性です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024434.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50314, CVE-2026-50314</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Officeの使用後解放の脆弱性により、不正な攻撃者がローカルでコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024433.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品におけるNULL ポインタデリファレンスに関する脆弱性</a><div class="cve-row">CVE-2026-50315, CVE-2026-50315</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Windows Image Acquisitionにおけるヌルポインタ参照の脆弱性により、権限を持つ攻撃者がローカルで特権を昇格させることが可能です。</td>
-      </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024432.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 21h2等の複数製品におけるログファイルからの情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-50316, CVE-2026-50316</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Windowsカーネルのログファイルに機密情報が挿入されることで、権限を持つ攻撃者がローカルで情報を開示できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024431.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-50317, CVE-2026-50317</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
-        <td class="desc">Windowsオペレーティングシステムにおける不適切な同期による共有リソースの同時実行（「競合状態」）が原因で、権限を持つ攻撃者がローカル環境で権限を昇格させることが可能となります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024430.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるスタックベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-50318, CVE-2026-50318</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Windows Resilient File System (ReFS) におけるスタックベースのバッファオーバーフローにより、認証された攻撃者がローカルで特権を昇格させることが可能となります。</td>
-      </tr>
-      <tr data-sev="High 7" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024429.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-50321, CVE-2026-50321</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
-        <td class="desc">Windows USBドライバーにおける不適切な同期による共有リソースの同時実行（「競合状態」）が原因で、正当な権限を持つ攻撃者がローカルで特権を昇格させることが可能になります。</td>
-      </tr>
-      <tr data-sev="High 7" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024428.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-50322, CVE-2026-50322</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
-        <td class="desc">Windows Runtimeにおける不適切な同期が原因で共有リソースの同時実行（「レースコンディション」）が発生し、認可された攻撃者がローカルで権限を昇格させることが可能です。</td>
-      </tr>
-      <tr data-sev="High 7" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024427.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50323, CVE-2026-50323</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
-        <td class="desc">Windows Runtime の解放後使用の脆弱性により、認証された攻撃者がローカルで権限を昇格させることが可能になります。</td>
-      </tr>
-      <tr data-sev="Medium 5.9" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024426.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における無限ループに関する脆弱性</a><div class="cve-row">CVE-2026-50324, CVE-2026-50324</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.9</span></td>
-        <td class="desc">Active Directory フェデレーション サービス（AD FS）における到達不能な終了条件（いわゆる「無限ループ」）が存在し、このループにより不正な攻撃者がネットワークを介してサービス拒否攻撃を引き起こす可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024425.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-50325, CVE-2026-50325</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
-        <td class="desc">Windows Win32Kにおける不適切なアクセス制御の脆弱性により、認証済みの攻撃者がローカルで特権を昇格させることが可能です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024424.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 21h2等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50326, CVE-2026-50326</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Windows Unified Consent System における Use after free の脆弱性により、権限を持つ攻撃者がローカルで権限を昇格させることが可能です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024423.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-50327, CVE-2026-50327</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Windows Mediaのヒープベースのバッファオーバーフローにより、認証された攻撃者がローカルでコードを実行できるようになります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024422.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-50333, CVE-2026-50333</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">WindowsのSpaceport.sysにおける重要な機能で認証が欠如しているため、認証された攻撃者がローカル環境で権限を昇格させることが可能です。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024649.html" target="_blank" rel="noopener">langflowにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-13448, CVE-2026-13448</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">IBM Langflow OSS バージョン1.0.0から1.10.1までのLangflow OSSには、認証されていないリモートコード実行の脆弱性があります。この脆弱性は、パブリックフロービルドエンドポイント（/api/v1/build_public_tmp/{flow_id}/flow）に存在しています。問題の原因は、validate_public_flow_no_code_execution</td>
       </tr>
       <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024421.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品におけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-50342, CVE-2026-50342</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024648.html" target="_blank" rel="noopener">langflowにおけるOS コマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-14499, CVE-2026-14499</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Windows MIDIサービスモジュールにおける不適切なアクセス制御が原因で、認可された攻撃者がローカル環境で権限を昇格させることが可能になります。</td>
+        <td class="desc">IBM Langflow OSS バージョン 1.0.0 から 1.10.1 までの Langflow は、Python インタプリタコンポーネントにおけるユーザー提供入力を適切に検証していないため、認証されたユーザーがシステム上で特権を昇格させて任意のコマンドを実行できる可能性があります。</td>
       </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+      <tr data-sev="Low 3.1" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024420.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 21h2等の複数製品における情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-50350, CVE-2026-50350</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Windows Trusted Runtime Interface Driver における機密情報の不正な主体への漏洩により、正規の攻撃者がローカルで情報を開示できる可能性がある問題です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024419.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-50351, CVE-2026-50351</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Windows Audio Compression Manager（ACM）における不適切なアクセス制御のため、認可された攻撃者がローカルで権限を昇格させることが可能となっています。</td>
-      </tr>
-      <tr data-sev="High 7.1" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024418.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50354, CVE-2026-50354</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
-        <td class="desc">WindowsカーネルにおけるUse after freeの脆弱性により、権限を持つ攻撃者がローカルで特権を昇格させることが可能となります。</td>
-      </tr>
-      <tr data-sev="High 7" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024417.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-50356, CVE-2026-50356</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
-        <td class="desc">Microsoft Windows App Storeにおける共有リソースの不適切な同期による同時実行（「競合状態」）の問題により、認可された攻撃者がローカルで権限を昇格させることが可能となります。</td>
-      </tr>
-      <tr data-sev="High 7.3" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024416.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 21h2等の複数製品におけるリンク解釈に関する脆弱性</a><div class="cve-row">CVE-2026-50364, CVE-2026-50364</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.3</span></td>
-        <td class="desc">Windows Server Backupにおけるファイルアクセス前の不適切なリンク解決（「リンクフォロー」）により、認可された攻撃者がローカル環境で権限を昇格させることが可能になります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024415.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50467, CVE-2026-50467</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft OfficeのUse after freeの脆弱性により、認証されていない攻撃者がローカルでコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.4" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024414.html" target="_blank" rel="noopener">マイクロソフトのVisual Studio Codeにおけるコマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-50520, CVE-2026-50520</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.4</span></td>
-        <td class="desc">Visual Studio Codeにおいてコマンドで使用される特殊要素が不適切に無害化される（「コマンドインジェクション」）ことにより、不正な攻撃者がローカルでコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="Low 3.3" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024413.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-50665, CVE-2026-50665</div></td>
-        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.3</span></td>
-        <td class="desc">Microsoft Officeの境界外読み取りの脆弱性により、未承認の攻撃者がローカル環境で情報を漏洩させる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024412.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1809等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-50670, CVE-2026-50670</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Windowsカーネルの境界外読み取りの脆弱性により、権限を持つ攻撃者がローカルで権限を昇格させることが可能となります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024411.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-50673, CVE-2026-50673</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Windowsカーネルにおけるヌルポインタ参照の脆弱性により、認可された攻撃者がローカルで権限を昇格させることが可能です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024410.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50688, CVE-2026-50688</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">WindowsカーネルにおけるUse after freeの脆弱性により、認証された攻撃者がローカルで権限を昇格させることが可能です。</td>
-      </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024409.html" target="_blank" rel="noopener">F5 NetworksのNGINX Ingress ControllerにおけるNULL ポインタデリファレンスに関する脆弱性</a><div class="cve-row">CVE-2026-52865, CVE-2026-52865</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">NGINX Ingress Controller が Ingress または TransportServer リソースを処理する際に、認証されたリモートの攻撃者が Ingress または TransportServer リソースの作成または変更権限を持っている場合、NGINX Ingress Controller プロセスを終了させることが可能です。影響として、NGINX Ingress Cont</td>
-      </tr>
-      <tr data-sev="High 7.4" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024408.html" target="_blank" rel="noopener">coturn projectのcoturnにおけるサーバサイドのリクエストフォージェリの脆弱性</a><div class="cve-row">CVE-2026-53450, CVE-2026-53450</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.4</span></td>
-        <td class="desc">CoturnはTURNおよびSTUNサーバの無料オープンソース実装です。バージョン4.13.0より前のCoturnでは、allow-loopback-peersが有効化されていない限り、デフォルトでループバックピアを拒否します。しかし、IPv4マップドIPv6ピアアドレス::ffff:127.0.0.1をTURNのXOR-PEER-ADDRESS属性に使用することで、デフォルトのループバックガード</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024647.html" target="_blank" rel="noopener">DevolutionsのDevolutions Serverにおけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-15058, CVE-2026-15058</div></td>
+        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.1</span></td>
+        <td class="desc">Devolutions Server 2026.2.11および2026.1.22のセキュアメッセージ削除エンドポイントにおいて、不適切な認可が存在するため、認証されたユーザーがメッセージ識別子への直接的オブジェクト参照を通じて他のユーザーのメッセージを削除できる可能性があります。</td>
       </tr>
       <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024407.html" target="_blank" rel="noopener">Excelizeにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-54063, CVE-2026-54063</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024646.html" target="_blank" rel="noopener">DevolutionsのDevolutions Serverにおけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-15637, CVE-2026-15637</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Excelizeは、Microsoft Excelのスプレッドシートを読み書きするためのGo言語ライブラリです。バージョン2.11.0以前では、github.com/xuri/excelize/v2のcheckSheet()関数が攻撃者に制御される＜row r="N"＞のXML属性値を、Excelの行数制限（TotalRows = 1,048,576）に対して検証せずに、そのままmake([]xl</td>
+        <td class="desc">Devolutions Server 2026.2.11および2026.1.22のPAM SSHキーおよび証明書取得エンドポイントにおける不適切な認可のため、認証された低権限ユーザーが認証情報識別子への直接参照を通じてSSHキーまたは証明書のPAM認証情報の秘密鍵を開示できる状態になっています。</td>
+      </tr>
+      <tr data-sev="High 7.1" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024645.html" target="_blank" rel="noopener">DevolutionsのDevolutions Serverにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-15641, CVE-2026-15641</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
+        <td class="desc">Devolutions Server 2026.2.11および2026.1.22のアクセスリクエストステータスエンドポイントにおける不適切な認可により、認証済みの権限の低いユーザーが要求ステータスエンドポイントへの直接呼び出しを通じて自身の保留中のアクセスリクエストを承認できるため、必要な承認者によるレビューを回避してしまう問題があります。</td>
+      </tr>
+      <tr data-sev="High 7.1" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024644.html" target="_blank" rel="noopener">Wazuh Inc.のWazuhにおけるインタラクション頻度の制御に関する脆弱性</a><div class="cve-row">CVE-2026-33434, CVE-2026-33434</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
+        <td class="desc">Wazuhは、脅威の防止、検出、および対応に使用される無料かつオープンソースのプラットフォームです。バージョン4.6.0以上、4.14.5未満において、CheckRateLimitsMiddleware.dispatch()のロジックエラーにより、/eventsエンドポイントのレートチェックが一般的なレート制限の結果を無条件に上書きしてしまいます。グローバルなmax_request_per_min</td>
       </tr>
       <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024406.html" target="_blank" rel="noopener">デルのDell Unisphere for PowerMaxにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-54468, CVE-2026-54468</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024643.html" target="_blank" rel="noopener">Wazuh Inc.のWazuhにおけるリソースの枯渇に関する脆弱性</a><div class="cve-row">CVE-2026-33754, CVE-2026-33754</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Dell Unisphere for PowerMax バージョン 10.3.0.5 およびそれ以前のバージョンには、パストラバーサルの脆弱性が存在します。リモートアクセス権を持つ低権限の攻撃者は、この脆弱性を悪用して任意のファイルを読み取ることが可能です。</td>
+        <td class="desc">Wazuhは、脅威の予防、検出、および対応に使用される無料のオープンソースプラットフォームです。バージョン3.9.0以上、4.14.5未満のバージョンにおいて、リモートの攻撃者が任意の大きさのペイロード長を持つ細工されたメッセージヘッダーを送信することで、クラスタプロトコルパーサーのメモリ枯渇を引き起こす可能性があります。この長さは認証や復号の前に信頼され、メモリ割り当てに直接使用されるため、認証</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024642.html" target="_blank" rel="noopener">Wazuh Inc.のWazuhにおけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-34150, CVE-2026-34150</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">Wazuhは、脅威の予防、検出、および対応に使用される無料かつオープンソースのプラットフォームです。バージョン1.0.0以上、4.14.5未満のwazuh-analysisdには、ヒープバッファオーバーフローの脆弱性が存在します。認証されていないリモート攻撃者は、この脆弱性を悪用してWazuhマネージャの分析エンジンをクラッシュさせ、SIEMアラート処理を完全に停止させる可能性があります。この攻撃</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024641.html" target="_blank" rel="noopener">Wazuh Inc.のWazuhにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-39359, CVE-2026-39359</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">Wazuhは、脅威の予防、検出、および対応に使用される無料かつオープンソースのプラットフォームです。バージョン4.0.0から4.10.3および4.11.0から4.14.4において、Wazuhマネージャの登録デーモン（authd）と同期デーモン（remoted）に論理的な欠陥があります。authdプロセスはエージェントが登録時にグループを選択できるようにしますが、「..」のようなパストラバーサルシー</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024640.html" target="_blank" rel="noopener">Wazuh Inc.のWazuhにおけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-40106, CVE-2026-40106</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Wazuhは脅威の予防、検出、および対応に使用される無料かつオープンソースのプラットフォームです。バージョン4.6.0から4.14.5未満のWazuhエージェントfor Windowsのsyscheckコンポーネントには、ヒープベースのバッファオーバーフローの脆弱性があります。ワイルドカード（*または？）を含むレジストリパスを展開する際、エージェントは固定サイズの256バイト（OS_SIZE_25</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024639.html" target="_blank" rel="noopener">Wazuh Inc.のWazuhにおける複数の脆弱性</a><div class="cve-row">CVE-2026-44251, CVE-2026-44251</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Wazuhは、脅威の予防、検出、および対応に使用される無料のオープンソースプラットフォームです。バージョン3.0.0以上かつ4.14.5未満のバージョンにおいて、os_crypto/shared/msgs.cの389行目にあるsize_t型整数のアンダーフローにより、登録された任意のWazuhエージェントがマネージャ上のwazuh-remotedプロセスをクラッシュさせ、その結果、すべてのエージェ</td>
+      </tr>
+      <tr data-sev="High 7.6" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024638.html" target="_blank" rel="noopener">BETTER-AUTH.のBetter Authにおける複数の脆弱性</a><div class="cve-row">CVE-2026-45337, CVE-2026-45337</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.6</span></td>
+        <td class="desc">Better AuthはTypeScript用の認証および認可ライブラリです。バージョン1.6.0から1.6.11の間、deviceAuthorizationプラグインは、GET /deviceがクレームを行わないため、認証されたセッションを保留中の任意のデバイスコードの所有者として扱っていました。また、POST /device/approveおよびPOST /device/denyはuserId</td>
+      </tr>
+      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024637.html" target="_blank" rel="noopener">NetFoundryのzrokにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-45568, CVE-2026-45568</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
+        <td class="desc">zrokは、ウェブサービス、ファイル、およびネットワークリソースを共有するためのソフトウェアです。バージョン2.0.3以前のzrokのPython SDK ProxyShare Flaskプロキシルートは、リクエストパスで絶対URLを受け入れ、それをurllib.parse.urljoinに渡すため、リクエストされたパスが設定されたターゲットホストを置き換えることができました。その結果、reque</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024636.html" target="_blank" rel="noopener">NetFoundryのzrokにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-45576, CVE-2026-45576</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">zrokはウェブサービス、ファイル、およびネットワークリソースを共有するためのソフトウェアです。バージョン0.4.23から2.0.3までの間、`zrok2 copy`は攻撃者が制御するWebDAVまたはzrokドライブのパス（例えば /../outside.txt）をソースインベントリに保存し、それをFilesystemTarget.WriteStreamに渡していました。これにより、同期パイプラ</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024635.html" target="_blank" rel="noopener">Argo Project AuthorsのArgo CDにおける複数の脆弱性</a><div class="cve-row">CVE-2026-45737, CVE-2026-45737</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Argo CDは、Kubernetes向けの宣言型GitOps継続的デリバリーツールです。バージョン3.2.0から3.2.12、3.3.10、および3.4.2までの間、Argo CDのServerSideDiffは、kubectl.kubernetes.io/last-applied-configurationアノテーションに埋め込まれたKubernetes Secretの値を露出させる可能性があ</td>
+      </tr>
+      <tr data-sev="High 8.7" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024634.html" target="_blank" rel="noopener">Argo Project AuthorsのArgo CDにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-45738, CVE-2026-45738</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.7</span></td>
+        <td class="desc">Argo CDは、Kubernetes向けの宣言型GitOps継続的デリバリーツールです。バージョン3.2.12、3.3.10、および3.4.2より前のバージョンでは、アプリケーション書き込み権限を持つArgo CDユーザーがpipe区切りの値を持つlink.argocd.argoproj.io/*アノテーションを設定でき、その値がui/src/app/applications/component</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024633.html" target="_blank" rel="noopener">spaceapplicationsのyamcsにおける複数の脆弱性</a><div class="cve-row">CVE-2026-46562, CVE-2026-46562</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Yamcsはミッションコントロールフレームワークです。5.12.7以前のバージョンでは、yamcs-core/src/main/java/org/yamcs/algorithms/ScriptAlgorithmExecutorFactory.java内でユーザー提供のJavaScriptアルゴリズムテキストを評価するために使用されていたNashorn ScriptEngineがClassFilte</td>
+      </tr>
+      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024632.html" target="_blank" rel="noopener">spaceapplicationsのyamcsにおけるコードインジェクションの脆弱性</a><div class="cve-row">CVE-2026-46621, CVE-2026-46621</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
+        <td class="desc">Yamcsはミッションコントロールフレームワークです。バージョン5.12.7以前では、Pythonアルゴリズム用のYamcsスクリプト評価エンジンが、JSR-223 ScriptEngine APIを介してJythonを用い、ユーザー制御のアルゴリズムテキストを動的にコンパイルおよび評価していましたが、安全なサンドボックスを強制していませんでした。そのため、ChangeMissionDatabas</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024631.html" target="_blank" rel="noopener">Squid-cache.orgのSquidにおける複数の脆弱性</a><div class="cve-row">CVE-2026-47729, CVE-2026-47729</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">SquidはWeb向けのキャッシュプロキシです。バージョン7.6以前では、FTPゲートウェイ（src/clients/FtpGateway.cc）における入力の構文的正当性の不適切な検証により、Squidに境界外読み取りの脆弱性が存在していました。具体的には、TypeAまたはTypeBのディレクトリリスティング形式でリストエントリーの日付の後にファイル名が続かない場合、パース処理は入力バッファの制</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024630.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-49172, CVE-2026-49172</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Windows FTPサービスにおけるヒープベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行する可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024629.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 26h1における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-49173, CVE-2026-49173</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">WindowsカーネルにおけるUse after freeの脆弱性により、権限のある攻撃者がローカルで特権を昇格させられる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 6.1" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024628.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1809等の複数製品における重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-49174, CVE-2026-49174</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.1</span></td>
+        <td class="desc">Microsoft Windows DNSの重要な機能に認証が欠如しているため、認証された攻撃者がローカルで改ざんを行うことが可能となっています。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024627.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 21h2等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-49175, CVE-2026-49175</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows DNSにおけるヒープベースのバッファオーバーフローにより、認証された攻撃者がローカルで権限を昇格させることが可能となります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024626.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-49176, CVE-2026-49176</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows WalletServiceにおける不適切な権限管理により、認可された攻撃者がローカルで権限を昇格させることが可能です。</td>
       </tr>
       <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024405.html" target="_blank" rel="noopener">デルのDell Unisphere for PowerMaxにおける信頼できないデータのデシリアライゼーションに関する脆弱性</a><div class="cve-row">CVE-2026-54469, CVE-2026-54469</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024625.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-49178, CVE-2026-49178</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Dell Unisphere for PowerMax バージョン 10.3.0.5 およびそれ以前のバージョンには、信頼されていないデータの逆シリアル化に関する脆弱性があります。リモートアクセス権を持つ権限の低い攻撃者がこの脆弱性を悪用する可能性があり、root 権限で任意のコマンドを実行される危険性があります。</td>
+        <td class="desc">Active Directoryドメインサービスにおけるヒープベースのバッファオーバーフローにより、認可された攻撃者がネットワーク経由でコードを実行できる可能性があります。</td>
       </tr>
-      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024404.html" target="_blank" rel="noopener">デルのDell Unisphere for PowerMaxにおけるXML 外部エンティティの脆弱性</a><div class="cve-row">CVE-2026-54470, CVE-2026-54470</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
-        <td class="desc">Dell Unisphere for PowerMax バージョン10.3.0.5およびそれ以前には、不適切なXML外部エンティティ参照制限の脆弱性が含まれています。リモートアクセス権を持つ低権限の攻撃者がこの脆弱性を悪用すると、不正アクセスが発生する恐れがあります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024624.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるリンク解釈に関する脆弱性</a><div class="cve-row">CVE-2026-49180, CVE-2026-49180</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Universal Plug and Play (upnp.dll) におけるファイルアクセス前の不適切なリンク解決（「リンク追跡」）によって、権限を持つ攻撃者がローカルで情報を漏洩させることが可能となります。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024623.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における整数アンダーフローの脆弱性</a><div class="cve-row">CVE-2026-49181, CVE-2026-49181</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Windows DHCPクライアントにおける整数のアンダーフロー（またはオーバーフロー、ラップアラウンド）によって、不正な攻撃者がネットワーク経由で権限を昇格させる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024622.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1809等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-49183, CVE-2026-49183</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
+        <td class="desc">Windowsクリップボードサーバーにおける不適切な同期が原因で共有リソースの同時実行（競合状態）が発生し、認可された攻撃者がローカルで特権を昇格させることが可能になります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024621.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-49184, CVE-2026-49184</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows NTFSのヒープベースのバッファオーバーフローにより、不正な攻撃者がローカルでコードを実行可能となります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024620.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるセキュリティチェックに関する脆弱性</a><div class="cve-row">CVE-2026-49783, CVE-2026-49783</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows Secure Bootの標準に対するセキュリティチェックが不適切に実装されているため、認可された攻撃者がローカルでセキュリティ機能を回避できる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024619.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-49784, CVE-2026-49784</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
+        <td class="desc">Microsoft Windows App Storeにおける不適切な同期による共有リソースの同時実行（「レースコンディション」）が原因で、認可された攻撃者がローカル環境で権限を昇格させることが可能となります。</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024618.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-49787, CVE-2026-49787</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">Windows HTTP.sysにおける制限やスロットリングがないリソース割り当てによって、不正な攻撃者がネットワーク経由でサービス拒否を引き起こすことが可能になります。</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024617.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-49788, CVE-2026-49788</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">HTTP/2におけるリソースの割り当てが制限やスロットリングなしで行われるため、権限のない攻撃者がネットワーク上でサービス拒否攻撃を引き起こすことが可能です。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024616.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるスタックベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-49789, CVE-2026-49789</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows NTFS のスタックベースのバッファオーバーフローにより、認証された攻撃者がローカルで権限を昇格させることが可能です。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024615.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-49790, CVE-2026-49790</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windowsユニバーサルディスクフォーマットファイルシステムドライバー（UDFS）に権限昇格の脆弱性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024614.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるリンク解釈に関する脆弱性</a><div class="cve-row">CVE-2026-49791, CVE-2026-49791</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows Routing and Remote Access Service（RRAS）におけるファイルアクセス前の不適切なリンク解決（「リンク追跡」）により、認可された攻撃者がローカルで権限を昇格させることが可能となります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024613.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における数値打ち切り誤差に関する脆弱性</a><div class="cve-row">CVE-2026-49792, CVE-2026-49792</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows Resilient File System (ReFS) における数値切り捨てエラーにより、認可された攻撃者がローカルでコードを実行できる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024612.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-49793, CVE-2026-49793</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows Resilient File System (ReFS) におけるヒープベースのバッファオーバーフローの脆弱性により、認証済みの攻撃者がローカルでコードを実行できる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024611.html" target="_blank" rel="noopener">Squid-cache.orgのSquidにおける複数の脆弱性</a><div class="cve-row">CVE-2026-50012, CVE-2026-50012</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Squidはウェブ向けのキャッシュプロキシです。バージョン7.6以前では、cache digestの応答処理（src/peer_digest.ccのpeerDigestSwapInMask）における不適切な入力検証のバグにより、Squidにヒープベースのバッファオーバーフローの脆弱性が存在します。キャッシュダイジェストのオンザワイヤサイズが、ダイジェスト内で宣言されたmask_sizeより大きくな</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024610.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-50328, CVE-2026-50328</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">Windows Server Update Serviceで未処理の例外が発生することにより、不正な攻撃者がネットワーク経由で改ざんを行うことが可能になります。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024609.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-50330, CVE-2026-50330</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">リモートデスクトップクライアントにおけるヒープベースのバッファオーバーフローにより、未承認の攻撃者がネットワーク経由で権限を昇格させることが可能です。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024608.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50331, CVE-2026-50331</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">WindowsアプリケーションモデルにおけるUse after freeの脆弱性により、認可された攻撃者がローカルで権限を昇格させることが可能です。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024607.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-50334, CVE-2026-50334</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Windows通知における機密情報の不正な第三者への漏洩により、認可された攻撃者がローカル環境で情報を開示できるようになります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024606.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1809等の複数製品におけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-50335, CVE-2026-50335</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windowsオペレーティングシステムにおける不適切なアクセス制御のため、権限を持つ攻撃者がローカルで権限を昇格させることが可能です。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024605.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-50336, CVE-2026-50336</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows Mediaにおけるヒープベースのバッファオーバーフローにより、認証された攻撃者がローカルで権限を昇格させることが可能です。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024604.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における不正な型変換に関する脆弱性</a><div class="cve-row">CVE-2026-50337, CVE-2026-50337</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows通知における誤った型変換またはキャストにより、認可された攻撃者がローカルで権限を昇格させることが可能となります。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024603.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1809等の複数製品における情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-50339, CVE-2026-50339</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Windowsプッシュ通知における機密情報の不正な行為者への露出により、認可された攻撃者がローカルで情報を開示できる可能性があります。</td>
       </tr>
       <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024403.html" target="_blank" rel="noopener">Rcloneにおけるリンク解釈に関する脆弱性</a><div class="cve-row">CVE-2026-54572, CVE-2026-54572</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024602.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-50340, CVE-2026-50340</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Rcloneは、異なるクラウドストレージプロバイダー間でファイルやディレクトリを同期するためのコマンドラインプログラムです。バージョン1.74.4以前では、-l/--linksオプションを使用すると、rcloneはシンボリックリンクを.rclonelinkというテキストオブジェクトとしてシリアライズし、ターゲットの検証を行わずにローカルの宛先に再作成します。そのため、攻撃者が制御するリモートに逃げ</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024402.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-55017, CVE-2026-55017</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Officeにおけるヒープベースのバッファオーバーフローにより、不正な攻撃者がローカルでコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024401.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-55018, CVE-2026-55018</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft OfficeのUse after freeの脆弱性により、権限のない攻撃者がローカルでコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024400.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における型の取り違えに関する脆弱性</a><div class="cve-row">CVE-2026-55022, CVE-2026-55022</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Officeにおける互換性のない型の使用（「型混乱」）によってリソースへアクセスされ、不正な攻撃者がローカルでコードを実行できる可能性があります。</td>
+        <td class="desc">WindowsランタイムにおけるUse after freeの脆弱性により、認証された攻撃者がネットワーク経由で特権を昇格させることが可能です。</td>
       </tr>
       <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
+        <td class="date">2026-07-22</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024399.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-55023, CVE-2026-55023</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024601.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品におけるバッファオーバーリードの脆弱性</a><div class="cve-row">CVE-2026-50341, CVE-2026-50341</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Microsoft Officeにおける境界外読み取りの脆弱性により、不正な攻撃者がローカル環境で情報を漏洩させることが可能となります。</td>
+        <td class="desc">Windows NTFSにおけるバッファオーバーリードにより、認可された攻撃者がローカルで情報を漏洩させる可能性があります。</td>
       </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024398.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における整数オーバーフローの脆弱性</a><div class="cve-row">CVE-2026-55026, CVE-2026-55026</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Microsoft Officeにおける整数オーバーフローまたはラップアラウンドの脆弱性により、不正な攻撃者がローカルで情報を開示する可能性があります。</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90683587/" target="_blank" rel="noopener">プロジェクト管理ツール「Plane」における認可回避の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024397.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-55027, CVE-2026-55027</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Microsoft Officeの境界外読み取りにより、不正な攻撃者がローカル環境で情報を漏洩させる可能性があります。</td>
-      </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024396.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-55028, CVE-2026-55028</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Microsoft Officeの境界外読み取りの脆弱性により、不正な攻撃者がローカル環境で情報を開示できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024395.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-55032, CVE-2026-55032</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Office WordにおけるUse after freeの脆弱性により、認可されていない攻撃者がローカルでコードを実行する可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024394.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-55033, CVE-2026-55033</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Office Wordの整数オーバーフローまたはラップアラウンドの脆弱性により、不正な攻撃者がローカルでコードを実行する可能性があります。</td>
-      </tr>
-      <tr data-sev="Low 3.3" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024393.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-55035, CVE-2026-55035</div></td>
-        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.3</span></td>
-        <td class="desc">Microsoft Office の境界外読み取りの脆弱性により、認可されていない攻撃者がローカル環境で情報を開示できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024392.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるバッファオーバーリードの脆弱性</a><div class="cve-row">CVE-2026-55036, CVE-2026-55036</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Office Excel のバッファオーバーリードにより、不正な攻撃者がローカルでコードを実行する可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024391.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるスタックベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-55038, CVE-2026-55038</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Office Wordのスタックベースのバッファオーバーフローにより、権限のない攻撃者がローカルでコードを実行する可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024390.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-55039, CVE-2026-55039</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Office Excelにおける整数のアンダーフロー（ラップまたはラップアラウンド）が原因で、未承認の攻撃者がローカル環境でコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-024389.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における初期化されていないリソースの使用に関する脆弱性</a><div class="cve-row">CVE-2026-55042, CVE-2026-55042</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Microsoft Officeにおける未初期化リソースの使用により、権限のない攻撃者がローカルで情報を開示できる可能性があります。</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU98832565/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年07月21日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年07月21日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-07-21</td>
@@ -579,20 +593,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/jp/JVN62347140/" target="_blank" rel="noopener">富士電機製Pupsmanのインストーラにおける複数の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">富士電機株式会社が提供するPupsmanのインストーラには、複数の脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-08</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU92734392/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年07月07日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年07月07日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-07</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN90566559/" target="_blank" rel="noopener">Apache Jena Fusekiにおけるパストラバーサルの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">The Apache Software Foundationが提供するJena Fusekiには、パストラバーサルの脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-07-15</td>
@@ -756,6 +756,20 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">Linuxカーネルのx86向けKVMに解放済みメモリの使用の脆弱性</td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/0722-jre.html" target="_blank" rel="noopener">Oracle Java の脆弱性対策について(2026年7月)</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20260722.html" target="_blank" rel="noopener">WordPressの脆弱性対策について(CVE-2026-60137、CVE-2026-63030：wp2shell)</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-07-15</td>
         <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
         <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/0715-ms.html" target="_blank" rel="noopener">Microsoft 製品の脆弱性対策について(2026年7月)</a><div class="cve-row"></div></td>
@@ -831,13 +845,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2025/alert20251106.html" target="_blank" rel="noopener">更新：Cisco Secure Firewall ASAおよびCisco Secure FTDの脆弱性について (CVE-2025-20333等)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="IPA 脆弱性">
-        <td class="date">2026-04-22</td>
-        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
-        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/0422-jre.html" target="_blank" rel="noopener">Oracle Java の脆弱性対策について(2026年4月)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
       </tr></tbody>
   </table>
   </div>
@@ -855,6 +862,24 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187654" target="_blank" rel="noopener">「WordPress」「Langflow」の脆弱性悪用に警戒を - 米当局が注意喚起</a></td>
+        <td class="desc">米当局は、「WordPress」や「Langflow」などで悪用が確認されている脆弱性について注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187617" target="_blank" rel="noopener">Perl向けX.509証明書処理モジュールに脆弱性 - 更新版で修正</a></td>
+        <td class="desc">X.509証明書を処理するPerl向けモジュール「Crypt::OpenSSL::X509」に複数の脆弱性が明らかとなった。修正版が提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-22</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187662" target="_blank" rel="noopener">「Chrome」にアップデート - 「高」脆弱性12件に対処</a></td>
+        <td class="desc">Googleは現地時間2026年7月21日、同社ブラウザ「Chrome」のセキュリティアップデートをリリースした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-07-21</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/187598" target="_blank" rel="noopener">「WordPress」に複数の脆弱性 - 連鎖でRCEのおそれ</a></td>
@@ -869,8 +894,38 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-src="SecurityNext">
         <td class="date">2026-07-21</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187621" target="_blank" rel="noopener">2017年以前のFeliCa一部ICチップに脆弱性 - 漏洩や改ざんのおそれ</a></td>
+        <td class="desc">非接触型ICカード技術「FeliCa」の一部ICチップに関する脆弱性のアドバイザリが公表された。チップ内部のデータが読み取られたり、改ざんにつながるおそれがあるという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/187585" target="_blank" rel="noopener">Node.js向け解凍ライブラリにDoS脆弱性 - ディスク枯渇のおそれ</a></td>
         <td class="desc">「Node.js」向けに提供されているアーカイブライブラリ「node-tar」にサービス拒否の脆弱性が判明した。実証コードも公開されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187649" target="_blank" rel="noopener">Adobe、アドバイザリ12件で脆弱性89件に対応</a></td>
+        <td class="desc">Adobeは現地時間2026年7月14日、「ColdFusion」「Adobe Commerce」をはじめ、製品やSDKに関する12件のセキュリティアドバイザリを公開した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187071" target="_blank" rel="noopener">個人情報を誤提供、システムの改修テストで - 農林中金</a></td>
+        <td class="desc">農林中央金庫は、受託していたJAバンクの関連事務において、個人情報をJAグループの関係団体へ誤って提供していたことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187122" target="_blank" rel="noopener">委託先の就職試験対策サイトがランサムウェア被害 - 福岡大</a></td>
+        <td class="desc">福岡大学は、学生が就職活動で受験する筆記試験の対策サイトのサーバがランサムウェアによる被害に遭ったことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187220" target="_blank" rel="noopener">児童発達支援センターで個人情報含む文書を誤廃棄 - 古河市</a></td>
+        <td class="desc">茨城県古河市は、児童発達支援センターにおいて、保存期限を迎えていない文書を誤って廃棄した可能性が高いことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-07-20</td>
@@ -925,61 +980,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/186819" target="_blank" rel="noopener">小学校で児童の個人情報含む絵画作品を紛失 - 大阪市</a></td>
         <td class="desc">大阪市は、市内小学校において、児童の個人情報を含む絵画作品を紛失したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-17</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187476" target="_blank" rel="noopener">公開講座申込者向けの事前メールで誤送信 - 島根県立大</a></td>
-        <td class="desc">島根県立大学は、公開講座の申込者にメールで資料を送信した際にミスがあり、メールアドレスが流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-15</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187443" target="_blank" rel="noopener">Windows版「Zoom」に深刻な脆弱性 - 最新版で修正済み</a></td>
-        <td class="desc">オンライン会議サービスを提供するZoomは、Windows向けクライアントに脆弱性が見つかり、対処したことを明らかにした。「クリティカル（Critical）」とされる脆弱性も含まれる。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187478" target="_blank" rel="noopener">「nginx」に複数脆弱性、「クリティカル」も -  修正版を公開</a></td>
-        <td class="desc">ウェブサーバ「nginx」の開発チームは現地時間2026年7月15日、複数の脆弱性へ対処したセキュリティアップデートをリリースした。「クリティカル（Critical）」とされる脆弱性にも対処している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187455" target="_blank" rel="noopener">「Oracle EBS」やビル設備向けプロトコルの脆弱性を悪用する攻撃</a></td>
-        <td class="desc">米当局は、「Oracle E-Business Suite」やビル設備などで利用される「KNXプロトコル」の脆弱性が、サイバー攻撃に悪用されているとして注意喚起を行った。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187470" target="_blank" rel="noopener">サーバがランサム被害、影響など詳細を調査 - 金子農機</a></td>
-        <td class="desc">農業機械メーカーの金子農機は、第三者によるランサムウェアを用いたサイバー攻撃を受けたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-15</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187449" target="_blank" rel="noopener">「Veeam Updater」に権限昇格の脆弱性 - root権限取得のおそれ</a></td>
-        <td class="desc">Veeam Softwareは、Linuxベースアプライアンスで利用される「Veeam Updater」に脆弱性が確認されたとして利用者に注意を呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187482" target="_blank" rel="noopener">「SAP」が月例更新、16件の新規アドバイザリ - 3件が「クリティカル」</a></td>
-        <td class="desc">SAPは現地時間2026年7月14日、あらたに16件のセキュリティアドバイザリを公開した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/186910" target="_blank" rel="noopener">職員が患者情報を使用、他医療機関の開業を案内 - 済生会宇都宮病院</a></td>
-        <td class="desc">済生会宇都宮病院は、職員が個人情報を業務目的外で利用し、他医療機関の開業案内を送付していたことを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年07月21日 12:47 JST</span>
+  <span>最終更新: 2026年07月22日 12:49 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
