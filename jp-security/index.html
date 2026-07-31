@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">45</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">27</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">97</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,355 +104,390 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
-      <tr data-sev="Medium 5.8" data-src="JVN iPedia">
+      <tr data-sev="Medium 6.3" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025876.html" target="_blank" rel="noopener">Ralph SlootenのMailpitにおけるサーバサイドのリクエストフォージェリの脆弱性</a><div class="cve-row">CVE-2026-45709, CVE-2026-45709</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.8</span></td>
-        <td class="desc">Mailpitは開発者向けのメールテストツールおよびAPIです。GHSA-6jxm-fv7w-rw5j（CVE-2026-23845、「HTML Check APIを介したサーバーサイドリクエストフォージェリ（SSRF）」）の修正はmailpitのバージョンv1.28.3にて提供されました。この修正では、`internal/htmlcheck/css.go::downloadCSSToBytes`</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026085.html" target="_blank" rel="noopener">オラクルのOracle Price Protectionにおける複数の脆弱性</a><div class="cve-row">CVE-2026-61304, CVE-2026-61304</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.3</span></td>
+        <td class="desc">Oracle E-Business SuiteのOracle Price Protection製品（コンポーネント：内部操作）に存在する脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までとなっています。HTTP経由でネットワークからアクセス可能な低権限の攻撃者により容易に悪用され、Oracle Price Protectionが侵害される可能性があります。本脆弱性が</td>
       </tr>
-      <tr data-sev="High 8.2" data-src="JVN iPedia">
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025875.html" target="_blank" rel="noopener">Ralph SlootenのMailpitにおける複数の脆弱性</a><div class="cve-row">CVE-2026-45711, CVE-2026-45711</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
-        <td class="desc">Mailpitは、開発者向けのメールテストツールおよびAPIです。バージョン1.30.0より前では、mailpitのdump --http ＜base-url＞ ＜out-dir＞ サブコマンドがリモートMailpitインスタンスからすべてのメッセージをダウンロードし、ユーザーが指定した出力ディレクトリ内に各メッセージを ＜id＞.eml として書き込みます。メッセージIDフィールドはリモートサー</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026084.html" target="_blank" rel="noopener">オラクルのOracle TeleSalesにおける複数の脆弱性</a><div class="cve-row">CVE-2026-61322, CVE-2026-61322</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Oracle E-Business SuiteのTeleSales製品（コンポーネント：内部操作）には脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。HTTPを介してネットワークアクセス可能な権限の低い攻撃者が、この脆弱性を容易に悪用できるため、TeleSalesが侵害される可能性があります。この脆弱性を悪用した攻撃が成功すると、TeleSalesが乗</td>
       </tr>
-      <tr data-sev="Medium 5.9" data-src="JVN iPedia">
+      <tr data-sev="High 7.1" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025874.html" target="_blank" rel="noopener">Ralph SlootenのMailpitにおける複数の脆弱性</a><div class="cve-row">CVE-2026-45712, CVE-2026-45712</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.9</span></td>
-        <td class="desc">Mailpitは開発者向けのメールテストツールおよびAPIです。バージョン1.30.0以前では、スクリーンショット／プリントプロキシ（/proxy?data=…）がパッケージレベルのassetsマップ[string]MessageAssetsキャッシュを保持していましたが、assetsMutexを保持せずにマップを読み取っていました。一方で、長時間実行されるクリーンアップのゴルーチンや（再入可能な</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026083.html" target="_blank" rel="noopener">オラクルのOracle Price Protectionにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-61334, CVE-2026-61334</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
+        <td class="desc">Oracle E-Business SuiteのOracle Price Protection製品に脆弱性（コンポーネント：Internal Operations）が存在します。影響を受けるサポート対象バージョンは12.2.3から12.2.15です。この脆弱性は、HTTP経由でネットワークアクセスが可能な低権限の攻撃者により容易に悪用され、Oracle Price Protectionの侵害を引き</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025873.html" target="_blank" rel="noopener">Ralph SlootenのMailpitにおける複数の脆弱性</a><div class="cve-row">CVE-2026-45713, CVE-2026-45713</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Mailpitは、開発者向けのメール検証ツールおよびAPIです。バージョン1.30.0以前のMailpitのSMTPサーバには、最大許容DATAペイロードサイズを制御するServer.MaxSizeというintフィールドが存在しますが、このフィールドはテストコード以外で設定されることがなく、Goのゼロ値のままです（0は「無制限」を意味します）。同様に、HTTPの/api/v1/sendエンドポイン</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026082.html" target="_blank" rel="noopener">DevolutionsのPowerShell Universalにおける送信データへの重要な情報の挿入に関する脆弱性</a><div class="cve-row">CVE-2026-16798, CVE-2026-16798</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Devolutions PowerShell Universal 2026.2.2およびそれ以前のバージョンにおける自動化ジョブAPIには、送信データに機密情報が挿入される脆弱性があります。この脆弱性により、スコープ付きジョブまたはスクリプトの読み取り権限を持つ認証済みユーザーが、リフレッシュトークンを除去できなかったジョブの読み取りレスポンスを通じて、他のユーザーの保存されたOAuthリフレッシ</td>
+      </tr>
+      <tr data-sev="Medium 5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026081.html" target="_blank" rel="noopener">DevolutionsのPowerShell Universalにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-16799, CVE-2026-16799</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5</span></td>
+        <td class="desc">Devolutions PowerShell Universal 2026.2.2以前の自動化テストおよびワークフロー機能において、不適切なアクセス制御が存在します。そのため、Readerロールのみを持つ認証ユーザーが、サーバーサイドの認可チェックが欠如していることで自動化テストを実行し、ワークフローのプロパティを変更できてしまいます。</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026080.html" target="_blank" rel="noopener">DevolutionsのPowerShell Universalにおけるコードインジェクションの脆弱性</a><div class="cve-row">CVE-2026-16800, CVE-2026-16800</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Devolutions PowerShell Universal 2026.2.2およびそれ以前のバージョンのスケジュール機能におけるコード生成の不適切な制御（「コードインジェクション」）により、スケジュール作成権限を持つ認証済みユーザーが、細工されたスケジュールパラメーター名をスクリプト呼び出しに連結して任意のPowerShellコードを実行できる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026079.html" target="_blank" rel="noopener">DevolutionsのPowerShell Universalにおけるコードインジェクションの脆弱性</a><div class="cve-row">CVE-2026-16801, CVE-2026-16801</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Devolutions PowerShell Universal 2026.2.2およびそれ以前のバージョンの変数機能におけるコード生成の不適切な制御（「コードインジェクション」）により、変数書き込み権限を持つ認証ユーザーは、変数設定ファイルに書き込まれる際に適切にエスケープされていない細工された変数値を介して任意のPowerShellコードを実行できる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026078.html" target="_blank" rel="noopener">DevolutionsのPowerShell Universalにおける重要な情報の平文保存に関する脆弱性</a><div class="cve-row">CVE-2026-16802, CVE-2026-16802</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Devolutions PowerShell Universal 2026.2.2およびそれ以前のバージョンのvariables機能において、機密情報が平文で保存される問題があります。この問題により、ボールトが選択されていない場合に、ファイルシステムへのアクセス権を持つローカルの攻撃者がディスク上に平文で保存されたシークレット変数を介して秘密の値を読み取ることが可能になります。</td>
       </tr>
       <tr data-sev="Medium 5.3" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025872.html" target="_blank" rel="noopener">Ralph SlootenのMailpitにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-48824, CVE-2026-48824</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026077.html" target="_blank" rel="noopener">シスコシステムズのCisco Secure Firewall Management Centerにおけるハードコードされたパスワードの使用に関する脆弱性</a><div class="cve-row">CVE-2026-20316, CVE-2026-20316, CVE-2026-20316</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
-        <td class="desc">Mailpitは開発者向けのメールテストツールおよびAPIです。バージョン1.30.1以前では、GHSA-fpxj-m5q8-fphw（CVE-2026-45710、「Mailpit: 無制限のSMTP DATAおよび/api/v1/sendのボディサイズによるDoSを防ぐためのデフォルト50MB/月リミット設定」）の修正が`POST /api/v1/send`のみを`http.MaxBytesR</td>
+        <td class="desc">Cisco Secure Firewall Management Center (FMC) ソフトウェアのウェブインターフェースに存在する脆弱性により、認証されていないリモート攻撃者が低権限アカウントを使用して影響を受けるデバイスにログインし、該当システム内の機密データにアクセスできる可能性があります。この脆弱性は、低権限アカウントの静的ユーザー認証情報が存在することが原因です。攻撃者はこの脆弱性</td>
       </tr>
-      <tr data-sev="High 7.3" data-src="JVN iPedia">
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025871.html" target="_blank" rel="noopener">neutrinolabsのxrdpにおける複数の脆弱性</a><div class="cve-row">CVE-2026-55626, CVE-2026-55626</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.3</span></td>
-        <td class="desc">xrdpはオープンソースのRDPサーバーです。バージョン0.10.6以前では、認証済みユーザーセッションがUNIXドメインソケット経由でXvncバックエンドを使用して初期化される際、Xvncプロセスが不十分な認証メカニズムで起動されていました。これにより、ローカルの認証済み攻撃者がこの脆弱性を悪用して意図されたセッション分離を回避し、同一システム上の他のユーザーのアクティブなデスクトップセッション</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026076.html" target="_blank" rel="noopener">アップルのmacOSにおける情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-20672, CVE-2026-20672</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">情報漏洩の問題は、強化されたプライバシー管理によって対処されました。この問題は macOS Sequoia 15.7.8 および macOS Sonoma 14.8.8 で修正されています。アプリが機密性の高いユーザーデータにアクセスできる可能性がありましたが、現在は対策が施されています。</td>
       </tr>
-      <tr data-sev="High 7.3" data-src="JVN iPedia">
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025870.html" target="_blank" rel="noopener">オラクルのOracle Workflowにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60143, CVE-2026-60143</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.3</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Workflow製品（コンポーネント：Workflow Notification Mailer）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。認証されていない攻撃者がHTTP経由でネットワークアクセスを行うことで簡単に悪用可能な脆弱性により、Oracle Workflowが侵害される恐れ</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026075.html" target="_blank" rel="noopener">The HDF GroupのHDF5における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-26197, CVE-2026-26197</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">HDF5は高性能なライブラリであり、HDF5データモデルを実装したファイルフォーマットの仕様です。ファイルが破損して配列データ型のサイズ、要素数、および要素サイズが一致しなくなると、境界外読み取りが発生する可能性があります。配列データ型は、データ型の全サイズ（`dt-＞shared-＞size`）を、要素数（`dt-＞shared-＞u.array.nelem`）や要素サイズ（`dt-＞share</td>
       </tr>
-      <tr data-sev="Low 3.6" data-src="JVN iPedia">
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025869.html" target="_blank" rel="noopener">オラクルのOracle Workflowにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60144, CVE-2026-60144</div></td>
-        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.6</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Workflow製品（コンポーネント：Workflow Notification Mailer）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。この脆弱性は、Oracle Workflowが実行されるインフラストラクチャにログオンできる権限の低い攻撃者が悪用するのは困難ですが、成功するとO</td>
-      </tr>
-      <tr data-sev="Medium 5.2" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025868.html" target="_blank" rel="noopener">オラクルのOracle Workflowにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60149, CVE-2026-60149</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.2</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Workflow製品（コンポーネント：Workflow Notification Mailer）に存在する脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15です。悪用が難しい脆弱性ではありますが、高権限を持ち、Oracle Workflowが実行されているインフラストラクチャにログオンできる攻撃者によって、O</td>
-      </tr>
-      <tr data-sev="High 8.4" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025867.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60196, CVE-2026-60196</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.4</span></td>
-        <td class="desc">Oracle Fusion Middleware の Oracle WebLogic Server 製品（コンポーネント：コア）に脆弱性が存在します。影響を受けるサポート対象バージョンは 12.2.1.4.0 および 14.1.2.0.0 です。この脆弱性は容易に悪用可能であり、Oracle WebLogic Server が実行されているハードウェアに接続された物理通信セグメントへのアクセス権を</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025866.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60198, CVE-2026-60198</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。容易に悪用可能なこの脆弱性により、T3およびIIOP経由でネットワークアクセス可能な認証されていない攻撃者がOracle</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025865.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60199, CVE-2026-60199</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。容易に悪用可能なこの脆弱性によって、HTTP経由でネットワークアクセスが可能な未認証の攻撃者がOracle WebLog</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025864.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60200, CVE-2026-60200</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。この脆弱性はネットワーク経由のSOAPアクセスを介して認証されていない攻撃者が容易に悪用でき、Oracle WebLog</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025863.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60201, CVE-2026-60201</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）における脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。この脆弱性は悪用が困難ですが、T3およびIIOPを介してネットワークアクセスが可能な未認証の攻撃者によりOracl</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025862.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60202, CVE-2026-60202</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）における脆弱性について説明します。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。容易に悪用可能なこの脆弱性により、T3やIIOPを介したネットワークアクセスを持つ認証されていない攻撃者が</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025861.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60203, CVE-2026-60203</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0となります。ネットワーク経由でHTTPアクセスが可能な低権限の攻撃者が悪用しやすいこの脆弱性により、Oracle WebLog</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025860.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60204, CVE-2026-60204</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0となっています。T3およびIIOP経由のネットワークアクセスを持つ認証されていない攻撃者が悪用しやすい脆弱性であるため、Ora</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025859.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60205, CVE-2026-60205</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion Middleware の Oracle WebLogic Server 製品（コンポーネント：Core）に脆弱性があります。影響を受けるサポート対象バージョンは 12.2.1.4.0 および 14.1.2.0.0 です。ネットワーク経由の TCP 接続により、認証されていない攻撃者が容易に悪用できる脆弱性であり、Oracle WebLogic Server を侵害する恐</td>
-      </tr>
-      <tr data-sev="Critical 9.9" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025858.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60206, CVE-2026-60206</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.9</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）に存在する脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。低権限の攻撃者がSAML経由でネットワークアクセスを持つ場合、本脆弱性を簡単に悪用してOracle WebLogic </td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025857.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60207, CVE-2026-60207</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.0.0です。HTTP経由でネットワークアクセスを持つ権限の低い攻撃者が容易に悪用できる脆弱性であり、Oracle WebLogic Serverを侵害する恐れがあります。この脆弱</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026074.html" target="_blank" rel="noopener">The HDF GroupのHDF5におけるバッファアンダーフローの脆弱性</a><div class="cve-row">CVE-2026-26199, CVE-2026-26199</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">HDF5は高性能なライブラリであり、HDF5データモデルを実装したファイル形式の仕様です。`H5Iget_name`がグループIDに対してサイズパラメータを`0`で呼び出された場合、バッファ内にヌル終端文字を配置しようとしてアンダーフローが発生します。これは、`H5Iget_name`がサイズを強制的にゼロにできる形で呼び出され、かつ`name`バッファの前に重要なデータが存在するときに発生する可</td>
       </tr>
       <tr data-sev="Critical 9.1" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025856.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおけるリソースの枯渇に関する脆弱性</a><div class="cve-row">CVE-2026-60208, CVE-2026-60208</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026073.html" target="_blank" rel="noopener">Wazuh Inc.のWazuhにおける信頼できないデータのデシリアライゼーションに関する脆弱性</a><div class="cve-row">CVE-2026-28220, CVE-2026-28220</div></td>
         <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">Oracle Fusion Middleware の Oracle WebLogic Server 製品（コンポーネント：Core）に存在する脆弱性です。影響を受けるサポート対象バージョンは、12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および 15.1.1.0.0 です。ネットワーク経由の HTTP アクセスを持つ認証されていない攻撃者によって、この脆弱性が容易に悪用される可</td>
+        <td class="desc">Wazuhは、脅威の予防、検出、および対応に使用される無料のオープンソースプラットフォームです。バージョン4.14.5より前のバージョンには、クラスタ分散API（DAPI）の処理に問題がありました。クラスタピア、または共有クラスタキーを使ってクラスタチャネルに認証可能な任意のアクターが、マスターノードに攻撃者が制御する呼び出し可能オブジェクトを逆シリアル化させ、攻撃者が制御するRBACコンテキスト</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026072.html" target="_blank" rel="noopener">アップルのmacOSにおける複数の脆弱性</a><div class="cve-row">CVE-2026-28849, CVE-2026-28849</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">この問題は改良されたチェックによって対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8 で修正されています。悪意を持って細工された ZIP アーカイブが Gatekeeper のチェックを回避する可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.7" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026071.html" target="_blank" rel="noopener">アップルのmacOSにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-28896, CVE-2026-28896</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.7</span></td>
+        <td class="desc">この問題はメモリ処理の改善によって対処しました。この問題は macOS Sequoia 15.7.8 および macOS Sonoma 14.8.8 で修正されています。攻撃者は予期しないシステムの終了を引き起こしたり、カーネルメモリを読み取ったりする可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026070.html" target="_blank" rel="noopener">アップルのmacOSにおける複数の脆弱性</a><div class="cve-row">CVE-2026-28900, CVE-2026-28900</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">ファイルの隔離回避は追加のチェックによって対処されました。この問題はmacOS Sequoia 15.7.8およびmacOS Sonoma 14.8.8で修正されています。悪意を持って細工されたZIPアーカイブがGatekeeperのチェックを回避する可能性があります。</td>
       </tr>
       <tr data-sev="Critical 9.8" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025855.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60291, CVE-2026-60291</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026069.html" target="_blank" rel="noopener">アップルのmacOSにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-28911, CVE-2026-28911</div></td>
         <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）に存在する脆弱性です。影響を受けるサポート対象バージョンは、12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。HTTPを介したネットワークアクセスにより、認証されていない攻撃者が容易に悪用できる脆弱性であり、Oracle We</td>
+        <td class="desc">この問題は、改善されたメモリ管理によって対処されました。この問題は macOS Sonoma 14.8.8 および macOS Tahoe 26.6 で修正されています。悪意のあるアプリがシステムプロセスのメモリを破損させる可能性があります。</td>
       </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025854.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60292, CVE-2026-60292</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.1.0.0です。HTTPを介してネットワークアクセス可能な未認証の攻撃者が容易に悪用できるこの脆弱性により、Oracle WebLogic Serverが侵害される可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026068.html" target="_blank" rel="noopener">アップルのmacOSにおける保護メカニズムの不具合に関する脆弱性</a><div class="cve-row">CVE-2026-28912, CVE-2026-28912</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">ロジックの問題が改善された制限によって対処されました。この問題はmacOS Sequoia 15.7.8およびmacOS Tahoe 26.6で修正されています。この問題によりユーザーが権限を昇格させる可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.6" data-src="JVN iPedia">
+      <tr data-sev="High 7" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025853.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-60293, CVE-2026-60293</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.6</span></td>
-        <td class="desc">Oracle Fusion Middleware の Oracle WebLogic Server 製品に脆弱性（コンポーネント：WLS - Web Services）が存在します。影響を受けるサポート対象バージョンは、12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および 15.1.1.0.0 です。この脆弱性は簡単に悪用可能であり、HTTP 経由のネットワークアクセスを持つ認</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026067.html" target="_blank" rel="noopener">アップルのmacOSにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-28926, CVE-2026-28926</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
+        <td class="desc">状態管理の改善によりレースコンディションが解消されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8 で修正されています。アプリが権限を昇格させる可能性があります。</td>
       </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025852.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60294, CVE-2026-60294</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）には脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。この脆弱性は容易に悪用可能であり、SOAP経由でネットワークアクセスが可能な認証されていない攻撃者がOracle W</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026066.html" target="_blank" rel="noopener">アップルのmacOSにおけるリソースの枯渇に関する脆弱性</a><div class="cve-row">CVE-2026-28932, CVE-2026-28932</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">メモリ破損を引き起こす論理的な問題が存在していました。この問題は状態管理の改善によって対処されました。macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6で修正されています。この問題によりアプリがサービス拒否（DoS）を引き起こす可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025851.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60312, CVE-2026-60312</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）における脆弱性について述べています。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、15.1.1.0.0です。悪用が困難なこの脆弱性により、T3およびIIOP経由でネットワークアクセスを持つ認証されていない攻撃者がOra</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026065.html" target="_blank" rel="noopener">アップルのmacOSにおける不適切なデフォルトパーミッションに関する脆弱性</a><div class="cve-row">CVE-2026-39874, CVE-2026-39874</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">追加の制限により、権限に関する問題が対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6 にて修正されています。悪意のあるアプリがルート権限を取得する可能性がありました。</td>
       </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025850.html" target="_blank" rel="noopener">オラクルのOracle WebLogic Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60313, CVE-2026-60313</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebLogic Server製品（コンポーネント：Core）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0、14.1.1.0.0、14.1.2.0.0、および15.1.1.0.0です。RMI経由でネットワークアクセスが可能な低権限の攻撃者が簡単に悪用できる脆弱性により、Oracle WebLogic S</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026064.html" target="_blank" rel="noopener">アップルのmacOSにおける不適切なデフォルトパーミッションに関する脆弱性</a><div class="cve-row">CVE-2026-39875, CVE-2026-39875</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">追加の制限により権限の問題に対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6 で修正されています。悪意のあるアプリがルート権限を取得する可能性があります。</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025849.html" target="_blank" rel="noopener">オラクルのMySQL Routerにおけるリソースの枯渇に関する脆弱性</a><div class="cve-row">CVE-2026-60314, CVE-2026-60314</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Oracle MySQLのMySQL Router製品（コンポーネント：Router: General）に存在する脆弱性です。影響を受けるサポート対象バージョンは8.4.0から8.4.10、および9.7.0から9.7.1までです。ネットワーク経由のHTTPアクセスを持つ認証されていない攻撃者によって容易に悪用される脆弱性であり、MySQL Routerが侵害される恐れがあります。この脆弱性を悪用し</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025848.html" target="_blank" rel="noopener">オラクルのOracle Access Managerにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60355, CVE-2026-60355</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Access Manager製品（コンポーネント：Authentication Engine）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。ネットワーク経由でHTTPアクセスが可能な未認証の攻撃者により容易に悪用される脆弱性であり、Oracle Access Manager</td>
-      </tr>
-      <tr data-sev="High 8.6" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025847.html" target="_blank" rel="noopener">オラクルのOracle Access Managerにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60356, CVE-2026-60356</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.6</span></td>
-        <td class="desc">Oracle Fusion Middleware の Oracle Access Manager 製品（コンポーネント：認証エンジン）に脆弱性があります。影響を受けるサポート対象バージョンは 12.2.1.4.0 および 14.1.2.1.0 です。ネットワーク経由で HTTP にアクセス可能な認証されていない攻撃者が容易に悪用できる脆弱性が存在し、その結果として Oracle Access Ma</td>
-      </tr>
-      <tr data-sev="Critical 10" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025846.html" target="_blank" rel="noopener">オラクルのOracle Access Managerにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60358, CVE-2026-60358</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 10</span></td>
-        <td class="desc">Oracle Fusion Middleware の Oracle Access Manager 製品（コンポーネント：Authentication Engine）における脆弱性について説明します。影響を受けるサポート対象バージョンは 12.2.1.4.0 および 14.1.2.1.0 です。HTTP 経由でネットワークアクセスを持つ認証されていない攻撃者によって簡単に悪用可能な脆弱性により、Or</td>
-      </tr>
-      <tr data-sev="High 8.6" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025845.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60359, CVE-2026-60359</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.6</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0となっています。HTTPを介したネットワークアクセス権を持つ認証されていない攻撃者により、容易に悪用可能な脆弱性であり、Oracle Unified Direc</td>
-      </tr>
-      <tr data-sev="Critical 10" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025844.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60360, CVE-2026-60360</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 10</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）に脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。認証されていない攻撃者がLDAP経由のネットワークアクセスを通じて容易に悪用できる脆弱性があり、これによりOracle Unified Director</td>
-      </tr>
-      <tr data-sev="Critical 9.9" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025843.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60361, CVE-2026-60361</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.9</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント: OUD Core）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。LDAPを介してネットワークアクセスを持つ権限の低い攻撃者が簡単に悪用できるこの脆弱性により、Oracle Unified Directoryが侵害され</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025842.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60362, CVE-2026-60362</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUDコア）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。LDAP経由でネットワークアクセス可能な未認証の攻撃者が簡単に悪用できる脆弱性であり、Oracle Unified Directoryの乗っ取りを可能にします。</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025841.html" target="_blank" rel="noopener">オラクルのOracle Access Managerにおける認証に関する脆弱性</a><div class="cve-row">CVE-2026-60416, CVE-2026-60416</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Access Manager製品（コンポーネント：Authentication Engine）に脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。悪用が困難なこの脆弱性によって、HTTP経由でネットワークアクセス可能な認証されていない攻撃者がOracle Access Mana</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025840.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60417, CVE-2026-60417</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）における脆弱性です。本脆弱性の影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0となっています。悪用は困難な脆弱性であり、LDAP経由でネットワークアクセスが可能な認証されていない攻撃者がOracle Unified Direct</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026063.html" target="_blank" rel="noopener">アップルのmacOSにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-39877, CVE-2026-39877</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">メモリ処理の改善により、メモリ破損の問題が対処されました。この問題はmacOS Sequoia 15.7.8およびmacOS Sonoma 14.8.8で修正されています。アプリがカーネルメモリを開示する可能性がありましたが、現在は対策済みです。</td>
       </tr>
       <tr data-sev="High 7.2" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025839.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける権限管理に関する脆弱性</a><div class="cve-row">CVE-2026-60418, CVE-2026-60418</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026062.html" target="_blank" rel="noopener">デルのPowerProtect Data Managerにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-40712, CVE-2026-40712</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUDコア）における脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。LDAP経由でネットワークアクセスを持つ高権限の攻撃者が容易に悪用できる脆弱性のため、Oracle Unified Directoryが侵害される可能性が</td>
+        <td class="desc">Dell PowerProtect Data Managerのバージョン20.2.0.0以前には、REST APIにおける不適切な入力検証の脆弱性があります。この脆弱性をリモートアクセス権を持つ高権限の攻撃者が悪用することで、権限を昇格させる可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
+      <tr data-sev="High 7.2" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025838.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける権限管理に関する脆弱性</a><div class="cve-row">CVE-2026-60419, CVE-2026-60419</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Oracle Fusion Middleware の Oracle Unified Directory 製品（コンポーネント：OUD コア）に存在する脆弱性です。影響を受けるサポート対象バージョンは 12.2.1.4.0 および 14.1.2.1.0 です。LDAP 経由でネットワークアクセスを持つ低権限の攻撃者が簡単に悪用可能な脆弱性により、Oracle Unified Directory が侵</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026061.html" target="_blank" rel="noopener">デルのPowerProtect Data Managerにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-40714, CVE-2026-40714</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
+        <td class="desc">Dell PowerProtect Data Managerのバージョン20.2.0.0以前には、不適切な入力検証の脆弱性があります。この脆弱性を悪用すると、高い権限を持つ攻撃者がリモートアクセスで権限昇格を引き起こす可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.5" data-src="JVN iPedia">
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025837.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60420, CVE-2026-60420</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.5</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。LDAP経由でネットワークアクセスを持つ低権限の攻撃者によって容易に悪用可能な脆弱性があり、Oracle Unified Directoryが侵害される可</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026060.html" target="_blank" rel="noopener">アップルのmacOSにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-43665, CVE-2026-43665</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">この問題は、追加の権限チェックを行うことで対処されました。この問題はmacOS Sequoia 15.7.8およびmacOS Sonoma 14.8.8で修正されています。ローカルの攻撃者がスクリーン共有に設定されたレガシーVNCパスワードを特定できる可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.2" data-src="JVN iPedia">
+      <tr data-sev="High 7.1" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025836.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60421, CVE-2026-60421</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。悪用が困難な脆弱性であり、LDAP経由でネットワークアクセス権を持つ権限の低い攻撃者がOracle Unified Directoryを侵害する可能性があ</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026059.html" target="_blank" rel="noopener">アップルのmacOSにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-43672, CVE-2026-43672</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
+        <td class="desc">状態管理の改善により、認可の問題が対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6 で修正されています。悪意のあるアプリケーションがプライバシー環境設定を回避する可能性があります。</td>
       </tr>
-      <tr data-sev="Critical 9.9" data-src="JVN iPedia">
+      <tr data-sev="High 7.1" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025835.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60422, CVE-2026-60422</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.9</span></td>
-        <td class="desc">Oracle Fusion Middleware の Oracle Unified Directory 製品（コンポーネント：OUD Core）に存在する脆弱性です。影響を受けるサポート対象バージョンは 14.1.2.1.0 です。LDAP 経由でネットワークアクセスが可能な低権限の攻撃者によって容易に悪用され、Oracle Unified Directory を危険にさらす可能性があります。この</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026058.html" target="_blank" rel="noopener">アップルのmacOSにおける古典的バッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-43681, CVE-2026-43681</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
+        <td class="desc">バッファオーバーフローは境界チェックの改善によって対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6 で修正されています。ローカルユーザーがカーネルメモリを読み取る可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025834.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける認証に関する脆弱性</a><div class="cve-row">CVE-2026-60423, CVE-2026-60423</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）における脆弱性です。影響を受ける対応バージョンは12.2.1.4.0および14.1.2.1.0です。LDAP経由でネットワークアクセスが可能な低権限の攻撃者によって容易に悪用される脆弱性により、Oracle Unified Directoryが侵害される可能性が</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026057.html" target="_blank" rel="noopener">アップルのmacOSにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-43682, CVE-2026-43682</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">この問題は、改善されたメモリ処理によって対処されました。この問題は、macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6で修正されています。リモートのユーザーが予期しないシステムの終了やカーネルメモリの破損を引き起こす可能性があります。</td>
       </tr>
-      <tr data-sev="Critical 9" data-src="JVN iPedia">
+      <tr data-sev="High 7" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025833.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-60424, CVE-2026-60424</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）に脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。この悪用が困難な脆弱性により、LDAPを介したネットワークアクセスを持つ認証されていない攻撃者がOracle Unified Directoryを侵害す</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026056.html" target="_blank" rel="noopener">アップルのmacOSにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-43693, CVE-2026-43693</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
+        <td class="desc">状態管理の改善により競合状態の問題が対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6 で修正されています。この問題により、アプリが root 権限を取得できる可能性がありました。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026055.html" target="_blank" rel="noopener">アップルのmacOSにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-43694, CVE-2026-43694</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">この問題は、改良されたメモリ処理によって対処されました。この問題は、macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、および macOS Tahoe 26.6で修正されています。アプリケーションが予期しないシステム終了を引き起こしたり、カーネルメモリを書き換えたりする可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026054.html" target="_blank" rel="noopener">アップルのmacOSにおける引数の挿入または変更に関する脆弱性</a><div class="cve-row">CVE-2026-43698, CVE-2026-43698</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">インジェクションの問題は、検証の強化によって対処されました。この問題は macOS Sequoia 15.7.8 および macOS Sonoma 14.8.8 で修正されています。アプリがルート権限を取得できる可能性がありました。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026053.html" target="_blank" rel="noopener">アップルのmacOSにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-43710, CVE-2026-43710</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">この問題は改良されたメモリ処理によって対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6 で修正されています。攻撃者は予期しないシステム終了やカーネルメモリの破損を引き起こす可能性があります。</td>
       </tr>
       <tr data-sev="High 7.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025832.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるリソースの枯渇に関する脆弱性</a><div class="cve-row">CVE-2026-60425, CVE-2026-60425</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026052.html" target="_blank" rel="noopener">アップルのmacOSにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-43728, CVE-2026-43728</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）に存在する脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。この脆弱性は、ネットワーク経由でLDAPアクセスが可能な未認証の攻撃者によって容易に悪用され、Oracle Unified Directoryが侵害され</td>
+        <td class="desc">この問題はステート管理の改善によって対処されました。この問題はmacOS Tahoe 26.6で修正されています。攻撃者がキーチェーンの状態を変更できる可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.5" data-src="JVN iPedia">
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025831.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60426, CVE-2026-60426</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.5</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUDコア）における脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。LDAP経由でネットワークアクセスを持つ権限の低い攻撃者が容易に悪用できる脆弱性により、Oracle Unified Directoryが侵害される可能性</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026051.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品におけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-43729, CVE-2026-43729</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">この問題はメモリ処理の改善によって対処されました。本問題はiOS 16.6およびiPadOS 16.6、macOS Sequoia 15.7.8、macOS Tahoe 16.6、tvOS 16.6、visionOS 16.6で修正されています。悪意のある形で作成された画像を処理すると、プロセスメモリが破損する可能性があるため注意が必要です。</td>
       </tr>
-      <tr data-sev="High 8.7" data-src="JVN iPedia">
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025830.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60427, CVE-2026-60427</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.7</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUDコア）における脆弱性について説明します。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。本脆弱性は悪用が困難ですが、LDAP経由でネットワークアクセスが可能な認証されていない攻撃者がOracle Unified Directoryを侵</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026050.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-43739, CVE-2026-43739</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">境界外書き込みの問題は、改良された境界チェックによって対処されました。この問題は、iOS 16.6、iPadOS 16.6、macOS Tahoe 16.6、tvOS 16.6、visionOS 1.0、watchOS 9.6で修正されています。この問題により、アプリが予期しないシステム終了を引き起こす可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.2" data-src="JVN iPedia">
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025829.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60428, CVE-2026-60428</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。LDAP経由でネットワークアクセスが可能な認証なしの攻撃者によって簡単に悪用される脆弱性により、Oracle Unified Directoryが侵害され</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026049.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-43744, CVE-2026-43744</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">境界外書き込みの問題は、改善された境界チェックによって対処されました。この問題は、iOS 16.6および iPadOS 16.6、macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 16.6、tvOS 16.6、visionOS 16.6、watchOS 16.6で修正されています。悪意を持って細工されたメディアファイルのオーディオストリームを</td>
       </tr>
-      <tr data-sev="Critical 9.9" data-src="JVN iPedia">
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025828.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60429, CVE-2026-60429</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.9</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUD Core）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。LDAP経由でネットワークアクセスを持つ低権限の攻撃者が容易に悪用できる脆弱性であり、Oracle Unified Directoryを侵害する可能性があ</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026048.html" target="_blank" rel="noopener">アップルのmacOSにおける情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-43754, CVE-2026-43754</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">この問題は、機密情報の不適切な編集によって発生したものであり、修正されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6 で解決されています。アプリケーションが機密のカーネル状態を漏洩させる可能性があります。</td>
       </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-025827.html" target="_blank" rel="noopener">オラクルのOracle Unified Directoryにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60430, CVE-2026-60430</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle Unified Directory製品（コンポーネント：OUDコア）において脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.1.0です。LDAP経由でネットワークアクセスが可能な権限の低い攻撃者が簡単に悪用できる脆弱性により、Oracle Unified Directoryが侵害されるお</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026047.html" target="_blank" rel="noopener">アップルのmacOS等の複数製品における情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-43758, CVE-2026-43758</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">認証の問題は状態管理の改善によって対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6、および watchOS 26.6 で修正されています。アプリが機密ユーザーデータにアクセスできる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026046.html" target="_blank" rel="noopener">アップルのmacOSにおけるリソースの枯渇に関する脆弱性</a><div class="cve-row">CVE-2026-43768, CVE-2026-43768</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">この問題はメモリ処理の改善によって対処されました。この問題はmacOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6で修正されています。この問題により、アプリケーションが予期しないシステムの終了を引き起こす可能性があります。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026045.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における整数オーバーフローの脆弱性</a><div class="cve-row">CVE-2026-43769, CVE-2026-43769</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">整数オーバーフローは、入力検証の改善によって対処されました。この問題は、iOS 16.6およびiPadOS 16.6、macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 16.6、tvOS 16.6、visionOS 16.6、watchOS 16.6で修正されています。この脆弱性により、アプリが予期しないシステムの終了を引き起こす可能性があり</td>
+      </tr>
+      <tr data-sev="Medium 4.7" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026044.html" target="_blank" rel="noopener">アップルのmacOS等の複数製品における競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-43770, CVE-2026-43770</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.7</span></td>
+        <td class="desc">追加の検証により競合状態が対処されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6、および tvOS 26.6 で修正されています。アプリが機密ユーザーデータにアクセスできる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026043.html" target="_blank" rel="noopener">アップルのmacOSにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-43774, CVE-2026-43774</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">境界外読み取りは、境界チェックの改善によって修正されました。この問題は macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 26.6 で修正されています。この問題により、アプリが機密ユーザーデータにアクセスできる可能性があります。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026042.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-43778, CVE-2026-43778</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">メモリ管理の改善により、Use After Freeの問題が対処されました。この問題はiOS 16.6およびiPadOS 16.6、macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 16.6、tvOS 16.6、visionOS 16.6、watchOS 16.6で修正されています。この問題により、アプリケーションが予期しないシステムの終了や</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026041.html" target="_blank" rel="noopener">アップルのmacOS等の複数製品における認可に関する脆弱性</a><div class="cve-row">CVE-2026-43792, CVE-2026-43792</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">認可の問題は、改善された状態管理によって解決されました。この問題はSafari 26.6およびmacOS Tahoe 26.6で修正されています。アプリが機密性の高いユーザーデータにアクセスできる可能性がありました。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026040.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-43797, CVE-2026-43797</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">この問題は改良されたチェックにより対処されました。この問題はiOS 16.6およびiPadOS 16.6、macOS Tahoe 16.6で修正されています。アプリがユーザーの連絡先に関する情報にアクセスできる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026039.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-43800, CVE-2026-43800</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">情報漏えいの問題は、脆弱なコードを削除することで対処されました。この問題は、iOS 16.6およびiPadOS 16.6、macOS Tahoe 13.6、tvOS 16.6、watchOS 9.6で修正されています。アプリが機密性の高いユーザーデータにアクセスできる可能性がありましたが、現在は解消されています。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026038.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-43810, CVE-2026-43810</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">この問題は、メモリ処理の改善によって対処されました。本問題は、iOS 16.6およびiPadOS 16.6、macOS Sequoia 15.7.8、macOS Sonoma 14.8.8、macOS Tahoe 16.6、tvOS 16.6、visionOS 16.6、watchOS 16.6で修正されています。リモートのユーザーが予期しないシステムの終了やカーネルメモリの破損を引き起こす可能性</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026037.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-43816, CVE-2026-43816</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">境界外書き込みの問題は、改良された境界チェックによって対処されました。この問題は、iOS 16.6、iPadOS 16.6、macOS Tahoe 16.6、tvOS 16.6、visionOS 16.6、watchOS 16.6で修正されています。この問題により、アプリが予期しないシステム終了を引き起こす可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026036.html" target="_blank" rel="noopener">アップルのiPadOS等の複数製品における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-43817, CVE-2026-43817</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">境界チェックを強化することにより、境界外読み取りの問題に対処されました。この問題は、iOS 16.6およびiPadOS 16.6、macOS Tahoe 16.6、tvOS 16.6、visionOS 16.6、watchOS 16.6で修正されています。この問題によって、アプリが予期しないシステムの終了を引き起こす可能性があります。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-07-31</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/apis/myjvn" target="_blank" rel="noopener">MyJVN　該当する脆弱性対策情報はありません。</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">MyJVN　該当する脆弱性対策情報はありません。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-31</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97496464/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年07月30日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年07月30日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-31</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90278463/" target="_blank" rel="noopener">SGLangにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-31</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU92804348/" target="_blank" rel="noopener">ロボット掃除機DEEBOT PRO M1、DEEBOT PRO K1VACおよびスマートフォンアプリECOVACS PROにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">ECOVACS ROBOTICSが開発し、日本国内ではHellohas Robotics株式会社が提供するロボット掃除機DEEBOT PRO M1、DEEBOT PRO K1VACおよびスマートフォンアプリECOVACS PROには、複数の脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-07-31</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU94952030/" target="_blank" rel="noopener">BaserCMSにおけるCSVファイルインジェクションの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">baserCMSユーザー会が提供するBaserCMSには、CSVファイルインジェクションの脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-07-30</td>
@@ -566,33 +601,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">2026年07月21日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN20592637/" target="_blank" rel="noopener">Drupalプラグイン「AI Agents」における不正な認証の脆弱性</a><div class="cve-row"></div></td>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260021.html" target="_blank" rel="noopener">注意喚起: Ruby on RailsのActive Storageにおけるリモートコード実行につながる脆弱性（CVE-2026-66066）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">Drupalが提供するプラグイン「AI Agents」には、不正な認証の脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-21</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN40509781/" target="_blank" rel="noopener">非接触型ICカード技術FeliCaの一部のICチップにおける脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">ソニー株式会社より2017年以前に出荷された一部のFeliCa ICチップでは、暗号処理プロセスにおいて特定の操作を行うことにより、本来のセキュリティ強度が低下する事象が発生します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-17</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU95874748/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年07月16日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年07月16日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-17</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90338324/" target="_blank" rel="noopener">一部のHTTP/2サーバーにおけるフロー制御に起因したサービス拒否（DoS）の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+        <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-07-15</td>
@@ -626,13 +640,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="date">2026-06-10</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
         <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260016.html" target="_blank" rel="noopener">注意喚起: Check Point Software Technologies社製品における認証バイパスの脆弱性（CVE-2026-50751）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-05-22</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260015.html" target="_blank" rel="noopener">注意喚起: Palo Alto Networks製PAN-OSにおける認証回避の脆弱性（CVE-2026-0265）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
       </tr>
@@ -775,13 +782,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20260501.html" target="_blank" rel="noopener">更新：Linuxの脆弱性対策について(CVE-2026-31431、Copy Fail)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="IPA 脆弱性">
-        <td class="date">2026-05-01</td>
-        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
-        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20260501.html" target="_blank" rel="noopener">Linuxの脆弱性対策について(CVE-2026-31431、Copy Fail)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
       </tr></tbody>
   </table>
   </div>
@@ -799,6 +799,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-07-31</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188126" target="_blank" rel="noopener">「Ruby on Rails」に深刻な脆弱性「KindaRails2Shell」</a></td>
+        <td class="desc">ウェブアプリケーションフレームワーク「Ruby on Rails」に深刻な脆弱性が判明した。WAFで攻撃を回避することは難しいとされており、アップデートの実施が呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188118" target="_blank" rel="noopener">「Adobe Campaign Classic」に悪用リスク高い脆弱性 - 早急に更新を</a></td>
+        <td class="desc">「Adobe Campaign Classic（ACC）」に深刻な脆弱性が明らかとなった。悪用は確認されていないものの、今後悪用されるリスクが高いとして早急に対策を講じるよう呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-31</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188153" target="_blank" rel="noopener">「PHP」に複数の脆弱性 - セキュリティリリースを公開</a></td>
+        <td class="desc">「PHP」の開発チームは現地時間2026年7月30日、複数の脆弱性へ対処したセキュリティアップデート「PHP 8.5.9」「同8.4.24」「同8.3.33」「同8.2.33」をリリースした。各ブランチの利用者にアップデートを呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-31</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188136" target="_blank" rel="noopener">「TrendAI Vision One」に深刻な脆弱性 - 2025年に修正済み</a></td>
+        <td class="desc">トレンドマイクロは、同社セキュリティ製品「TrendAI Vision One」に関連し、深刻な脆弱性を2025年後半に解消していたことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-07-29</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188041" target="_blank" rel="noopener">ファイアウォール管理製品「Cisco FMC」に脆弱性 - すでに悪用も</a></td>
@@ -813,14 +837,50 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-src="SecurityNext">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188056" target="_blank" rel="noopener">インク通販サイトに不正アクセス - 個人情報流出の可能性</a></td>
+        <td class="desc">プリンタ用インクの通信販売サイトが不正アクセスを受けたことがわかった。クレジットカード情報を含む個人情報が流出した可能性があるという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187746" target="_blank" rel="noopener">ランサム被害で個人情報流出の可能性 - FA機器開発会社</a></td>
+        <td class="desc">工場や物流現場の自動化設備やロボットシステムの開発を手がける新エフエイコムは、ランサムウェアによるサイバー攻撃を受けた問題で、個人情報が流出した可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187818" target="_blank" rel="noopener">インシデント件数減少、ただしサイト改ざんは倍増</a></td>
+        <td class="desc">JPCERTコーディネーションセンターは、2026年第2四半期に報告を受けたインシデントの状況について取りまとめた。インシデント件数は前四半期から1割弱減となった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188052" target="_blank" rel="noopener">「Node.js」のアップデートが公開 - 脆弱性11件を修正</a></td>
         <td class="desc">「Node.js」の開発チームは、現地時間2026年7月29日にセキュリティアップデートを公開し、複数の脆弱性へ対処した。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-07-30</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188066" target="_blank" rel="noopener">「Unbound」に複数脆弱性 - キャッシュ汚染などに対処</a></td>
+        <td class="desc">キャッシュDNSサーバ「Unbound」に複数の脆弱性が判明した。脆弱性を修正するアップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188047" target="_blank" rel="noopener">Cisco、8月5日に複数製品の脆弱性情報を公開予定</a></td>
         <td class="desc">Cisco Systemsは、現地時間2026年8月5日に複数製品に関するセキュリティアドバイザリを公開する予定だ。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188087" target="_blank" rel="noopener">エレコム製無線LAN機器に複数脆弱性 - アップデートを提供</a></td>
+        <td class="desc">エレコムの一部無線LAN機器に脆弱性が判明した。ファームウェアのアップデートが呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-07-30</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188065" target="_blank" rel="noopener">講座受講者リストをメールに誤添付 - 北九州市</a></td>
+        <td class="desc">福岡県北九州市は、市民カレッジの講座受講者へメールを送信した際、個人情報が漏洩したことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-07-29</td>
@@ -857,73 +917,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188015" target="_blank" rel="noopener">「macOS Tahoe 26.6」を公開 - 脆弱性155件を修正</a></td>
         <td class="desc">Appleは現地時間2026年7月27日、Mac向けにセキュリティアップデートを公開した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188010" target="_blank" rel="noopener">「Node.js」セキュリティ更新の公開が延期 - 7月29日以降を予定</a></td>
-        <td class="desc">「Node.js」では脆弱性の修正に向けてセキュリティアップデートを準備しているが、当初予定より公開が遅延している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187944" target="_blank" rel="noopener">通販サイトにサイバー攻撃、調査を実施 - ヴェレダ・ジャパン</a></td>
-        <td class="desc">スイスのオーガニックコスメ「WELEDA」の正規輸入販売代理店であるヴェレダ・ジャパンは、公式オンラインショップがサイバー攻撃を受けたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187814" target="_blank" rel="noopener">顧客情報含む伝票など誤廃棄 - 東京三協信金</a></td>
-        <td class="desc">東京三協信用金庫は、倉庫で保管していた顧客情報を含む伝票や内部事務に関する書類を、誤って廃棄したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187930" target="_blank" rel="noopener">「VeloCloud Orchestrator」に脆弱性、悪用を確認 - 侵害調査を</a></td>
-        <td class="desc">SD-WAN環境の統合管理製品「Arista VeloCloud Orchestrator（VCO）」のオンプレミス版に深刻な脆弱性が明らかとなった。すでに脆弱性の悪用が確認されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187935" target="_blank" rel="noopener">「TeamCity」に深刻な脆弱性 - アップデートで修正</a></td>
-        <td class="desc">ソフトウェアのビルドやテスト、自動配布などの機能を提供するJetBrainsのCI/CDサーバ「TeamCity」に深刻な脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187925" target="_blank" rel="noopener">米当局、「FortiOS」「VeloCloud Orchestrator」の脆弱性悪用を確認</a></td>
-        <td class="desc">米当局は、「FortiOS」や「VeloCloud Orchestrator」に判明した2件の脆弱性が、サイバー攻撃に悪用されているとして注意を呼びかけた。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187957" target="_blank" rel="noopener">Apple、「iOS 26.6」「iPadOS 26.6」公開 - 脆弱性87件を修正</a></td>
-        <td class="desc">Appleは現地時間2026年7月27日、同社スマートデバイス向けにセキュリティアップデートとなる「iOS 26.6」「iPadOS 26.6」をリリースした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187529" target="_blank" rel="noopener">2026年2Qの脆弱性DB登録、約13％増となる1万3131件</a></td>
-        <td class="desc">2026年第2四半期に、脆弱性データベース「JVN iPedia」に登録された脆弱性情報は前四半期から1526件増加し、1万3131件だった。5四半期連続で1万件を超えている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187942" target="_blank" rel="noopener">通販サイトにサイバー攻撃、個人情報流出の可能性 - ANAグループ会社</a></td>
-        <td class="desc">ANAグループ会社で国際輸送を手がけるOCSは、通信販売サイトがサイバー攻撃を受け、個人情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187949" target="_blank" rel="noopener">製品サイトが侵害、サーバ内に個人情報も - ナカバヤシ</a></td>
-        <td class="desc">アルバムや手帳などの製造、販売を手がけるナカバヤシは、製品紹介サイトが不正アクセスを受け、フォームから問い合わせをした顧客の個人情報が流出した可能性があることを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年07月30日 12:31 JST</span>
+  <span>最終更新: 2026年07月31日 12:52 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
