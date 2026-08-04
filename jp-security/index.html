@@ -78,14 +78,14 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
   </div>
   <div class="stats">
     <div class="stat danger"><div class="n">24</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">97</div><div class="l">脆弱性</div></div>
+    <div class="stat warn"><div class="n">98</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">97</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">98</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -104,12 +104,61 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="High 7.2" data-src="JVN iPedia">
+        <td class="date">2026-08-04</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000107.html" target="_blank" rel="noopener">freo2におけるアップロードするファイルの検証が不十分な脆弱性</a><div class="cve-row">CVE-2026-67243</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
+        <td class="desc">refirioが提供するfreo2は、PHPで作成されたコンテンツ管理システムです。freo2には、次の脆弱性があります。  アップロードするファイルの検証が不十分（CWE-434）- CVE-2026-67243  この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：三井物産セキュアディレクション株</td>
+      </tr>
       <tr data-sev="Medium 6.8" data-src="JVN iPedia">
         <td class="date">2026-08-03</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000106.html" target="_blank" rel="noopener">サイボウズ Garoonにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-57279</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.8</span></td>
         <td class="desc">サイボウズ株式会社が提供するGaroonのスケジュール（Scheduler）には、次の脆弱性が存在します。  [CyCDB-4148]クロスサイトスクリプティング（CWE-79）- CVE-2026-57279 この脆弱性情報は、製品利用者への周知を目的に、開発者がJPCERT/CCに報告し、JPCERT/CCが開発者との調整を行いました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026401.html" target="_blank" rel="noopener">SGLangにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Vulnerability Note VU#281278 SGLang contains six different vulnerabilities including RCE, data exfiltration, and credential disclosure</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026400.html" target="_blank" rel="noopener">ロボット掃除機DEEBOT PRO M1、DEEBOT PRO K1VACおよびスマートフォンアプリECOVACS PROにおける複数の脆弱性</a><div class="cve-row">CVE-2021-31698, CVE-2026-66403, CVE-2026-66404, CVE-2026-66405, CVE-2026-66406, CVE-2026-66407, CVE-2026-66408, CVE-2026-66409, CVE-2026-66410, CVE-2026-66411</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">ECOVACS ROBOTICSが開発し、日本国内ではHellohas Robotics株式会社が提供するロボット掃除機DEEBOT PRO M1、DEEBOT PRO K1VACおよびスマートフォンアプリECOVACS PROには、次の複数の脆弱性が存在します。 デバッグ用途のWebサーバが有効（CWE-489） - CVE-2026-66403 MQTT通信におけるサーバ証明書検証の欠如（CW</td>
+      </tr>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026399.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年07月30日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年07月30日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：11件 ICSA-26-211-01: MikroTik RouterOS ICSA-26-211-02: Johnson Controls OpenBlue Employee ICSA-26-211-03: Toptech Systems R</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026398.html" target="_blank" rel="noopener">シャープ製および東芝テック製複合機（MFP）における複数の脆弱性</a><div class="cve-row">CVE-2026-60011, CVE-2026-63545, CVE-2026-63563</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">シャープ株式会社および東芝テック株式会社が提供する複数の複合機（MFP）には、次の複数の脆弱性が存在します。 細工されたURLによってユーザー認証を回避される（CWE-425） - CVE-2026-60011 キャッシュファイルの不完全なクリーンアップ（CWE-459） - CVE-2026-63545 初期設定ではユーザー認証機能が無効にされている（CWE-1188） - CVE-2026-6</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026397.html" target="_blank" rel="noopener">シャープ製ネットワークスキャナーツールの初期設定がセキュアでない問題</a><div class="cve-row">CVE-2026-62416</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">シャープ株式会社が提供するWindowsアプリケーション「ネットワークスキャナーツール」および「ネットワークスキャナーツールLite」はFTPサーバーとして動作し、MFPがスキャン結果をアップロードしてくるのを待ち受けます。 これらを初期設定のまま使用している場合には、接続時に認証を要求しません。さらに、制限なくファイルをアップロードすることが可能です。 初期設定がセキュアでない（CWE-1188</td>
+      </tr>
+      <tr data-sev="High 7.1" data-src="JVN iPedia">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026396.html" target="_blank" rel="noopener">BaserCMSにおけるCSVファイルインジェクションの脆弱性</a><div class="cve-row">CVE-2026-65875</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
+        <td class="desc">baserCMSユーザー会が提供するBaserCMSには、次の脆弱性が存在します。 CSVファイルインジェクション（CWE-1236） - CVE-2026-65875 この脆弱性情報は、下記の方がJPCERT/CCに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：VCSLab - Viettel Cyber Security quanlna2 (Le Nguyen Anh Qu</td>
       </tr>
       <tr data-sev="" data-src="JVN iPedia">
         <td class="date">2026-08-03</td>
@@ -419,47 +468,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
         <td class="desc">151.0.7922.72より前のGoogle ChromeのGPUにおける不適切な実装により、リモート攻撃者がレンダラープロセスを侵害し、細工されたHTMLページを介してクロスオリジンデータを漏洩させることが可能でした。（Chromiumのセキュリティ重大度は中程度です）</td>
       </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-08-03</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026351.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける同一生成元ポリシー違反に関する脆弱性</a><div class="cve-row">CVE-2026-17765, CVE-2026-17765</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">151.0.7922.72以前のGoogle ChromeにおけるWebProtectの不適切な実装により、レンダラープロセスを侵害したリモート攻撃者が、細工されたHTMLページを介してクロスオリジンデータを漏洩させることが可能でした。（Chromiumセキュリティの深刻度は中程度です）</td>
-      </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-08-03</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026350.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるユーザインターフェースにおける重要情報の誤った表示に関する脆弱性</a><div class="cve-row">CVE-2026-17849, CVE-2026-17849</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">151.0.7922.72より前のiOS向けGoogle Chromeにおいて、iOS版Chromeの不適切な実装が原因で、リモートの攻撃者が悪意のあるネットワークトラフィックを介してOmnibox（URLバー）の内容を偽装できる可能性がありました。（Chromiumセキュリティの深刻度は中です）</td>
-      </tr>
-      <tr data-sev="Medium 5.9" data-src="JVN iPedia">
-        <td class="date">2026-08-03</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026349.html" target="_blank" rel="noopener">オラクルのOracle GraalVM等の複数製品におけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-46968, CVE-2026-46968</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.9</span></td>
-        <td class="desc">Oracle Java SE（コンポーネント：JSSE）に脆弱性が存在します。影響を受けるサポート対象バージョンは、Oracle Java SEの8u491、8u491-perf、11.0.31、17.0.19、21.0.11、25.0.3、および26.0.1、Oracle GraalVM for JDKの17.0.19および21.0.11、ならびにOracle GraalVM Enterpris</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-03</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026348.html" target="_blank" rel="noopener">オラクルのOracle Retail Integration Busにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-46982, CVE-2026-46982</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Retail ApplicationsのOracle Retail Integration Bus製品（コンポーネント：RIBカーネル）には脆弱性があります。影響を受けるサポート対象バージョンは14.1.3.2です。容易に悪用可能なこの脆弱性によって、HTTPを介してネットワークアクセスが可能な認証されていない攻撃者がOracle Retail Integration Busを侵害す</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-03</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026347.html" target="_blank" rel="noopener">オラクルのOracle Retail Integration Busにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-46983, CVE-2026-46983</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Retail ApplicationsのOracle Retail Integration Bus製品（コンポーネント：RIBカーネル）に脆弱性が存在します。本脆弱性の影響を受けるサポート対象バージョンは16.0.3です。HTTP経由でネットワークアクセス可能な認証されていない攻撃者が容易に悪用できる脆弱性であり、Oracle Retail Integration Busが侵害される</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-03</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-026346.html" target="_blank" rel="noopener">オラクルのEnterprise Manager Base Platformにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-46992, CVE-2026-46992</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Oracle Enterprise ManagerのOracle Enterprise Manager Base Platform製品（コンポーネント：Enterprise Config Management）に存在する脆弱性です。影響を受けるサポート対象バージョンは13.5および24.1です。HTTPS経由でネットワークアクセスが可能な低権限の攻撃者が容易に悪用できる脆弱性により、Oracle </td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-08-04</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN52865575/" target="_blank" rel="noopener">freo2におけるアップロードするファイルの検証が不十分な脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">refirioが提供するfreo2には、アップロードするファイルの検証が不十分な脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-08-03</td>
@@ -594,24 +608,17 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-23</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97496543/" target="_blank" rel="noopener">ISC BINDにおける複数の脆弱性（2026年7月）</a><div class="cve-row"></div></td>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260021.html" target="_blank" rel="noopener">注意喚起: Ruby on RailsのActive Storageにおけるリモートコード実行につながる脆弱性（CVE-2026-66066）に関する注意喚起  (更新)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">ISC（Internet Systems Consortium）から、ISC BINDの複数の脆弱性が公開されました。</td>
+        <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-07-31</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
         <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260020.html" target="_blank" rel="noopener">注意喚起: 2026年7月マイクロソフトセキュリティ更新プログラムに関する注意喚起  (更新)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260021.html" target="_blank" rel="noopener">注意喚起: Ruby on RailsのActive Storageにおけるリモートコード実行につながる脆弱性（CVE-2026-66066）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
       </tr>
@@ -700,7 +707,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">複数のElastic製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-07-29</td>
+        <td class="date">2026-08-03</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
         <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260729.html#9" target="_blank" rel="noopener">Weekly Report: 複数のOracle製品に脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
@@ -799,6 +806,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-08-04</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188299" target="_blank" rel="noopener">「Adobe Campaign Classic」に脆弱性 - 直前の修正版にも影響、再度更新を</a></td>
+        <td class="desc">Adobeは2026年8月3日、「Adobe Campaign Classic」に深刻な脆弱性が複数確認されたとし、緊急でアップデートを公開した。前回7月29日のアップデートから日が浅いが、異なる脆弱性に対処しており、利用者に早急な対応を呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-04</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188270" target="_blank" rel="noopener">「N-central」に脆弱性、ホットフィクスが公開 - すでに悪用も</a></td>
+        <td class="desc">サーバやネットワーク機器などの遠隔監視に利用されるN-ableのIT運用管理プラットフォーム「N-central」に脆弱性が明らかとなった。すでに悪用が確認されており、関連するIPアドレスをはじめとする「IoC（Indicators of Compromise）」情報が公開されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-04</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188282" target="_blank" rel="noopener">米当局「脆弱性悪用リスト」、7月に26件 - 8割超が3日以内対応</a></td>
+        <td class="desc">米サイバーセキュリティインフラストラクチャセキュリティ庁（CISA）は、2026年7月に「悪用が確認された脆弱性カタログ（KEV）」へ26件の脆弱性を追加した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-04</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188277" target="_blank" rel="noopener">米当局、N-able「N-central」の脆弱性悪用に注意喚起</a></td>
+        <td class="desc">サーバやネットワーク機器の遠隔監視などに利用されるN-ableのIT運用管理プラットフォーム「N-central」がサイバー攻撃の標的となっている。米当局が注意を呼びかけた。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-08-02</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188205" target="_blank" rel="noopener">「pgAdmin 4」に深刻な脆弱性 - 前回修正の不備も</a></td>
@@ -807,8 +838,44 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-src="SecurityNext">
         <td class="date">2026-08-03</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188223" target="_blank" rel="noopener">「MongoDB Server」に24件の脆弱性 - 「クリティカル」も</a></td>
+        <td class="desc">NoSQLデータベース「MongoDB Server」に複数の脆弱性が判明した。「クリティカル」とされる脆弱性も含まれており、アップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188213" target="_blank" rel="noopener">「Apache Kyuubi」に3件の脆弱性 - 修正版が公開</a></td>
         <td class="desc">「Apache Spark」などの処理エンジンを利用したSQL処理やバッチ処理のためのインターフェースを提供する「Apache Kyuubi」に3件の脆弱性が判明した。修正版が提供されており、アップデートが呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188229" target="_blank" rel="noopener">開発プラットフォーム「GitLab」、脆弱性13件を修正</a></td>
+        <td class="desc">GitLabは、開発プラットフォームのセキュリティアップデート「GitLab 19.2.1」「同19.1.3」「同19.0.5」をリリースした。最新バージョンへ更新することを強く推奨している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187748" target="_blank" rel="noopener">システム侵害で原因や影響など調査 - CRM開発会社</a></td>
+        <td class="desc">CRMパッケージの開発、提供を手がけるソリッドアドバンスは、社内システムが外部からの侵害を受けてマルウェアに感染した疑いがあることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187667" target="_blank" rel="noopener">本人確認書類画像の保存先クラウドに設定不備 - 宿泊施設向けSaaS</a></td>
+        <td class="desc">宿泊施設の運営やチェックインシステムを提供するリクリエは、クラウドストレージに保存された本人確認書類の画像が、第三者よりアクセス可能だったことを公表した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/187953" target="_blank" rel="noopener">検針員が個人情報含む資料を一時紛失 - 広島県水道広域連合企業団</a></td>
+        <td class="desc">広島県水道広域連合企業団は、水道メーター検針業務を委託している検針員が、移動中に個人情報を含む資料を紛失したことを明らかにした。住民によって拾得され、回収されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-03</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188148" target="_blank" rel="noopener">県立高のオープンスクール申込フォームで設定ミス - 三重県</a></td>
+        <td class="desc">三重県は、県立高校が実施するオープンスクールの申し込みフォームにおいて設定ミスがあり、個人情報が閲覧可能な状態だったことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-08-02</td>
@@ -857,73 +924,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/187991" target="_blank" rel="noopener">サーバでランサム被害を確認、影響など調査 - 八王子中高校</a></td>
         <td class="desc">八王子中学校・高校を運営する八王子学園は、第三者によるサイバー攻撃を受けたことを明らかにした。詳細について調査を進めている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-31</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187468" target="_blank" rel="noopener">従業員が顧客クレカをスキミング - サムギョプサル店</a></td>
-        <td class="desc">サムギョプサル専門店の従業員が、顧客のクレジットカード情報をスキミングして入手し、不正に利用した可能性があることがわかった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-31</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187995" target="_blank" rel="noopener">講座受講者一覧表を紛失、メモから発覚 - 厚木市</a></td>
-        <td class="desc">神奈川県厚木市は、生涯学習講座の受講者リストが所在不明となっていることを公表した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-31</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188146" target="_blank" rel="noopener">子ども向けプログラミング講座の案内メールで誤送信 - 藤沢市</a></td>
-        <td class="desc">神奈川県藤沢市は、子ども向けプログラミング講座の案内をメールで行った際、操作ミスによってメールアドレスが流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188041" target="_blank" rel="noopener">ファイアウォール管理製品「Cisco FMC」に脆弱性 - すでに悪用も</a></td>
-        <td class="desc">Cisco Systemsは、ファイアウォール管理製品「Cisco Secure Firewall Management Center（FMC）」にあらたな脆弱性を確認したことを明らかにした。ゼロデイ攻撃が確認されている。他脆弱性との組み合わせることでより大きな影響を及ぼすおそれもあり、注意が必要となる。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188070" target="_blank" rel="noopener">「Chrome」にセキュリティ更新 - 脆弱性370件を修正</a></td>
-        <td class="desc">Googleは現地時間2026年7月29日、「Chrome」のセキュリティアップデートをリリースした。「クリティカル」とされるものも含め、多数脆弱性を解消している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188056" target="_blank" rel="noopener">インク通販サイトに不正アクセス - 個人情報流出の可能性</a></td>
-        <td class="desc">プリンタ用インクの通信販売サイトが不正アクセスを受けたことがわかった。クレジットカード情報を含む個人情報が流出した可能性があるという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187746" target="_blank" rel="noopener">ランサム被害で個人情報流出の可能性 - FA機器開発会社</a></td>
-        <td class="desc">工場や物流現場の自動化設備やロボットシステムの開発を手がける新エフエイコムは、ランサムウェアによるサイバー攻撃を受けた問題で、個人情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187818" target="_blank" rel="noopener">インシデント件数減少、ただしサイト改ざんは倍増</a></td>
-        <td class="desc">JPCERTコーディネーションセンターは、2026年第2四半期に報告を受けたインシデントの状況について取りまとめた。インシデント件数は前四半期から1割弱減となった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188052" target="_blank" rel="noopener">「Node.js」のアップデートが公開 - 脆弱性11件を修正</a></td>
-        <td class="desc">「Node.js」の開発チームは、現地時間2026年7月29日にセキュリティアップデートを公開し、複数の脆弱性へ対処した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-07-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188066" target="_blank" rel="noopener">「Unbound」に複数脆弱性 - キャッシュ汚染などに対処</a></td>
-        <td class="desc">キャッシュDNSサーバ「Unbound」に複数の脆弱性が判明した。脆弱性を修正するアップデートが提供されている。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年08月03日 12:56 JST</span>
+  <span>最終更新: 2026年08月04日 12:39 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
