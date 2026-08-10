@@ -78,14 +78,14 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
   </div>
   <div class="stats">
     <div class="stat danger"><div class="n">45</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">131</div><div class="l">脆弱性</div></div>
+    <div class="stat warn"><div class="n">130</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">131</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">130</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -313,13 +313,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000107.html" target="_blank" rel="noopener">freo2におけるアップロードするファイルの検証が不十分な脆弱性</a><div class="cve-row">CVE-2026-67243</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
         <td class="desc">refirioが提供するfreo2は、PHPで作成されたコンテンツ管理システムです。freo2には、次の脆弱性があります。  アップロードするファイルの検証が不十分（CWE-434）- CVE-2026-67243  この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：三井物産セキュアディレクション株</td>
-      </tr>
-      <tr data-sev="Medium 6.8" data-src="JVN iPedia">
-        <td class="date">2026-08-03</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000106.html" target="_blank" rel="noopener">サイボウズ Garoonにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-57279</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.8</span></td>
-        <td class="desc">サイボウズ株式会社が提供するGaroonのスケジュール（Scheduler）には、次の脆弱性が存在します。  [CyCDB-4148]クロスサイトスクリプティング（CWE-79）- CVE-2026-57279 この脆弱性情報は、製品利用者への周知を目的に、開発者がJPCERT/CCに報告し、JPCERT/CCが開発者との調整を行いました。</td>
       </tr>
       <tr data-sev="Medium 6.5" data-src="JVN iPedia">
         <td class="date">2026-08-06</td>
@@ -672,6 +665,20 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">IBM WebSphere Application Server 9.0および8.5には、管理コンソールにおけるアクセス制御の破損および権限昇格が発生する脆弱性があります。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
+        <td class="date">2026-08-10</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU91804527/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年08月07日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年08月07日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-08-10</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU95261826/" target="_blank" rel="noopener">nothingsのstb TrueTypeライブラリにおけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
         <td class="date">2026-08-07</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU92139835/" target="_blank" rel="noopener">OpenSSLのOCSPレスポンス検証におけるクライアント側のメモリリークの脆弱性（CVE-2026-54876）</a><div class="cve-row"></div></td>
@@ -796,20 +803,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/jp/JVN99975039/" target="_blank" rel="noopener">てがろぐ -Fumy Otegaru Memo Logger-における制限が不十分な正規表現を使用している脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">にししふぁくとりーが提供するてがろぐ -Fumy Otegaru Memo Logger-には、制限が不十分な正規表現を使用している脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-29</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU99139115/" target="_blank" rel="noopener">Apache TomcatのWebSocket chatサンプルにおけるサービス運用妨害（DoS）の脆弱性（2026年7月28日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">The Apache Software Foundationから、Apache Tomcatの脆弱性（CVE-2026-66299）に対してアドバイザリが公開されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-07-29</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90008749/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年07月28日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年07月28日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-08-03</td>
@@ -1037,6 +1030,36 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-08-09</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188591" target="_blank" rel="noopener">「Progress Kemp LoadMaster」の脆弱性が標的に - 米当局が注意喚起</a></td>
+        <td class="desc">Progress Softwareが提供するアプリケーションデリバリ製品「Progress Kemp LoadMaster」における既知の脆弱性が悪用されていることがわかった。早急に対策を講じるよう呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188600" target="_blank" rel="noopener">「Dell VSI」において「クリティカル」含む脆弱性70件を修正</a></td>
+        <td class="desc">Dellが提供する「Dell Virtual Storage Integrator for VMware vSphere Client（VSI）」に複数の脆弱性が判明した。アップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188594" target="_blank" rel="noopener">海外子会社に不正アクセス、影響範囲など調査 - ヨネックス</a></td>
+        <td class="desc">ヨネックスは、台湾子会社の一部サーバが第三者によって侵害されたことを明らかにした。一部業務に影響も生じているが、同子会社に限られるとしている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-10</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188486" target="_blank" rel="noopener">「Jenkins」に脆弱性 - 一部プラグインは修正版が未提供</a></td>
+        <td class="desc">「Jenkins」のコア部分や複数のプラグインに脆弱性が明らかとなった。コアや一部プラグインに対してアップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-09</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188587" target="_blank" rel="noopener">先週注目された記事（2026年8月2日〜2026年8月8日）</a></td>
+        <td class="desc">2026年8月2日から2026年8月8日までの1週間にSecurity NEXTにおいて注目度が高かった上位10記事は以下のとおり。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-08-07</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188567" target="_blank" rel="noopener">Cisco、アドバイザリ12件を公開 - 「Catalyst SD-WAN」「IOS XE」に深刻な脆弱性</a></td>
@@ -1125,43 +1148,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188445" target="_blank" rel="noopener">職員アカウントに不正アクセス、ニュース配信には影響なし - 共同通信</a></td>
         <td class="desc">共同通信社は、不正アクセスを受け、職員や加盟社に関する情報が外部に流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-06</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187812" target="_blank" rel="noopener">NASがランサム被害、内部に関係者連絡先 - 日本ご当地キャラクター協会</a></td>
-        <td class="desc">日本ご当地キャラクター協会は、ネットワークストレージがランサムウェアによる被害に遭ったことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-06</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188195" target="_blank" rel="noopener">アプリのユーザー認証に脆弱性、設計や実装時に問題 - タカラトミー</a></td>
-        <td class="desc">タカラトミーは、同社が運営する「デュエル・マスターズ サポートアプリ」において脆弱性を修正したことを公表した。約1年前のリリース時より個人情報を第三者が閲覧できる状態だったという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-06</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188296" target="_blank" rel="noopener">定食チェーンの持帰注文サイトで個人情報流出の可能性</a></td>
-        <td class="desc">定食屋チェーン「宮本むなし」の持ち帰り注文サイトにおいて、顧客の個人情報が流出した可能性があることがわかった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-06</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188467" target="_blank" rel="noopener">窓口で公開している台帳図面に個人情報 - 長野県</a></td>
-        <td class="desc">長野県は、同県で一般向けに公開している道路台帳や下水道管路台帳の一部に個人情報が記載されていたことを公表した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-04</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188342" target="_blank" rel="noopener">「Langflow」「Tomcat」など脆弱性3件の悪用に注意喚起 - 米当局</a></td>
-        <td class="desc">米サイバーセキュリティインフラストラクチャセキュリティ庁（CISA）は、「Apache Tomcat」に関する脆弱性をはじめ、悪用されている3件の既知の脆弱性について注意を喚起した。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年08月09日 11:30 JST</span>
+  <span>最終更新: 2026年08月10日 11:35 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
