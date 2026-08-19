@@ -77,15 +77,15 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">67</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">148</div><div class="l">脆弱性</div></div>
+    <div class="stat danger"><div class="n">62</div><div class="l">高深刻度</div></div>
+    <div class="stat warn"><div class="n">150</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">148</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">150</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -104,355 +104,558 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="Medium 6.1" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028764.html" target="_blank" rel="noopener">IBMのIBM Documentation Offlineにおける不適切なログ出力の無効化に関する脆弱性</a><div class="cve-row">CVE-2026-17481, CVE-2026-17481</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">IBM Documentation Offline バージョン1.0.0から1.4.1において、不適切なログの出力の無害化に問題があり、リモートの攻撃者が任意のコードを実行できる可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028883.html" target="_blank" rel="noopener">ludのOaskitにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-66296, CVE-2026-66296</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.1</span></td>
+        <td class="desc">lud oaskitにおけるウェブページ生成時の入力の不適切な無害化（XSS）脆弱性は、デフォルトのHTMLエラーハンドラーを介してリフレクト型クロスサイトスクリプティングを引き起こします。lib/oaskit/error_handler/default.ex内のOaskit.ErrorHandler.Default.format_reason/4およびOaskit.ErrorHandler.De</td>
       </tr>
       <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028763.html" target="_blank" rel="noopener">IBMのIBM Documentation Offlineにおけるファイル名やパス名の外部制御に関する脆弱性</a><div class="cve-row">CVE-2026-17482, CVE-2026-17482</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028882.html" target="_blank" rel="noopener">IBMのIBM DB2におけるスタックベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-10534, CVE-2026-10534</div></td>
         <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">IBM Documentation Offline バージョン1.0.0から1.4.1までにおいて、不適切なファイルパス制御が原因でリモートの攻撃者が任意のコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028761.html" target="_blank" rel="noopener">マイクロソフトのApplication Insights Profilerにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-49163, CVE-2026-49163</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Application Insights Profilerにおける制限されたディレクトリへのパス名の不適切な制限（「パストラバーサル」）により、認証された攻撃者がネットワーク経由で権限を昇格させることが可能となります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028759.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Entra ConnectにおけるSQL インジェクションの脆弱性</a><div class="cve-row">CVE-2026-65673, CVE-2026-65673</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Microsoft Entra Connect SyncにおけるSQLコマンドで使用される特殊要素が不適切に無害化される（「SQLインジェクション」）ため、認可された攻撃者がローカルで権限を昇格させることが可能となります。</td>
-      </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028758.html" target="_blank" rel="noopener">Apache Software FoundationのApache Airflow Providers Yandex (apache-airflow-providers-yandex)におけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-68871, CVE-2026-68871</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Apache AirflowのYandexプロバイダーにおけるYandex Lockboxシークレットバックエンドは、チームスコープのConnectionまたはVariableのIDをチームに依存しない検索で解決していました。これは、チームスコープの検索が失敗した場合に発生します。このバックエンドを使用してマルチチームモードで展開している環境では、あるチームの呼び出し元が、そのチームの名前空間を示</td>
-      </tr>
-      <tr data-sev="Medium 5.4" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028755.html" target="_blank" rel="noopener">IBMのIBM iにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-16694, CVE-2026-16694</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.4</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3はストアドクロスサイトスクリプティングの脆弱性を有しています。この脆弱性により、認証されたユーザーがWeb UIに任意のJavaScriptコードを埋め込むことが可能となり、本来の機能が変更されることで、信頼されたセッション内で認証情報が漏洩する可能性があります。</td>
-      </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028754.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-16815, CVE-2026-16815</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、リモートの攻撃者によってスタックベースのバッファオーバーフローが引き起こされる脆弱性が存在し、それによりサービス拒否が発生し、潜在的に機密情報が取得される可能性があります。</td>
+        <td class="desc">IBM Db2 11.5.0から11.5.9、および12.1.0から12.1.5には、IXF IMPORTパーサーにおけるバッファオーバーフローの脆弱性が存在します。</td>
       </tr>
       <tr data-sev="Medium 5.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028753.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-16861, CVE-2026-16861</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028881.html" target="_blank" rel="noopener">IBMのIBM WebSphere Application Serverにおける信頼できないデータのデシリアライゼーションに関する脆弱性</a><div class="cve-row">CVE-2026-10571, CVE-2026-10571</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3において、リモートの攻撃者が境界外読み取りを行い、サービス拒否を引き起こす可能性があります。</td>
+        <td class="desc">IBM WebSphere Application Server - Liberty のバージョン 17.0.0.3 から 26.0.0.8 までが、不安全なデシリアライズに起因するサービス拒否の脆弱性の影響を受けます。権限の低い管理ユーザーが、restConnector-2.0 機能が有効になっている場合にこの脆弱性を悪用し、システムリソースを消費させる可能性があります。</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="High 7.4" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028752.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-16887, CVE-2026-16887</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">IBM i 7.6 にはリモートの攻撃者によって境界外書き込みが発生し、サービス拒否（DoS）を引き起こす可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028876.html" target="_blank" rel="noopener">IBMのSecurity Verify Access等の複数製品における認証に関する脆弱性</a><div class="cve-row">CVE-2026-11923, CVE-2026-11923</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.4</span></td>
+        <td class="desc">IBM Security Verify Access 10.0から10.0.9.2およびIBM Verify Identity Access 11.0から11.0.3、さらにIBM Verify Identity Access Container 11.0から11.0.3のリバースプロキシは、特定の構成においてユーザー提供データの暗号検証が期待よりも弱くなる可能性がある問題です。</td>
       </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="Low 3.1" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028751.html" target="_blank" rel="noopener">IBMのIBM iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-16975, CVE-2026-16975</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、ヒープベースのバッファオーバーフローの脆弱性があり、リモートで認証された攻撃者が任意のコードを実行できる可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028875.html" target="_blank" rel="noopener">IBMのSecurity Verify Access等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-11937, CVE-2026-11937</div></td>
+        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.1</span></td>
+        <td class="desc">IBM Security Verify Access 10.0 から 10.0.9.2 までおよび IBM Verify Identity Access 11.0 から 11.0.3 まで、さらに IBM Verify Identity Access Container 11.0 から 11.0.3 までおよび IBM Security Verify Access Container 10.0 か</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="High 8.7" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028750.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-16982, CVE-2026-16982</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3において、リモートの攻撃者がヒープバッファオーバーフローによりサービス拒否を引き起こす可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028874.html" target="_blank" rel="noopener">IBMのSecurity Verify Access等の複数製品における書式文字列に関する脆弱性</a><div class="cve-row">CVE-2026-12004, CVE-2026-12004</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.7</span></td>
+        <td class="desc">IBM Security Verify Access 10.0から10.0.9.2まで、およびIBM Verify Identity Access 11.0から11.0.3まで、さらにIBM Verify Identity Access Container 11.0から11.0.3までには、管理インターフェースにフォーマット文字列インジェクションの脆弱性が含まれており、攻撃者が悪意のあるHTTPリ</td>
       </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="High 7.2" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028749.html" target="_blank" rel="noopener">IBMのIBM Iにおけるファイル名やパス名の外部制御に関する脆弱性</a><div class="cve-row">CVE-2026-16987, CVE-2026-16987</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3は、LANG環境変数を適切に検証しないため、ローカルの攻撃者が権限を昇格させる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028748.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-17029, CVE-2026-17029</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、ローカルの攻撃者が境界外書き込みを利用して任意のコードを実行できる脆弱性があります。</td>
-      </tr>
-      <tr data-sev="Low 3.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028747.html" target="_blank" rel="noopener">IBMのIBM Iにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-17043, CVE-2026-17043</div></td>
-        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 では、リモートで認証済みの攻撃者がパストラバーサルにより任意のファイルを削除できる可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028873.html" target="_blank" rel="noopener">IBMのSecurity Verify Access等の複数製品におけるOS コマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-12005, CVE-2026-12005</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
+        <td class="desc">IBM Security Verify Access 10.0から10.0.9.2、および IBM Verify Identity Access 11.0から11.0.3、さらに IBM Verify Identity Access Container 11.0から11.0.3には、管理インターフェースに入力検証の脆弱性が存在します。この脆弱性により、すでに権限を持つ攻撃者が悪意のあるHTTPリク</td>
       </tr>
       <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028746.html" target="_blank" rel="noopener">IBMのIBM IにおけるCapture-replay による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-17045, CVE-2026-17045</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028872.html" target="_blank" rel="noopener">IBMのSecurity Verify Access等の複数製品における認証に関する脆弱性</a><div class="cve-row">CVE-2026-12359, CVE-2026-12359</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3は、不適切なセッション管理の脆弱性により、リモートの認証済み攻撃者が不正な操作を実行し、機密情報にアクセスできる可能性があります。</td>
+        <td class="desc">IBM Security Verify Access 10.0 から 10.0.9.2、および IBM Verify Identity Access 11.0 から 11.0.3、ならびに IBM Verify Identity Access Container 11.0 から 11.0.3 において、リバースプロキシによる HTTP リクエストの解釈に不一致が発生するため、リモートの攻撃者が機密</td>
       </tr>
-      <tr data-sev="High 7.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="High 7.2" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028745.html" target="_blank" rel="noopener">IBMのIBM Iにおけるクロスサイトリクエストフォージェリの脆弱性</a><div class="cve-row">CVE-2026-17069, CVE-2026-17069</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.3</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3では、不適切なアンチCSRFトークンの検証により、リモートの認証済み攻撃者がセキュリティ制限を回避できる可能性があります。こちらの問題により、システムの安全性が損なわれる恐れがあります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028744.html" target="_blank" rel="noopener">IBMのIBM iにおける権限管理に関する脆弱性</a><div class="cve-row">CVE-2026-17082, CVE-2026-17082</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3では、クライアントから提供されたプロファイル名が適切に検証されないため、リモートの認証済み攻撃者が権限昇格を行う可能性があります。</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028743.html" target="_blank" rel="noopener">IBMのIBM iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-17083, CVE-2026-17083</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、スタックベースのバッファオーバーフローの脆弱性があり、リモートの攻撃者が任意のコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028742.html" target="_blank" rel="noopener">IBMのIBM iにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-17094, CVE-2026-17094</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 にはパストラバーサルの脆弱性があり、リモートの認証済み攻撃者が機密情報を取得したり、ファイルを操作したりする可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028741.html" target="_blank" rel="noopener">IBMのIBM iにおける動的に決定されたオブジェクト属性の不適切に制御された変更に関する脆弱性</a><div class="cve-row">CVE-2026-17095, CVE-2026-17095</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、安全でないリフレクションの脆弱性があり、リモートの認証済み攻撃者がセキュリティ制限を回避できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028740.html" target="_blank" rel="noopener">IBMのIBM Iにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-17199, CVE-2026-17199</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、リモートの攻撃者が無制限のリソース割り当てを引き起こすことでサービス拒否を発生させる可能性があります。</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028739.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-17206, CVE-2026-17206</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 にはバッファオーバーフローの脆弱性があり、リモートの攻撃者が任意のコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.2" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028738.html" target="_blank" rel="noopener">IBMのIBM Iにおける古典的バッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-17220, CVE-2026-17220</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3において、リモートの攻撃者がバッファオーバーフローを引き起こし、サービス拒否を発生させるとともに、認証メタデータを改ざんする可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028737.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-17223, CVE-2026-17223</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3において、リモートの認証済み攻撃者がバッファオーバーフローを利用して任意のコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028736.html" target="_blank" rel="noopener">IBMのIBM Iにおける無限ループに関する脆弱性</a><div class="cve-row">CVE-2026-17229, CVE-2026-17229</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、7.3には、リモートの攻撃者が無限ループを発生させてサービス拒否を引き起こす可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.2" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028735.html" target="_blank" rel="noopener">IBMのIBM iにおける複数の脆弱性</a><div class="cve-row">CVE-2026-17485, CVE-2026-17485</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、整数のアンダーフローが発生する脆弱性があり、リモートの攻撃者がサービス拒否を引き起こし、機密情報を取得する可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028871.html" target="_blank" rel="noopener">IBMのSecurity Verify Access等の複数製品におけるインジェクションに関する脆弱性</a><div class="cve-row">CVE-2026-12618, CVE-2026-12618</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
+        <td class="desc">IBM Security Verify Access 10.0 から 10.0.9.2、および IBM Verify Identity Access 11.0 から 11.0.3、さらに IBM Verify Identity Access Container 11.0 から 11.0.3 までにおいて、ユーザーが提供した入力を不適切に検証した結果、管理者が本来許可されていない追加のコマンドを実行</td>
       </tr>
       <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028733.html" target="_blank" rel="noopener">IBMのIBM iにおける同一生成元ポリシー違反に関する脆弱性</a><div class="cve-row">CVE-2026-18098, CVE-2026-18098</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028869.html" target="_blank" rel="noopener">IBMのSecurity Verify Access等の複数製品における認証回避の脆弱性</a><div class="cve-row">CVE-2026-13267, CVE-2026-13267</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、XMLインジェクションの脆弱性が存在し、リモートの認証済み攻撃者が機密情報を取得したり、システムの整合性を損なったりする可能性があります。</td>
+        <td class="desc">IBM Security Verify Access 10.0から10.0.9.2まで、および IBM Verify Identity Access 11.0から11.0.3まで、さらに IBM Verify Identity Access Container 11.0から11.0.3までにおいて、認証されたユーザーが特別に細工されたリクエストを介して他のユーザーの権限を取得できる可能性があります</td>
       </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028732.html" target="_blank" rel="noopener">IBMのIBM iにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-18106, CVE-2026-18106</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、ユーザーが提供したパス入力の検証が不適切であるため、リモートの認証済み攻撃者が機密情報を取得できる可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028868.html" target="_blank" rel="noopener">IBMのIBM Planning Analytics Localにおけるクロスサイトリクエストフォージェリの脆弱性</a><div class="cve-row">CVE-2026-13365, CVE-2026-13365</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">IBM Planning Analytics 2.0および2.1 Localにはクロスサイトリクエストフォージェリ（CSRF）の脆弱性が存在し、攻撃者がウェブサイトから信頼されているユーザーによって送信された悪意のある不正な操作を実行できる可能性があります。</td>
       </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028731.html" target="_blank" rel="noopener">IBMのIBM iにおける認可に関する脆弱性</a><div class="cve-row">CVE-2026-18144, CVE-2026-18144</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、認証されたリモート攻撃者が不適切な認可によりセキュリティ制限を回避できる脆弱性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028867.html" target="_blank" rel="noopener">IBMのIBM Storage Scaleにおけるハードコードされた認証情報の使用に関する脆弱性</a><div class="cve-row">CVE-2026-13460, CVE-2026-13460</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">IBM Storage Scale バージョン5.2.3.0から5.2.3.8、および6.0.0.0から6.0.1.0のGUIには、ソースコード内にハードコードされたトークンが含まれており、そのトークンはノード間クラスタ通信およびGUI間のREST API認証に使用されています。</td>
       </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="Critical 9.4" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028730.html" target="_blank" rel="noopener">IBMのIBM iにおける解釈の競合に関する脆弱性</a><div class="cve-row">CVE-2026-18246, CVE-2026-18246</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、マルチパートパーサーの解釈の不一致があり、リモートの認証済み攻撃者がセキュリティ制限を回避できてしまう可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028728.html" target="_blank" rel="noopener">IBMのIBM Iにおける認可に関する脆弱性</a><div class="cve-row">CVE-2026-18509, CVE-2026-18509</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、ローカル認証済みの攻撃者が Navigator for i デバッガーを介して権限昇格を引き起こす可能性があります。これにより、攻撃者はシステム上の機密データにアクセスしたり操作したりできるほか、IBM i システム上で権限を昇格させた新しいプロファイルを作成することが可能です。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028866.html" target="_blank" rel="noopener">IBMのIBM WebSphere Application Serverにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-14525, CVE-2026-14525</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.4</span></td>
+        <td class="desc">IBM WebSphere Application Server - Liberty バージョン 17.0.0.3 から 26.0.0.8 において、rtcomm-1.0 または rtcommGateway-1.0 機能が有効化されている場合、認証バイパスの脆弱性が存在します。</td>
       </tr>
       <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028727.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-18511, CVE-2026-18511</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028865.html" target="_blank" rel="noopener">IBMのIBM i Access Client Solutionsにおける信頼できない検索パスに関する脆弱性</a><div class="cve-row">CVE-2026-14875, CVE-2026-14875</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3では、ローカルの認証済み攻撃者がTLSセッション確立時の不適切な境界チェックにより、Native IBM i JSSEプロバイダーでスタックベースのバッファオーバーフローを引き起こす可能性があります。ローカル攻撃者は固定長バッファをオーバーフローさせることで、システム上で任意のコードを実行したり、JVMプロセスをクラッシュさせたりすることができます。</td>
+        <td class="desc">IBM i Access Client Solutions のバージョン 1.1.2.0 から 1.1.9.13 までには、すべてのユーザー向けにインストールされた場合に、パブリックに書き込み可能なディレクトリが原因で Windows 上で任意のコードが実行される脆弱性があります。</td>
+      </tr>
+      <tr data-sev="Medium 6.1" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028864.html" target="_blank" rel="noopener">Django Software FoundationのDjangoにおけるWeb ページの属性に対するスクリプトの不適切な無害化に関する脆弱性</a><div class="cve-row">CVE-2026-15920, CVE-2026-15920</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.1</span></td>
+        <td class="desc">Django 5.2.17より前の5.2および6.0.8より前の6.0に脆弱性が発見されました。`django.contrib.admin.utils.display_for_field()`は管理画面で`URLField`の値をURLの検証を行わずにクリック可能なリンクとしてレンダリングします。安全でないスキームを持つ値が保存されている場合、変更リストや読み取り専用の管理ページでリンクとして表示</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028863.html" target="_blank" rel="noopener">IBMのIBM iにおける信頼できない検索パスに関する脆弱性</a><div class="cve-row">CVE-2026-16674, CVE-2026-16674</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、信頼されていない検索パスの問題があり、リモートの認証済み攻撃者が任意のコードを実行できる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028862.html" target="_blank" rel="noopener">IBMのIBM iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-16692, CVE-2026-16692</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3において、リモートの認証済み攻撃者がスタックベースのバッファオーバーフローを悪用してサービス拒否を引き起こす可能性があります。</td>
       </tr>
       <tr data-sev="Medium 5.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028726.html" target="_blank" rel="noopener">IBMのIBM Iにおける整数オーバーフローの脆弱性</a><div class="cve-row">CVE-2026-18671, CVE-2026-18671</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028861.html" target="_blank" rel="noopener">IBMのIBM Documentation Offlineにおける制限されていない IP アドレスへのバインディングに関する脆弱性</a><div class="cve-row">CVE-2026-16713, CVE-2026-16713</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3では、認証された攻撃者がリクエスト処理中の境界チェックにおける整数オーバーフローにより、NetServerサーバースレッドの例外を強制的に発生させることがあります。攻撃者はこの脆弱性を悪用して、一時的なサービス拒否（DoS）状態を引き起こす可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028725.html" target="_blank" rel="noopener">IBMのIBM iにおけるOS コマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-18683, CVE-2026-18683</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、Navigator for iを介した特権昇格の脆弱性があります。この脆弱性により、認証されたユーザーが特権をルートユーザーに昇格させてコマンドを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028724.html" target="_blank" rel="noopener">IBMのIBM IにおけるXML 外部エンティティの脆弱性</a><div class="cve-row">CVE-2026-18715, CVE-2026-18715</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および7.3は、XML外部エンティティを不適切に処理するため、リモートの認証済み攻撃者が機密情報を取得する可能性があります。</td>
+        <td class="desc">IBM Documentation Offline バージョン 1.0.0 から 1.4.1 において、ドキュメントサーバーが制限のないIPアドレスにバインドされてしまうセキュリティ設定ミスが原因で、リモートの攻撃者が機密情報を取得できる可能性があります。</td>
       </tr>
       <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028723.html" target="_blank" rel="noopener">IBMのIBM Iにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-18846, CVE-2026-18846</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028860.html" target="_blank" rel="noopener">IBMのIBM iにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-16853, CVE-2026-16853</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、クライアントデータの検証が不適切であることに起因するバッファオーバーフローの脆弱性があります。この脆弱性は、攻撃者がホストサーバの一つに対して不正なリクエストを送信することで悪用され、そのサーバに対してサービス拒否（DoS）を引き起こす可能性があります。</td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、範囲外読み取りの脆弱性が存在し、リモート攻撃者が機密情報を取得できる可能性があります。</td>
       </tr>
       <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028722.html" target="_blank" rel="noopener">IBMのIBM iにおける同一生成元ポリシー違反に関する脆弱性</a><div class="cve-row">CVE-2026-18847, CVE-2026-18847</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028859.html" target="_blank" rel="noopener">IBMのIBM iにおける認証に関する脆弱性</a><div class="cve-row">CVE-2026-16867, CVE-2026-16867</div></td>
         <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、Navigator for i のなりすましによりリモートの認証されていない攻撃者が資格情報を収集できる脆弱性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028721.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-19556, CVE-2026-19556</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">151.0.7922.137 より前の Google Chrome の V8 における Use after free の脆弱性により、リモート攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティの深刻度は高いです）</td>
-      </tr>
-      <tr data-sev="High 8.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028720.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-19557, CVE-2026-19557</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
-        <td class="desc">151.0.7922.137 未満の Mac 向け Google Chrome の TabStrip における解放後使用の脆弱性により、レンダラープロセスが侵害される可能性がありました。これにより、リモートの攻撃者が細工された HTML ページを介してサンドボックスを脱出できる恐れがあります。（Chromium セキュリティの深刻度: 高）</td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3では、NTLMセッション交渉中の不適切な認証により、リモートの攻撃者が認証済みユーザーの権限でサーバーリソースにアクセスできる可能性があります。</td>
       </tr>
       <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028719.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-19558, CVE-2026-19558</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028858.html" target="_blank" rel="noopener">IBMのIBM iにおける初期化されていないリソースの使用に関する脆弱性</a><div class="cve-row">CVE-2026-16868, CVE-2026-16868</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">151.0.7922.137 より前の Google Chrome の拡張機能に存在する Use after free の脆弱性により、攻撃者が悪意のある拡張機能をインストールさせ、巧妙に作成された Chrome 拡張機能を通じてサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティ深刻度：高）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028718.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-19559, CVE-2026-19559</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">151.0.7922.137 より前の Google Chrome における HTML の Use after free 脆弱性により、リモート攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティの深刻度：高い）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028717.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-19560, CVE-2026-19560</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chrome 151.0.7922.137 より前のバージョンに含まれる Blink の Use after free 脆弱性により、リモートの攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティ重大度：高です）</td>
-      </tr>
-      <tr data-sev="High 8.6" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028716.html" target="_blank" rel="noopener">シスコシステムズのCisco IOS XEにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-20273, CVE-2026-20273</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.6</span></td>
-        <td class="desc">Ciscoの継続的なセキュリティ強化および製品品質への取り組みの一環として、Cisco IOS XEソフトウェアのエンジニアリングチームは包括的な内部セキュリティレビューを実施しました。このレビューの結果、複数の内部で発見された脆弱性に対処するためのソフトウェア強化リリースが行われました。CVE-2026-20273で追跡されている脆弱性は、不適切な入力検証の問題に関連しており、これは共通脆弱性分</td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3は、ASN.1の長さ処理中に初期化されていないメモリを使用することで、リモートの攻撃者がサービス拒否を引き起こす可能性がある脆弱性が存在します。</td>
       </tr>
       <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028715.html" target="_blank" rel="noopener">シスコシステムズのCisco RoomOS等の複数製品におけるログファイルからの情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-20289, CVE-2026-20289</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028857.html" target="_blank" rel="noopener">IBMのIBM iにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-16878, CVE-2026-16878</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Cisco RoomOSのログ記録サブシステムに存在する脆弱性により、権限の低い認証済みのローカル攻撃者が機密情報にアクセスできる可能性があります。この脆弱性は、機密情報がログ記録されることに起因しています。攻撃者は特定のログレベルを有効にし、その後システムログを収集することでこの脆弱性を悪用できます。攻撃に成功した場合、攻撃者はユーザーのログイン認証情報などの機密情報を閲覧できる可能性があります</td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、リモートの認証済み攻撃者が範囲外の読み取りを利用して機密情報を取得できる脆弱性があります。</td>
+      </tr>
+      <tr data-sev="Medium 4.7" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028856.html" target="_blank" rel="noopener">IBMのIBM iにおけるTime-of-check Time-of-use (TOCTOU) 競合状態の脆弱性</a><div class="cve-row">CVE-2026-16896, CVE-2026-16896</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.7</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 には、ローカルで認証された攻撃者が時刻チェックと時刻使用（TOCTOU）競合状態を悪用してファイルに不正アクセスできる可能性があります。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028855.html" target="_blank" rel="noopener">IBMのIBM iにおけるSQL インジェクションの脆弱性</a><div class="cve-row">CVE-2026-17111, CVE-2026-17111</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3にはSQLインジェクションの脆弱性があります。リモートの攻撃者が特別に細工されたSQL文を送信することで、バックエンドデータベースの情報を閲覧、追加、変更、または削除できる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028854.html" target="_blank" rel="noopener">IBMのIBM iにおけるOS コマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-17417, CVE-2026-17417</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、シェルのメタ文字が不適切に無効化される脆弱性があり、リモートの認証済み攻撃者が任意のコマンドを実行できる可能性があります。</td>
       </tr>
       <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028714.html" target="_blank" rel="noopener">マイクロソフトのVisual Studio Codeにおけるコマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-47285, CVE-2026-47285</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028853.html" target="_blank" rel="noopener">IBMのIBM Iにおける不要な特権による実行に関する脆弱性</a><div class="cve-row">CVE-2026-17445, CVE-2026-17445</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Visual Studio Codeにおけるコマンドで使用される特殊要素の不適切な無効化（「コマンドインジェクション」）により、不正な攻撃者がネットワークを通じて情報を漏洩させる可能性があります。</td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3は、攻撃者が提供したユーザープロファイル名を不適切に検証するため、リモートの認証済み攻撃者がセキュリティ制限を回避できる可能性があります。</td>
       </tr>
-      <tr data-sev="High 7.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028713.html" target="_blank" rel="noopener">NVIDIAのtriton inference serverにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-47487, CVE-2026-47487</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
-        <td class="desc">Linux向けNVIDIA Triton Inference Serverには、ユーザーがTriton MLflowプラグインにモデル名としてパスを指定することで、モデルリポジトリ外のファイルを読み取り、書き込み、または変更できるという脆弱性があります。この脆弱性を悪用されると、サービス拒否や情報漏えいが発生する可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028852.html" target="_blank" rel="noopener">IBMのSecurity Verify Access等の複数製品における暗号に関する脆弱性</a><div class="cve-row">CVE-2026-17616, CVE-2026-17616</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">IBM Security Verify Access 10.0 から 10.0.9.2 および IBM Verify Identity Access 11.0 から 11.0.3、さらに IBM Verify Identity Access Container 11.0 から 11.0.3 のリバースプロキシは、特定の構成においてユーザー提供データの暗号検証が期待よりも弱くなる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028851.html" target="_blank" rel="noopener">IBMのIBM iにおけるOS コマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-17642, CVE-2026-17642</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3は、OSコマンドで使用される特殊な要素を適切に無害化できていないため、リモートの認証済み攻撃者が任意のコマンドを実行する可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028850.html" target="_blank" rel="noopener">IBMのIBM iにおける権限管理に関する脆弱性</a><div class="cve-row">CVE-2026-18071, CVE-2026-18071</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、不適切な権限管理が存在し、ローカルの攻撃者が権限を昇格させる可能性があります。</td>
+      </tr>
+      <tr data-sev="Low 3.3" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028849.html" target="_blank" rel="noopener">IBMのIBM DB2における制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-18096, CVE-2026-18096</div></td>
+        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.3</span></td>
+        <td class="desc">IBM Db2 12.1.5 for Linux、UNIX、および Windows（DB2 Connect Serverを含む）には、ローカルの攻撃者がメモリリークを利用してサービス拒否を引き起こす可能性があります。</td>
       </tr>
       <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028712.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Defender for Endpointにおける情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-54123, CVE-2026-54123</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028848.html" target="_blank" rel="noopener">IBMのIBM DB2におけるログファイルからの情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-18097, CVE-2026-18097</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Microsoft Defender for Endpointにおける機密情報の不正な主体への漏洩により、権限を持つ攻撃者がローカル環境で情報を開示できる可能性があります。</td>
+        <td class="desc">IBM Db2 11.5.0から11.5.9、および12.1.0から12.1.5までのLinux、UNIX、Windows向け（DB2 Connect Serverを含む）において、トレースファイルに平文のパスワードが記録されるため、ローカルの攻撃者が機密情報を取得できる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.4" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028847.html" target="_blank" rel="noopener">IBMのIBM Iにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-18099, CVE-2026-18099</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.4</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および 7.3 では、ユーザーが制御する入力が不適切に無害化されたため、リモートの認証済み攻撃者が任意のスクリプトコードを実行できる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028846.html" target="_blank" rel="noopener">IBMのIBM iにおける不適切なログ出力の無効化に関する脆弱性</a><div class="cve-row">CVE-2026-18148, CVE-2026-18148</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3では、ログの出力内容の中立化が不適切であるため、リモートの認証済み攻撃者がNavigatorのログファイルに任意の内容を注入できる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028845.html" target="_blank" rel="noopener">IBMのIBM iにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-18150, CVE-2026-18150</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">IBM i 7.6、7.5、7.4、および7.3には、レースコンディションが存在し、それによりリモートの認証済み攻撃者が機密情報を取得できる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 8.1" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028844.html" target="_blank" rel="noopener">IBMのIBM WebSphere Application Serverにおける認可に関する脆弱性</a><div class="cve-row">CVE-2026-18499, CVE-2026-18499</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
+        <td class="desc">IBM WebSphere Application Server - Liberty 17.0.0.3 から 26.0.0.8 までのバージョンには、Liberty コレクティブを使用する際に特権昇格の脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028842.html" target="_blank" rel="noopener">Apache Software FoundationのApache Rangerにおけるコマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-28672, CVE-2026-28672</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Apache Rangerのコマンドで使用される特殊要素が不適切に無害化される脆弱性（「コマンドインジェクション」）です。この問題はApache Rangerのバージョン0.6から2.8までに影響を及ぼします。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028841.html" target="_blank" rel="noopener">Apache Software FoundationのApache RangerにおけるSQL インジェクションの脆弱性</a><div class="cve-row">CVE-2026-32227, CVE-2026-32227</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Apache Ranger における SQL インジェクションの脆弱性です。この問題は特定のバージョンに影響を及ぼします。ユーザーには、この問題を修正したバージョン 2.9.0 へアップグレードすることを推奨します。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028839.html" target="_blank" rel="noopener">Apache Software FoundationのApache Rangerにおける複数の脆弱性</a><div class="cve-row">CVE-2026-40920, CVE-2026-40920</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Apache Ranger バージョン 2.8.0 以下において、URL パラメータを介した権限昇格の脆弱性が報告されています。この問題を修正したバージョン 2.9.0 へのアップグレードをユーザーに推奨します。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028838.html" target="_blank" rel="noopener">Apache Software FoundationのApache Rangerにおける複数の脆弱性</a><div class="cve-row">CVE-2026-42537, CVE-2026-42537</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Apache Ranger バージョン 2.8.0 以下において、JDBC URL インジェクションを介したリモートコード実行の脆弱性があります。ユーザーは、この問題を修正したバージョン 2.9.0 へのアップグレードを推奨します。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028836.html" target="_blank" rel="noopener">Apache Software FoundationのApache Rangerにおける複数の脆弱性</a><div class="cve-row">CVE-2026-44416, CVE-2026-44416</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Apache Ranger ＜= 2.8.0 の plugin-schema-registry コンポーネントにおいて、任意のクラスのインスタンス化を介したリモートコード実行の脆弱性が存在します。ユーザーは、この問題を修正したバージョン 2.9.0 へアップグレードすることを推奨します。</td>
       </tr>
       <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028711.html" target="_blank" rel="noopener">マイクロソフトのPythonにおける複数の脆弱性</a><div class="cve-row">CVE-2026-54981, CVE-2026-54981</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028834.html" target="_blank" rel="noopener">デルのDell Display and Peripheral Managerにおけるスプーフィングによる認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-46731, CVE-2026-46731</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Visual Studio Code の Python 拡張機能において、信頼されていない制御領域から機能が組み込まれることで、不正な攻撃者がローカル環境でセキュリティ機能を回避できるようになります。</td>
+        <td class="desc">Dell Display and Peripheral Manager（DDPM Windows）のバージョン2.3.0.17以前には、認証バイパス（なりすまし）の脆弱性が存在します。ローカルアクセス権限を持つ低権限の攻撃者がこの脆弱性を悪用すると、権限昇格や任意のコード実行が発生する可能性があります。</td>
       </tr>
-      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028710.html" target="_blank" rel="noopener">マイクロソフトのAzure Storage Explorerにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-57104, CVE-2026-57104</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
-        <td class="desc">Azure Storage Explorer におけるウェブページ生成時の入力の不適切な無害化（クロスサイトスクリプティング）が、未承認の攻撃者によってネットワーク上で特権昇格を可能にします。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028831.html" target="_blank" rel="noopener">Apache Software FoundationのApache Rangerにおけるコードインジェクションの脆弱性</a><div class="cve-row">CVE-2026-55799, CVE-2026-55799</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Apache Ranger 2.8.0以下のGraalscriptEngineCreatorにリモートコード実行の脆弱性が存在します。ユーザーはこの問題を修正したバージョン2.9.0にアップグレードすることを推奨します。</td>
       </tr>
       <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028709.html" target="_blank" rel="noopener">マイクロソフトのPowerShellにおけるサーバサイドのリクエストフォージェリの脆弱性</a><div class="cve-row">CVE-2026-58612, CVE-2026-58612</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028830.html" target="_blank" rel="noopener">Apache Software FoundationのApache Rangerにおける重要な機能に対する認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-55814, CVE-2026-55814</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Microsoft PowerShell Core のサーバーサイドリクエストフォージェリ（SSRF）により、不正な攻撃者がネットワークを介して情報を開示できる可能性があります。</td>
+        <td class="desc">バージョン2.8.0以下のApache RangerダウンロードAPIには認証が欠如しています。このため、ユーザーは問題を修正したバージョン2.9.0へアップグレードすることを推奨します。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028829.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における整数オーバーフローの脆弱性</a><div class="cve-row">CVE-2026-59127, CVE-2026-59127</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows インストーラーにおける整数オーバーフローまたはラップアラウンドの脆弱性により、認証された攻撃者がローカルで権限を昇格させることが可能となります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028828.html" target="_blank" rel="noopener">デルのDell Display and Peripheral Managerにおける複数の脆弱性</a><div class="cve-row">CVE-2026-59914, CVE-2026-59914</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Dell Display and Peripheral Manager（DDPM Windows）バージョン2.3.0.17未満には、なりすましによる認証バイパスの脆弱性が存在します。低権限のローカルアクセス権を持つ攻撃者がこの脆弱性を悪用すると、権限昇格や任意のコード実行が発生する可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028827.html" target="_blank" rel="noopener">デルのDell Display and Peripheral Managerにおけるスプーフィングによる認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-59916, CVE-2026-59916</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Dell Display and Peripheral Manager（DDPM Windows）のバージョン2.3.0.17より前には、不適切なアクセス制御の脆弱性が存在します。権限の低い攻撃者がローカルアクセスを持つ場合、この脆弱性を悪用して特権を昇格させたり、任意のコードを実行したりする可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028826.html" target="_blank" rel="noopener">デルのDell Display and Peripheral Managerにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-59917, CVE-2026-59917</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Dell Display and Peripheral Manager (DDPM Windows) のバージョン2.3.0.17以前には、不適切なアクセス制御の脆弱性が存在します。低権限の攻撃者がローカルアクセス権を持つ場合、この脆弱性を悪用して権限昇格や任意のコード実行を引き起こす可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 6.6" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028825.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-61920, CVE-2026-61920</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.6</span></td>
+        <td class="desc">Windows DNSにおける不適切な同期を伴う共有リソースの同時実行（レースコンディション）により、認可された攻撃者がネットワーク経由でコードを実行できる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028824.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 10 1607等の複数製品における不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-61925, CVE-2026-61925</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Windows インストーラーにおける不適切な認可のため、権限を持つ攻撃者がローカルで権限を昇格させることが可能です。</td>
+      </tr>
+      <tr data-sev="High 7" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028823.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft Windows 11 24h2等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-61938, CVE-2026-61938</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
+        <td class="desc">Windows InstallerのUse after freeにより、認可された攻撃者がローカルで権限を昇格させることが可能です。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028897.html" target="_blank" rel="noopener">Exim DevelopmentのEximにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-66140, CVE-2026-66140</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">4.99.5より前のEximは、キュー名に関連する引数を適切に処理しないため、スプールエリア外のファイルにアクセスできるディレクトリトラバーサルを許可し、その結果、権限を取得される可能性があります。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028896.html" target="_blank" rel="noopener">Exim DevelopmentのEximにおける信頼できない制御領域からの機能の組み込みに関する脆弱性</a><div class="cve-row">CVE-2026-66141, CVE-2026-66141</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Exim 4.99.5より前のバージョンでは、パイプトランスポートに対するforce_commandの誤処理により、.forwardファイルを用いて権限昇格が可能になります。</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028893.html" target="_blank" rel="noopener">Paul Scott-Murphyのzeroconfにおける再帰制御に関する脆弱性</a><div class="cve-row">CVE-2026-47180, CVE-2026-47180</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Zeroconfは、マルチキャストDNSサービスの検出を純粋なPythonで実装したものです。バージョン0.149.5以前では、DNSIncoming._decode_labels_at_offsetがDNS名の圧縮ポインタごとに一度再帰呼び出しを行い、チェインされたポインタを含む単一のmDNSパケットがDNSIncoming.__init__を抜け出す際にRecursionErrorを引き起こし</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028892.html" target="_blank" rel="noopener">Paul Scott-Murphyのzeroconfにおけるリソースの枯渇に関する脆弱性</a><div class="cve-row">CVE-2026-47183, CVE-2026-47183</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">ZeroconfはマルチキャストDNSサービス発見の純粋なPython実装です。バージョン0.149.6以前では、DNSIncoming._log_exception_debugおよび4つのQuietLoggerの例外重複除去メソッドが、攻撃者によって影響を受けるIncomingDecodeErrorメッセージをキーとした無制限の_seen_logs辞書を保存していました。この辞書はsys.exc</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028891.html" target="_blank" rel="noopener">Paul Scott-Murphyのzeroconfにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-47184, CVE-2026-47184</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">ZeroconfはマルチキャストDNSサービスディスカバリーの純粋なPython実装です。バージョン0.149.7以前では、DNSCache._async_addがキャッシュ、_expirations、_expire_heap、およびservice_cacheに対して、上限なくすべてのレスポンスレコードを挿入していました。このため、ローカルリンク上の認証されていないホストがUDP/5353（224</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028890.html" target="_blank" rel="noopener">Paul Scott-Murphyのzeroconfにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-48045, CVE-2026-48045</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Zeroconfは、マルチキャストDNSサービスディスカバリの純粋なPython実装です。バージョン0.149.12以前では、AsyncListener.handle_query_or_deferは、切り詰められたTCビット付きの受信クエリ（最大サイズは_MAX_MSG_ABSOLUTE = 8966バイト）をすべてself._deferred[addr]に保持し、かつアドレスごとのタイマーをse</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028889.html" target="_blank" rel="noopener">Paul Scott-Murphyのzeroconfにおけるレングスパラメーターの不整合による処理に関する脆弱性</a><div class="cve-row">CVE-2026-48487, CVE-2026-48487</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">Zeroconfは、マルチキャストDNSサービス発見の純粋なPython実装です。バージョン0.149.16以前では、src/zeroconf/_protocol/incoming.py内の_read_character_stringおよび_read_stringが、self._data_lenと照合せずに攻撃者が宣言したRDLENGTH分だけself.offsetを進めてしまいました。そのため、</td>
+      </tr>
+      <tr data-sev="High 7" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028885.html" target="_blank" rel="noopener">Zoom Video Communications, Inc.のRemote Control App for Zoom Contact Center等の複数製品におけるTime-of-check Time-of-use (TOCTOU) 競合状態の脆弱性</a><div class="cve-row">CVE-2026-53410, CVE-2026-53410</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7</span></td>
+        <td class="desc">Windows向け特定のZoomクライアントのインストールおよびアンインストールプロセスにおいて、チェック時点から使用時点までの競合状態（TOCTOU）が存在するため、認証済みのローカルユーザーが権限を昇格させる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028884.html" target="_blank" rel="noopener">huggingfaceのDatasetsにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-66007, CVE-2026-66007</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">5.0.0までのDatasetsには、コミットf989ef9で修正されたフォルダベースのデータセットビルダーにおいて、file_nameメタデータフィールドがデータセットディレクトリに結合される前に適切に検証されないパス・トラバーサルの脆弱性が含まれています。攻撃者は、ディレクトリトラバーサルのシーケンスを含む細工されたfile_nameの値を提供することで任意のローカルファイルを読み取ることがで</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028880.html" target="_blank" rel="noopener">Zephyr ProjectのZephyrにおける複数の脆弱性</a><div class="cve-row">CVE-2026-10673, CVE-2026-10673</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">ZephyrのADIN2111/ADIN1110 10BASE-T1S/T1Lイーサネットドライバー（drivers/ethernet/eth_adin2111.c）は、OPEN Alliance（OA）SPIモードで受信したイーサネットフレームを再構築する際、デバイスから提供される64バイトのデータチャンクを固定の静的バッファctx-＞buf（サイズはCONFIG_ETH_ADIN2111_BU</td>
+      </tr>
+      <tr data-sev="Medium 4.9" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028870.html" target="_blank" rel="noopener">Octopus Deploy Pty. Ltd.のOctopus Serverにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-12702, CVE-2026-12702</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.9</span></td>
+        <td class="desc">影響を受けるバージョンのOctopus Deployにおいて、プロジェクトトリガーアクションのチェックが不十分なため、権限のないユーザーがデプロイメントをトリガーできる可能性があります。</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028843.html" target="_blank" rel="noopener">SolarWindsのWeb Help Deskにおける認証に関する脆弱性</a><div class="cve-row">CVE-2026-28323, CVE-2026-28323</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">SolarWinds Web Help Desk は、SAML 認証バイパスの脆弱性の影響を受けることが判明しています。この脆弱性は、SAML 2.0 認証方式が有効になっている場合に発生します。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028833.html" target="_blank" rel="noopener">Zoom Video Communications, Inc.のZoom Roomsにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-53409, CVE-2026-53409</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">バージョン7.1.0以前のWindows向けZoom Roomsには不適切な権限管理があり、認証されたユーザーがローカルアクセスを介して権限昇格を実行できる可能性があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.9" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028832.html" target="_blank" rel="noopener">Hasura Inc.のGraphQL Engineにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-54698, CVE-2026-54698</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.9</span></td>
+        <td class="desc">HasuraはユーザーにGraphQLまたはREST APIを提供するオープンソース製品です。バージョン2.49.2および2.45.5以前では、ユーザーがテーブルの計算フィールド（SETOF some_tableを返す）に対してwhere句を使用し、some_tableの行レベルの権限に基づくロール向けにフィルタリングされるべき行の値を推測できる問題がありました。これらの行は直接返されることはあり</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028810.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-64142, CVE-2026-64142</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が解決されました。ksmbdのdurable scavengerがm_fp_listのルックアップに対して競合状態を起こしていた問題が修正されました。ksmbd_durable_scavenger()には、f_ci-＞m_fp_listをイテレートするすべてのウォーカー、特にksmbd_vfs_renameで使用されるksmbd_lookup_fd_inod</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028809.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64143, CVE-2026-64143</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。platform/x86: uniwill-laptopにおいて、強制時でも充電制限を有効にしない一部の古いモデル（〜2020年頃）では、バッテリーの充電制限の欠如によりバッテリーが永久的に損傷する可能性があります。この機能を"force"モジュールパラメータ経由でユーザーが有効にすることを防ぐことで、これらのデバイスで恒久的なハードウェア</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028808.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける有効期限後のメモリの解放の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-64144, CVE-2026-64144</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました：Bluetoothのbtmtkドライバにおいて、エラーパスでのurb-＞setup_packetのリークを修正しました。usb_submit_urbが失敗した場合や送信されたurbが強制終了された場合に、コントロールurbのsetup_packetが解放されていませんでした。これら二つのパスでの解放処理を追加しました。</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028807.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-64145, CVE-2026-64145</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。wifi: wilc1000におけるバス獲得失敗時のdma_bufferリークの問題を修正しました。wilc_wlan_firmware_download()関数の冒頭では、kmalloc()によりdma_bufferを割り当て、エラー時には「fail:」ラベルを使ってkfree(dma_buffer)で解放しています。その後のすべてのエラ</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028806.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける有効期限後のメモリの解放の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-64146, CVE-2026-64146</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。erofsにおけるinodeのxattr初期化時のmetabufリークの修正です。commit bb88e8da0025（"erofs: use meta buffers for xattr operations"）では、xattr操作をスタック上のerofs_bufインスタンスを使用するように変更しました。erofs_init_inode</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028805.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける有効期限後のメモリの解放の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-64147, CVE-2026-64147</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。pds_core: debugfs_lookup の dentry リークおよびエラーハンドリングの修正についてです。debugfs_lookup() は参照カウントが増加した dentry を返し、dput() で解放する必要があります。現在のコードは返された dentry を dput() を呼ばずに破棄しており、ファームウェアのリセッ</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028804.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける無限ループに関する脆弱性</a><div class="cve-row">CVE-2026-64148, CVE-2026-64148</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。pds_coreのpdsc_devcmd_wait関数におけるエラー処理の修正です。pdsc_devcmd_wait()がエラーの代わりに完了レジスタから古い成功ステータスを返す2つのケースを修正しました。1つ目はFWクラッシュ時の問題です。ファームウェアの動作が停止した場合、待機ループはrunning=falseで早期に終了します。このと</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028803.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64149, CVE-2026-64149</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。dma-mappingのdma_map_resource()関数の整合性チェックをデバッグコードに移動しました。dma_map_resource()はpfn_valid()を使用して、範囲がRAMでないことを確認しています。しかし、pfn_valid()はPFNに対応するメモリマップの有無のみをチェックしており、PFNが実際にRAMであるこ</td>
+      </tr>
+      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028802.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64150, CVE-2026-64150</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。netfilterのnft_innerにおいて、softirqsを再有効化する前にlocal_lockを解放する問題です。sashiko氏によると、エラーパスではlocal_unlock_nested_bh()の前にlocal_bh_enable()が呼び出されているとのことです。</td>
+      </tr>
+      <tr data-sev="High 8.4" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028801.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64151, CVE-2026-64151</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.4</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。iommuptではpgsize_bitmap内のPAGE_SIZEの欠落をチェックしていませんでした。Sashikoは、ドライバがpgsize_bitmapからPAGE_SIZEを取り除く可能性を指摘しました。これは技術的には許容されますが、現実には行われておらず、そのようなiommu_domainは現在のDMA APIでは使用されていませ</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028800.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64152, CVE-2026-64152</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。iommu_debugが有効な場合のアンマップエラーを適切に処理できない問題です。Sashikoが潜在的なバグを発見しました。マップエラーの処理でiommu_unmap()が呼ばれ、これがiommu_debug_unmap_begin()およびiommu_debug_unmap_end()を呼び出しますが、この経路はエラーフローであるため、</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028799.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64153, CVE-2026-64153</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。drm/msmのiommu_map_sgtable()の戻り値チェックの修正とWARNの回避が行われました。コミット「iommu: return full error code from iommu_map_sg[_atomic]()」により、iommu_map_sgtable()はsize_tと0の代わりにssize_tと負の値を返すよう</td>
+      </tr>
+      <tr data-sev="High 7.1" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028798.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける配列インデックスの検証に関する脆弱性</a><div class="cve-row">CVE-2026-64243, CVE-2026-64243</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました：ASoC: codecs: simple-mux: enum制御の境界チェックの修正。simple_mux_control_put()はe-＞itemsより大きい値を拒否しますが、enum制御の値は0から始まります。このドライバーで使用される2エントリマルチプレクサの場合、有効な値は0と1だけであり、値2も拒否される必要があります。e-＞i</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028797.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64244, CVE-2026-64244</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。drivers/base/memoryでは、デバイス登録が成功した後にmem-＞altmapを設定する__add_memory_block()関数がxa_store()で失敗した場合（例えばメモリ不足時）、device_unregister()が呼び出されます。その結果、mem-＞altmapがまだ設定されたままの状態でmemory_blo</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028796.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-64245, CVE-2026-64245</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。fbdev: modedbのfb_find_mode()関数におけるUse-After-Free（UAF）の可能性です。mode_optionがNULLの場合、mode_option_bufから代入されます。if (!mode_option) {  fb_get_options(NULL, &amp;mode_option_buf);  mode_</td>
       </tr>
       <tr data-sev="High 7.2" data-src="JVN iPedia">
         <td class="date">2026-08-18</td>
@@ -601,208 +804,19 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
         <td class="desc">Oracle E-Business SuiteのOracle Product Hub製品（コンポーネント：Internal Operations）における脆弱性です。本脆弱性の影響を受けるサポート対象バージョンは12.2.3から12.2.15までとなっています。HTTP経由でネットワークアクセスが可能な低権限の攻撃者が容易に悪用でき、Oracle Product Hubを侵害する恐れがあります。本</td>
       </tr>
-      <tr data-sev="High 8.5" data-src="JVN iPedia">
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90536447/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年08月18日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">2026年08月18日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
         <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028690.html" target="_blank" rel="noopener">オラクルのOracle Product Hubにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-61312, CVE-2026-61312</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.5</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Product Hub製品（コンポーネント：内部操作）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までとなっています。悪用が困難な脆弱性であり、HTTP経由でネットワークアクセスを持つ低権限の攻撃者がOracle Product Hubを侵害する可能性があります。この脆弱性はOracle Pro</td>
-      </tr>
-      <tr data-sev="Medium 6.6" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028689.html" target="_blank" rel="noopener">オラクルのCost Managementにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-61328, CVE-2026-61328</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.6</span></td>
-        <td class="desc">Oracle E-Business Suite の Oracle Cost Management 製品（コンポーネント：Cost Planning）には脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。悪用が困難なこの脆弱性により、高い権限を持ち、HTTP経由でネットワークアクセスが可能な攻撃者が Oracle Cost Management を侵害する</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028688.html" target="_blank" rel="noopener">オラクルのOracle Price Protectionにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-61329, CVE-2026-61329</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Price Protection製品（コンポーネント：Internal Operations）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。HTTP経由でネットワークアクセス可能な低権限の攻撃者が容易に悪用できる脆弱性により、Oracle Price Protectionが侵害される可能</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028687.html" target="_blank" rel="noopener">オラクルのOracle Order Managementにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-62445, CVE-2026-62445</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Order Management製品（コンポーネント：Product Diagnostic Tools）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.4から12.2.15までです。容易に悪用可能なこの脆弱性により、HTTP経由でネットワークアクセスを持つ権限の低い攻撃者がOracle Order Management</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028686.html" target="_blank" rel="noopener">オラクルのOracle Trade Managementにおける複数の脆弱性</a><div class="cve-row">CVE-2026-62447, CVE-2026-62447</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Trade Management製品（コンポーネント：Claim LOV）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。ネットワーク経由のHTTPアクセス権を持つ低権限の攻撃者が簡単に悪用できる脆弱性により、Oracle Trade Managementが侵害される可能性があります。この</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028685.html" target="_blank" rel="noopener">オラクルのOracle Work in Processにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-62451, CVE-2026-62451</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Work in Process製品（コンポーネント：内部操作）における脆弱性です。影響を受けるサポート対象バージョンは12.2.14から12.2.15までとなっています。HTTP経由でネットワークアクセス可能な権限の低い攻撃者により、容易に悪用可能な脆弱性であり、Oracle Work in Processが侵害される恐れがあります。こ</td>
-      </tr>
-      <tr data-sev="Medium 6.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028684.html" target="_blank" rel="noopener">オラクルのOracle Qualityにおける複数の脆弱性</a><div class="cve-row">CVE-2026-62525, CVE-2026-62525</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.3</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Quality製品（コンポーネント：Quality Workbench HTMLシステム）に脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.3から12.2.15までです。低権限の攻撃者がHTTP経由でネットワークアクセスすることで容易に悪用可能な脆弱性により、Oracle Qualityが侵害される可能性があります。こ</td>
-      </tr>
-      <tr data-sev="Medium 6.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028683.html" target="_blank" rel="noopener">オラクルのOracle Learning Managementにおける複数の脆弱性</a><div class="cve-row">CVE-2026-62527, CVE-2026-62527</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.3</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle Learning Management製品（コンポーネント：インポートおよびエクスポート）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.3から12.2.15です。ネットワーク経由でHTTPアクセスが可能な低権限攻撃者によって容易に悪用され、Oracle Learning Managementが侵害される恐れがあります</td>
-      </tr>
-      <tr data-sev="Medium 6.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028682.html" target="_blank" rel="noopener">オラクルのOracle Human Capital Management Configuration Workbenchにおける複数の脆弱性</a><div class="cve-row">CVE-2026-62528, CVE-2026-62528</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.3</span></td>
-        <td class="desc">Oracle E-Business SuiteのOracle HCM Configuration Workbench製品（コンポーネント：Install）における脆弱性について説明します。影響を受けるサポート対象バージョンは12.2.3から12.2.15です。低権限の攻撃者がHTTP経由でネットワークアクセスを行うことで、この脆弱性を容易に悪用可能です。そのため、Oracle HCM Config</td>
-      </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028676.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64154, CVE-2026-64154</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました：drm/msm/adreno の a6xx_gpu_init() における参照リークの修正です。a6xx_gpu_init() 内で、node は of_parse_phandle() を通じて取得されます。共通処理の最後に手動で of_node_put() が呼ばれていましたが、いくつかの早期エラーリターンではこの呼び出しがバイパスされ、</td>
-      </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028675.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける有効期限後のメモリの解放の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-64155, CVE-2026-64155</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が解決されました。wifi: ath11kに関する一部のWMI WOWコールにおけるエラーパスのリークを修正しました。具体的には、ath11k_wmi_cmd_send(...) の結果を直接返していた2箇所を修正し、戻り値をチェックしていなかったためにエラーパスでskbを解放できていなかった問題を解決しました。</td>
-      </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028674.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64157, CVE-2026-64157</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。netfsのストリーミング書き込み用フォリオの部分的な無効化に関する修正です。netfs_invalidate_folio()関数では、部分的な無効化領域がストリーミング書き込みページ内のダーティ書き込み領域（ダーティでありながらアップトゥデートではなく、netfs_folio構造体によってダーティ領域が追跡されている）先頭に重なる場合（た</td>
-      </tr>
-      <tr data-sev="High 7.3" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028673.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64158, CVE-2026-64158</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.3</span></td>
-        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました：netfsにおけるfdがO_RDWRで開かれている場合の書き込みストリーミングの無効化の問題を修正しました。netfs_perform_write()では、「書き込みストリーミング」（dirtyだがuptodateではないフォリオ内の不整合データのキャッシュ）が実施されます。これは、すぐに上書きされるだけのデータを読み込む必要を回避するため</td>
-      </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028672.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64159, CVE-2026-64159</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。netfs：i_size ＞ remote_i_sizeの場合のゼロポイント更新に関する修正です。netfs_release_folio()によるゼロポイントの更新において、解放されるフォリオ以降のページキャッシュにコミットされていないデータが存在し、かつオンザサーバーのEOFがこのフォリオ内にある場合（すなわち i_size ＞ remo</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-18</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028671.html" target="_blank" rel="noopener">LinuxのLinux Kernelにおける不特定の脆弱性</a><div class="cve-row">CVE-2026-64160, CVE-2026-64160</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Linuxカーネルにおいて、以下の脆弱性が修正されました。netfsの-＞remote_i_sizeおよび-＞zero_pointの使用時に発生する可能性のある破損を修正するために、i_size_read()とi_size_write()をコピーし、i_sizeで使用されているのと同じseqcountを使用しています。netfslibおよびそれを使用するファイルシステムは、i_size_seqco</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028657.html" target="_blank" rel="noopener">VSeeのVSee Clinic等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-13380, CVE-2026-13380</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">VSee Clinic 7.1.26およびVSee Clinic API 1.3.0には、認証されていない3つのエンドポイントのHTTPレスポンス内に平文のSFTP認証情報が露出する脆弱性があります。これらの認証情報は、アプリケーション内でSFTP接続が構成されている場合にのみレスポンスに含まれます。また、認証はこれらの認証情報を取得する際に必要ありません。SFTPが構成されているインスタンス上で</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028656.html" target="_blank" rel="noopener">VSeeのVSee Clinic等の複数製品におけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-13381, CVE-2026-13381</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">VSee Clinic 7.1.26およびAPI 1.3.0には、/v1.3.0/api/filesエンドポイントにおける安全でない直接オブジェクト参照（IDOR）脆弱性が存在します。認証された攻撃者は、'remark'リクエストパラメータを操作することで、アプリケーションサーバー上の他のユーザーに属するファイルを列挙し、取得し、削除することが可能です。</td>
-      </tr>
-      <tr data-sev="Medium 6.1" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028655.html" target="_blank" rel="noopener">BlackBerryのUnified Endpoint Managementにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-18084, CVE-2026-18084</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.1</span></td>
-        <td class="desc">BlackBerry UEMのBlackBerry UEM管理コンソールにおいて、Webページ生成時の入力の不適切な無害化により、クロスサイトスクリプティング（XSS）が発生する脆弱性があります。この問題はUEMバージョン12.23.0 QF8またはそれ以前に影響を及ぼします。</td>
-      </tr>
-      <tr data-sev="Medium 6.9" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028654.html" target="_blank" rel="noopener">BlackBerryのUnified Endpoint Managementにおけるインジェクションに関する脆弱性</a><div class="cve-row">CVE-2026-18085, CVE-2026-18085</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.9</span></td>
-        <td class="desc">BlackBerry UEM 12.23.0 QF8およびそれ以前のBlackBerry UEM管理コンソールには不適切な入力検証が存在し、それにより任意のファイルをダウンロードされたりサービス拒否が発生したりする可能性があります。</td>
-      </tr>
-      <tr data-sev="Low 2.7" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028653.html" target="_blank" rel="noopener">Gallagher Group LimitedのCommand Centreにおけるキャッチされない例外に関する脆弱性</a><div class="cve-row">CVE-2026-27790, CVE-2026-27790</div></td>
-        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 2.7</span></td>
-        <td class="desc">T20リーダーにおける未捕捉例外（CWE-248）は、認証および認可されたオペレーターが特定のリクエストを送信することで再起動を引き起こし、一時的にサービス拒否をもたらします。影響を受けるコマンドセンターのバージョンは以下のとおりです。  *  vCR9.50.260616aより前の9.50（9.50.1587(MR1)に配布されているもの）  *  vCR9.40.260616aより前の9.40</td>
-      </tr>
-      <tr data-sev="Low 2.7" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028652.html" target="_blank" rel="noopener">Gallagher Group LimitedのCommand Centreにおけるキャッチされない例外に関する脆弱性</a><div class="cve-row">CVE-2026-27844, CVE-2026-27844</div></td>
-        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 2.7</span></td>
-        <td class="desc">コントローラー6000およびコントローラー7000の診断ウェブインターフェースにおける未検出の例外（CWE-248）は、認証および認可されたオペレーターが特定のリクエストを送信することでコントローラーの再起動を引き起こし、一時的にサービス拒否の状態を発生させる可能性があります。影響を受けるCommand Centreのバージョンは以下のとおりです。・vCR9.50.260616aより前の9.50（</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028651.html" target="_blank" rel="noopener">VITECのFlamingoにおけるOS コマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-60121, CVE-2026-60121</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Vitec Flamingo 4.12.2には、admin/ajax/ping.phpエンドポイントに認証なしでOSコマンドをインジェクションできる脆弱性があります。この脆弱性は、シェル引数処理における二重評価の欠陥を悪用することで、リモートの攻撃者が任意のコマンドを実行できるようにします。該当エンドポイントは、ユーザーが提供するhostというPOSTパラメータに対してescapeshellarg</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028650.html" target="_blank" rel="noopener">VITECのFlamingoにおけるOS コマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-61498, CVE-2026-61498</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Vitec Flamingo 4.12.2には、admin/ajax/gen_graphs.phpエンドポイントに認証不要のOSコマンドインジェクションの脆弱性が存在します。この脆弱性により、遠隔の認証されていない攻撃者が、start、end、key、またはformatのHTTP GETパラメータにシェルのメタキャラクターを供給することで任意のコマンドを実行できます。攻撃者はグラフ生成スクリプトに</td>
-      </tr>
-      <tr data-sev="High 7.2" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028649.html" target="_blank" rel="noopener">ウォッチガード・テクノロジーのWatchGuard Firewareにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-13050, CVE-2026-13050</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
-        <td class="desc">WatchGuard Fireware OS の networkd プロセスにおける境界外書き込みの脆弱性により、認証された権限を持つユーザーが、管理用ウェブUIへの特別に細工されたリクエストを介して任意のコードを実行する可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028648.html" target="_blank" rel="noopener">ウォッチガード・テクノロジーのWatchGuard FirewareにおけるNULL ポインタデリファレンスに関する脆弱性</a><div class="cve-row">CVE-2026-13084, CVE-2026-13084</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">WatchGuard Fireware OSにおけるヌルポインタ参照の脆弱性により、リモートの認証されていない攻撃者が特別に細工されたIKEv2メッセージを送信することでサービス拒否（DoS）状態を引き起こす可能性があります。この脆弱性は、動的ゲートウェイピアで構成された場合にIKEv2を利用するモバイルユーザーVPNおよびブランチオフィスVPNの両方に影響を及ぼします。この脆弱性はFirewar</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028647.html" target="_blank" rel="noopener">ウォッチガード・テクノロジーのWatchGuard Firewareにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-13368, CVE-2026-13368</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">WatchGuard Fireware OSには、IKEv2を使用するモバイルユーザVPNのLDAP認証において、競合状態が原因でユースアフターフリーの脆弱性が存在します。リモートの未認証攻撃者は、この脆弱性を悪用して、外部LDAP認証サーバを使用するように設定されたIKEv2モバイルVPNを持つFirebox上のikedプロセスのコンテキストで任意のコードを実行できます。</td>
-      </tr>
-      <tr data-sev="Medium 4.9" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028646.html" target="_blank" rel="noopener">ウォッチガード・テクノロジーのWatchGuard Firewareにおける信頼できないデータのデシリアライゼーションに関する脆弱性</a><div class="cve-row">CVE-2026-13371, CVE-2026-13371</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.9</span></td>
-        <td class="desc">認証された管理者は、put_dataエンドポイントに不正な形式または細工されたデータを送信することで、Fireware管理Web UIにおいてサービス拒否（DoS）状態を引き起こす可能性があります。このエンドポイントは攻撃者が提供した入力を安全でない方法でデシリアライズします。</td>
-      </tr>
-      <tr data-sev="High 7.2" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028645.html" target="_blank" rel="noopener">ウォッチガード・テクノロジーのWatchGuard Firewareにおけるデジタル署名の検証に関する脆弱性</a><div class="cve-row">CVE-2026-13722, CVE-2026-13722</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
-        <td class="desc">WatchGuard Fireware OSには、バックアップ／復元機能を介してバックアップイメージを処理する際にファームウェア検証をバイパスする脆弱性が含まれています。認証された管理者は、この脆弱性を悪用して改ざんされたファームウェアイメージをインストールできます。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-08-17</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-028592.html" target="_blank" rel="noopener">AnysphereのCursorにおける信頼できない検索パスに関する脆弱性</a><div class="cve-row">CVE-2026-63093, CVE-2026-63093</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Cursor for Windows バージョン 3.2.16 にはバイナリ・プランティングの脆弱性が含まれており、リモートの攻撃者がリポジトリのルートディレクトリに悪意のある git.exe ファイルを配置することで、任意のコードを実行できるようになります。開発者が細工されたリポジトリをクローンして開くと、Cursor は IDE の起動時および定期的なタイミングで、ユーザーの操作なしにリポジト</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN06609828/" target="_blank" rel="noopener">Apache Alluraにおけるサーバサイドリクエストフォージェリの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">The Apache Software Foundationが提供するApache Alluraには、サーバサイドリクエストフォージェリの脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-08-17</td>
@@ -930,20 +944,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">ECOVACS ROBOTICSが開発し、日本国内ではHellohas Robotics株式会社が提供するロボット掃除機DEEBOT PRO M1、DEEBOT PRO K1VACおよびスマートフォンアプリECOVACS PROには、複数の脆弱性が存在します。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-08-04</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN52865575/" target="_blank" rel="noopener">freo2におけるアップロードするファイルの検証が不十分な脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">refirioが提供するfreo2には、アップロードするファイルの検証が不十分な脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-08-03</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU98879231/" target="_blank" rel="noopener">三菱電機製複数製品で使用しているCC-Link IE TSN通信プロトコルにおける通信チャネルで送受信するメッセージに対する完全性の検証不備に起因する脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">三菱電機製複数製品で使用しているCC-Link IE TSN通信プロトコルには、通信チャネルで送受信するメッセージに対する完全性の検証不備に起因する脆弱性が存在します。</td>
-      </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-08-15</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
@@ -987,102 +987,116 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#1" target="_blank" rel="noopener">Weekly Report: macOSの画面共有に不適切な認証の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#1" target="_blank" rel="noopener">Weekly Report: PostgreSQLに複数の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">macOSの画面共有に不適切な認証の脆弱性</td>
+        <td class="desc">PostgreSQLに複数の脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#2" target="_blank" rel="noopener">Weekly Report: 複数のZyxel製品に脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#2" target="_blank" rel="noopener">Weekly Report: 複数のElastic製品に脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">複数のZyxel製品に脆弱性</td>
+        <td class="desc">複数のElastic製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#3" target="_blank" rel="noopener">Weekly Report: Google Chromeに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#3" target="_blank" rel="noopener">Weekly Report: 複数のVMware製品に脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">複数のVMware製品に脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#4" target="_blank" rel="noopener">Weekly Report: 複数のFortinet製品に脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">複数のFortinet製品に脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#5" target="_blank" rel="noopener">Weekly Report: 複数のPalo Alto Networks製品に脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">複数のPalo Alto Networks製品に脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#6" target="_blank" rel="noopener">Weekly Report: GitLabに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">GitLabに複数の脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#7" target="_blank" rel="noopener">Weekly Report: 複数のSAP製品に脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">複数のSAP製品に脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#8" target="_blank" rel="noopener">Weekly Report: 複数のSonicWall製品に脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">複数のSonicWall製品に脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#9" target="_blank" rel="noopener">Weekly Report: Google Chromeに複数の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">Google Chromeに複数の脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#4" target="_blank" rel="noopener">Weekly Report: WordPressに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#10" target="_blank" rel="noopener">Weekly Report: 複数のAdobe製品に脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">WordPressに複数の脆弱性</td>
+        <td class="desc">複数のAdobe製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#5" target="_blank" rel="noopener">Weekly Report: ProgressのMarkLogic Serverに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#11" target="_blank" rel="noopener">Weekly Report: 複数のIvanti製品に脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">ProgressのMarkLogic Serverに複数の脆弱性</td>
+        <td class="desc">複数のIvanti製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#6" target="_blank" rel="noopener">Weekly Report: 複数のCisco製品に脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#12" target="_blank" rel="noopener">Weekly Report: NetScaler ADCおよびNetScaler Gatewayにリモートコード実行につながる脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">複数のCisco製品に脆弱性</td>
+        <td class="desc">NetScaler ADCおよびNetScaler Gatewayにリモートコード実行につながる脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#7" target="_blank" rel="noopener">Weekly Report: Jenkinsおよび複数のJenkins用プラグインに脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#13" target="_blank" rel="noopener">Weekly Report: MetabaseにSQLインジェクションの脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">Jenkinsおよび複数のJenkins用プラグインに脆弱性</td>
+        <td class="desc">MetabaseにSQLインジェクションの脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#8" target="_blank" rel="noopener">Weekly Report: NetKids iMarkに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#14" target="_blank" rel="noopener">Weekly Report: JetBrains TeamCity（オンプレミス版）にリモートコード実行につながる脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">NetKids iMarkに複数の脆弱性</td>
+        <td class="desc">JetBrains TeamCity（オンプレミス版）にリモートコード実行につながる脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#9" target="_blank" rel="noopener">Weekly Report: Giteaにパストラバーサルの脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#15" target="_blank" rel="noopener">Weekly Report: 制御システムセキュリティカンファレンス2027講演募集</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">Giteaにパストラバーサルの脆弱性</td>
+        <td class="desc">制御システムセキュリティカンファレンス2027講演募集</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
+        <td class="date">2026-08-19</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#10" target="_blank" rel="noopener">Weekly Report: Bouncy Castle Javaに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260819.html#16" target="_blank" rel="noopener">Weekly Report: 複数のマイクロソフト製品に脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">Bouncy Castle Javaに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#11" target="_blank" rel="noopener">Weekly Report: Adobe Campaign Classicに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Adobe Campaign Classicに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#12" target="_blank" rel="noopener">Weekly Report: サイボウズ Garoonにクロスサイトスクリプティングの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">サイボウズ Garoonにクロスサイトスクリプティングの脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#13" target="_blank" rel="noopener">Weekly Report: pgAdmin 4に複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">pgAdmin 4に複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-13</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260813.html#14" target="_blank" rel="noopener">Weekly Report: Better Authに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Better Authに複数の脆弱性</td>
+        <td class="desc">複数のマイクロソフト製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-08-12</td>
@@ -1156,6 +1170,24 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-08-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/189024" target="_blank" rel="noopener">米当局、悪用脆弱性リストに新規4件 - 「macOS」「SharePoint」など</a></td>
+        <td class="desc">米当局は、「macOS」「Microsoft SharePoint」「VMware vCenter」などに判明した4件の脆弱性について、実際の攻撃で悪用されていることから注意喚起を行った。米行政機関に対しては3日以内に対処するよう求めている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/189013" target="_blank" rel="noopener">「Chrome」にセキュリティアップデート - 脆弱性15件を修正</a></td>
+        <td class="desc">Googleは現地時間2026年8月18日、同社ブラウザ「Chrome」のセキュリティアップデートをリリースした。重要度「クリティカル」とされる2件を含む複数の脆弱性を修正している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/189018" target="_blank" rel="noopener">Apple、「macOS Tahoe 26.6.2」を公開 - 脆弱性28件に対処</a></td>
+        <td class="desc">Appleは現地時間2026年8月17日、Mac向けに最新OSとなる「macOS Tahoe 26.6.2」を公開した。旧OS向けにブラウザ「Safari」のアップデートも提供している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-08-17</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188947" target="_blank" rel="noopener">「GitLab」に深刻な脆弱性 - 認証なしで公開プロジェクト改変のおそれ</a></td>
@@ -1166,6 +1198,48 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188955" target="_blank" rel="noopener">米当局、AIフレームワーク「Ray」の脆弱性悪用を警告</a></td>
         <td class="desc">米当局は、AIを活用したPythonアプリケーションを構築するためのフレームワーク「Ray」における脆弱性が実際の攻撃で悪用されているとして注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188974" target="_blank" rel="noopener">「Tenable Security Center」に深刻な脆弱性 - 修正版を公開</a></td>
+        <td class="desc">Tenableの脆弱性管理製品「Security Center」に複数の脆弱性が確認された。重要度が「クリティカル」とされる脆弱性も複数含まれる。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188979" target="_blank" rel="noopener">「YouTrack」に脆弱性 - 認証なしでDBバックアップを取得可能</a></td>
+        <td class="desc">JetBrainsのプロジェクト管理ツール「YouTrack」に脆弱性が判明した。アップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188597" target="_blank" rel="noopener">複数役職員のメールアカウントに不正アクセス - 科学技術振興機構</a></td>
+        <td class="desc">科学技術振興機構（JST）は、一部職員のメールアカウントが不正アクセスを受けたことを明らかにした。情報が流出したおそれがある。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188878" target="_blank" rel="noopener">教員がサポート詐欺被害、校内研修で被害に気づく - 那覇市</a></td>
+        <td class="desc">沖縄県那覇市は、市立学校の教員がパソコンの利用中にサポート詐欺に遭ったことを明らかにした。サポート詐欺に関する校内研修を受けた際、自身が被害に遭っていたことに気づいたという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188965" target="_blank" rel="noopener">ペット用品通販ショップに不正アクセス - 個人情報流出の可能性</a></td>
+        <td class="desc">ペット用品やアクアリウム用品を扱うチャームは、同社通信販売サイトが不正アクセスを受けたことを明らかにした。顧客の個人情報が流出した可能性があるという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188537" target="_blank" rel="noopener">メルアカに不正アクセス、個人情報流出の可能性 - ナイス</a></td>
+        <td class="desc">建築資材の卸売や住宅販売を手がけるナイスは、メールアカウントが不正アクセスを受け、アカウント内に保存されていた個人情報が流出した可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188461" target="_blank" rel="noopener">利用予定のウェブシステムに攻撃 - ウォーターサーバ事業者</a></td>
+        <td class="desc">ウォーターサーバー事業などを展開するシンアイ産業は、利用予定だったウェブシステムが侵害され、顧客の個人情報が流出した可能性があることを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-08-16</td>
@@ -1214,73 +1288,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/188882" target="_blank" rel="noopener">医師が病室に個人情報含む書類を置き忘れ、患者宅から回収 - 川崎市</a></td>
         <td class="desc">神奈川県川崎市は、市立井田病院の医師が患者の個人情報を含む書類を患者の病室に置き忘れたことを明らかにした。約1カ月後、書類は患者の自宅で発見されたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188887" target="_blank" rel="noopener">先週注目された記事（2026年8月9日〜2026年8月15日）</a></td>
-        <td class="desc">2026年8月9日から2026年8月15日までの1週間にSecurity NEXTにおいて注目度が高かった上位10記事は以下のとおり。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188829" target="_blank" rel="noopener">「TeamCity」の脆弱性悪用に注意 - 対応状況の確認や侵害調査を</a></td>
-        <td class="desc">JetBrainsの継続的インテグレーション製品「TeamCity」に脆弱性「CVE-2026-63077」が見つかり、悪用も発生していることを受け、JPCERTコーディネーションセンターでは利用者に対策や侵害調査の実施を検討するよう呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188817" target="_blank" rel="noopener">Ciscoがアップデートを事前告知 - 8月19日に修正版を公開予定</a></td>
-        <td class="desc">Cisco Systemsは、複数製品に関するセキュリティアドバイザリを現地時間2026年8月19日に公開する予定だ。対象製品の利用者に注意を呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-13</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187610" target="_blank" rel="noopener">フィッシング報告数が4割減 - ただし悪用URLは増加</a></td>
-        <td class="desc">2026年6月におけるフィッシング攻撃の報告件数は前月比約4割減となる一方、悪用されたURLについては微増した。調査用メールアドレスに着信したフィッシングメールの9割超で独自ドメインが利用されていたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188661" target="_blank" rel="noopener">「Ivanti EPM」や「Ivanti Neurons for MDM」に脆弱性 - 修正を実施</a></td>
-        <td class="desc">Ivantiは2026年8月11日、「Ivanti Endpoint Manager（EPM）」や「Ivanti Neurons for MDM」のセキュリティアドバイザリを公開した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188755" target="_blank" rel="noopener">GitLab、XSSをはじめ脆弱性13件を解消</a></td>
-        <td class="desc">GitLabは現地時間2026年8月12日、開発プラットフォームのセキュリティアップデートをリリースした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188747" target="_blank" rel="noopener">「OpenSSL」に脆弱性 - 今後のリリースで修正予定</a></td>
-        <td class="desc">「OpenSSL」にサービス拒否の脆弱性が明らかとなった。重要度は「低」とされており、今後のアップデートで修正される見込み。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188744" target="_blank" rel="noopener">Windows向け「LINE PC版」のインストーラに脆弱性 - 最新版の利用を</a></td>
-        <td class="desc">LINEヤフーよりWindows向けに提供されている「LINE PC版」のインストーラーに脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188694" target="_blank" rel="noopener">個人情報含むHDD2台がリース返却後、所在不明に - 徳島県</a></td>
-        <td class="desc">徳島県は、リース事業者へ返却した機器がデータを含んだまま所在不明となっていることを明らかにした。マイナンバーをはじめとする個人情報が含まれる。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-14</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188705" target="_blank" rel="noopener">児童発達支援センターで個人情報含むUSBメモリを紛失 - 釧路町</a></td>
-        <td class="desc">北海道釧路町は、児童発達支援センターにおいて、個人情報が保存されたUSBメモリが所在不明となっていることを明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年08月18日 10:51 JST</span>
+  <span>最終更新: 2026年08月19日 10:54 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
