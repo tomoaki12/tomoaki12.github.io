@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">68</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">66</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">150</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,6 +104,34 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="High 8.5" data-src="JVN iPedia">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000097.html" target="_blank" rel="noopener">SKYSEA Client ViewおよびSKYMEC IT Managerにおける複数の脆弱性</a><div class="cve-row">CVE-2026-66109, CVE-2026-68062, CVE-2026-68959, CVE-2026-68960, CVE-2026-69665</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.5</span></td>
+        <td class="desc">Ｓｋｙ株式会社が提供するSKYSEA Client ViewおよびSKYMEC IT ManagerはIT資産管理用ツールです。SKYSEA Client ViewおよびSKYMEC IT Managerには、次の複数の脆弱性が存在します。 認可処理の欠如（CWE-862）- CVE-2026-66109 パストラバーサル（CWE-22）- CVE-2026-68062 パストラバーサル（CWE-</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-029751.html" target="_blank" rel="noopener">ヤマハ製VOCALOID6 Editorにおける複数の脆弱性</a><div class="cve-row">CVE-2026-76131, CVE-2026-76137</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">ヤマハ株式会社が提供するVOCALOID6 Editorには、次の複数の脆弱性が存在します。 ハードコードされた認証情報の使用（CWE-798） - CVE-2026-76131 重要な機能に対する認証の欠如（CWE-306） - CVE-2026-76137 この脆弱性情報は、下記の方がJPCERT/CCに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：Zero 氏</td>
+      </tr>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-029750.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年08月20日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：1件 ICSA-26-232-01: Johnson Controls Simplex Incident Manager</td>
+      </tr>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000115.html" target="_blank" rel="noopener">サクラエディタにおけるOSコマンドインジェクションの脆弱性</a><div class="cve-row">CVE-2026-59561</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">サクラエディタ開発コミュニティが提供するサクラエディタには「ターミナルを起動」する機能があります。この機能は、編集中のファイルが置かれたディレクトリをカレントディレクトリとしてシェルプログラムを起動しますが、ディレクトリ名を表す文字列を無害化せずに使用しています。 OSコマンドインジェクション（CWE-78）- CVE-2026-59561</td>
+      </tr>
       <tr data-sev="" data-src="JVN iPedia">
         <td class="date">2026-08-24</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -425,34 +453,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-029703.html" target="_blank" rel="noopener">オラクルのOracle WebCenter Enterprise Captureにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60916, CVE-2026-60916</div></td>
         <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.9</span></td>
         <td class="desc">Oracle Fusion MiddlewareのOracle WebCenter Enterprise Capture製品（コンポーネント：クライアントバンドル）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.0.0です。HTTP経由でのネットワークアクセスを持つ認証されていない攻撃者によって容易に悪用可能な脆弱性のため、Oracle WebCen</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-24</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-029702.html" target="_blank" rel="noopener">オラクルのOracle WebCenter Enterprise Captureにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60921, CVE-2026-60921</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebCenter Enterprise Capture製品（コンポーネント：Client Bundle）に脆弱性が存在します。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.0.0です。T3およびIIOPを介したネットワークアクセスを持つ認証されていない攻撃者が、容易に悪用できる脆弱性のため、Oracle</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-24</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-029701.html" target="_blank" rel="noopener">オラクルのOracle WebCenter Enterprise Captureにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60946, CVE-2026-60946</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebCenter Enterprise Capture製品（コンポーネント：Client Bundle）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.0.0です。ネットワーク経由でRMIを介して認証されていない攻撃者が容易に悪用可能な脆弱性のため、Oracle WebCenter E</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-24</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-029700.html" target="_blank" rel="noopener">オラクルのOracle WebCenter Enterprise Captureにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60947, CVE-2026-60947</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebCenter Enterprise Capture製品（コンポーネント：クライアントバンドル）における脆弱性です。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.0.0となっています。RMI経由のネットワークアクセスを持つ認証されていない攻撃者が容易に悪用可能な脆弱性により、Oracle WebCen</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-08-24</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-029699.html" target="_blank" rel="noopener">オラクルのOracle WebCenter Enterprise Captureにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-60958, CVE-2026-60958</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Oracle Fusion MiddlewareのOracle WebCenter Enterprise Capture製品（コンポーネント：Client Bundle）に脆弱性があります。影響を受けるサポート対象バージョンは12.2.1.4.0および14.1.2.0.0です。容易に悪用可能なこの脆弱性により、HTTP経由でネットワークアクセスが可能な認証されていない攻撃者がOracle WebC</td>
       </tr>
       <tr data-sev="High 7.1" data-src="JVN iPedia">
         <td class="date">2026-08-24</td>
@@ -805,6 +805,34 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">Oracle E-Business SuiteのOracle Sales for Handhelds製品（コンポーネント：Outlook Sync Win 32）における脆弱性です。影響を受けるサポート対象バージョンは12.2.3から12.2.15までとなっています。容易に悪用可能な脆弱性により、HTTP経由でネットワークアクセスが可能な低権限の攻撃者がOracle Sales for Handh</td>
       </tr>
       <tr data-sev="" data-src="JVN">
+        <td class="date">2026-08-25</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96980428/" target="_blank" rel="noopener">KONAMI製METAL GEAR ONLINE 3におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN33423625/" target="_blank" rel="noopener">SKYSEA Client ViewおよびSKYMEC IT Managerにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Ｓｋｙ株式会社が提供するSKYSEA Client ViewおよびSKYMEC IT Managerには、複数の脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN84326763/" target="_blank" rel="noopener">SKYSEA Client Viewにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Sky株式会社が提供するSKYSEA Client Viewには、複数の脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN74538868/" target="_blank" rel="noopener">サクラエディタにおけるOSコマンドインジェクションの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">サクラエディタ開発コミュニティが提供するサクラエディタには、OSコマンドインジェクションの脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
         <td class="date">2026-08-21</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/jp/JVN81414813/" target="_blank" rel="noopener">UNIVERGE IX-R/IX-Vシリーズルータにおける重要な機能に対する認証の欠如の脆弱性</a><div class="cve-row"></div></td>
@@ -915,34 +943,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96740507/" target="_blank" rel="noopener">ECプラットフォーム「Opencart」におけるディレクトリトラバーサルの脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-08-12</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU98375707/" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年8月）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Siemensから各製品向けのアドバイザリが公表されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-08-12</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU95587179/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年08月11日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年08月11日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-08-10</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN40467227/" target="_blank" rel="noopener">LINE PC版（Windows版）のインストーラにおけるDLL読み込みに関する脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">LINEヤフー株式会社が提供するLINE PC版（Windows版）のインストーラには、DLL読み込みに関する脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-08-10</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU91804527/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年08月07日）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">2026年08月07日（現地時間）、米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-08-15</td>
@@ -1170,6 +1170,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-08-25</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/189320" target="_blank" rel="noopener">「OAuth2 Proxy」に認証回避の脆弱性 - 修正版は未公開</a></td>
+        <td class="desc">認証プロクシ「OAuth2 Proxy」に認証を回避されるおそれがある深刻な脆弱性が明らかとなった。ソースリポジトリにおいて修正が進められているが、修正版は未提供となっている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-08-23</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/189155" target="_blank" rel="noopener">IBMの「AIX」「PowerVM VIOS」に多数脆弱性 - 修正版を提供</a></td>
@@ -1180,6 +1186,42 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/189268" target="_blank" rel="noopener">米当局、「Zimbra」脆弱性の悪用を警告 - 2026年5件目のKEV登録</a></td>
         <td class="desc">米当局は、組織向けコラボレーションツール「Zimbra Collaboration Suite（ZCS）」の脆弱性が悪用されているとして注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/189254" target="_blank" rel="noopener">注文の配送先情報を含むPCに不正アクセス - 楽天グループ会社</a></td>
+        <td class="desc">楽天グループ会社で出版取次事業を手がける楽天ブックスネットワークは、一部パソコンが第三者によって侵害されたことを明らかにした。端末の内部には注文データなどの顧客情報が含まれていたという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/189257" target="_blank" rel="noopener">休眠中サーバがランサム被害、内部に個人情報 - システム開発会社</a></td>
+        <td class="desc">オンライン試験システムの開発、販売を手がける教育ソフトウェアは、契約している休眠中のレンタルサーバがサイバー攻撃を受けたことを明らかにした。内部に個人情報が保存されていたという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188700" target="_blank" rel="noopener">土木情報サイト、パスワード含む会員情報流出の可能性</a></td>
+        <td class="desc">土木関連情報サイト「いさぼうネット」において、会員の個人情報が流出した可能性があることがわかった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/189121" target="_blank" rel="noopener">医療機器会社が手術室でのX線画像を保有、経緯を調査 - 金沢大病院</a></td>
+        <td class="desc">金沢大学付属病院は、患者のX線画像を医療機器事業者が保有していたことを明らかにした。担当医師と事業者で説明が異なり、撮影から情報共有に至った経緯などがわかっていない。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188709" target="_blank" rel="noopener">設定変更で他利用者情報が閲覧可能に - レジャー予約サイト</a></td>
+        <td class="desc">レジャーや文化体験の予約サイト「アクティビティジャパン」において、一部利用者の個人情報が他利用者から参照できる不具合が発生した。登録情報が置き換わるケースも確認されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-08-24</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/188144" target="_blank" rel="noopener">メール送信サービスのアクセスキーを第三者が不正利用 - 衣料品会社</a></td>
+        <td class="desc">衣料品や寝具の企画、販売を手がけるTENTIALは、メール送信サービスにおける同社アクセスキーが不正利用されたことを明らかにした。大量のフィッシングメールが送信されたという。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-08-23</td>
@@ -1246,55 +1288,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/189129" target="_blank" rel="noopener">広報紙配布の宛名シール、別人宛名に重ね貼り - 大阪市</a></td>
         <td class="desc">大阪市は、西区の広報紙配布業務において、個人情報が流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-21</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/188970" target="_blank" rel="noopener">調査票発送時の宛名に本来不要な国籍を記載 - 杉並区</a></td>
-        <td class="desc">東京都杉並区は、郵便物の宛名に本来必要のない国籍情報を記載するミスがあったことを明らかにした。データ出力時のミスが原因だという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-20</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/189101" target="_blank" rel="noopener">Oracle、月例パッチを公開 - 900件以上の脆弱性に対処</a></td>
-        <td class="desc">Oracleは現地時間2026年8月18日、複数の製品を対象とした「Critical Security Patch Update（CSPU）」を公開した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-19</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/189093" target="_blank" rel="noopener">「NetScaler ADC/Gateway」に認証回避の脆弱性 - 重要度「クリティカル」</a></td>
-        <td class="desc">「NetScaler ADC（旧Citrix ADC）」「NetScaler Gateway（旧Citrix Gateway）」に深刻な脆弱性が明らかとなった。重要度は「クリティカル」とされており、利用者にアップデートを呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-20</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/189109" target="_blank" rel="noopener">「Cisco Secure Workload」に複数の深刻な脆弱性 - 修正版を提供</a></td>
-        <td class="desc">サーバやクラウド上のワークロード間の通信を可視化し、通信ポリシーを設定してアクセスを制御するセキュリティ製品「Cisco Secure Workload」に深刻な脆弱性が明らかとなった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-20</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/189114" target="_blank" rel="noopener">「MLflow」脆弱性の悪用を確認 - 米当局が注意喚起</a></td>
-        <td class="desc">米サイバーセキュリティインフラストラクチャセキュリティ庁（CISA）は、「MLflow」に関する脆弱性が悪用されているとして注意喚起を行った。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-20</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/187403" target="_blank" rel="noopener">地域を超えるサイバー攻撃、日チェコ協力で高まるレジリエンス</a></td>
-        <td class="desc">首都プラハをはじめ、美しい町並みで知られるチェコ共和国。国民楽派の作曲家スメタナによる「モルダウ」やミュシャの絵画作品など、同国の文化は日本でもなじみ深い。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-08-20</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/189122" target="_blank" rel="noopener">「Cisco Crosswork」にクリティカル脆弱性 - アップデートを公開</a></td>
-        <td class="desc">Cisco Systemsは現地時間2026年8月19日、セキュリティアドバイザリを公開し、ネットワーク運用基盤「Cisco Crosswork」の3製品に深刻な脆弱性が判明したとして、アップデートをリリースした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年08月24日 10:58 JST</span>
+  <span>最終更新: 2026年08月25日 10:53 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
