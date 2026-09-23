@@ -77,15 +77,15 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">29</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">105</div><div class="l">脆弱性</div></div>
+    <div class="stat danger"><div class="n">22</div><div class="l">高深刻度</div></div>
+    <div class="stat warn"><div class="n">97</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">105</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">97</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -397,62 +397,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033937.html" target="_blank" rel="noopener">Wazuh Inc.のWazuhにおける高圧縮データの処理 (データ増幅)に関する脆弱性</a><div class="cve-row">CVE-2026-74046, CVE-2026-74046</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.9</span></td>
         <td class="desc">Wazuh 4.4.0から4.14.7より前のバージョンには、cluster.py内のfdecompress_files()関数にサービス拒否の脆弱性があります。この脆弱性により、認証されたクラスターピアが展開サイズの制限なしに悪意のある同期アーカイブを提供してメモリを枯渇させることが可能です。有効なクラスターファーネットキーを保持する攻撃者は、小さく高圧縮されたzip爆弾アーカイブをアップロード</td>
-      </tr>
-      <tr data-sev="High 7.6" data-src="JVN iPedia">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033918.html" target="_blank" rel="noopener">flowiseaiのflowiseにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-67621, CVE-2026-67621</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.6</span></td>
-        <td class="desc">Flowiseのバージョン3.1.4までには、認証済みのワークスペースメンバーが保護されていないミューテーションエンドポイントにアクセスすることで、許可されていないドキュメントストア操作を実行できる認可欠落の脆弱性が含まれています。ビュー権限のみを持つ攻撃者でも、アップサートおよびリフレッシュドキュメントストアルートに直接HTTPリクエストを送信して、ドキュメントの取り込みをトリガーしたり、ベクタ</td>
-      </tr>
-      <tr data-sev="Critical 9.9" data-src="JVN iPedia">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033917.html" target="_blank" rel="noopener">flowiseaiのflowiseにおけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-67622, CVE-2026-67622</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.9</span></td>
-        <td class="desc">Flowise バージョン 3.1.4 までには、OpenAI Assistants 統合において、認証された攻撃者が任意の認証情報 UUID を Assistants エンドポイントに提供することで、ワークスペースの所有権検証を行わずに他のワークスペースに属する認証情報へアクセスできる不適切な直接オブジェクト参照の脆弱性が含まれています。攻撃者は、このワークスペーススコープの認可チェックが欠如し</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033884.html" target="_blank" rel="noopener">flowiseaiのflowiseにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-70636, CVE-2026-70636</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Flowise バージョン 3.1.4 までに、認証バイパスの脆弱性が存在しており、未認証の攻撃者が packages/server/src/utils/constants.ts に定義された認証ミドルウェア内のプレフィックスベースのホワイトリストマッチングを悪用して OAuth2 資格情報リフレッシュエンドポイントにアクセスできる問題があります。攻撃者は、trailing credential </td>
-      </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033874.html" target="_blank" rel="noopener">アドビのAdobe Commerce等の複数製品における不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-71362, CVE-2026-71362</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">Adobe Commerce は、権限昇格を引き起こす可能性のある不適切な認可の脆弱性の影響を受けています。攻撃者はこの脆弱性を悪用して、機密リソースへの権限を昇格させたアクセスを得ることが可能です。この問題を悪用するためにユーザーの操作は必要ありません。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033873.html" target="_blank" rel="noopener">アドビのAdobe XDにおける古典的バッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-71399, CVE-2026-71399</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Adobe XDにはバッファオーバーフローの脆弱性が存在し、現在のユーザーのコンテキストで任意のコードが実行される可能性があります。攻撃者はこの脆弱性を悪用して任意のコードを実行できます。この問題を悪用するためには、被害者が悪意のあるファイルを開くというユーザーの操作が必要になります。</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033868.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-75044, CVE-2026-75044</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">JetBrains YouTrack 2025.3.156085以前、2026.1.13914および2026.2.18095のバージョンにおいて、認証済みユーザーが認可なしにmailboxエンドポイントを介して任意のエンティティを削除できる脆弱性が存在していました。</td>
-      </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033867.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおける代替パスまたはチャネルを使用した認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-75045, CVE-2026-75045</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">JetBrains YouTrackのバージョン2025.3.156085以前、2026.1.13913、および2026.2.18112において、認証されていない攻撃者が共有されたドラフト署名を介してデータベースのバックアップをダウンロードできる脆弱性が存在していました。</td>
-      </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-033866.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-75046, CVE-2026-75046</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">JetBrains YouTrack 2026.2.18112 より前のバージョンでは、認証済みユーザーがユーザー検索エンドポイントを介してアカウントを列挙できる可能性がありました。これはセキュリティ上の問題を引き起こすおそれがあります。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-09-18</td>
@@ -855,6 +799,24 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-09-23</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190576" target="_blank" rel="noopener">「BIG-IP APM」に脆弱性、悪用を確認 - 侵害調査を</a></td>
+        <td class="desc">F5が提供する「BIG-IP Access Policy Manager（APM）」に深刻な脆弱性が明らかとなった。すでに悪用が確認されているという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-09-23</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190566" target="_blank" rel="noopener">「WordPress」に深刻な脆弱性 - わずか5日で再更新</a></td>
+        <td class="desc">コンテンツマネジメントシステムの「WordPress」に深刻な脆弱性が明らかとなった。前週に公開されたセキュリティアップデートで修正した脆弱性とは異なる問題であり、再度更新が必要となる。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-09-23</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190562" target="_blank" rel="noopener">先週注目された記事（2026年9月13日〜2026年9月19日）</a></td>
+        <td class="desc">2026年9月13日から2026年9月19日までの1週間にSecurity NEXTにおいて注目度が高かった上位10記事は以下のとおり。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-09-19</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190557" target="_blank" rel="noopener">米当局、「Linuxカーネル」の脆弱性3件を悪用リストに追加</a></td>
@@ -955,31 +917,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190205" target="_blank" rel="noopener">熊本県の就職移住支援サイトが改ざん - 偽警告でサブスクアプリに誘導</a></td>
         <td class="desc">熊本県が管理、運営する就職、移住支援情報サイト「ワンストップジョブサイトくまもと」が第三者によって改ざんされたことがわかった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-17</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190462" target="_blank" rel="noopener">Mozilla、「Firefox 156」をリリース - 脆弱性73件に対応</a></td>
-        <td class="desc">Mozilla Foundationは現地時間2026年9月15日、ウェブブラウザの最新版となる「Firefox 156」をリリースし、多数の脆弱性を修正した。延長サポート版「Firefox ESR」のセキュリティアップデートも用意している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-17</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/189987" target="_blank" rel="noopener">従業員アカウントが侵害、なりすましメールが送信 - ホテル運営会社</a></td>
-        <td class="desc">ホテルの運営を手がけるTRUNKは、メールアカウントが不正アクセスを受け、個人情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190370" target="_blank" rel="noopener">Apple、「iOS 27」「iPadOS 27」で多数脆弱性に対応 - 「同26.7」も公開</a></td>
-        <td class="desc">Appleは、同社スマートデバイス向けOSの最新版となる「iOS 27」「iPadOS 27」をリリースし、セキュリティに関する多数の問題へ対処した。旧環境向けにも「同26.7」を用意している。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年09月22日 14:01 JST</span>
+  <span>最終更新: 2026年09月23日 13:48 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
