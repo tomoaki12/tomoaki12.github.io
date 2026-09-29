@@ -78,14 +78,14 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
   </div>
   <div class="stats">
     <div class="stat danger"><div class="n">32</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">104</div><div class="l">脆弱性</div></div>
+    <div class="stat warn"><div class="n">105</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">104</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">105</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -455,6 +455,27 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">Nexus Repository 3 は、DataStore 設定 API を通じて設定可能な HikariCP 接続プールのプロパティに対して十分な制限を行っていませんでした。nx-datastores-update 権限を持つユーザーは、connectionInitSql プロパティを設定することで、新しい接続が確立されるたびに任意の SQL を対象のデータベースに対して実行できました。デフォ</td>
       </tr>
       <tr data-sev="" data-src="JVN">
+        <td class="date">2026-09-29</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN22475874/" target="_blank" rel="noopener">Pgpool-IIにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Pgpool Global Development Groupが提供するPgpool-IIには、複数の脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-09-29</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU99151548/" target="_blank" rel="noopener">Authlibライブラリにおける署名検証が回避される脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-09-29</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97027767/" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年9月）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Siemensから各製品向けのアドバイザリが公表されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
         <td class="date">2026-09-28</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU94863997/" target="_blank" rel="noopener">バッファロー製Wi-Fi製品における複数の脆弱性</a><div class="cve-row"></div></td>
@@ -520,13 +541,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-09-24</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97027767/" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年9月）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Siemensから各製品向けのアドバイザリが公表されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-09-24</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU94625787/" target="_blank" rel="noopener">Apache Tomcatにおける複数の脆弱性（2026年9月23日）</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">The Apache Software Foundationから、Apache Tomcatの15件の脆弱性に対してアドバイザリが公開されました。</td>
@@ -580,19 +594,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">東北電力株式会社が提供するスマートフォンアプリ「東北電力 よりそうｅねっと」には、ハードコードされた暗号鍵使用の脆弱性が存在します。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-09-17</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU94390979/" target="_blank" rel="noopener">MLflowのdspyとstatsmodelsフレーバーにおけるpickleのデシリアライズ制御回避の脆弱性</a><div class="cve-row"></div></td>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-09-28</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260029.html" target="_blank" rel="noopener">注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-09-17</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU91019649/" target="_blank" rel="noopener">Sentry Seerにおける攻撃者が制御する入力が管理者権限で実行される脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+        <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-09-24</td>
@@ -626,13 +633,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="date">2026-08-15</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
         <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260024.html" target="_blank" rel="noopener">注意喚起: NetScaler ADCおよびNetScaler Gatewayにおけるリモートコード実行につながる脆弱性（CVE-2026-8452）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-08-14</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260023.html" target="_blank" rel="noopener">注意喚起: MetabaseのSQLインジェクションの脆弱性（CVE-2026-72898）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
       </tr>
@@ -791,6 +791,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">複数のマイクロソフト製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-09-28</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20260928.html" target="_blank" rel="noopener">NetScaler ADCおよびNetScaler Gatewayの脆弱性について(CVE-2026-88771、CVE-2026-88772等)</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-09-09</td>
         <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
         <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/0909-ms.html" target="_blank" rel="noopener">Microsoft 製品の脆弱性対策について(2026年9月)</a><div class="cve-row"></div></td>
@@ -848,6 +855,18 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-09-28</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190781" target="_blank" rel="noopener">「iOS 26.7.1」公開、脆弱性を修正 - 特定個人への攻撃で悪用か</a></td>
+        <td class="desc">Appleは現地時間2026年9月28日、同社スマートデバイス向けに「iOS 26.7.1」「iPadOS 26.7.1」をリリースした。悪用された可能性がある脆弱性に対処したという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-09-29</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190787" target="_blank" rel="noopener">「macOS」にアップデート - iOSで悪用の可能性ある脆弱性に対処</a></td>
+        <td class="desc">Appleは現地時間2026年9月28日、「macOS Tahoe」「macOS Sequoia」向けに脆弱性を修正するセキュリティアップデートをリリースした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-09-27</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190251" target="_blank" rel="noopener">【特別企画】急激に進化する「AI」 - 見直すべき運用と変わらぬ防御原則</a></td>
@@ -864,6 +883,36 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190755" target="_blank" rel="noopener">「SharePoint」「WordPress」など脆弱性5件の悪用を警告 - 米当局</a></td>
         <td class="desc">米サイバーセキュリティインフラストラクチャセキュリティ庁（CISA）は、「NetScaler」「WordPress」「SharePoint」「RouterOS」に判明した脆弱性が悪用されているとして注意を呼びかけた。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-09-28</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190761" target="_blank" rel="noopener">ランサム被害、一部グループ会社の営業システムに影響 - 京王電鉄</a></td>
+        <td class="desc">京王電鉄は、同社グループのサーバがランサムウェア攻撃を受け、一部でシステム障害が発生していることを明らかにした。鉄道運行への影響は否定している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-09-28</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190734" target="_blank" rel="noopener">日本郵便のサーバに不正アクセスか - 詳細は調査中</a></td>
+        <td class="desc">日本郵便は、国際郵便物の調査請求ウェブ受付サービスで使用しているサーバが、不正アクセスを受けた可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-09-28</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190319" target="_blank" rel="noopener">教員5人のアカウントに不正アクセス、スパムの踏み台に - 日大</a></td>
+        <td class="desc">日本大学は、教員5人のメールアカウントが不正アクセスを受けたことを明らかにした。迷惑メールなども送信されたという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-09-28</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190520" target="_blank" rel="noopener">個人情報含む調査票が運送過程で所在不明に - 厚労省</a></td>
+        <td class="desc">厚生労働省は、最低賃金に関する基礎調査の記入済み調査票が、運送の過程で所在不明となったことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-09-28</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190739" target="_blank" rel="noopener">事業所担当者向けの説明会連絡メールで誤送信 - 愛媛労働基準協会</a></td>
+        <td class="desc">愛媛労働基準協会は、松山支部においてメールの送信ミスがあり、事業所の担当者に関するメールアドレスが流出したことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-09-27</td>
@@ -924,55 +973,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190247" target="_blank" rel="noopener">女性向け情報サイトの管理画面に不正アクセス - ハルメクHD</a></td>
         <td class="desc">50代以上の女性向け情報誌の発行や通信販売事業を展開するハルメクホールディングスは、ウェブサイト「HALMEK up」の管理画面が不正アクセスを受けたことを明らかにした。詳細について調査を行っている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-25</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190445" target="_blank" rel="noopener">オープンキャンパスの関連案内でメール誤送信 - 福岡女学院大</a></td>
-        <td class="desc">福岡女学院大学は、オープンキャンパスのバス利用者および交通費補助申込者への案内メールにおいて送信ミスがあったことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190604" target="_blank" rel="noopener">「Chrome 154」公開、108件のセキュリティ修正 - 「クリティカル」が11件</a></td>
-        <td class="desc">Googleは現地時間2026年9月22日、ブラウザ「Chrome」の最新版となる「Chrome 154」を公開した。「クリティカル（Critical）」とされる脆弱性をはじめ、100件以上の修正を行っている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190629" target="_blank" rel="noopener">「GitLab」がセキュリティアップデートを公開 - 深刻な脆弱性にも対処</a></td>
-        <td class="desc">GitLabは、同社の開発プラットフォーム「GitLab」に脆弱性が見つかったとしてアップデートをリリースした。深刻な脆弱性にも対処している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190654" target="_blank" rel="noopener">「Apache Tomcat」のアップデートで脆弱性12件を解消</a></td>
-        <td class="desc">「Apache Tomcat」の開発チームは、セキュリティアップデートをリリースし、複数の脆弱性を解消した。CVEベースで12件を修正したという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190644" target="_blank" rel="noopener">サイバー攻撃で受託業務の個人情報などが流出 - ニチレイ</a></td>
-        <td class="desc">冷凍食品の製造、販売を手がけるニチレイは、サイバー攻撃を受けてシステム障害が発生した問題で、被害を受けたサーバから顧客や従業員の個人情報が流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190516" target="_blank" rel="noopener">委託先事業者が地籍測量業務の図面を紛失 - つくば市</a></td>
-        <td class="desc">茨城県つくば市は、地籍測量業務の委託先事業者において、個人情報が記載された図面が所在不明となっていることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-24</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190611" target="_blank" rel="noopener">「NVIDIA Infrastructure Controller」に複数の脆弱性 - 「クリティカル」も</a></td>
-        <td class="desc">ベアメタル環境のライフサイクル管理を自動化する「NVIDIA Infrastructure Controller（NICo）」に複数の脆弱性が明らかとなった。「クリティカル（Critical）」とされる脆弱性も含まれる。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年09月28日 14:28 JST</span>
+  <span>最終更新: 2026年09月29日 14:47 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
