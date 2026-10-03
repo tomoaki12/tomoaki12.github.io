@@ -77,15 +77,15 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">0</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">64</div><div class="l">脆弱性</div></div>
+    <div class="stat danger"><div class="n">1</div><div class="l">高深刻度</div></div>
+    <div class="stat warn"><div class="n">71</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">64</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">71</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -104,6 +104,55 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-036350.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-103491, CVE-2026-103491</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">JetBrains YouTrack 2026.2.19422以前のバージョンにおいて、課題アクティビティAPIのIDORにより、制限された課題を読み取ることが可能でした。</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-036349.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおける無限ループに関する脆弱性</a><div class="cve-row">CVE-2026-103492, CVE-2026-103492</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">JetBrains YouTrack 2026.2.19422 より前のバージョンでは、細工された PSD 添付ファイルを介してサービス拒否（DoS）攻撃を行うことが可能でした。</td>
+      </tr>
+      <tr data-sev="High 8.1" data-src="JVN iPedia">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-036348.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row">CVE-2026-103493, CVE-2026-103493</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
+        <td class="desc">JetBrains YouTrackのバージョン2026.2.19422以前には、MermaidおよびLaTeXのコンテンツを介して保存型XSSが発生する可能性がありました。</td>
+      </tr>
+      <tr data-sev="Medium 6.6" data-src="JVN iPedia">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-036347.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおける不適切な権限設定に関する脆弱性</a><div class="cve-row">CVE-2026-103494, CVE-2026-103494</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.6</span></td>
+        <td class="desc">JetBrains YouTrackのバージョン2026.2.19422以前では、ユーザーグループのメンバーシップ変更を介して権限昇格が可能でした。</td>
+      </tr>
+      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-036346.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-103495, CVE-2026-103495</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
+        <td class="desc">JetBrains YouTrack 2026.2.19422以前のバージョンでは、認証が欠如していたために翻訳カタログの再読み込みが許可されていました。</td>
+      </tr>
+      <tr data-sev="Medium 5.4" data-src="JVN iPedia">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-036345.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-103496, CVE-2026-103496</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.4</span></td>
+        <td class="desc">JetBrains YouTrack 2026.2.19422以前のバージョンでは、受信トレイスレッドにおけるiDORの脆弱性により、他のユーザーの通知を読むことが可能でした。</td>
+      </tr>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-036344.html" target="_blank" rel="noopener">JetBrainsのYouTrackにおけるサーバサイドのリクエストフォージェリの脆弱性</a><div class="cve-row">CVE-2026-103497, CVE-2026-103497</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">JetBrains YouTrack 2026.2.19422 より前のバージョンでは、GitHub VCS 統合を介して sSRF 攻撃が可能でした。</td>
+      </tr>
       <tr data-sev="" data-src="JVN iPedia">
         <td class="date">2026-10-02</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -568,10 +617,40 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190989" target="_blank" rel="noopener">本人確認書類の画像流出、対象アカウントは約160万件 - タイムズカー</a></td>
+        <td class="desc">パーク24グループのタイムズモビリティが運営するカーシェアリングサービス「タイムズカー」が外部から侵害され、会員の個人情報が流出した問題で、本人確認書類の流出状況を明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-10-01</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190943" target="_blank" rel="noopener">「FortiMail」に深刻なゼロデイ脆弱性 - 悪用が報告、修正版は準備中</a></td>
         <td class="desc">Fortinetが提供するメールセキュリティ製品「FortiMail」に深刻な脆弱性が明らかとなった。ゼロデイ攻撃に悪用されており、同社では修正版の準備を進めるとともに、回避策をアナウンスしている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190967" target="_blank" rel="noopener">「Apache HTTPD」に複数脆弱性 - 「クリティカル」との評価も</a></td>
+        <td class="desc">「Apache HTTP Server」の開発チームは、現地時間2026年10月1日に最新版となる「同2.4.69」をリリースした。開発チームでは比較的影響を小さいと評価しているが、CVSSベーススコアが「9.8」とされる脆弱性も複数含まれる。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190973" target="_blank" rel="noopener">国内の「NetScaler」狙う攻撃も - 最新IoCで侵害確認を</a></td>
+        <td class="desc">「NetScaler ADC（旧Citrix ADC）」「NetScaler Gateway（旧Citrix Gateway）」の深刻な脆弱性に対する攻撃が発生している問題で、日本国内を標的とした攻撃試行が観測されている。最新の「IoC」情報をもとに侵害を受けていないか確認するよう呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190957" target="_blank" rel="noopener">研究用原子炉利用者の身分証明書などが外部流出 - 原子力機構</a></td>
+        <td class="desc">日本原子力研究開発機構は、研究支援サイトがサイバー攻撃を受けたことを明らかにした。研究用原子炉の利用者に関する身分証明書や特殊健康診断の結果なども外部に流出したという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190952" target="_blank" rel="noopener">荷物問合サービスが侵害、個人情報流出の可能性 - 佐川急便</a></td>
+        <td class="desc">佐川急便は、荷物問い合わせサービスがサイバー攻撃を受け、顧客の個人情報が流出した可能性があることを明らかにした。ウェブサービスの一部を停止している。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-10-02</td>
@@ -584,6 +663,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190931" target="_blank" rel="noopener">HPE製アクセスポイント「Instant On」に脆弱性 - 「クリティカル」5件など</a></td>
         <td class="desc">Hewlett Packard Enterprise（HPE）は、無線LANアクセスポイント製品「HPE Networking Instant On AP」に複数の脆弱性が明らかになったとしてアップデートをリリースした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190386" target="_blank" rel="noopener">メーリングリストで設定ミス、個人情報が公開状態 - 足立区</a></td>
+        <td class="desc">東京都足立区は、足立区都市農業公園の指定管理者が使用しているメーリングリストにおいて設定ミスがあり、個人情報を含むメールがインターネット上で閲覧可能になっていたことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-09-30</td>
@@ -650,49 +735,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190837" target="_blank" rel="noopener">チケット販売「イープラス」、払戻し申請した顧客顧客の個人情報が流出</a></td>
         <td class="desc">チケット販売プラットフォーム「イープラス」が不正アクセスを受け、顧客の個人情報が流出したことがわかった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190835" target="_blank" rel="noopener">「代金後払いサービス」で侵害、サービスを停止 - ヤマト運輸</a></td>
-        <td class="desc">ヤマト運輸は、「クロネコ代金後払いサービス」が第三者により侵害されたことを明らかにした。宅配サービスの提供には影響はないとしている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190860" target="_blank" rel="noopener">税務署やe-Tax装うフィッシング、控除や還付など口実 - アプリへ不正誘導</a></td>
-        <td class="desc">国税庁や電子申告サービス「e-Tax」をかたるフィッシング攻撃が確認された。言葉巧みにアプリをインストールさせようとしていたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190854" target="_blank" rel="noopener">GitLab、旧ブランチ向けにセキュリティ更新 - クリティカル脆弱性を修正</a></td>
-        <td class="desc">GitLabは、同社開発ツールに深刻な脆弱性が見つかった問題を受け、旧ブランチ向けのバックポートを実施した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190850" target="_blank" rel="noopener">Mozilla、ブラウザ最新版「Firefox 157」を公開 - 脆弱性76件を解消</a></td>
-        <td class="desc">Mozilla Foundationは現地時間2026年9月29日、ウェブブラウザの最新版「Firefox 157」をリリースした。セキュリティに関する多数の脆弱性へ対処しており、延長サポート版のアップデートも提供している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190648" target="_blank" rel="noopener">2支店で顧客情報記載の書類が所在不明 - 青森みちのく銀</a></td>
-        <td class="desc">青森みちのく銀行は、2支店において、顧客情報が記載された書類が所在不明になっていることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-09-28</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190781" target="_blank" rel="noopener">「iOS 26.7.1」公開、脆弱性を修正 - 特定個人への攻撃で悪用か</a></td>
-        <td class="desc">Appleは現地時間2026年9月28日、同社スマートデバイス向けに「iOS 26.7.1」「iPadOS 26.7.1」をリリースした。悪用された可能性がある脆弱性に対処したという。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年10月02日 14:42 JST</span>
+  <span>最終更新: 2026年10月03日 14:22 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
