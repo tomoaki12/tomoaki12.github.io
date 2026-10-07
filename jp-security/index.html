@@ -78,14 +78,14 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
   </div>
   <div class="stats">
     <div class="stat danger"><div class="n">26</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">113</div><div class="l">脆弱性</div></div>
+    <div class="stat warn"><div class="n">99</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">113</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">99</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -104,6 +104,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="Critical 9.4" data-src="JVN iPedia">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000146.html" target="_blank" rel="noopener">Movable Typeにおける複数の脆弱性</a><div class="cve-row">CVE-2026-103668, CVE-2026-96408</div></td>
+        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.4</span></td>
+        <td class="desc">シックス・アパート株式会社が提供するMovable Typeには、次の複数の脆弱性が存在します。 アップグレードスクリプトにおけるコードインジェクション（CWE-94）- CVE-2026-96408 サイト内検索機能におけるSQLインジェクション（CWE-89）- CVE-2026-103668 上記以外にも複数の脆弱性が修正されています。詳細については開発者が提供する情報を確認してください。 </td>
+      </tr>
       <tr data-sev="High 7.5" data-src="JVN iPedia">
         <td class="date">2026-10-06</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
@@ -447,12 +454,26 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
         <td class="desc">Apache HTTPサーバーのmod_heartmonitorにおけるユニキャストリスナーを介したNULLポインタ参照の脆弱性があります。この問題はApache HTTP Serverのバージョン2.4.0から2.4.68までに影響を及ぼします。</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-05</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-036492.html" target="_blank" rel="noopener">Apache Software FoundationのApache HTTP Serverにおける情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-47360, CVE-2026-47360</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Apache HTTP Server の mod_session_cookie モジュールにおいて、未承認のアクターに機密情報が漏えいする脆弱性があります。SessionCookieRemove が内部リダイレクトの間に変更されると、セッションクッキーがバックエンドサーバーに渡され続ける可能性があります。この問題は Apache HTTP Server バージョン 2.4.0 から 2.4.68 </td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN91153973/" target="_blank" rel="noopener">Movable Typeにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">シックス・アパート株式会社が提供するMovable Typeには複数の脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU98062224/" target="_blank" rel="noopener">キーエンス製複数製品におけるXML外部エンティティ参照（XXE）の不適切な制限の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">株式会社キーエンスが提供するXG VisionTerminal、XG-X VisionTerminal、LJ Series Terminal-SoftwareおよびWI Series Terminal-Softwareには、XML外部エンティティ参照（XXE）の不適切な制限の脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU94062711/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年10月06日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-10-06</td>
@@ -573,27 +594,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">baserCMSユーザー会が提供するbaserCMS用プラグイン「アドオンマイグレーター」 には、信頼できない制御領域からの機能の組み込みに関する脆弱性が存在します。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-09-25</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN14353754/" target="_blank" rel="noopener">baserCMSにおける複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">baserCMSユーザー会が提供するbaserCMSには複数の脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-09-25</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96941087/" target="_blank" rel="noopener">ViewSonic vCastにおける複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-09-25</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96565230/" target="_blank" rel="noopener">Norwegian Cruise Lineのドアアクセスコントローラにおける認証不備の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
-      </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-10-02</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
@@ -637,214 +637,116 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#1" target="_blank" rel="noopener">Weekly Report: ServiceNow AI Platformに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">ServiceNow AI Platformに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#2" target="_blank" rel="noopener">Weekly Report: 複数のAdobe製品に脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">複数のAdobe製品に脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#3" target="_blank" rel="noopener">Weekly Report: Unboundに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Unboundに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#4" target="_blank" rel="noopener">Weekly Report: Apache Tomcatに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Apache Tomcatに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#5" target="_blank" rel="noopener">Weekly Report: Next.jsのImageResponseにリモートコード実行につながる脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Next.jsのImageResponseにリモートコード実行につながる脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#6" target="_blank" rel="noopener">Weekly Report: Microsoft Edgeに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Microsoft Edgeに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#7" target="_blank" rel="noopener">Weekly Report: WordPressにPHPリモートファイルインクルージョンの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">WordPressにPHPリモートファイルインクルージョンの脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#8" target="_blank" rel="noopener">Weekly Report: Google Chromeに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#1" target="_blank" rel="noopener">Weekly Report: Google Chromeに複数の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">Google Chromeに複数の脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#9" target="_blank" rel="noopener">Weekly Report: VeloCloud Orchestratorに不適切な入力確認の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#2" target="_blank" rel="noopener">Weekly Report: Apache HTTP Server 2.4に複数の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">VeloCloud Orchestratorに不適切な入力確認の脆弱性</td>
+        <td class="desc">Apache HTTP Server 2.4に複数の脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#10" target="_blank" rel="noopener">Weekly Report: GitLabに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#3" target="_blank" rel="noopener">Weekly Report: FortinetのFortiMailに未認証のリモートコード実行につながる脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">GitLabに複数の脆弱性</td>
+        <td class="desc">FortinetのFortiMailに未認証のリモートコード実行につながる脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#11" target="_blank" rel="noopener">Weekly Report: 複数のCheck Point製品にパストラバーサルの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">複数のCheck Point製品にパストラバーサルの脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#12" target="_blank" rel="noopener">Weekly Report: Synology DiskStation Managerに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Synology DiskStation Managerに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#13" target="_blank" rel="noopener">Weekly Report: ISC BINDに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">ISC BINDに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#14" target="_blank" rel="noopener">Weekly Report: pgAdmin 4に複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">pgAdmin 4に複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#15" target="_blank" rel="noopener">Weekly Report: 複数のJenkinsプラグインに脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">複数のJenkinsプラグインに脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#16" target="_blank" rel="noopener">Weekly Report: 複数のHPE製品に脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">複数のHPE製品に脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#17" target="_blank" rel="noopener">Weekly Report: 複数のCisco製品に脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">複数のCisco製品に脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#18" target="_blank" rel="noopener">Weekly Report: QNDに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">QNDに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#19" target="_blank" rel="noopener">Weekly Report: WordPress用プラグインThe Events Calendarに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">WordPress用プラグインThe Events Calendarに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#20" target="_blank" rel="noopener">Weekly Report: IBM MQに複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">IBM MQに複数の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#21" target="_blank" rel="noopener">Weekly Report: LiteSpeed Web Server Enterpriseに権限昇格の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">LiteSpeed Web Server Enterpriseに権限昇格の脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#22" target="_blank" rel="noopener">Weekly Report: 複数のAtlassian製品に脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">複数のAtlassian製品に脆弱性</td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#23" target="_blank" rel="noopener">Weekly Report: 複数のMozilla製品に脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#4" target="_blank" rel="noopener">Weekly Report: 複数のMozilla製品に脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">複数のMozilla製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#24" target="_blank" rel="noopener">Weekly Report: 複数のOracle製品に脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#5" target="_blank" rel="noopener">Weekly Report: Cisco Catalyst SD-WAN Managerに認証回避につながる脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">複数のOracle製品に脆弱性</td>
+        <td class="desc">Cisco Catalyst SD-WAN Managerに認証回避につながる脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#25" target="_blank" rel="noopener">Weekly Report: Acronis Backup plugin for cPanel &amp; WHMに権限昇格の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#6" target="_blank" rel="noopener">Weekly Report: OpenSSLに複数の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">Acronis Backup plugin for cPanel &amp; WHMに権限昇格の脆弱性</td>
+        <td class="desc">OpenSSLに複数の脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#26" target="_blank" rel="noopener">Weekly Report: 複数のApple製品に脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#7" target="_blank" rel="noopener">Weekly Report: 複数のWatchGuard製品に脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">複数のWatchGuard製品に脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#8" target="_blank" rel="noopener">Weekly Report: 複数のHPE製品に脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">複数のHPE製品に脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#9" target="_blank" rel="noopener">Weekly Report: Pgpool-IIに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Pgpool-IIに複数の脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#10" target="_blank" rel="noopener">Weekly Report: 複数のApple製品に脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">複数のApple製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#27" target="_blank" rel="noopener">Weekly Report: ProgressのChef Automateに認証欠如の脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#11" target="_blank" rel="noopener">Weekly Report: 複数のElastic製品に脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">ProgressのChef Automateに認証欠如の脆弱性</td>
+        <td class="desc">複数のElastic製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#28" target="_blank" rel="noopener">Weekly Report: CERT PolskaがMikroTrickに関する技術分析を公開</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#12" target="_blank" rel="noopener">Weekly Report: NCOが「サイバーセキュリティ関係法令Q&amp;AハンドブックVer.3.0」を公開</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">CERT PolskaがMikroTrickに関する技術分析を公開</td>
+        <td class="desc">NCOが「サイバーセキュリティ関係法令Q&amp;AハンドブックVer.3.0」を公開</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#29" target="_blank" rel="noopener">Weekly Report: F5 BIG-IP Access Policy Managerにヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#13" target="_blank" rel="noopener">Weekly Report: NICTが「NICTER観測統計 - 2026年4月-6月」を公開</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">F5 BIG-IP Access Policy Managerにヒープベースのバッファオーバーフローの脆弱性</td>
+        <td class="desc">NICTが「NICTER観測統計 - 2026年4月-6月」を公開</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-30</td>
+        <td class="date">2026-10-07</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr260930.html#30" target="_blank" rel="noopener">Weekly Report: Cisco Secure Email GatewayにSQLインジェクションの脆弱性</a><div class="cve-row"></div></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#14" target="_blank" rel="noopener">Weekly Report: 「情報セキュリティ早期警戒パートナーシップガイドライン」の2026年版を公開</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">Cisco Secure Email GatewayにSQLインジェクションの脆弱性</td>
+        <td class="desc">「情報セキュリティ早期警戒パートナーシップガイドライン」の2026年版を公開</td>
+      </tr>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/wr/2026/wr261007.html#15" target="_blank" rel="noopener">Weekly Report: NetScaler ADCおよびNetScaler Gatewayに複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">NetScaler ADCおよびNetScaler Gatewayに複数の脆弱性</td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/20261007-jvn.html" target="_blank" rel="noopener">「Movable Type」における複数の脆弱性について（JVN#91153973）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-09-28</td>
@@ -911,6 +813,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191125" target="_blank" rel="noopener">リモートアクセス製品「SonicWall SMA1000シリーズ」に深刻なSSRF脆弱性</a></td>
+        <td class="desc">SonicWallのリモートアクセス製品「SMA1000シリーズ」に深刻な脆弱性が明らかとなった。アップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-06</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191113" target="_blank" rel="noopener">「Chrome 155」公開 - 「クリティカル」4件含む247件を修正</a></td>
+        <td class="desc">Googleは現地時間2026年10月6日、ブラウザの最新版「Chrome 155」をリリースした。「Critical」とされる4件を含め、多数の脆弱性へ対処している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191115" target="_blank" rel="noopener">セキュリティリリース「WordPress 7.1.3」が公開 - 複数脆弱性を修正</a></td>
+        <td class="desc">コンテンツマネジメントシステム「WordPress」の開発チームは、セキュリティアップデートをリリースした。複数の脆弱性に対処しており、早急にアップデートを実施するよう呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-07</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191135" target="_blank" rel="noopener">アプリや通販サイト会員の個人情報が流出 - MrMax</a></td>
+        <td class="desc">ディスカウントストア「MrMax」を運営するミスターマックスは、アプリ会員とオンラインストア会員の個人情報が流出した可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-10-06</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191061" target="_blank" rel="noopener">「FortiMail」のアップデートが提供開始 - ゼロデイ脆弱性を修正</a></td>
@@ -931,8 +857,38 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <tr data-src="SecurityNext">
         <td class="date">2026-10-06</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191072" target="_blank" rel="noopener">従業員アカウントに不正アクセス、取材先に大量なりすましメール - 日経</a></td>
+        <td class="desc">日本経済新聞社は、従業員が利用していた「Microsoft 365」のアカウントがサイバー攻撃を受けたことを明らかにした。大量のなりすましメールが送信されたという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-06</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190994" target="_blank" rel="noopener">人事システムから従業員の個人情報が流出した可能性 - 第一ライフG</a></td>
+        <td class="desc">第一ライフグループと第一生命保険は、人事システムが不正アクセスを受け、従業員や退職者に関する個人情報が流出した可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-06</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191070" target="_blank" rel="noopener">アプリシステムが侵害、顧客情報流出の可能性 - 回転ずしチェーン</a></td>
+        <td class="desc">回転ずしチェーンなどを展開する大起水産は、「大起水産公式アプリ」が不正アクセスを受け、顧客の個人情報が流出した可能性があることを明らかにした。アプリは通常通り利用できる。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-06</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191058" target="_blank" rel="noopener">JetBrains、6製品で脆弱性57件を修正 - 重要度「クリティカル」も</a></td>
         <td class="desc">JetBrainsは、開発環境やプロジェクト管理製品など複数の製品において脆弱性を修正したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-06</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190687" target="_blank" rel="noopener">介護事業者向けの報告書依頼メールで誤送信 - 鳥取県</a></td>
+        <td class="desc">鳥取県は、実績報告書の提出を介護事業者に依頼するメールにおいて送信ミスがあり、メールアドレスが流出したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-06</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/190450" target="_blank" rel="noopener">同県サイトで公開した地区防災計画のPDFに個人情報 - 岡山県</a></td>
+        <td class="desc">岡山県は、同県サイトに個人情報を参照できるPDFファイルを誤って掲載していたことを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-10-05</td>
@@ -975,67 +931,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/190800" target="_blank" rel="noopener">ブロガー情報管理システムに不正アクセス、個人情報が流出 - 集英社</a></td>
         <td class="desc">集英社は、同社のファッション誌で活動しているブロガーの情報管理や連絡に用いるシステム「HAPPY PLUS COMMUNITY（ハピコミュ）」が外部の第三者による不正アクセスを受け、ブロガーの個人情報が外部に流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-05</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190961" target="_blank" rel="noopener">複数サイトに不正アクセス、プラグイン脆弱性が標的に - ベネッセグループ会社</a></td>
-        <td class="desc">ベネッセコーポレーションのグループ会社で総合教育サービスを提供するアップは、運営する2サイトが不正アクセスを受け、採用応募者などの個人情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-05</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190448" target="_blank" rel="noopener">未達で返戻の水道料金減免解除通知書が所在不明 - 横浜市</a></td>
-        <td class="desc">横浜市は、送付先に到達せず返送された水道料金減免解除通知書が、所在不明になっていることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-04</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191003" target="_blank" rel="noopener">先週注目された記事（2026年9月27日〜2026年10月3日）</a></td>
-        <td class="desc">2026年9月27日から2026年10月3日までの1週間にSecurity NEXTにおいて注目度が高かった上位10記事は以下のとおり。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-01</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190943" target="_blank" rel="noopener">「FortiMail」に深刻なゼロデイ脆弱性 - 悪用が報告、修正版は準備中</a></td>
-        <td class="desc">Fortinetが提供するメールセキュリティ製品「FortiMail」に深刻な脆弱性が明らかとなった。ゼロデイ攻撃に悪用されており、同社では修正版の準備を進めるとともに、回避策をアナウンスしている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-02</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190967" target="_blank" rel="noopener">「Apache HTTPD」に複数脆弱性 - 「クリティカル」との評価も</a></td>
-        <td class="desc">「Apache HTTP Server」の開発チームは、現地時間2026年10月1日に最新版となる「同2.4.69」をリリースした。開発チームでは比較的影響を小さいと評価しているが、CVSSベーススコアが「9.8」とされる脆弱性も複数含まれる。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-02</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190973" target="_blank" rel="noopener">国内の「NetScaler」狙う攻撃も - 最新IoCで侵害確認を</a></td>
-        <td class="desc">「NetScaler ADC（旧Citrix ADC）」「NetScaler Gateway（旧Citrix Gateway）」の深刻な脆弱性に対する攻撃が発生している問題で、日本国内を標的とした攻撃試行が観測されている。最新の「IoC」情報をもとに侵害を受けていないか確認するよう呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-02</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190957" target="_blank" rel="noopener">研究用原子炉利用者の身分証明書などが外部流出 - 原子力機構</a></td>
-        <td class="desc">日本原子力研究開発機構は、研究支援サイトがサイバー攻撃を受けたことを明らかにした。研究用原子炉の利用者に関する身分証明書や特殊健康診断の結果なども外部に流出したという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-02</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190952" target="_blank" rel="noopener">荷物問合サービスが侵害、個人情報流出の可能性 - 佐川急便</a></td>
-        <td class="desc">佐川急便は、荷物問い合わせサービスがサイバー攻撃を受け、顧客の個人情報が流出した可能性があることを明らかにした。ウェブサービスの一部を停止している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-02</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190989" target="_blank" rel="noopener">本人確認書類の画像流出、対象アカウントは約160万件 - タイムズカー</a></td>
-        <td class="desc">パーク24グループのタイムズモビリティが運営するカーシェアリングサービス「タイムズカー」が外部から侵害され、会員の個人情報が流出した問題で、本人確認書類の流出状況を明らかにした。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年10月06日 15:25 JST</span>
+  <span>最終更新: 2026年10月07日 15:04 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
