@@ -77,7 +77,7 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">30</div><div class="l">高深刻度</div></div>
+    <div class="stat danger"><div class="n">14</div><div class="l">高深刻度</div></div>
     <div class="stat warn"><div class="n">100</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
@@ -104,355 +104,369 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
-      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037482.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-102322, CVE-2026-102322</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
-        <td class="desc">Google Chromeのバージョン155.0.8059.39より前のSite Isolationにおける不適切な認可の問題により、リモートの攻撃者が細工されたHTMLページを介して任意のコードを実行する可能性がありました。（Chromiumのセキュリティ重大度は高いです）</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037619.html" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年10月08日）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。  新規：3件 ICSA-26-281-01: Red Lion Controls N-Tron 700 Series ICSA-26-281-02: Grid Protection Alliance openPDC and openHistorian ICSA-26-281-03: Sa</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037481.html" target="_blank" rel="noopener">tonycozのImagerにおける複数の脆弱性</a><div class="cve-row">CVE-2026-102504, CVE-2026-102504</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Perl版Imager 1.037以前のバージョンでは、i_readraw_wiolで範囲外のraw_datachannels値を持つ生画像を読み込むと、プロセスが終了してしまいます。raw_datachannelsは範囲チェックが行われていません。ラインバッファは画像の幅とチャンネル数の積のサイズで確保されており、オーバーフローのチェックもありません。そのため、負の値や非常に大きな値が指定される</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-000143.html" target="_blank" rel="noopener">AssetViewにおける重要なリソースに対する不適切なアクセス権の割り当ての脆弱性</a><div class="cve-row">CVE-2026-101020</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">株式会社ハンモックが提供するAssetViewには、次の脆弱性が存在します。 重要なリソースに対する不適切なアクセス権の割り当て（CWE-732）- CVE-2026-101020 この脆弱性情報は、情報セキュリティ早期警戒パートナーシップに基づき下記の方がIPAに報告し、JPCERT/CCが開発者との調整を行いました。 報告者：株式会社サイバーディフェンス研究所 永岡　悟 氏</td>
       </tr>
-      <tr data-sev="Medium 6.3" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="Medium 6.6" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037480.html" target="_blank" rel="noopener">tonycozのImagerにおけるバッファサイズの計算の誤りに関する脆弱性</a><div class="cve-row">CVE-2026-102505, CVE-2026-102505</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.3</span></td>
-        <td class="desc">PerlのImagerバージョン1.037より前のバージョンでは、パレット画像から浮動小数点サンプルを取得する際に、i_gsampf_fpでヒープバッファがオーバーフローします。パレット付き画像の場合、型"float"でのgetsamples()は、ピクセルあたり1サンプルのバッファを割り当て、各ピクセルの要求されたすべてのチャネルをそこに取得します。複数のチャネルを要求すると、そのバッファの末尾</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037618.html" target="_blank" rel="noopener">クアルコムの5g Fixed Wireless Access Platform Firmware等の複数製品における境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-25263, CVE-2026-25263</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.6</span></td>
+        <td class="desc">無効なパラメータを使用してユーザースペースからカーネルに呼び出されるIOCTLコマンドの処理中にメモリ破損が発生する問題です。</td>
       </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037474.html" target="_blank" rel="noopener">Fleet Device Managementのfleetにおける認証に関する脆弱性</a><div class="cve-row">CVE-2026-103264, CVE-2026-103264</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">Fleetのバージョン4.87.0以前には、ホスト名およびハードウェアシリアルをデバイスUUIDに加えて認証トークンとして受け入れるデバイスAPIに認証回避の脆弱性があります。これらの秘密でない識別子を知っているか推測できる認証されていない攻撃者は、iOS/iPadOSホストとして認証し、デバイスデータを読み取り、ソフトウェアのインストールやMDM移行を含むデバイススコープのアクションを起動するこ</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037617.html" target="_blank" rel="noopener">クアルコムの5g Fixed Wireless Access Platform Firmware等の複数製品における認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-25267, CVE-2026-25267</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">非セキュアローダーがセキュアメモリの初期化前にページテーブルを書き換えることで、メモリが破損する問題です。</td>
       </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="Medium 6.7" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037473.html" target="_blank" rel="noopener">Fleet Device Managementのfleetにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-103265, CVE-2026-103265</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">4.89.0以前のFleetのバージョンでは、commands/resultsエンドポイントでチームによる認可に基づいたMDMコマンド結果の適切なフィルタリングが行われていません。チームに限定されたユーザーは、共有されたコマンドUUIDが複数のチームにまたがるホストを対象とする場合に、他のチームのホストに対するMDMコマンド結果を閲覧でき、その結果としてホストUUID、コマンドのペイロード、および</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037616.html" target="_blank" rel="noopener">クアルコムのCologne ファームウェア等の複数製品における境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-25269, CVE-2026-25269</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.7</span></td>
+        <td class="desc">過剰なバッチおよびIOバッファ構成を伴うカメラ要求を処理する際に、割り当てられたメモリサイズを超えてメモリ破損が発生します。</td>
       </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="Medium 6.7" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037472.html" target="_blank" rel="noopener">langflowにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-103360, CVE-2026-103360</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">IBM Langflow OSS バージョン 1.0.0 から 1.12.2 までにおいて、リモートの認証済み攻撃者が制限されたディレクトリへのパス名を不適切に制限されていることにより、機密情報を取得できる可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037615.html" target="_blank" rel="noopener">クアルコムのCologne ファームウェア等の複数製品における境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-25270, CVE-2026-25270</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.7</span></td>
+        <td class="desc">無効な長さパラメーターを含むコマンドバッファリクエストを処理する際に、Androidカメラドライバーでメモリが破損します。</td>
       </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="Medium 6.7" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037471.html" target="_blank" rel="noopener">langflowにおけるコードインジェクションの脆弱性</a><div class="cve-row">CVE-2026-104334, CVE-2026-104334</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">IBM Langflow OSS バージョン 1.0.0 から 1.12.2 において、コード生成の不適切な制御が原因でリモートの攻撃者が任意のコードを実行できる可能性があります。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037614.html" target="_blank" rel="noopener">クアルコムのCologne ファームウェア等の複数製品における境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-25272, CVE-2026-25272</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.7</span></td>
+        <td class="desc">ハードウェアアップデート準備中にバッファ制限の不適切な処理が原因で、カメラCREドライバーの操作を処理する際にメモリが破損しました。</td>
       </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="Medium 6.7" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037470.html" target="_blank" rel="noopener">Apache Software FoundationのApache Strutsにおける言語構文の表現に使用される特殊な要素の不適切な無効化に関する脆弱性</a><div class="cve-row">CVE-2026-104711, CVE-2026-104711</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">Apache Strutsにおける式言語ステートメントで使用される特殊要素の不適切な無害化（「式言語インジェクション」）の脆弱性です。アプリケーションがレガシーRESTfulアクションマッパーを使用するように設定されている場合、細工されたリクエストによりOGNL式がインジェクトされ、リモートコード実行につながる可能性があります。Struts 7はOGNLホワイトリスト（allowlist）が無効化</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037613.html" target="_blank" rel="noopener">クアルコムのCONGO Firmware等の複数製品における境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-25273, CVE-2026-25273</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.7</span></td>
+        <td class="desc">ドライバーの更新中に発生する境界外書き込みにより、カメラ操作の処理時にメモリが破損する。</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037469.html" target="_blank" rel="noopener">Apache Software FoundationのApache Strutsにおける非対称のリソース消費に関する脆弱性</a><div class="cve-row">CVE-2026-104712, CVE-2026-104712</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Apache Strutsにおける非対称的なリソース消費（増幅）脆弱性です。リクエストパラメータが任意精度の10進数（java.math.BigDecimal）プロパティにバインドされ、その後Strutsタグライブラリを通じてレンダリングされる場合、フレームワークはリクエストよりもはるかに大きな応答を生成する可能性があります。認証されていないリモート攻撃者は、低トラフィックを継続的に送信することで</td>
-      </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037468.html" target="_blank" rel="noopener">Apache Software FoundationのApache Strutsにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-104713, CVE-2026-104713</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Apache Struts RESTプラグインにおける、制限やスロットリングなしでリソースが割り当てられてしまう脆弱性があります。リクエストボディが受け入れ可能なサイズに制限されることなくメモリに読み込まれるため、単一のリクエストがそのサイズに比例してサーバーのメモリを割り当てさせ、Javaヒープの枯渇を引き起こして他のユーザーへのサービス拒否をもたらす可能性があります。追加設定を有効にする必要は</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037467.html" target="_blank" rel="noopener">Apache Software FoundationのApache Strutsにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-104714, CVE-2026-104714</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Apache Strutsにおける不適切な同期によって共有リソースが同時に実行される（「レースコンディション」）脆弱性です。ローカライズされたメッセージが日付または時刻の引数をフォーマットする場合、アプリケーション全体のテキストプロバイダーによってそのメッセージ用に保持されるフォーマッターが隔離されずに、同時に処理されるリクエストで使用されます。そのため、あるユーザーに属する値が別のユーザーのレス</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037466.html" target="_blank" rel="noopener">Mozilla FoundationのMozilla Firefoxにおける保護メカニズムの不具合に関する脆弱性</a><div class="cve-row">CVE-2026-106016, CVE-2026-106016</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">ファイル処理コンポーネントにおける緩和策の回避が確認されました。この脆弱性はFirefox 157.0.1で修正されています。</td>
-      </tr>
-      <tr data-sev="Medium 5.4" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037465.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるユーザインターフェースにおける重要情報の誤った表示に関する脆弱性</a><div class="cve-row">CVE-2026-106179, CVE-2026-106179</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.4</span></td>
-        <td class="desc">Google Chromeのバージョン155.0.8059.39以前のWebAppInstallsにおけるUI誤表示により、リモート攻撃者が細工されたHTMLページを通じてUI要素を偽装できる可能性がありました。（Chromiumのセキュリティ深刻度は低です）</td>
-      </tr>
-      <tr data-sev="Low 3.1" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037464.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける観測可能な不一致に関する脆弱性</a><div class="cve-row">CVE-2026-106180, CVE-2026-106180</div></td>
-        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.1</span></td>
-        <td class="desc">155.0.8059.39以前のGoogle Chromeにはアニメーションの観察可能な不整合が存在し、リモートの攻撃者が細工されたHTMLページを介してクロスオリジンのデータを取得できる可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
-      </tr>
-      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037463.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける誤って解決された名前や参照の使用に関する脆弱性</a><div class="cve-row">CVE-2026-106181, CVE-2026-106181</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
-        <td class="desc">155.0.8059.39以前のGoogle ChromeのDevToolsにおける誤った参照解決の脆弱性により、レンダラープロセスを侵害したリモート攻撃者が細工されたHTMLページを介して機密情報を取得できる可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
-      </tr>
-      <tr data-sev="Medium 5.4" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037462.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるユーザインターフェースにおける重要情報の誤った表示に関する脆弱性</a><div class="cve-row">CVE-2026-106182, CVE-2026-106182</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.4</span></td>
-        <td class="desc">155.0.8059.39より前のGoogle ChromeのPaintにおけるUI誤表示により、リモートの攻撃者が細工されたHTMLページを介してUI要素を偽装できる可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
-      </tr>
-      <tr data-sev="Medium 5.9" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037461.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106183, CVE-2026-106183</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.9</span></td>
-        <td class="desc">Windows上のGoogle ChromeのChromoting（バージョン155.0.8059.39未満）における認可の欠如により、リモートの攻撃者が細工されたネットワークトラフィックを介して機密情報を取得できる可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
-      </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037460.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていないリソースの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106184, CVE-2026-106184</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39以前のMediaにおいて、初期化されていないリソースが原因で、リモート攻撃者が細工されたHTMLページを介してクロスオリジンのデータを取得できる脆弱性がありました。（Chromiumセキュリティの重大度は高です）</td>
-      </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037459.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-106185, CVE-2026-106185</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39 より前のバージョンの Viz における不適切な入力検証により、レンダラープロセスを乗っ取ったリモート攻撃者が、細工された HTML ページを介してシステムのアクセス制限を回避できる可能性がありました。（Chromium セキュリティの重大度は中です）</td>
-      </tr>
-      <tr data-sev="High 8.6" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037458.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける制御されていない検索パスの要素に関する脆弱性</a><div class="cve-row">CVE-2026-106186, CVE-2026-106186</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.6</span></td>
-        <td class="desc">Windows版Google Chromeのバージョン155.0.8059.39以前におけるCredential Providerの制御されていない検索パス要素が原因で、ローカルの攻撃者がローカルプログラムを利用してサンドボックス外で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重大度は低と評価されています）</td>
-      </tr>
-      <tr data-sev="Medium 4.2" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037457.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106187, CVE-2026-106187</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.2</span></td>
-        <td class="desc">155.0.8059.39より前のGoogle ChromeのPermissionsにおける認可不足のため、リモート攻撃者がレンダラープロセスを侵害し、細工されたHTMLページを介してUI要素を詐称することが可能でした。（Chromiumセキュリティの重大度は低いです）</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037612.html" target="_blank" rel="noopener">クアルコムのCQ8845S Firmware等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-25291, CVE-2026-25291</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">適切な同期機構が欠如しているため、共有メモリページリスト上で同時操作を行う際にメモリが破損します。</td>
       </tr>
       <tr data-sev="High 7.1" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037456.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるフィルタリングの回避に関する脆弱性</a><div class="cve-row">CVE-2026-106188, CVE-2026-106188</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037611.html" target="_blank" rel="noopener">クアルコムのAR8035 ファームウェア等の複数製品におけるデジタル署名の検証に関する脆弱性</a><div class="cve-row">CVE-2026-25302, CVE-2026-25302</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
-        <td class="desc">Android版Google Chromeのバージョン155.0.8059.39より前のSignInにおける混乱代理人問題により、リモートの攻撃者が細工されたHTMLページを介してシステムのアクセス制限を回避し、特権ページにアクセスできる可能性がありました。（Chromiumセキュリティ重大度：中です）</td>
+        <td class="desc">非ELFパーティションを処理する際の暗号化の問題により、認証および署名チェックがバイパスされ、署名されていないまたは破損したイメージをマウントして処理できるようになります。</td>
       </tr>
-      <tr data-sev="High 7.3" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037455.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるコードインジェクションの脆弱性</a><div class="cve-row">CVE-2026-106189, CVE-2026-106189</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.3</span></td>
-        <td class="desc">iOS向けGoogle Chromeのバージョン155.0.8059.39未満のReader Modeにおけるコードインジェクションにより、リモートの攻撃者がソーシャルエンジニアリングを利用して細工されたHTMLページを介し、ウェブオリジンポリシーを回避することが可能でした。（Chromiumセキュリティ重大度：中）</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037610.html" target="_blank" rel="noopener">クアルコムのAR8031 ファームウェア等の複数製品における信頼できないポインタデリファレンスに関する脆弱性</a><div class="cve-row">CVE-2026-57545, CVE-2026-57545</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">グラフィックスコマンドリストの実行中に、誤ったタイプの描画オブジェクトを処理するとメモリが破損する問題です。</td>
       </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="High 7.8" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037454.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106190, CVE-2026-106190</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39 未満の Media における解放後使用（Use after free）の脆弱性により、リモート攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティ重大度：高）</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037609.html" target="_blank" rel="noopener">クアルコムのAR8031 ファームウェア等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-57554, CVE-2026-57554</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
+        <td class="desc">FastRPC呼び出し中に非同期スレッドが同時に共有パフォーマンスカウンタデータにアクセスすると、メモリが破損する問題。</td>
       </tr>
-      <tr data-sev="High 8.3" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037453.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106191, CVE-2026-106191</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39より前のバージョンにおいて、Actorの認可欠落により、レンダラープロセスを侵害したリモート攻撃者が細工されたHTMLページを介してサンドボックス外で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重大度は低です）</td>
-      </tr>
-      <tr data-sev="Medium 4.6" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037452.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-106192, CVE-2026-106192</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.6</span></td>
-        <td class="desc">iOS上のGoogle Chromeモバイル版バージョン155.0.8059.39以前において情報漏えいの問題があり、ローカルの攻撃者が物理的アクセスを介して機密情報を取得できる可能性がありました。（Chromiumによるセキュリティの重大度は低と評価されています）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037451.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106193, CVE-2026-106193</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39より前のバージョンのParserにおけるUse after freeの脆弱性により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの深刻度：高です）</td>
-      </tr>
-      <tr data-sev="High 8.3" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037450.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106194, CVE-2026-106194</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.3</span></td>
-        <td class="desc">155.0.8059.39より前のGoogle ChromeのWebAppInstallsにおける認可欠如の脆弱性により、レンダラプロセスが侵害される可能性がありました。リモートの攻撃者は、ソーシャルエンジニアリングを悪用して細工されたHTMLページを介し、サンドボックス外で任意のコードを実行できる危険がありました。（Chromiumセキュリティ重大度：中）</td>
-      </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037449.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106195, CVE-2026-106195</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">Mac版Google Chromeのバージョン155.0.8059.39以前のChromotingにおいて不適切な認可が存在したため、リモートの攻撃者が細工されたネットワークトラフィックを介してシステムのアクセス制限を回避できる可能性がありました。（Chromiumセキュリティの深刻度は低と評価されています）</td>
-      </tr>
-      <tr data-sev="High 7.6" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037448.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106196, CVE-2026-106196</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.6</span></td>
-        <td class="desc">iOS版Google Chromeのバージョン155.0.8059.39より前には、ナビゲーションにおける認可の欠如のため、リモート攻撃者が細工されたHTMLページを介してWebオリジンポリシーを回避し、特権ページへアクセスすることが可能な問題がありました。（Chromiumのセキュリティ深刻度は中です）</td>
-      </tr>
-      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037447.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106197, CVE-2026-106197</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
-        <td class="desc">Google Chromeのバージョン155.0.8059.39以前のブラウザにはUse after freeの脆弱性があり、リモートの攻撃者が細工されたHTMLページを介してサンドボックス外で任意のコードを実行できる可能性がありました。（Chromiumのセキュリティ重大度は重大です）</td>
-      </tr>
-      <tr data-sev="High 8.2" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037446.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106198, CVE-2026-106198</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39より前のバージョンのFileSystemにおける認可欠如により、レンダラープロセスを侵害したリモート攻撃者が、細工されたHTMLページを介してウェブオリジンポリシーを回避できる可能性がありました。（Chromiumのセキュリティ重大度は中と評価されています）</td>
-      </tr>
-      <tr data-sev="High 8.2" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037445.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106199, CVE-2026-106199</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
-        <td class="desc">Android版Google Chromeのバージョン155.0.8059.39より前において、Actorの不適切な認可によりレンダラープロセスが侵害される問題がありました。この脆弱性を利用したリモート攻撃者は、細工されたHTMLページを介してサイト分離を回避する可能性があります。（Chromiumのセキュリティの重大度：低）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037444.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106200, CVE-2026-106200</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39より前のバージョンのTrackにおけるUse after freeの脆弱性により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重要度は高いです）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037443.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-106201, CVE-2026-106201</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">155.0.8059.39より前のGoogle ChromeのV8における競合状態により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumのセキュリティの重大度は中と評価されています）</td>
-      </tr>
-      <tr data-sev="Medium 4.7" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037442.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていないリソースの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106202, CVE-2026-106202</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.7</span></td>
-        <td class="desc">Windows上のGoogle Chromeのバージョン155.0.8059.39以前のANGLEにおける未初期化リソースの問題により、リモートの攻撃者が細工されたHTMLページを通じてサンドボックス外のメモリを読み取ることが可能でした。（Chromiumセキュリティの重大度は高いです）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037441.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不完全なクリーンアップに関する脆弱性</a><div class="cve-row">CVE-2026-106203, CVE-2026-106203</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">iOS版Google Chromeのバージョン155.0.8059.39以前のAutofillにおける不完全なクリーンアップにより、リモートの攻撃者がソーシャルエンジニアリングを悪用して細工されたHTMLページを介し、機密情報を取得できる可能性がありました。（Chromiumのセキュリティ重大度は高です）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037440.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106204, CVE-2026-106204</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39より前のバージョンのPDFにおけるUse after freeの脆弱性により、リモートの攻撃者が細工されたPDFファイルを通じてサンドボックス内で任意のコードを実行できる問題が発生していました。（Chromiumセキュリティの深刻度：高です）</td>
-      </tr>
-      <tr data-sev="High 8.1" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037439.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106205, CVE-2026-106205</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
-        <td class="desc">Android版Google Chromeのバージョン155.0.8059.39より前のPasswords機能には認可の欠如があり、レンダラープロセスを乗っ取ったリモート攻撃者が細工されたHTMLページを介してサイトアイソレーションを回避できる問題が存在していました。（Chromiumセキュリティの深刻度：中）</td>
-      </tr>
-      <tr data-sev="Medium 5.9" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037438.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-106206, CVE-2026-106206</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.9</span></td>
-        <td class="desc">iOS上のGoogle Chromeのバージョン155.0.8059.39より前のモバイル版には不適切な入力検証の問題があり、リモートの攻撃者が細工されたネットワークトラフィックを介して機密情報を取得できる可能性がありました。（Chromiumセキュリティの重大度は中です）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037437.html" target="_blank" rel="noopener">GoogleのGoogle ChromeにおけるTime-of-check Time-of-use (TOCTOU) 競合状態の脆弱性</a><div class="cve-row">CVE-2026-106207, CVE-2026-106207</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39 未満の V8 における競合状態により、リモート攻撃者が細工された HTML ページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromium セキュリティの重大度は中と評価されています）</td>
-      </tr>
-      <tr data-sev="Medium 6.1" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037436.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106208, CVE-2026-106208</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.1</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39より前のバージョンのAPIには認可の欠如があり、リモートの攻撃者がソーシャルエンジニアリングを利用して、細工されたChrome拡張機能を介して機密情報を漏洩させる可能性がありました。（Chromiumセキュリティの深刻度は中です）</td>
-      </tr>
-      <tr data-sev="Medium 5.4" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037435.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるユーザインターフェースにおける重要情報の誤った表示に関する脆弱性</a><div class="cve-row">CVE-2026-106209, CVE-2026-106209</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.4</span></td>
-        <td class="desc">iOS版Google Chromeのバージョン155.0.8059.39以前のモバイルにおけるUI誤表示により、リモートの攻撃者がソーシャルエンジニアリングを駆使して、細工されたHTMLページを通じてアドレスバーを詐称することが可能でした。（Chromiumのセキュリティ重大度は中です）</td>
-      </tr>
-      <tr data-sev="Low 3.1" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037434.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける観測可能な不一致に関する脆弱性</a><div class="cve-row">CVE-2026-106210, CVE-2026-106210</div></td>
-        <td><span class="sev-badge" style="border-color:#3fb950;color:#3fb950">Low 3.1</span></td>
-        <td class="desc">155.0.8059.39より前のGoogle Chromeにおいて、スクロールに関する観察可能な不一致が存在していました。この問題により、リモート攻撃者が細工されたChrome拡張機能を介してクロスオリジンデータを取得できる可能性がありました。（Chromiumセキュリティの深刻度は中と評価されています）</td>
-      </tr>
-      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037433.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106211, CVE-2026-106211</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
-        <td class="desc">Google Chrome 155.0.8059.39より前のバージョンのTabStripにおけるUse after freeの脆弱性により、リモートの攻撃者がソーシャルエンジニアリングを駆使して、細工されたHTMLページを介してサンドボックス外で任意のコードを実行できる可能性がありました。（Chromiumセキュリティ重大度：高）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037432.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106212, CVE-2026-106212</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">155.0.8059.39未満のGoogle ChromeのAutofillにおける不正な認可の脆弱性により、リモートの攻撃者がソーシャルエンジニアリングを利用して細工されたHTMLページを通じて機密情報を取得できる可能性がありました。（Chromiumセキュリティの重大度は中です）</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037608.html" target="_blank" rel="noopener">VMwareのRabbitMQ Java Clientにおける悪意のあるコード（ウイルスまたはワーム）の複製に関する脆弱性</a><div class="cve-row">CVE-2026-106123, CVE-2026-106123</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
+        <td class="desc">RabbitMQのJavaクライアントライブラリは、JavaおよびJVMベースのアプリケーションがRabbitMQノードに接続してやり取りを行うことを可能にします。バージョン5.35.0以前では、ConnectionFactoryConfigurator.load()がAMQP URIの解析に失敗した際に、ラップされた例外に生のURI値を含めていました。URIには平文のユーザー名およびパスワードが</td>
       </tr>
       <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037431.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける競合状態に関する脆弱性</a><div class="cve-row">CVE-2026-106213, CVE-2026-106213</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037607.html" target="_blank" rel="noopener">Elasticsearch B.V.のKibanaにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-102410, CVE-2026-102410</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">Google Chromeのバージョン155.0.8059.39より前のWebAudioにおける競合状態によって、リモートの攻撃者が細工されたHTMLページを通じてクロスオリジンデータを漏洩させる可能性がありました。（Chromiumセキュリティ重大度：中です）</td>
+        <td class="desc">Kibanaにおける認可の欠如（CWE-862）は、ACLによって適切に制限されていない機能へのアクセス（CAPEC-1）を通じて情報漏洩につながる可能性があります。Metrics Experience機能内の内部APIの一部は、同じ機能内の同等かつ関連するAPIが実施しているKibanaレベルの認可チェックを強制していませんでした。その結果、インデックスに対してデータストアレベルの読み取りアクセ</td>
       </tr>
-      <tr data-sev="Critical 10" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037430.html" target="_blank" rel="noopener">JetBrainsのTeamCityにおける不完全なブラックリストに関する脆弱性</a><div class="cve-row">CVE-2026-106218, CVE-2026-106218</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 10</span></td>
-        <td class="desc">JetBrains TeamCity 2026.1.3 リリース以前のバージョンにおいて、2025年11月7日にKotlin DSLサンドボックスで逸脱が発生し、その結果サーバー上でリモートコード実行（RCE）が可能となっていました。</td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037606.html" target="_blank" rel="noopener">Elasticsearch B.V.のElasticsearchにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-102411, CVE-2026-102411</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Elasticsearchにおけるリソースの無制限またはスロットリングなしの割り当て（CWE-770）は、過剰な割り当てによってサービス拒否（CAPEC-130）を引き起こす可能性があります。Elasticsearchは個々のテンプレートリソースに対してユーザーが提供するメタデータフィールドのサイズ制限を課していますが、複数のそのようなリソースが一緒に取得される際の総メモリ使用量は制限していません</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037605.html" target="_blank" rel="noopener">Elasticsearch B.V.のKibanaにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-102412, CVE-2026-102412</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Kibanaにおける不適切な認可（CWE-863）は、ACLで適切に制限されていない機能へのアクセス（CAPEC-1）を通じて機密情報が漏洩する可能性があります。制限されたFleet管理権限を持つ認証済みKibanaユーザーが、本来はFleet設定の管理者アクセス権を持つユーザーに限定されるべき機密の認証情報にアクセスすることができてしまいます。これが成功すると、攻撃者はFleetサーバーホスト接</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037604.html" target="_blank" rel="noopener">Elasticsearch B.V.のElasticsearchにおける過剰なサイズ値のメモリ割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-103005, CVE-2026-103005</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Elasticsearchにおいて過剰なサイズ値を用いたメモリ割り当て（CWE-789）は、過剰割り当てによるサービス拒否（CAPEC-130）を引き起こす可能性があります。コネクタ管理権限を持つ認証済みユーザーが、過剰に大きな`description`フィールドを持つコネクタリソースを作成し、その後アクセスすることで、クラスタに制御されていない量のメモリを割り当てさせ、利用可能なヒープメモリを枯</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037603.html" target="_blank" rel="noopener">Elasticsearch B.V.のElasticsearchにおける再帰制御に関する脆弱性</a><div class="cve-row">CVE-2026-103006, CVE-2026-103006</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Elasticsearchの制御されていない再帰（CWE-674）は、検索APIの集約機能に対して特別に細工された深くネストされたリクエストを送信することで、サービス拒否（DoS）を引き起こす可能性があります。Elasticsearchには検索集約処理において制御されていない再帰の脆弱性が存在しています。認証されたユーザーで、単一のインデックスに対する読み取りアクセス権を持つ者は、深くネストされた</td>
+      </tr>
+      <tr data-sev="High 7.2" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037602.html" target="_blank" rel="noopener">Elasticsearch B.V.のElasticsearchにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-103007, CVE-2026-103007</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.2</span></td>
+        <td class="desc">Elasticsearchにおける誤った認可（CWE-863）は、認可チェック時に範囲が完全に適用されない委任された管理権限を介して権限昇格を引き起こす可能性があります。Elasticsearchには、特定のインデックスに限定された役割管理機能を他のユーザーに委譲できる、設定可能でデフォルトではない権限に誤った認可の脆弱性が存在します。このスコープ制御を実施する認可チェックは、マッチするインデック</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037601.html" target="_blank" rel="noopener">Elasticsearch B.V.のElasticsearchにおける再帰制御に関する脆弱性</a><div class="cve-row">CVE-2026-103008, CVE-2026-103008</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Elasticsearchにおける制御されていない再帰（CWE-674）は、特別に細工されたリクエストを介してサービス拒否（DoS）を引き起こす可能性があります。このリクエストは、再帰の深さに制限のない深くネストされたデータ構造をサーバーが構築および処理する原因となります。Elasticsearchは、スクリプト化されたランタイムフィールドによって生成されるジオメトリ値の構築およびシリアライズ方法</td>
+      </tr>
+      <tr data-sev="High 7.1" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037600.html" target="_blank" rel="noopener">Elasticsearch B.V.のElasticsearchにおけるユーザ制御の鍵による認証回避に関する脆弱性</a><div class="cve-row">CVE-2026-103009, CVE-2026-103009</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
+        <td class="desc">Elasticsearchにおけるユーザー制御キーを通じた認可バイパス（CWE-639）は、不正なシャード識別子を参照する特別に細工されたクロスクラスター検索リクエストによって情報漏洩を引き起こす可能性があります。Elasticsearchはリモートクラスタセキュリティ（RCS）2.0モデルを通じて行われるクロスクラスター検索リクエストの処理において認可バイパスの脆弱性を含んでいます。認可チェック</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037599.html" target="_blank" rel="noopener">Fedora Project等の複数ベンダの製品における区切り文字の不適切な無害化に関する脆弱性</a><div class="cve-row">CVE-2026-104047, CVE-2026-104047</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">SSSDに脆弱性が発見されました。Microsoft Entra IDを使用するように構成されている場合、検索入力がディレクトリのクエリフィルターに組み込まれる前に適切にサニタイズされません。ローカルユーザーは、細工されたルックアップ要求を送信することでこの脆弱性を悪用し、クエリロジックを操作してディレクトリから不正に情報を漏洩させる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 8.1" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037598.html" target="_blank" rel="noopener">Fedora Project等の複数ベンダの製品における誤った要素を使用した比較に関する脆弱性</a><div class="cve-row">CVE-2026-104048, CVE-2026-104048</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
+        <td class="desc">SSSDに脆弱性が発見されました。信頼が有効なID管理環境において、SSSDはホストベースアクセス制御（HBAC）ルールを評価する際にドメイン修飾子を取り除き、短いユーザー名のみを比較します。信頼されたドメイン内で認証されたユーザーが、認可されたローカルアカウントと同じユーザー名を共有している場合、アクセスポリシーを回避して保護されたサービスやホストに不正にアクセスできる可能性があります。</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037597.html" target="_blank" rel="noopener">langflowにおけるアクセス制御に関する脆弱性</a><div class="cve-row">CVE-2026-104335, CVE-2026-104335</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">IBM Langflow OSS バージョン 1.0.0 から 1.12.2 までにおいて、不適切なアクセス制御が存在し、そのためリモートの認証済み攻撃者が任意のコードを実行できる可能性がある問題があります。</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037596.html" target="_blank" rel="noopener">Apache Software FoundationのApache log4netにおけるNULL バイトまたは NULL キャラクタの無害化に関する脆弱性</a><div class="cve-row">CVE-2026-105239, CVE-2026-105239</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">Apache log4netのEventLogAppenderにおけるヌルバイトやNUL文字の不適切な無害化による脆弱性です。ログに記録された内容にNUL文字が含まれていると、それがWindowsイベントログのレコードの終了として扱われ、その後の例外メッセージや末尾のフィールドなどレイアウトでレンダリングされた内容はすべて保存されません。この脆弱性により、ログメッセージに到達するデータを持つ者は、</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037595.html" target="_blank" rel="noopener">Apache Software FoundationのApache log4netにおけるNULL バイトまたは NULL キャラクタの無害化に関する脆弱性</a><div class="cve-row">CVE-2026-105240, CVE-2026-105240</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">Apache log4netのOutputDebugStringAppenderにおけるヌルバイトまたはNUL文字の不適切な無害化による脆弱性です。ログに記録された内容にNUL文字が含まれていると、その時点でデバッグ出力レコードが終了し、それ以降のレイアウトでレンダリングされた例外テキストや後続のフィールドなどの情報が静かに失われてしまいます。ログメッセージにデータが到達する当事者は、そのレコード</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037594.html" target="_blank" rel="noopener">Apache Software FoundationのApache log4netにおけるUnicode エンコーディングの処理に関する脆弱性</a><div class="cve-row">CVE-2026-105241, CVE-2026-105241</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">Apache log4netのSmtpPickupDirAppenderにおけるUnicodeエンコーディングの不適切な処理に関する脆弱性です。メールファイルライターがエンコードできない内容（ペアになっていないUTF-16サロゲートなど）が原因で書き込み時に例外をスローしました。バッチ内のすべてのバッファされたイベントが破棄され、内容を含むイベントだけでなく、ピックアップディレクトリに切り捨てられ</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037593.html" target="_blank" rel="noopener">Apache Software FoundationのApache log4netにおける例外的な状態の処理に関する脆弱性</a><div class="cve-row">CVE-2026-105242, CVE-2026-105242</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">Apache log4net の aspnet-request パターンコンバータにおける例外条件の不適切な処理に脆弱性があります。リクエストパラメータを読み取る際に ASP.NET のリクエスト検証がトリガーされ、マークアップなどの内容を含むリクエストがレイアウトで例外を発生させます。そのためアペンダがイベント全体を破棄してしまいました。これにより、送信者は自身のリクエストのログ記録を抑制できる</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037592.html" target="_blank" rel="noopener">Apache Software FoundationのApache log4netにおける不十分なロギングに関する脆弱性</a><div class="cve-row">CVE-2026-105243, CVE-2026-105243</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">Apache log4netのEventLogAppenderには、不十分なログ記録の脆弱性があります。長いメッセージは固定サイズに切り詰められますが、そのサイズはWindowsイベントログが受け入れる容量を、ログ名およびソース名を含めて超えてしまいます。その結果、イベントログは何も保存せず、何も報告しません。ログメッセージに到達可能な当事者は、メッセージを十分に長くすることで全ての記録を抑制でき</td>
+      </tr>
+      <tr data-sev="Medium 5.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037591.html" target="_blank" rel="noopener">Apache Software FoundationのApache log4netにおけるエンコードおよびエスケープに関する脆弱性</a><div class="cve-row">CVE-2026-105244, CVE-2026-105244</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.3</span></td>
+        <td class="desc">Apache log4netのRemoteSyslogAppenderにおける出力の不適切なエンコードおよびエスケープの脆弱性です。可視ASCII文字およびスペース以外のすべての文字がエスケープされるのではなく、レコードから削除されていたため、非ASCIIテキストやタブなどの制御文字が通知なしに消失していました。ログメッセージに含まれるデータを扱う者は、例えばゼロ幅スペースを含むユーザー名が「ad</td>
+      </tr>
+      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037590.html" target="_blank" rel="noopener">vLLMにおけるリソースの不適切なシャットダウンおよびリリースに関する脆弱性</a><div class="cve-row">CVE-2026-105922, CVE-2026-105922</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
+        <td class="desc">vllm-projectのvLLM 0.31.0までにセキュリティ上の脆弱性が発見されました。この脆弱性は、コンポーネントPenalty Handlerのファイルvllm/model_executor/layers/utils.py内の関数get_token_bin_counts_and_maskに影響します。この問題によって操作を行うとサービス拒否（DoS）が発生します。リモートからの攻撃が可能</td>
       </tr>
       <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037429.html" target="_blank" rel="noopener">JetBrainsのTeamCityにおけるファイル名やパス名の外部制御に関する脆弱性</a><div class="cve-row">CVE-2026-106219, CVE-2026-106219</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037589.html" target="_blank" rel="noopener">VMwareのRabbitMQ Java Clientにおける無限ループに関する脆弱性</a><div class="cve-row">CVE-2026-106121, CVE-2026-106121</div></td>
         <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">JetBrains TeamCity 2026.2.1以前のバージョンでは、GitサブモジュールのURLの検証が不足していたため、サーバー上のローカルリポジトリを読み取ることが可能となっていました。</td>
+        <td class="desc">RabbitMQのJavaクライアントライブラリは、JavaおよびJVMベースのアプリケーションがRabbitMQノードに接続して対話できるようにしています。バージョン5.37.0以前では、com.rabbitmq.tools.json.JSONReader.read()は入力がクオートされた文字列内または行コメント内で終了すると適切に終了せず、これは文字列および空白のスキャナーがCharacte</td>
+      </tr>
+      <tr data-sev="High 7.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037588.html" target="_blank" rel="noopener">VMwareのRabbitMQ Java Clientにおける複数の脆弱性</a><div class="cve-row">CVE-2026-106122, CVE-2026-106122</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
+        <td class="desc">RabbitMQのJavaクライアントライブラリは、JavaおよびJVMベースのアプリケーションがRabbitMQノードに接続し、相互にやり取りを行うことを可能にします。バージョン5.36.0より前では、ValueReader.readShortstrが不正なUTF-8バイトを置換文字にデコードし、その置換文字がValueWriter.writeShortstrによって適用されるAMQPのshor</td>
+      </tr>
+      <tr data-sev="Medium 5.4" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037587.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるクロスサイトリクエストフォージェリの脆弱性</a><div class="cve-row">CVE-2026-106216, CVE-2026-106216</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.4</span></td>
+        <td class="desc">Android版Google Chromeのバージョン155.0.8059.39より前において、ReadingListのクロスサイトリクエストフォージェリにより、リモートの攻撃者がソーシャルエンジニアリングを利用して細工されたHTMLページを介し、ウェブオリジンポリシーを回避できる可能性がありました。（Chromiumセキュリティの深刻度は中です）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037586.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていないリソースの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106261, CVE-2026-106261</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">155.0.8059.39より前のGoogle ChromeのVideoにおいて未初期化リソースが存在し、これによりリモート攻撃者が細工されたHTMLページを介してサンドボックス内のメモリを読み取ることが可能でした。(Chromiumセキュリティの重要度は中です)</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037585.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106280, CVE-2026-106280</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Google Chrome 155.0.8059.39より前のバージョンにおいて、PermissionElementの誤った認可により、リモートの攻撃者が巧妙に作成されたHTMLページを介してウェブオリジンポリシーを回避できる可能性がありました。（Chromiumセキュリティの深刻度は中です）」</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037584.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106289, CVE-2026-106289</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">Google Chrome 155.0.8059.39 未満のバージョンの FedCM における認可の欠如により、リモートの攻撃者が細工された HTML ページを介してウェブオリジンポリシーを回避できる問題が発生しています。（Chromium セキュリティ重大度：中）</td>
+      </tr>
+      <tr data-sev="Medium 5.4" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037583.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106333, CVE-2026-106333</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.4</span></td>
+        <td class="desc">Google Chrome バージョン 155.0.8059.39 より前の入力における不正な認可により、リモートの攻撃者がソーシャルエンジニアリングを利用して細工された HTML ページを介して UI 要素を偽装できる脆弱性がありました。（Chromium セキュリティの深刻度は中です）</td>
+      </tr>
+      <tr data-sev="High 8.8" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037582.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける情報漏えいに関する脆弱性</a><div class="cve-row">CVE-2026-106334, CVE-2026-106334</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
+        <td class="desc">Google Chromeのバージョン155.0.8059.39より前のPaymentsにおいて情報漏えいが発生し、リモート攻撃者がソーシャルエンジニアリングを利用して細工されたHTMLページを介し、機密情報を取得できる可能性がありました。（Chromiumのセキュリティ重大度は低と評価されています）</td>
       </tr>
       <tr data-sev="Medium 4.7" data-src="JVN iPedia">
-        <td class="date">2026-10-09</td>
+        <td class="date">2026-10-13</td>
         <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037428.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていないリソースの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106258, CVE-2026-106258</div></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037581.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていないリソースの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106376, CVE-2026-106376</div></td>
         <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.7</span></td>
-        <td class="desc">155.0.8059.39 より前の Windows 上の Google Chrome の ANGLE における初期化されていないリソースの問題により、リモートの攻撃者が細工された HTML ページを介してサンドボックス外のメモリを読み取ることが可能でした。（Chromium のセキュリティ重大度は高いです）</td>
+        <td class="desc">155.0.8059.39 より前の Windows 上の Google Chrome の ANGLE における初期化されていないリソースの問題により、リモート攻撃者が細工された HTML ページを介してサンドボックス外のメモリを読み取ることが可能でした。（Chromium セキュリティの重大度は高いと評価されています）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037580.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける認証の欠如に関する脆弱性</a><div class="cve-row">CVE-2026-106384, CVE-2026-106384</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">155.0.8059.39より前のGoogle ChromeのSite Isolationには認可の欠如がありました。この問題により、レンダラープロセスを乗っ取ったリモート攻撃者が細工されたHTMLページを用いてサイト分離を回避することが可能でした。（Chromiumセキュリティの深刻度は中として評価されています）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037579.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける初期化されていないリソースの使用に関する脆弱性</a><div class="cve-row">CVE-2026-106386, CVE-2026-106386</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">WebAudio における未初期化リソースが、155.0.8059.39 より前の Google Chrome に存在し、作成された HTML ページを介してリモートの攻撃者がサンドボックス内のメモリを読み取ることを許していました。（Chromium のセキュリティ重大度は中程度です）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037578.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106389, CVE-2026-106389</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">155.0.8059.39より前のGoogle ChromeにおけるUSBの認可不備により、リモート攻撃者はソーシャルエンジニアリングを悪用し、巧妙に作成されたChrome拡張機能を介してシステムのアクセス制限を回避できる可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
+      </tr>
+      <tr data-sev="Medium 6.1" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037577.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106397, CVE-2026-106397</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.1</span></td>
+        <td class="desc">iOS版Google Chromeのバージョン155.0.8059.39以前におけるモバイル版の認可処理の不備により、リモートの攻撃者がソーシャルエンジニアリングを利用して巧妙に作成したHTMLページを介してシステムのアクセス制限を回避できる可能性がありました。（Chromiumセキュリティの重大度は「中」です）</td>
+      </tr>
+      <tr data-sev="High 8.1" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037576.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106403, CVE-2026-106403</div></td>
+        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.1</span></td>
+        <td class="desc">Google Chrome 155.0.8059.39 未満のバージョンにおいて、アクセシビリティの不適切な認可によって、レンダラープロセスを乗っ取ったリモート攻撃者が細工されたHTMLページを介してサイトアイソレーションを回避できる可能性がありました。（Chromiumのセキュリティ重大度は中です）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037575.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106404, CVE-2026-106404</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">155.0.8059.39 未満の Google Chrome の FontAccess における不適切な認可により、レンダラプロセスを乗っ取ったリモート攻撃者が巧妙に作成された HTML ページを介してシステムのアクセス制限を回避できる問題が発生しました。（Chromium セキュリティの深刻度は中です）</td>
+      </tr>
+      <tr data-sev="Medium 6" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037574.html" target="_blank" rel="noopener">GoogleのGoogle ChromeにおけるTime-of-check Time-of-use (TOCTOU) 競合状態の脆弱性</a><div class="cve-row">CVE-2026-106405, CVE-2026-106405</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6</span></td>
+        <td class="desc">155.0.8059.39より前のAndroid版Google ChromeのCustom Tabsにおける競合状態によって、同時にインストールされたアプリを通じてローカル攻撃者がウェブオリジンポリシーを回避できる可能性がありました。（Chromiumセキュリティの深刻度は中です）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037573.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106407, CVE-2026-106407</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">155.0.8059.39 未満の Google Chrome における GetUserMedia の認可不備により、レンダラプロセスが侵害されたリモート攻撃者が、細工された HTML ページを介してシステムのアクセス制限を回避できる可能性がありました。（Chromium セキュリティ重要度：中）</td>
+      </tr>
+      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037572.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける保護メカニズムの不具合に関する脆弱性</a><div class="cve-row">CVE-2026-106408, CVE-2026-106408</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
+        <td class="desc">iOS上のGoogle Chrome（バージョン155.0.8059.39以前）におけるモバイルの保護機構に不具合があり、リモートの攻撃者が細工されたHTMLページを介してウェブオリジンポリシーを回避できる可能性がありました。（Chromiumセキュリティ深刻度：中程度です）</td>
+      </tr>
+      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
+        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-037571.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-106422, CVE-2026-106422</div></td>
+        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
+        <td class="desc">155.0.8059.39より前のGoogle ChromeのAPIにおいて不適切な認証が存在し、リモート攻撃者が細工されたHTMLページを介してウェブオリジンポリシーを回避できる可能性がありました。（Chromiumセキュリティの深刻度は低です）</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN38664315/" target="_blank" rel="noopener">AssetViewにおける重要なリソースに対する不適切なアクセス権の割り当ての脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">株式会社ハンモックが提供するAssetViewには、重要なリソースに対する不適切なアクセス権の割り当ての脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU99982995/" target="_blank" rel="noopener">Theliaにおける複数の脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-10-09</td>
@@ -579,20 +593,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU94863997/" target="_blank" rel="noopener">バッファロー製Wi-Fi製品における複数の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">株式会社バッファローが提供する複数のWi-Fi製品の設定画面には、複数の脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-09-28</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97703430/" target="_blank" rel="noopener">ISC BINDにおける複数の脆弱性（2026年9月）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">ISC（Internet Systems Consortium）から、ISC BINDの複数の脆弱性が公開されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-09-28</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96520526/" target="_blank" rel="noopener">Androidアプリ「Readwise Reader」における複数のクロスサイトスクリプティングの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-10-09</td>
@@ -820,6 +820,42 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191308" target="_blank" rel="noopener">「GitLab」が「クリティカル」脆弱性含む24件の修正を実施</a></td>
+        <td class="desc">GitLabは2026年10月8日、ソフトウェア開発プラットフォーム「GitLab」のセキュリティアップデートをリリースした。「クリティカル」とされる脆弱性なども修正に含まれており、すみやかに更新するよう求めている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191346" target="_blank" rel="noopener">「AnyDesk」に脆弱性、実証コードも - 6月の更新で修正</a></td>
+        <td class="desc">AnyDesk Softwareが提供するリモートデスクトップソフト「AnyDesk」に深刻な脆弱性が明らかとなった。6月の更新で修正されていたが、公開当初は言及されていなかったという。すでに実証コードも公開されており、注意が必要となる。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191321" target="_blank" rel="noopener">PDF処理ソフト「Ghostscript」の深刻な脆弱性 - 詳細が明らかに</a></td>
+        <td class="desc">PDFやPostScriptを処理する「Ghostscript」に、任意のコード実行や権限昇格につながる複数の脆弱性の詳細情報が公開された。脆弱性は2026年9月のアップデートで修正されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191340" target="_blank" rel="noopener">DB高可用性ツール「IBM Db2 Mirror for i」に権限昇格の脆弱性</a></td>
+        <td class="desc">IBMは、データベースの高可用性ソリューション「IBM Db2 Mirror for i」に深刻な脆弱性が明らかになったとして、セキュリティアップデートをリリースした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191327" target="_blank" rel="noopener">「バイトル」で会員メールアドレスが流出した可能性</a></td>
+        <td class="desc">アルバイト求人情報サイト「バイトル」および「バイトルNEXT」において、登録会員のメールアドレスが外部に流出したことがわかった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-13</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191306" target="_blank" rel="noopener">先週注目された記事（2026年10月4日〜2026年10月10日）</a></td>
+        <td class="desc">2026年10月4日から2026年10月10日までの1週間にSecurity NEXTにおいて注目度が高かった上位10記事は以下のとおり。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-10-08</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191238" target="_blank" rel="noopener">「Apache Struts」「BIND」など悪用脆弱性リストに5件追加 - 米当局</a></td>
@@ -902,49 +938,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191188" target="_blank" rel="noopener">タイ子会社に不正アクセス、パスポート情報流出の可能性 - HIS</a></td>
         <td class="desc">エイチ・アイ・エスは、タイの現地法人において顧客のパスポート情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191191" target="_blank" rel="noopener">Dellのコンテナストレージ製品に複数の脆弱性 - 重要度「クリティカル」</a></td>
-        <td class="desc">Dellは、「Dell Container Storage Modules（CSM）」に複数の脆弱性が確認されたとして、セキュリティアップデートをリリースした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191190" target="_blank" rel="noopener">クラウドサービスにランサム攻撃、障害が発生 - IDCフロンティア</a></td>
-        <td class="desc">ソフトバンク子会社でクラウド事業を展開しているIDCフロンティアは、同社クラウドサービスの一部システムがランサムウェアによるサイバー攻撃を受けたことを明らかにした。東日本のクラウド基盤の一部で障害が発生している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191148" target="_blank" rel="noopener">医療関係者向け情報サイトで会員情報流出の可能性 - 旭化成グループ会社</a></td>
-        <td class="desc">旭化成セラピューティクスは、医療関係者向け情報提供サイト「Pharma DIGITAL」がサイバー攻撃を受け、会員の個人情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/190905" target="_blank" rel="noopener">関係者の個人情報や口座情報が流出の可能性 - 修道学園</a></td>
-        <td class="desc">修道学園は、取引先企業の口座情報や教職員の個人情報などが流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-08</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191076" target="_blank" rel="noopener">チャット内で講座受講者の個人情報が閲覧可能に - 練馬区</a></td>
-        <td class="desc">東京都練馬区は、男女共同参画センターが実施している「女性のためのデジタルスキル習得プログラム」の受講者の個人情報が、チャットツール内で閲覧可能になっていたことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-07</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191125" target="_blank" rel="noopener">リモートアクセス製品「SonicWall SMA1000シリーズ」に深刻なSSRF脆弱性</a></td>
-        <td class="desc">SonicWallのリモートアクセス製品「SMA1000シリーズ」に深刻な脆弱性が明らかとなった。アップデートが提供されている。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年10月12日 15:03 JST</span>
+  <span>最終更新: 2026年10月13日 15:49 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
