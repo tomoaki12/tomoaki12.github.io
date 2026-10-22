@@ -77,15 +77,15 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     <p>JVN / JPCERT/CC / IPA / SecurityNext ― 日本関連セキュリティ情報</p>
   </div>
   <div class="stats">
-    <div class="stat danger"><div class="n">43</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">108</div><div class="l">脆弱性</div></div>
+    <div class="stat danger"><div class="n">0</div><div class="l">高深刻度</div></div>
+    <div class="stat warn"><div class="n">60</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">108</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">60</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -104,355 +104,26 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039045.html" target="_blank" rel="noopener">FreeBSDにおける複数の脆弱性</a><div class="cve-row">CVE-2026-101302, CVE-2026-101302</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">TLS 1.3は、復号化されたペイロードの最後のゼロでないバイトとして実際のレコードタイプを埋め込み、その後にゼロパディングが続く場合があります。内部レコードタイプを検索するコードにオフバイワンのバグがあり、無効なフレームによってこのバグが引き起こされるとアンダーフローが発生し、その後条件なしにNULLポインタ参照が行われてカーネルパニックを引き起こします。リモートのTLS 1.3ピアは、特別に細</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-22</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU99905564/" target="_blank" rel="noopener">PHPにおける複数の任意のコードが実行可能な脆弱性（CVE-2026-109618、CVE-2026-109619）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">The PHP Groupから、PHPの2件の脆弱性（CVE-2026-109618、CVE-2026-109619）に対してアドバイザリが公開されました。</td>
       </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039044.html" target="_blank" rel="noopener">FreeBSDにおける通信チャネルの不適切な宛名の指定に関する脆弱性</a><div class="cve-row">CVE-2026-101303, CVE-2026-101303</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">未接続ソケットのIPv6 UDP送信経路は、ループバック宛先アドレスをjailのプライマリIPv6アドレスに書き換えるjailポリシーを適用していませんでした。そのため、クラシック（非VNET）jail内のプロセスは、ホストのIPv6ループバックアドレスで待機しているサービスにUDPデータグラムを送信でき、jailのネットワーク分離が回避される可能性があります。</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-22</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU91023667/" target="_blank" rel="noopener">LIFF SDKにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">LINEヤフー株式会社が提供するLIFF SDKには、クロスサイトスクリプティングの脆弱性が存在します。</td>
       </tr>
-      <tr data-sev="High 7.1" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039043.html" target="_blank" rel="noopener">FreeBSDにおける削除された特権に対する不適切なチェックに関する脆弱性</a><div class="cve-row">CVE-2026-101304, CVE-2026-101304</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.1</span></td>
-        <td class="desc">fdescfs(4) が "nodup" オプション付きでジュール内にマウントされている場合、/dev/fd/N を開くと、FD_RESOLVE_BENEATH やディスクリプター N の Capsicum ケイパビリティ権限が継承されていないディスクリプターが返されます。別のジュールからディレクトリファイルディスクリプターを受け取ったジュール内のプロセスは、これらの手法を利用してジュールのファイ</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039042.html" target="_blank" rel="noopener">FreeBSDにおける削除された特権に対する不適切なチェックに関する脆弱性</a><div class="cve-row">CVE-2026-101305, CVE-2026-101305</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">renameat(2) は、そのディレクトリ引数に対して FD_RESOLVE_BENEATH を適用していませんでした。これにより、監獄（jail）内のプロセスが制限されたディスクリプタに相対的なディレクトリ名の変更を行い、fchdir(2) を使って監獄のルートを脱出できる可能性がありました。この操作は、ディレクトリが監獄のルートからもアクセス可能なファイルシステム上に存在している必要がありま</td>
-      </tr>
-      <tr data-sev="Critical 9.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039041.html" target="_blank" rel="noopener">FreeBSDにおける複数の脆弱性</a><div class="cve-row">CVE-2026-101306, CVE-2026-101306</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.8</span></td>
-        <td class="desc">SCM_RIGHTSによるファイルディスクリプタの転送時に、FD_RESOLVE_BENEATHフラグが保持されませんでした。そのため、プロセスはUnixドメインソケットを通じて自身にディスクリプタを送信することで、この制限を解除できました。別のjailからディレクトリのファイルディスクリプタを受け取ったjail内のプロセスは、これらの手法を用いることでjailのファイルシステムルート制限を回避す</td>
-      </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039040.html" target="_blank" rel="noopener">FreeBSDにおける複数の脆弱性</a><div class="cve-row">CVE-2026-101307, CVE-2026-101307</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">PCMサンプル配列を拡張する必要がある場合、RACKスタックは16ビットの割り当てカウンターを倍増させます。繰り返し倍増するとカウンターがゼロに巻き戻り、ほぼゼロ長の割り当てが発生し、その後既存のサンプルが過小サイズのバッファにコピーされてしまいます。リモートのピアは確立された接続上で十分な数のACKを送信することでこの拡張をトリガーできます。リモート攻撃者がRACKスタックを使用するシステムにT</td>
-      </tr>
-      <tr data-sev="Medium 5.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039039.html" target="_blank" rel="noopener">FreeBSDにおけるTime-of-check Time-of-use (TOCTOU) 競合状態の脆弱性</a><div class="cve-row">CVE-2026-101308, CVE-2026-101308</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 5.5</span></td>
-        <td class="desc">オーディオチャンネルのバッファサイズを変更する必要がある場合、sound(4)ドライバはバッファがメモリマップされていないことを確認し、その後チャンネルロックを解除して新しいバッファを割り当てます。この間に別のスレッドでmmap(2)呼び出しが完了する可能性があり、その後リサイズ処理は再確認せずにマップされたバッファを解放してしまいます。サウンドデバイスへのアクセス権を持つ特権のないローカルユーザ</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039038.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおけるスタックベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-103830, CVE-2026-103830</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stagerは、スタックベースのバッファオーバーフロー脆弱性の影響を受けており、これにより現在のユーザー権限で任意のコードを実行される可能性があります。この問題を悪用するには、被害者が悪意のあるファイルを開くなどのユーザー操作が必要です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039037.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-103832, CVE-2026-103832</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stagerは境界外書き込みの脆弱性の影響を受けており、これにより現在のユーザー権限で任意のコードを実行される可能性があります。この問題を悪用するには、被害者が悪意のあるファイルを開く操作を行う必要があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039036.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-103833, CVE-2026-103833</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stager は、現在のユーザーのコンテキストで任意のコードが実行される可能性のある境界外書き込みの脆弱性の影響を受けます。この問題を悪用するには、被害者が悪意のあるファイルを開くなどのユーザー操作が必要です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039035.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-103834, CVE-2026-103834</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stager は、現在のユーザーのコンテキストで任意のコードを実行される可能性がある境界外書き込みの脆弱性の影響を受けます。この問題を悪用するには、被害者が悪意のあるファイルを開くというユーザーの操作が必要です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039034.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-103835, CVE-2026-103835</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stager は範囲外書き込みの脆弱性の影響を受けており、これにより現在のユーザーのコンテキストで任意のコードを実行される可能性があります。この問題を悪用するには、被害者が悪意のあるファイルを開くというユーザー操作を行う必要があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039033.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-103836, CVE-2026-103836</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stager は、現在のユーザーのコンテキストで任意のコードが実行される可能性のある境界外書き込みの脆弱性の影響を受けます。この問題を悪用するためには、被害者が悪意のあるファイルを開く必要があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039032.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-103837, CVE-2026-103837</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stagerは、境界外書き込みの脆弱性の影響を受けており、これにより現在のユーザーのコンテキストで任意のコードを実行できる可能性があります。この問題を悪用するには、被害者が悪意のあるファイルを開くというユーザーによる操作が必要です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039031.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-103838, CVE-2026-103838</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stager は、現在のユーザーのコンテキストで任意のコードを実行される可能性がある境界外書き込みの脆弱性に影響されています。この問題を悪用するには、被害者が悪意のあるファイルを開くという操作を行う必要があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039030.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外書き込みに関する脆弱性</a><div class="cve-row">CVE-2026-103839, CVE-2026-103839</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stager は、現在のユーザーのコンテキストで任意のコードを実行させる可能性がある範囲外書き込みの脆弱性の影響を受けています。この問題を悪用するには、被害者が悪意のあるファイルを開くというユーザー操作が必要です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039029.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-103840, CVE-2026-103840</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stagerは、細工されたファイルを解析する際に境界外読み取りの脆弱性の影響を受けます。この脆弱性により、割り当てられたメモリ構造の末尾を越えて読み取ってしまう可能性があります。攻撃者はこの脆弱性を悪用して、現在のユーザーのコンテキストでコードを実行する可能性があります。この問題を悪用するには、被害者が悪意のあるファイルを開くというユーザーによる操作が必要です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039028.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-103841, CVE-2026-103841</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stager には、細工されたファイルを解析する際に境界外読み取りの脆弱性が存在し、割り当てられたメモリ構造の末尾を越えて読み取ってしまう可能性があります。攻撃者はこの脆弱性を悪用することで、現在のユーザーのコンテキストでコードを実行できます。この問題を悪用するには、被害者が悪意のあるファイルを開くというユーザー操作が必要です。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039027.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-103842, CVE-2026-103842</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stagerは、細工されたファイルを解析する際に境界外読み取りの脆弱性の影響を受けます。これにより、割り当てられたメモリ構造の終端を超えて読み取る可能性があります。攻撃者はこの脆弱性を悪用し、現在のユーザーのコンテキストでコードを実行することが可能です。この問題を悪用するためには、被害者が悪意のあるファイルを開く必要があります。</td>
-      </tr>
-      <tr data-sev="High 7.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039026.html" target="_blank" rel="noopener">アドビのAdobe Substance 3D Stagerにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-103843, CVE-2026-103843</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.8</span></td>
-        <td class="desc">Substance3D - Stager は Use After Free の脆弱性の影響を受けており、これにより現在のユーザーのコンテキストで任意のコードを実行される可能性があります。この問題を悪用するには、被害者が悪意のあるファイルを開くなどのユーザー操作を行う必要があります。</td>
-      </tr>
-      <tr data-sev="High 8.2" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039025.html" target="_blank" rel="noopener">アドビのAdobe ColdFusionにおける不正な認証に関する脆弱性</a><div class="cve-row">CVE-2026-105898, CVE-2026-105898</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.2</span></td>
-        <td class="desc">ColdFusionは不適切な認可の脆弱性の影響を受けており、これにより現在のユーザーのコンテキストで任意のコードを実行される可能性があります。権限の低い攻撃者がこの脆弱性を悪用して任意のコードを実行する可能性もあります。この問題を悪用するには、被害者が悪意のあるファイルを開くというユーザーの操作が必要です。スコープが変更されています。</td>
-      </tr>
-      <tr data-sev="Critical 10" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039024.html" target="_blank" rel="noopener">アドビのAdobe ColdFusionにおける危険なタイプのファイルの無制限アップロードに関する脆弱性</a><div class="cve-row">CVE-2026-105899, CVE-2026-105899</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 10</span></td>
-        <td class="desc">ColdFusion は、危険なタイプのファイルを無制限にアップロードできる脆弱性の影響を受けており、これにより現在のユーザーのコンテキストで任意のコードが実行される可能性があります。攻撃者はこの脆弱性を悪用して任意のコードを実行できます。この問題を悪用するためにユーザーの操作は必要ありません。影響範囲が変更されました。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039023.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における境界条件の判定に関する脆弱性</a><div class="cve-row">CVE-2026-108443, CVE-2026-108443</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office Word のオフバイワンエラーにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性がある脆弱性です。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039022.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-108444, CVE-2026-108444</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office におけるヒープベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039021.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるスタックベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-108445, CVE-2026-108445</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office Wordのスタックベースのバッファオーバーフローにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039020.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-108446, CVE-2026-108446</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office Excelの解放後使用（Use after free）の脆弱性により、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039019.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-108447, CVE-2026-108447</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office Wordのヒープベースのバッファオーバーフローにより、認証されていない攻撃者がネットワーク経由でコードを実行する可能性があります。</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039018.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-108448, CVE-2026-108448</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">Microsoft Office Outlook のヒープベースのバッファオーバーフローにより、権限のない攻撃者がネットワーク越しにコードを実行する可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039017.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるヒープベースのバッファオーバーフローの脆弱性</a><div class="cve-row">CVE-2026-108449, CVE-2026-108449</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office Wordのヒープベースのバッファオーバーフローにより、不正な攻撃者がネットワークを介してコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039016.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-108450, CVE-2026-108450</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office Wordにおけるヒープベースのバッファオーバーフローの脆弱性により、未承認の攻撃者がネットワーク経由でコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039015.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における複数の脆弱性</a><div class="cve-row">CVE-2026-108451, CVE-2026-108451</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office Wordの数値切り捨てエラーにより、不正な攻撃者がネットワーク経由でコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039014.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft SharePoint Serverにおけるパストラバーサルの脆弱性</a><div class="cve-row">CVE-2026-108452, CVE-2026-108452</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Microsoft Office SharePointにおける制限されたディレクトリへのパス名の不適切な制限（「パストラバーサル」）の脆弱性により、認可された攻撃者がネットワーク経由でコードを実行できる可能性があります。</td>
-      </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039013.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-108453, CVE-2026-108453</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Microsoft Office PowerPointにおける境界外読み取りの脆弱性により、不正な攻撃者がネットワークを介して情報を漏洩させる可能性があります。</td>
-      </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039012.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品におけるバッファオーバーリードの脆弱性</a><div class="cve-row">CVE-2026-108454, CVE-2026-108454</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Microsoft Office PowerPointのバッファオーバーリードにより、不正な攻撃者がネットワークを介して情報を漏洩させる可能性があります。</td>
-      </tr>
-      <tr data-sev="Medium 6.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039011.html" target="_blank" rel="noopener">マイクロソフトのMicrosoft 365 Apps等の複数製品における境界外読み取りに関する脆弱性</a><div class="cve-row">CVE-2026-108455, CVE-2026-108455</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 6.5</span></td>
-        <td class="desc">Microsoft Office PowerPointにおける境界外読み取りの脆弱性により、権限のない攻撃者がネットワークを介して情報を開示できる可能性があります。</td>
-      </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039010.html" target="_blank" rel="noopener">Node.js Foundationのundiciにおける証明書検証に関する脆弱性</a><div class="cve-row">CVE-2026-109383, CVE-2026-109383</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">undiciはNode.js用のHTTPクライアントライブラリです。バージョン4.0.0から6.29.0、7.0.0から7.30.0、および8.0.0から8.12.1において、そのAgentディスパッチャはコンストラクタオプションをJSONベースのディープクローンを通じて各オリジンプールに渡します。しかしJSONは関数を表現できないため、checkServerIdentityコールバックを含む呼び</td>
-      </tr>
-      <tr data-sev="Critical 9.1" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039009.html" target="_blank" rel="noopener">Node.js Foundationのundiciにおける複数の脆弱性</a><div class="cve-row">CVE-2026-109829, CVE-2026-109829</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.1</span></td>
-        <td class="desc">undiciはNode.js用のHTTPクライアントライブラリです。バージョン7.0.0から7.30.0および8.0.0から8.12.1において、オリジンレスのAgentがリダイレクトインターセプターとキャッシュインターセプターをその順序で共有キャッシュストアと共に構成すると、キャッシュはリダイレクトハンドラーがオリジンを変更する前の元のリクエストURLからキーを生成します。そのため、クロスオリジ</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039008.html" target="_blank" rel="noopener">Node.js Foundationのundiciにおける大文字と小文字の区別の不適切な処理に関する脆弱性</a><div class="cve-row">CVE-2026-109841, CVE-2026-109841</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">undiciはNode.js用のHTTPクライアントライブラリです。バージョン7.15.0から7.30.0および8.0.0から8.12.1の間では、そのfetch()実装がSubresource Integrity（SRI）メタデータを検証する際に、アルゴリズムトークンを小文字のみのセットと照合しています。しかし、SRI仕様はトークンをASCII小文字形式で定義しているため、有効であっても大文字や</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039007.html" target="_blank" rel="noopener">Node.js Foundationのundiciにおける複数の脆弱性</a><div class="cve-row">CVE-2026-109855, CVE-2026-109855</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">undiciはNode.js用のHTTPクライアントライブラリです。バージョン8.11.0および8.11.1では、実験的なWebSocketクライアントがHTTP/2を許可されている場合にデフォルトで有効になっており、HTTP/2上でのWebSocketハンドシェイクの失敗を適切に処理できません。具体的には、リクエストがすでに完了済みとマークされているため、中止処理が無効化され、基盤となるHTTP</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039006.html" target="_blank" rel="noopener">Node.js Foundationのundiciにおける複数の脆弱性</a><div class="cve-row">CVE-2026-109869, CVE-2026-109869</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">undiciはNode.js向けのHTTPクライアントライブラリです。バージョン6.23.0から6.29.0、7.18.0から7.30.0、8.0.0から8.12.1において、悪意のあるサーバーが5つ以上のコンテンツエンコーディングを含むレスポンスを返し、ボディを送信する前に接続を閉じると、fetch()の実装がNode.jsプロセスをクラッシュさせます。undiciはコンテンツエンコーディングの</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039005.html" target="_blank" rel="noopener">Node.js Foundationのundiciにおける制限またはスロットリング無しのリソースの割り当てに関する脆弱性</a><div class="cve-row">CVE-2026-109924, CVE-2026-109924</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">undiciはNode.jsのHTTPクライアントライブラリです。バージョン6.5.0から6.29.0、7.0.0から7.30.0、および8.0.0から8.12.1において、そのEventSourceクライアントは悪意のあるまたは侵害されたServer-Sent Eventsピアによりプロセスメモリを使い果たされる可能性があります。空白のイベント区切りなしに数百万の小さな完了データフィールドを送信</td>
-      </tr>
-      <tr data-sev="High 7.5" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039004.html" target="_blank" rel="noopener">Node.js Foundationのundiciにおける複数の脆弱性</a><div class="cve-row">CVE-2026-109932, CVE-2026-109932</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 7.5</span></td>
-        <td class="desc">undiciはNode.js向けのHTTPクライアントライブラリです。バージョン5.15.0から6.29.0、7.0.0から7.30.0、および8.0.0から8.12.1においては、Node.jsで公開されるバンドルされたWebSocketを含むWebSocketクライアントが、悪意のあるまたは乗っ取られたWebSocketサーバーによってプロセスのメモリを枯渇させられる可能性があります。受信した</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039003.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-110913, CVE-2026-110913</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">155.0.8059.84より前のGoogle ChromeのDOMにおけるメモリ破損の脆弱性により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティ重大度：高）」</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039002.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-110914, CVE-2026-110914</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">155.0.8059.84以前のGoogle ChromeのWorkersにおけるメモリ破損により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの深刻度は中です）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039001.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-110915, CVE-2026-110915</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chrome 155.0.8059.84以前のCompositingにおけるUse after freeの脆弱性により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できる可能性がありました。（Chromiumセキュリティの重大度：中です）</td>
-      </tr>
-      <tr data-sev="Critical 9.6" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-039000.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける入力確認に関する脆弱性</a><div class="cve-row">CVE-2026-110916, CVE-2026-110916</div></td>
-        <td><span class="sev-badge" style="border-color:#f85149;color:#f85149">Critical 9.6</span></td>
-        <td class="desc">Google Chrome のデスクトップ版における入力検証の不備により、155.0.8059.84より前のバージョンでは、リモートの攻撃者が巧妙に作成された HTML ページを介してサンドボックスの外部で任意のコードを実行できる可能性があります。（Chromiumのセキュリティ重大度は中程度です）</td>
-      </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-038999.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-110917, CVE-2026-110917</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">155.0.8059.84より前のGoogle ChromeのSVGにおけるメモリ破損の脆弱性により、リモートの攻撃者が細工されたHTMLページを介してメモリを読み取ることが可能でした。（Chromiumセキュリティの重大度は高です）</td>
-      </tr>
-      <tr data-sev="Medium 4.3" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-038998.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-110918, CVE-2026-110918</div></td>
-        <td><span class="sev-badge" style="border-color:#d29922;color:#d29922">Medium 4.3</span></td>
-        <td class="desc">155.0.8059.84 未満の Google Chrome のコアにおけるメモリ破損の脆弱性により、リモートの攻撃者が細工された HTML ページを介してメモリを読み取ることが可能でした。（Chromium のセキュリティ重大度は高です）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-038997.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおける解放済みメモリの使用に関する脆弱性</a><div class="cve-row">CVE-2026-110919, CVE-2026-110919</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chromeのバージョン155.0.8059.84より前のV8におけるUse after freeの脆弱性により、リモート攻撃者が細工されたHTMLページを介してサンドボックス内で恣意的なコードを実行できる可能性がありました。（Chromiumのセキュリティ重大度は高と評価されています）</td>
-      </tr>
-      <tr data-sev="High 8.8" data-src="JVN iPedia">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#58a6ff;color:#58a6ff">JVN iPedia</span></td>
-        <td class="title-cell"><a href="https://jvndb.jvn.jp/ja/contents/2026/JVNDB-2026-038996.html" target="_blank" rel="noopener">GoogleのGoogle Chromeにおけるバッファエラーの脆弱性</a><div class="cve-row">CVE-2026-110920, CVE-2026-110920</div></td>
-        <td><span class="sev-badge" style="border-color:#f0883e;color:#f0883e">High 8.8</span></td>
-        <td class="desc">Google Chromeの155.0.8059.84より前のバージョンにおけるV8のメモリ破損により、リモートの攻撃者が細工されたHTMLページを介してサンドボックス内で任意のコードを実行できました。(Chromiumセキュリティ重大度：高)</td>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-22</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU91196958/" target="_blank" rel="noopener">ISC BINDにおける複数の脆弱性（2026年10月）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">ISC（Internet Systems Consortium）から、ISC BINDの複数の脆弱性が公開されました。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-10-21</td>
@@ -573,26 +244,12 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">EGセキュアソリューションズ株式会社が提供するSiteGuard Server Editionには、OSコマンドインジェクションの脆弱性が存在します。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-14</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU92045336/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年10月13日）</a><div class="cve-row"></div></td>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-10-22</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260033.html" target="_blank" rel="noopener">注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-14</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96061614/" target="_blank" rel="noopener">KomodoサーバーのエージェントPeripheryにおけるOSコマンドインジェクションの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-14</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU91984971/" target="_blank" rel="noopener">Lowcoder Query Library APIにおける認可回避の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+        <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-10-14</td>
@@ -626,13 +283,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="date">2026-09-24</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
         <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260028.html" target="_blank" rel="noopener">注意喚起: F5 BIG-IP Access Policy Managerにおけるヒープベースのバッファオーバーフローの脆弱性（CVE-2026-94127）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-15</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260027.html" target="_blank" rel="noopener">注意喚起: Cisco Secure Email GatewayにおけるSQLインジェクションの脆弱性（CVE-2026-76461）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
       </tr>
@@ -805,6 +455,20 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">複数のマイクロソフト製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-10-22</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html" target="_blank" rel="noopener">PHPの脆弱性対策について(CVE-2026-109618、CVE-2026-109619：PHP2shell)</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-10-21</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/pre-alert20261021.html" target="_blank" rel="noopener">【事前準備のお願い】PHPのセキュリティリリース公開予定について</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-10-21</td>
         <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
         <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/1021-jre.html" target="_blank" rel="noopener">Oracle Java の脆弱性対策について(2026年10月)</a><div class="cve-row"></div></td>
@@ -876,10 +540,46 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-10-22</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191766" target="_blank" rel="noopener">米当局、「PHP脆弱性」の即修正を勧告 - 困難ならオフラインに</a></td>
+        <td class="desc">米サイバーセキュリティインフラセキュリティ庁（CISA）は、プログラム言語「PHP」に深刻な脆弱性2件が見つかった問題で、修正プログラムをただちに適用するよう強く勧告した。更新が困難な場合は、インターネットへの公開を控えることを推奨している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-22</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191772" target="_blank" rel="noopener">「PHP」脆弱性、2024年に兆候把握も修正難航 - 公開前に混乱</a></td>
+        <td class="desc">「PHP」で判明した深刻な脆弱性2件をめぐり、PHP Foundationは発見から修正に至る経緯を明らかにした。一部の問題は2024年に把握していたが、リソース不足から対応が長期化。関係者間で調整のうえ情報を公開する予定だったが、公開前に情報が漏洩するなど混乱も生じたという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191760" target="_blank" rel="noopener">「GitLab」に深刻な脆弱性 - 旧ブランチにも修正を提供</a></td>
+        <td class="desc">ソフトウェア開発プラットフォーム「GitLab」に複数の脆弱性が判明した。深刻な脆弱性も含まれており、早急にアップデートするよう強く呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191749" target="_blank" rel="noopener">「PHP」に2件の深刻なRCE脆弱性 - アップデートを公開</a></td>
+        <td class="desc">プログラム言語「PHP」に深刻な脆弱性2件が判明した。開発チームはセキュリティアップデートをリリースし、利用者に更新するよう強く呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191734" target="_blank" rel="noopener">Oracle、四半期定例パッチで1295件を修正 - 深刻な脆弱性も</a></td>
+        <td class="desc">Oracleは現地時間2026年10月20日、四半期ごとに提供している「Critical Patch Update（CPU）」を公開した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-10-21</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191702" target="_blank" rel="noopener">「Chrome 156」公開、脆弱性353件を修正 - 「クリティカル」6件</a></td>
         <td class="desc">Googleは、ウェブブラウザ「Chrome」の最新版となる「Chrome 156」をリリースした。多数の脆弱性に対処しており、重要度がもっとも高い「クリティカル（Critical）」とされる脆弱性も6件含まれる。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191717" target="_blank" rel="noopener">個人情報流出が判明、意図しない売買も - 岩井コスモ証券</a></td>
+        <td class="desc">岩井コスモ証券は、インターネット取引システムにおいて個人情報が流出したことを明らかにした。意図しない取り引きも確認されたという。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-10-21</td>
@@ -892,6 +592,24 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191697" target="_blank" rel="noopener">「Firefox 158.0.1」を公開 - 脆弱性や侵害された中間証明書に対処</a></td>
         <td class="desc">Mozilla Foundationは現地時間2026年10月20日、ウェブブラウザのセキュリティアップデート「Firefox 158.0.1」を公開した。複数の脆弱性を修正したほか、侵害された中間証明書を遮断するためのリストを更新している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191714" target="_blank" rel="noopener">「ふるさとチョイス」に不正アクセス - 会員情報が流出</a></td>
+        <td class="desc">ふるさと納税サイト「ふるさとチョイス」が第三者によるサイバー攻撃を受け、登録会員の個人情報が流出したことがわかった。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191595" target="_blank" rel="noopener">「代金後払いサービス」で個人情報が流出 - ヤマト運輸</a></td>
+        <td class="desc">ヤマト運輸の「クロネコ代金後払いサービス」がサイバー攻撃を受けた問題で、顧客の個人情報が流出したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-21</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191730" target="_blank" rel="noopener">「PHP」に複数の深刻な脆弱性 - 21日に修正版を公開予定</a></td>
+        <td class="desc">「PHP」に複数の深刻な脆弱性が確認された。PHPのセキュリティチームは、10月21日に修正版をリリースする計画で、利用者にアップデートの準備を呼びかけている。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-10-20</td>
@@ -940,67 +658,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191667" target="_blank" rel="noopener">大会形式を刷新、2月に「SECCON Tournament」開催</a></td>
         <td class="desc">日本ネットワークセキュリティ協会（JNSA）のSECCON実行委員会は、2月にセキュリティ競技大会「SECCON Tournament」を都内で開催すると発表した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-20</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191332" target="_blank" rel="noopener">委託先が顧客のメアド保存のPCを紛失 - 山陰合同銀</a></td>
-        <td class="desc">山陰合同銀行は、委託先において顧客のメールアドレスが含まれるおそれがある業務用パソコンが所在不明となっていることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-18</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191246" target="_blank" rel="noopener">【特別企画】メッセージングセキュリティの最新動向がテーマ - JPAAWGが年次イベント</a></td>
-        <td class="desc">2026年前半以降、予想を超えるAIの進化によってメールやメッセージングを取り巻くセキュリティ環境も目まぐるしく変化している。悪質化する攻撃に対し、グローバルではどのような対応が進められているのだろうか。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-18</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191608" target="_blank" rel="noopener">「Fortinet」「BeyondTrust」の脆弱性悪用に注意喚起 - 米当局</a></td>
-        <td class="desc">米当局は、Fortinet製品やBeyondTrust製品に関する脆弱性2件が悪用されているとして、注意喚起を行った。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-19</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191592" target="_blank" rel="noopener">「Node.js」のセキュリティアップデート - 10月21日以降に公開予定</a></td>
-        <td class="desc">「Node.js」の開発チームは、複数の脆弱性が確認されたとして、現地時間2026年10月21日以降にセキュリティアップデートをリリース予定であることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-19</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191600" target="_blank" rel="noopener">ファンケルとアテニア、eコマースサイトの会員情報が流出</a></td>
-        <td class="desc">キリンホールディングスグループで化粧品事業を展開するファンケルおよび同社子会社のアテニアは、両社の通信販売サイトが外部より侵害され、会員の個人情報が流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-19</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191329" target="_blank" rel="noopener">「ココナラスキルマーケット」に不正アクセス - 履歴書など流出</a></td>
-        <td class="desc">ノウハウやスキルの個人向け取引サービス「ココナラスキルマーケット」が外部から不正アクセスを受け、会員の個人情報が流出したことがわかった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-19</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191145" target="_blank" rel="noopener">交通系IC「nimoca」の利用履歴照会サービスで個人情報が流出</a></td>
-        <td class="desc">西日本鉄道の子会社であるニモカは、交通系ICカード「nimoca」の利用履歴照会サービスがサイバー攻撃を受け、個人情報が流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-19</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191552" target="_blank" rel="noopener">「コミックシーモア」で情報流出 - 影響など調査</a></td>
-        <td class="desc">電子書籍ストアの「コミックシーモア」が、第三者より侵害され、会員情報やログ情報が外部へ流出したことがわかった。影響など詳細を調べている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-19</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191620" target="_blank" rel="noopener">Progress製データ連携ツール向けAIエージェント定義ファイルに脆弱性</a></td>
-        <td class="desc">Progress Softwareが提供するデータ連携ツール「Progress DataDirect」の一部定義ファイルに</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年10月21日 13:53 JST</span>
+  <span>最終更新: 2026年10月22日 13:53 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
