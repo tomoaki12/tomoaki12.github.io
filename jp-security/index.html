@@ -78,14 +78,14 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
   </div>
   <div class="stats">
     <div class="stat danger"><div class="n">0</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">60</div><div class="l">脆弱性</div></div>
+    <div class="stat warn"><div class="n">61</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">60</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">61</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -105,6 +105,43 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN90463048/" target="_blank" rel="noopener">Sleipnir Mobile for Androidのユーザーインターフェースにおいて偽のアドレスバーなどを表示される脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">フェンリル株式会社が提供するSleipnir Mobile for Androidには、ユーザーインターフェースにおいて偽のアドレスバーなどを表示される脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90547696/" target="_blank" rel="noopener">Fireblocks製mpc-libの強化導出（Hardened Derivation）処理における脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90363302/" target="_blank" rel="noopener">COVESA vsomeipにおける過剰なメモリ割り当ての脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90141693/" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年10月）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Siemensから各製品向けのアドバイザリが公表されました。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97400824/" target="_blank" rel="noopener">BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Googleのデータ圧縮アルゴリズムBrotliのC言語実装における脆弱性（ CVE-2026-111497 ）に対するアドバイザリが公開されました。 
+ 
+本脆弱性は「HTTP2Shell」や「Node2Shell」とも呼ばれています。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
         <td class="date">2026-10-26</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96549652/" target="_blank" rel="noopener">富士電機製V-SFTにおける複数の脆弱性（2026年10月）</a><div class="cve-row"></div></td>
@@ -117,13 +154,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/jp/JVN75668103/" target="_blank" rel="noopener">電子納品物検査支援システムにおけるインストール時の不適切なファイルアクセス権設定の脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">国土交通省が提供する電子納品物検査支援システムには、インストール時に不適切なファイルアクセス権設定が行われる脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-26</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90141693/" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年10月）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Siemensから各製品向けのアドバイザリが公表されました。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-10-23</td>
@@ -216,45 +246,24 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="na">—</span></td>
         <td class="desc">ヤマハ株式会社が提供するVOCALOID6 Editorには、外部エンティティ参照の不適切な制限の脆弱性が存在します。</td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-16</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU96928590/" target="_blank" rel="noopener">CISA ICS Advisory / ICS Medical Advisory（2026年10月15日）</a><div class="cve-row"></div></td>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260034.html" target="_blank" rel="noopener">注意喚起: BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">米国CISAがCISA ICS Advisory / ICS Medical Advisoryを公表しました。</td>
+        <td class="desc"></td>
       </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-15</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN94004488/" target="_blank" rel="noopener">「車検証閲覧アプリ」における送信データへの機微な情報の挿入の脆弱性</a><div class="cve-row"></div></td>
+      <tr data-sev="" data-src="JPCERT 注意喚起">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
+        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260033.html" target="_blank" rel="noopener">注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (更新)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
-        <td class="desc">国土交通省が提供する「車検証閲覧アプリ」には、送信データへの機微な情報の挿入の脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-15</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN48627289/" target="_blank" rel="noopener">スマートフォンアプリ「ハンドメイドマーケットアプリ - Creema（クリーマ）」におけるオープンリダイレクトの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">株式会社クリーマが提供するスマートフォンアプリ「ハンドメイドマーケットアプリ - Creema（クリーマ）」には、オープンリダイレクトの脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-15</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN40460777/" target="_blank" rel="noopener">スマートフォンアプリ「ゲオアプリ」における複数の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">株式会社ゲオが提供するスマートフォンアプリ「ゲオアプリ」には、複数の脆弱性が存在します。</td>
+        <td class="desc"></td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-10-23</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
         <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260030.html" target="_blank" rel="noopener">注意喚起: 直近で相次いでいる国内組織における不正アクセスに関する注意喚起  (更新)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-10-22</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260033.html" target="_blank" rel="noopener">注意喚起: PHPにおける複数の脆弱性（CVE-2026-109618、CVE-2026-109619）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
       </tr>
@@ -276,13 +285,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="date">2026-10-02</td>
         <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
         <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260029.html" target="_blank" rel="noopener">注意喚起: NetScaler ADCおよびNetScaler Gatewayにおける複数の脆弱性（CVE-2026-88771、CVE-2026-88772等）に関する注意喚起  (更新)</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc"></td>
-      </tr>
-      <tr data-sev="" data-src="JPCERT 注意喚起">
-        <td class="date">2026-09-24</td>
-        <td><span class="src-badge" style="border-color:#f0883e;color:#f0883e">JPCERT 注意喚起</span></td>
-        <td class="title-cell"><a href="https://www.jpcert.or.jp/at/2026/at260028.html" target="_blank" rel="noopener">注意喚起: F5 BIG-IP Access Policy Managerにおけるヒープベースのバッファオーバーフローの脆弱性（CVE-2026-94127）に関する注意喚起  (公開)</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc"></td>
       </tr>
@@ -455,6 +457,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">複数のマイクロソフト製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html" target="_blank" rel="noopener">更新：PHPの脆弱性対策について(CVE-2026-109618、CVE-2026-109619：PHP2shell)</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-10-22</td>
         <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
         <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html" target="_blank" rel="noopener">PHPの脆弱性対策について(CVE-2026-109618、CVE-2026-109619：PHP2shell)</a><div class="cve-row"></div></td>
@@ -540,6 +549,42 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191976" target="_blank" rel="noopener">脆弱性「PHP2Shell」の悪用を確認 - 米当局が注意喚起</a></td>
+        <td class="desc">プログラミング言語「PHP」で判明した脆弱性「PHP2Shell」について、実際に悪用されていることが確認されているとし、米当局は注意を呼びかけた。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191972" target="_blank" rel="noopener">Apple、「iOS 27.2」を公開 - 旧OSの更新では悪用脆弱性を修正</a></td>
+        <td class="desc">Appleは、スマートフォンやタブレット向けOS「iOS」「iPadOS」のセキュリティアップデートを公開した。旧OS向けに悪用された脆弱性へ対処したアップデートも用意している。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191985" target="_blank" rel="noopener">Windows版「PHP」にアップデート - 同梱「Brotli」を更新</a></td>
+        <td class="desc">「PHP」の開発チームは、Windows版の「PHP」に同梱される圧縮ライブラリ「Brotli」に深刻な脆弱性が見つかったとしてアップデートをリリースした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/192008" target="_blank" rel="noopener">「PowerShell」に「Brotli」脆弱性を解消するアップデート</a></td>
+        <td class="desc">Googleのデータ圧縮ライブラリ「Brotli」に脆弱性が見つかった問題で、マイクロソフトのコマンドラインシェル「PowerShell」も影響を受けることがわかった。アップデートが提供されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-27</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191999" target="_blank" rel="noopener">GMOに身代金要求 - ランサム攻撃や情報公開を行うと脅迫</a></td>
+        <td class="desc">GMOインターネットの仮想デスクトップサービスが侵害された問題で、攻撃予告が行われている。同社では対応を進めるとともに、利用者に注意を呼びかけた。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191949" target="_blank" rel="noopener">Google製「Brotliデコーダ」の脆弱性、幅広い環境に影響か</a></td>
+        <td class="desc">ウェブ通信などで利用されるGoogleのデータ圧縮ライブラリ「Brotli」に深刻な脆弱性が判明した。データ処理に同ライブラリが利用される幅広い環境が影響を受けるおそれもあるという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-10-26</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191931" target="_blank" rel="noopener">MSが定例外パッチ、「.NET」脆弱性を修正 - Brotli問題などに対応</a></td>
@@ -556,6 +601,36 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191926" target="_blank" rel="noopener">「Nextcloud」組込ツールや「Arista VCO」の脆弱性などに注意喚起 - 米当局</a></td>
         <td class="desc">米サイバーセキュリティインフラセキュリティ庁（CISA）は現地時間2026年10月23日、悪用が確認されている脆弱性2件について注意喚起を行った。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191902" target="_blank" rel="noopener">「PHP」にあらたな脆弱性、対象環境は限定的 - 次回更新時に修正</a></td>
+        <td class="desc">プログラミング言語「PHP」にあらたな脆弱性が確認された。深刻な問題として大きく注目された先の2件とは異なる脆弱性で、対象となる環境は限定的であるとして、今後のアップデートで修正される見込み。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191906" target="_blank" rel="noopener">荷物問合サービスの侵害、流出対象件数を取りまとめ - 佐川急便</a></td>
+        <td class="desc">佐川急便は、同社の荷物問い合わせサービスが侵害された問題で、最大でのべ約5323万件の個人情報が流出した可能性があるとする調査結果を公表した。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191846" target="_blank" rel="noopener">メール配信システムで契約者情報が流出 - ラクスグループ会社</a></td>
+        <td class="desc">ラクスは、子会社のラクスライトクラウドが提供するメール配信システム「ブラストメール」が侵害され、契約者に関する情報が流出したことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191495" target="_blank" rel="noopener">小中学校がPTAに生徒の個人情報を同意なしに提供 - 厚木市</a></td>
+        <td class="desc">神奈川県厚木市は、市内複数の小中学校で、児童生徒や保護者の個人情報を、本人の同意なくPTAへ提供していたことを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-10-26</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/191783" target="_blank" rel="noopener">口座解約に関する顧客情報が記録された記録媒体を紛失 - りそな銀</a></td>
+        <td class="desc">りそな銀行は、25年以上前の顧客情報が記録されたフィルム状の記録媒体が所在不明となっていることを明らかにした。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-10-25</td>
@@ -592,79 +667,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/191883" target="_blank" rel="noopener">GMO「デスクトップクラウド」で侵害 - 利用者から金融口座の不正操作報告</a></td>
         <td class="desc">GMOインターネットが提供する仮想デスクトップサービス「お名前.com デスクトップクラウド」が第三者により侵害されたことがわかった。同サービスの利用者において、金融機関の取引口座に対する不正操作が報告されており、内部データを窃取されたおそれがある。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-23</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191838" target="_blank" rel="noopener">「CAPCOM ID」で情報流出、パスワードの不正変更も - カプコン</a></td>
-        <td class="desc">ゲームメーカーのカプコンは、オンライン会員サービスがサイバー攻撃を受け、登録されている個人情報が流出したことを明らかにした。一部のアカウントではログインパスワードが不正に変更され、通信販売サイトへアクセスが行われていたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-23</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191807" target="_blank" rel="noopener">「Node.js」に脆弱性10件 - Brotli圧縮データの処理でRCEのおそれ</a></td>
-        <td class="desc">JavaScriptの実行環境である「Node.js」に複数の脆弱性が判明した。リモートからコードを実行されるおそれがある問題も含まれており、開発チームがセキュリティアップデートを公開した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-23</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191844" target="_blank" rel="noopener">運用環境に第三者が不正侵入、1年以上前の痕跡も - デジタルアーツ</a></td>
-        <td class="desc">フィルタリングソリューションや暗号化製品などを展開するデジタルアーツは、クラウドや社内環境が第三者によって不正アクセスを受け、一部利用者に関する情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-23</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191862" target="_blank" rel="noopener">Android版「Firefox」に暗号関連の脆弱性 - 修正版が公開</a></td>
-        <td class="desc">Mozilla Foundationは、ブラウザ「Firefox」のAndroid版に脆弱性が判明したとし、アップデートをリリースした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-23</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191724" target="_blank" rel="noopener">採用内定式の案内メールを誤送信、メアド流出 - 江戸川区</a></td>
-        <td class="desc">東京都江戸川区は、採用内定式の案内メールにおいて送信ミスがあり、区職員内定者のメールアドレスが流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-22</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191766" target="_blank" rel="noopener">米当局、「PHP脆弱性」の即修正を勧告 - 困難ならオフラインに</a></td>
-        <td class="desc">米サイバーセキュリティインフラセキュリティ庁（CISA）は、プログラム言語「PHP」に深刻な脆弱性2件が見つかった問題で、修正プログラムをただちに適用するよう強く勧告した。更新が困難な場合は、インターネットへの公開を控えることを推奨している。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-22</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191772" target="_blank" rel="noopener">「PHP」脆弱性、2024年に兆候把握も修正難航 - 公開前に混乱</a></td>
-        <td class="desc">「PHP」で判明した深刻な脆弱性2件をめぐり、PHP Foundationは発見から修正に至る経緯を明らかにした。一部の問題は2024年に把握していたが、リソース不足から対応が長期化。関係者間で調整のうえ情報を公開する予定だったが、公開前に情報が漏洩するなど混乱も生じたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-21</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191760" target="_blank" rel="noopener">「GitLab」に深刻な脆弱性 - 旧ブランチにも修正を提供</a></td>
-        <td class="desc">ソフトウェア開発プラットフォーム「GitLab」に複数の脆弱性が判明した。深刻な脆弱性も含まれており、早急にアップデートするよう強く呼びかけている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-22</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191788" target="_blank" rel="noopener">「PHP」の深刻なRCE脆弱性「PHP2Shell」 - 悪用試行を観測</a></td>
-        <td class="desc">ウェブサイトをはじめ、広く活用されているプログラミング言語の「PHP」に、認証を必要とすることなくリモートからコードを実行できる深刻な脆弱性が見つかった問題で、すでに悪用を試みる攻撃も観測されている。実証コードも公開されており注意が必要だ。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-22</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191795" target="_blank" rel="noopener">Ciscoのビデオ会議製品に深刻な脆弱性 - 修正版が公開</a></td>
-        <td class="desc">Cisco Systemsのビデオ会議関連製品「Cisco Expresswayシリーズ」に複数の脆弱性が判明した。リモートから認証なしに任意のコマンドを実行できる脆弱性も含まれる。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-22</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191773" target="_blank" rel="noopener">リクルートの中古車情報サービスで個人情報など流出か</a></td>
-        <td class="desc">リクルートが運営する中古車情報サイト「カーセンサーnet」や、中古車販売店向け業務支援サービス「C-MATCH」がサイバー攻撃を受けたことがわかった。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年10月26日 13:52 JST</span>
+  <span>最終更新: 2026年10月27日 14:10 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
