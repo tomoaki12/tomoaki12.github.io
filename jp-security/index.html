@@ -78,14 +78,14 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
   </div>
   <div class="stats">
     <div class="stat danger"><div class="n">0</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">52</div><div class="l">脆弱性</div></div>
+    <div class="stat warn"><div class="n">53</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">52</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">53</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -104,6 +104,20 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-11-02</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN23328936/" target="_blank" rel="noopener">Core TempのカーネルドライバにおけるIOCTLインタフェースに対するアクセス制御が不十分な脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">ALCPUが提供するCore Tempのカーネルドライバには、IOCTLインタフェースに対するアクセス制御が不十分な脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-11-02</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90141693/" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年10月）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Siemensから各製品向けのアドバイザリが公表されました。</td>
+      </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-10-30</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
@@ -189,13 +203,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">CERT/CCから本件に関するアドバイザリが公表されました。</td>
       </tr>
       <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-27</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU90141693/" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年10月）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Siemensから各製品向けのアドバイザリが公表されました。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
         <td class="date">2026-10-26</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97400824/" target="_blank" rel="noopener">BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）</a><div class="cve-row"></div></td>
@@ -238,13 +245,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU91023667/" target="_blank" rel="noopener">LIFF SDKにおけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">LINEヤフー株式会社が提供するLIFF SDKには、クロスサイトスクリプティングの脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-10-22</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU91196958/" target="_blank" rel="noopener">ISC BINDにおける複数の脆弱性（2026年10月）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">ISC（Internet Systems Consortium）から、ISC BINDの複数の脆弱性が公開されました。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-10-29</td>
@@ -394,6 +394,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">JPCERT/CCが2026年7月から9月分の「JPCERT/CC 四半期レポート」を公開</td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-11-02</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html" target="_blank" rel="noopener">更新：PHPの脆弱性対策について(CVE-2026-109618、CVE-2026-109619：PHP2shell)</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-10-27</td>
         <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
         <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20261022.html" target="_blank" rel="noopener">更新：PHPの脆弱性対策について(CVE-2026-109618、CVE-2026-109619：PHP2shell)</a><div class="cve-row"></div></td>
@@ -485,6 +492,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/192266" target="_blank" rel="noopener">「Ivanti Connect Secure」の脆弱性悪用で注意喚起 - 米当局</a></td>
+        <td class="desc">Ivantiのリモートアクセス製品「Ivanti Connect Secure（ICS）」に存在する2件の脆弱性に関し、悪用が確認されたことを受けて米当局が注意喚起を行った。3件の脆弱性を組み合わせた攻撃も確認されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/192262" target="_blank" rel="noopener">「WordPress 7.1.4」で更新時RCEや複数XSSなど脆弱性を修正</a></td>
+        <td class="desc">コンテンツマネジメントシステムである「WordPress」に複数の脆弱性が判明した。セキュリティアップデートを提供しており、利用者に更新を呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/192279" target="_blank" rel="noopener">DB管理ツール「pgAdmin 4」に複数脆弱性 - 2件は「クリティカル」</a></td>
+        <td class="desc">「PostgreSQL」向けのデータベース管理ツール「pgAdmin 4」に複数の脆弱性が判明した。修正版を提供しており、利用者にアップデートを呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-02</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/192264" target="_blank" rel="noopener">先週注目された記事（2026年10月25日〜2026年10月31日）</a></td>
+        <td class="desc">2026年10月25日から2026年10月31日までの1週間にSecurity NEXTにおいて注目度が高かった上位10記事は以下のとおり。</td>
+      </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-10-29</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
@@ -580,37 +611,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/192077" target="_blank" rel="noopener">従業員の個人情報が流出した可能性 - ドトールコーヒー</a></td>
         <td class="desc">コーヒーショップチェーンを運営するドトールコーヒーは、システムから従業員の個人情報が流出した可能性があることを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191987" target="_blank" rel="noopener">不正アクセスで電子ギフトが不正発行 - ギフティ</a></td>
-        <td class="desc">ギフティグループは、電子ギフトを展開する子会社のギフティが不正アクセスを受けたことを明らかにした。電子ギフトが不正に発行され、被害額は約5億円を超えるという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-29</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192167" target="_blank" rel="noopener">会員サイトやアプリにPWリスト攻撃 - 富士急ハイランド</a></td>
-        <td class="desc">富士急ハイランドの公式アプリと会員サイトがパスワードリスト攻撃を受け、一部会員アカウントが第三者によってログインされたことがわかった。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192044" target="_blank" rel="noopener">「Brotli」や「Adobe Commerce」「Magento」の脆弱性悪用を確認 - 米当局が注意喚起</a></td>
-        <td class="desc">Googleのデータ圧縮ライブラリ「Brotli」に関する脆弱性やAdobeが提供するeコマースサイト関連製品「Adobe Commerce」「Magento」の脆弱性が悪用されている。米当局が注意を呼びかけた。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-10-27</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192058" target="_blank" rel="noopener">「Chrome」で脆弱性52件を修正 - 4件が「クリティカル」</a></td>
-        <td class="desc">Googleは、ウェブブラウザ「Chrome」のセキュリティアップデートを公開した。4件については、重要度が「クリティカル（Critical）」と評価されている。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年11月01日 15:12 JST</span>
+  <span>最終更新: 2026年11月02日 15:12 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
