@@ -78,14 +78,14 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
   </div>
   <div class="stats">
     <div class="stat danger"><div class="n">0</div><div class="l">高深刻度</div></div>
-    <div class="stat warn"><div class="n">64</div><div class="l">脆弱性</div></div>
+    <div class="stat warn"><div class="n">65</div><div class="l">脆弱性</div></div>
     <div class="stat info"><div class="n">20</div><div class="l">ニュース</div></div>
   </div>
 </header>
 
 <!-- タブ -->
 <div class="tabs">
-  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">64</span></button>
+  <button class="tab active" onclick="switchTab('vuln',this)">⚠️ 脆弱性情報 <span class="cnt">65</span></button>
   <button class="tab" onclick="switchTab('news',this)">📰 ニュース <span class="cnt">20</span></button>
 </div>
 
@@ -104,6 +104,27 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
       <th>日付</th><th>ソース</th><th>タイトル / CVE</th><th>深刻度</th><th>概要</th>
     </tr></thead>
     <tbody>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-11-19</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN29068051/" target="_blank" rel="noopener">ブラウザ拡張機能「Win Bird 授業支援」におけるクロスサイトスクリプティングの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">ウィンバード株式会社が提供するブラウザ拡張機能「Win Bird 授業支援」には、クロスサイトスクリプティングの脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-11-19</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/jp/JVN28897261/" target="_blank" rel="noopener">複数のRuijie Networks製品におけるOSコマンドインジェクションの脆弱性</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Ruijie Networks Co., Ltd.が提供する複数の製品には、OSコマンドインジェクションの脆弱性が存在します。</td>
+      </tr>
+      <tr data-sev="" data-src="JVN">
+        <td class="date">2026-11-19</td>
+        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
+        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU98354779/" target="_blank" rel="noopener">Siemens製品に対するアップデート（2026年11月）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc">Siemensから各製品向けのアドバイザリが公表されました。</td>
+      </tr>
       <tr data-sev="" data-src="JVN">
         <td class="date">2026-11-18</td>
         <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
@@ -224,29 +245,6 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU92635551/" target="_blank" rel="noopener">KUSANAGIにおけるHTTPヘッダーインジェクションの脆弱性</a><div class="cve-row"></div></td>
         <td><span class="na">—</span></td>
         <td class="desc">GMOプライム・ストラテジー株式会社が提供するKUSANAGIには、HTTPヘッダーインジェクションの脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-11-12</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU97400824/" target="_blank" rel="noopener">BrotliのC言語実装における境界外書き込みの脆弱性（CVE-2026-111497）</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">Googleのデータ圧縮アルゴリズムBrotliのC言語実装における脆弱性（ CVE-2026-111497 ）に対するアドバイザリが公開されました。 
- 
-本脆弱性は「HTTP2Shell」や「Node2Shell」とも呼ばれています。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-11-12</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/vu/JVNVU95523788/" target="_blank" rel="noopener">三菱電機数値制御装置におけるサービス運用妨害（DoS）の脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">三菱電機数値制御装置（CNC）には、入力値インデックス、位置、またはオフセットの不適切な検証に起因するサービス運用妨害（DoS）の脆弱性が存在します。</td>
-      </tr>
-      <tr data-sev="" data-src="JVN">
-        <td class="date">2026-11-12</td>
-        <td><span class="src-badge" style="border-color:#79c0ff;color:#79c0ff">JVN</span></td>
-        <td class="title-cell"><a href="https://jvn.jp/jp/JVN64740097/" target="_blank" rel="noopener">SoftBank製Airターミナル6におけるOSコマンドインジェクションの脆弱性</a><div class="cve-row"></div></td>
-        <td><span class="na">—</span></td>
-        <td class="desc">ソフトバンク株式会社が提供するAirターミナル6には、OSコマンドインジェクションの脆弱性が存在します。</td>
       </tr>
       <tr data-sev="" data-src="JPCERT 注意喚起">
         <td class="date">2026-11-11</td>
@@ -466,6 +464,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td class="desc">複数のマイクロソフト製品に脆弱性</td>
       </tr>
       <tr data-sev="" data-src="IPA 脆弱性">
+        <td class="date">2026-11-19</td>
+        <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
+        <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/alert20261119.html" target="_blank" rel="noopener">NGINXの複数の脆弱性対策について（CVE-2026-123007、CVE-2026-123633等）</a><div class="cve-row"></div></td>
+        <td><span class="na">—</span></td>
+        <td class="desc"></td>
+      </tr>
+      <tr data-sev="" data-src="IPA 脆弱性">
         <td class="date">2026-11-18</td>
         <td><span class="src-badge" style="border-color:#d29922;color:#d29922">IPA 脆弱性</span></td>
         <td class="title-cell"><a href="https://www.ipa.go.jp/security/security-alert/2026/1118-jre.html" target="_blank" rel="noopener">Oracle Java の脆弱性対策について(2026年11月)</a><div class="cve-row"></div></td>
@@ -572,6 +577,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
     </tr></thead>
     <tbody>
       <tr data-src="SecurityNext">
+        <td class="date">2026-11-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/193071" target="_blank" rel="noopener">米当局、脆弱性の悪用リストに4件を追加</a></td>
+        <td class="desc">米当局は、「Apache Axis」「REDCap」「Synology DSM」「LiteLLM」に関する脆弱性が実際の攻撃で悪用されているとして注意を呼びかけた。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/193073" target="_blank" rel="noopener">複数の脆弱性に対処した「WordPress 7.1.5」が公開</a></td>
+        <td class="desc">コンテンツマネジメントシステムである「WordPress」の開発チームは、複数の脆弱性に対処したセキュリティアップデートを公開した。サイト管理者に対してすみやかに更新するよう呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/193011" target="_blank" rel="noopener">旧版「Apache Axis」に脆弱性、悪用も - 後継版などへ移行を</a></td>
+        <td class="desc">Java向けSOAPエンジン「Apache Axis」のサポートが終了している旧版に深刻な脆弱性が確認された。すでに悪用も確認されており、後継版や他エンジンへの移行が呼びかけられている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-19</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/193077" target="_blank" rel="noopener">ウェブサーバ「nginx」に10件の脆弱性 - 一部で「PoC」が公開</a></td>
+        <td class="desc">ウェブサーバ「nginx」に複数の脆弱性が確認され、脆弱性を修正したアップデートがリリースされた。一部脆弱性は、概念実証（PoC）コードも公開されている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
         <td class="date">2026-11-18</td>
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/193031" target="_blank" rel="noopener">Oracle、のべ655件の修正パッチを公開 - 深刻な脆弱性も解消</a></td>
@@ -600,6 +629,30 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/193016" target="_blank" rel="noopener">「Puppet Enterprise」RCE脆弱性、悪用を確認 - 米当局が注意喚起</a></td>
         <td class="desc">Perforceが提供する「Puppet Enterprise」に任意のコード実行につながる脆弱性が確認された。米サイバーセキュリティ・インフラセキュリティ庁（CISA）は、実際の攻撃で悪用されているとして注意を呼びかけている。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/192952" target="_blank" rel="noopener">理研「富岳」で侵害 - 窃取情報で他システムへの攻撃試行も</a></td>
+        <td class="desc">理化学研究所は、計算科学研究センターのスーパーコンピュータ「富岳」の運用系システムが外部の第三者による不正アクセスを受けたことを明らかにした。利用者の個人情報が流出した可能性があるという。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/193015" target="_blank" rel="noopener">年収や資産情報など個人情報流出の可能性 - 楽天証券</a></td>
+        <td class="desc">楽天証券は、第三者によってシステムが侵害され、顧客の個人情報が流出した可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/192585" target="_blank" rel="noopener">法人顧客向けサイトで顧客情報が閲覧可能に - 日本郵便</a></td>
+        <td class="desc">日本郵便は、送り状注文や集荷依頼などの各種サービスを提供する法人顧客向けサイト「JP Business Tool Box」において、顧客情報が流出した可能性があることを明らかにした。</td>
+      </tr>
+      <tr data-src="SecurityNext">
+        <td class="date">2026-11-18</td>
+        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
+        <td class="title-cell"><a href="https://www.security-next.com/192083" target="_blank" rel="noopener">2026年3Qのセキュ相談、12.1％減 - 「不正ログイン」は高水準</a></td>
+        <td class="desc">2026年第3四半期にセキュリティに関する窓口に寄せられた個人からの相談は3369件だった。前四半期から約12.1％減少している。</td>
       </tr>
       <tr data-src="SecurityNext">
         <td class="date">2026-11-17</td>
@@ -642,61 +695,13 @@ footer{margin-top:20px;padding-top:14px;border-top:1px solid var(--bd);font-size
         <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
         <td class="title-cell"><a href="https://www.security-next.com/192657" target="_blank" rel="noopener">太陽光発電遠隔監視サービスで侵害 - ポイント不正交換も</a></td>
         <td class="desc">NTTスマイルエナジーが提供する太陽光発電遠隔監視サービス「エコめがね」が不正アクセスを受けたことがわかった。ポイントが不正に交換されたという。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-11-17</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192962" target="_blank" rel="noopener">防災製品部の出荷管理システムで侵害か - 古河電工グループ会社</a></td>
-        <td class="desc">古河電工パワーシステムズは、防災製品部の出荷管理用ウェブシステムが外部から侵害された可能性があることを明らかにした。関係者の個人情報が流出した可能性がある。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-11-17</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192498" target="_blank" rel="noopener">従業員情報含むファイルをメールで誤送信 - 三菱ガス化学</a></td>
-        <td class="desc">三菱ガス化学は、同社従業員の個人情報含むファイルを、誤って第三者へメール送信したことを公表した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-11-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192877" target="_blank" rel="noopener">Check Point製品に脆弱性 - 「PHP2Shell」連鎖での悪用も</a></td>
-        <td class="desc">Check Point Software Technologiesのセキュリティ製品に、管理者権限を奪取されるおそれがある脆弱性が明らかとなった。サイバー攻撃で悪用されたことが確認されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-11-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192887" target="_blank" rel="noopener">「Apache Shiro」に認証回避の脆弱性 - 8月の更新で修正済み</a></td>
-        <td class="desc">Java向けセキュリティフレームワーク「Apache Shiro」に重要度が「クリティカル」とされる脆弱性が明らかとなった。修正版が提供されている。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-11-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192892" target="_blank" rel="noopener">米当局、悪用確認の脆弱性2件に注意喚起</a></td>
-        <td class="desc">米サイバーセキュリティ・インフラセキュリティ庁（CISA）は、サイバー攻撃で悪用が確認された脆弱性2件について注意喚起を行った。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-11-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192896" target="_blank" rel="noopener">「Apache Airflow」の分散処理機能に脆弱性 - 修正版が公開</a></td>
-        <td class="desc">ワークフロー管理ソフトウェア「Apache Airflow」の開発チームは、脆弱性が確認されたとして修正版を公開した。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-11-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/192746" target="_blank" rel="noopener">通信販売サイトで個人情報が流出 - 靖国神社</a></td>
-        <td class="desc">靖国神社は、通信販売サイト「オンライン授与品・頒布品サイト」がサイバー攻撃を受け、利用者の個人情報が流出したことを明らかにした。</td>
-      </tr>
-      <tr data-src="SecurityNext">
-        <td class="date">2026-11-16</td>
-        <td><span class="src-badge" style="border-color:#3fb950;color:#3fb950">SecurityNext</span></td>
-        <td class="title-cell"><a href="https://www.security-next.com/191998" target="_blank" rel="noopener">2026年3Qのソフト製品の脆弱性届出 - スマホアプリが最多</a></td>
-        <td class="desc">情報処理推進機構（IPA）は、2026年第3四半期における脆弱性の届け出状況を取りまとめた。ソフトウェア関連の届け出が微増している。</td>
       </tr></tbody>
   </table>
   </div>
 </section>
 
 <footer>
-  <span>最終更新: 2026年11月18日 16:34 JST</span>
+  <span>最終更新: 2026年11月19日 16:30 JST</span>
   <span>情報源: JVN iPedia / JPCERT/CC / IPA / SecurityNext</span>
 </footer>
 
